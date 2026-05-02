@@ -1,38 +1,68 @@
 # OpenHealth
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+OpenHealth is a Next.js app with Convex as the backend.
 
-## Getting Started
+## Prerequisites
 
-First, run the development server:
+- Node.js 20 or newer
+- pnpm
+- A Convex account, or a GitHub account you can use to log in to Convex
+
+If pnpm is not installed, enable it with Corepack:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+corepack enable pnpm
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Install dependencies:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm install
+```
 
-## Learn More
+Start Convex in one terminal:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm exec convex dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+On the first run, Convex will ask you to log in and choose or create a project. After setup, it writes the deployment values to `.env.local`, including `NEXT_PUBLIC_CONVEX_URL`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Keep this terminal running while you work. It watches files in `convex/`, syncs backend functions, and regenerates the typed API files in `convex/_generated/`.
 
-## Deploy on Vercel
+Start Next.js in a second terminal:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open [http://localhost:3000](http://localhost:3000).
+
+## Seed Sample Data
+
+The app currently reads tasks from the Convex `tasks` table. To add the sample tasks used by the starter screen, run this after `pnpm exec convex dev` has connected successfully:
+
+```bash
+pnpm exec convex import --table tasks sampleData.jsonl
+```
+
+Only run the import once per Convex deployment unless you intentionally want duplicate sample rows.
+
+## Convex Project Notes
+
+- Backend schema lives in `convex/schema.ts`.
+- Backend functions live in `convex/`, such as `convex/tasks.ts`.
+- The frontend Convex provider is in `app/ConvexClientProvider.tsx`.
+- The task list calls `api.tasks.get` from `app/page.tsx`.
+- Do not commit `.env.local`; each teammate should create their own local Convex deployment config by running `pnpm exec convex dev`.
+
+## Useful Commands
+
+```bash
+pnpm lint
+pnpm build
+pnpm exec convex dev
+pnpm exec convex codegen
+```
