@@ -50,6 +50,17 @@ export default function Home() {
             placeholder="Ex: ACL Surgery or Specific CPT"
           />
           <div className="mt-3 flex justify-end">
+            <button
+              type="button"
+              className="inline-flex items-center rounded-md border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-900 shadow-sm hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 dark:hover:bg-zinc-900"
+            >
+              Search
+            </button>
+          </div>
+          <p className="mt-4 text-center text-sm font-medium text-zinc-500 dark:text-zinc-400">
+            Or
+          </p>
+          <div className="mt-4 flex justify-center">
             <AddUploadProcedureButton onClick={() => {}} />
           </div>
         </div>
