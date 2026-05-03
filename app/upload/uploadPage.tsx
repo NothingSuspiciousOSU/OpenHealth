@@ -72,6 +72,7 @@ export function UploadPage() {
     const [formError, setFormError] = useState<string | null>(null);
     const [parseError, setParseError] = useState<string | null>(null);
     const [successDocumentParse, setSuccessDocumentParse] = useState(false);
+    const [showSuccessPanel, setShowSuccessPanel] = useState(false);
     const [successDBUpdate, setSuccessDBUpdate] = useState(false);
     const [formData, setFormData] = useState<ProcedureFormData>(createInitialFormData);
     const [lineItems, setLineItems] = useState<CptLineItemDraft[]>(createInitialLineItems);
@@ -90,6 +91,7 @@ export function UploadPage() {
         setFormError(null);
         setParseError(null);
         setSuccessDocumentParse(false);
+        setShowSuccessPanel(false);
         setSuccessDBUpdate(false);
     };
 
@@ -284,6 +286,7 @@ export function UploadPage() {
         setIsDocumentParseLoading(true);
         setParseError(null);
         setSuccessDocumentParse(false);
+        setShowSuccessPanel(false);
 
         try {
             const images = await parseFilesToUploadImages(selectedFiles);
@@ -389,10 +392,12 @@ export function UploadPage() {
                     <DocumentUploadSection
                         selectedFiles={selectedFiles}
                         isLoading={isDocumentParseLoading}
+                        isSuccess={successDocumentParse}
                         onFileSelect={handleFileSelect}
                         handleUpload={handleUpload}
+                        onProgressComplete={() => setShowSuccessPanel(true)}
                     />
-                    {successDocumentParse && (
+                    {showSuccessPanel && (
                         <div className={successPanelClasses}>
                             <p>Document parsed successfully.</p>
                         </div>
