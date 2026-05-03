@@ -1,10 +1,10 @@
-import { internalMutation } from "./_generated/server";
+import { mutation } from "./_generated/server";
 
 /**
  * Delete a batch of data from both tables.
  * Call repeatedly until `remaining` is 0.
  */
-export const clearBatch = internalMutation({
+export const clearBatch = mutation({
   args: {},
   handler: async (ctx) => {
     const procedures = await ctx.db.query("procedures").take(200);
@@ -21,7 +21,7 @@ export const clearBatch = internalMutation({
 /**
  * Generate 500 synthetic procedures with associated line items.
  */
-export const generate = internalMutation({
+export const generate = mutation({
   args: {},
   handler: async (ctx) => {
     const hospitals = [

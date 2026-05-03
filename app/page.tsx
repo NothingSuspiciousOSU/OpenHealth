@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useMutation } from "convex/react";
+import { api } from "../convex/_generated/api";
 
 import { HeroIcon } from "./components/HeroIcon";
 import { SearchBar } from "./components/SearchBar";
@@ -12,6 +14,11 @@ import { TrendingProcedures } from "./components/TrendingProcedures";
 export default function Home() {
   const [query, setQuery] = useState("");
   const router = useRouter();
+  
+  const generateData = useMutation(api.mockData.generate);
+  const clearData = useMutation(api.mockData.clearBatch);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [isClearing, setIsClearing] = useState(false);
 
   const handleSearch = () => {
     if (query.trim()) {
@@ -65,6 +72,38 @@ export default function Home() {
               </span>
               <AddProcedureButton onClick={() => router.push('/upload')} />
             </div>
+          </div>
+
+          {/* Dev Tools - Hidden in production */}
+          <div className="mt-12 flex items-center justify-center gap-6 animate-fade-in-up-delay-4">
+            <button
+              type="button"
+              onClick={async () => {
+                setIsGenerating(true);
+                await generateData();
+                setIsGenerating(false);
+              }}
+              disabled={isGenerating || isClearing}
+              className="text-xs font-medium text-zinc-400 hover:text-zinc-600 dark:text-zinc-500 dark:hover:text-zinc-300 disabled:opacity-50"
+            >
+              {isGenerating ? "Generating..." : "Seed Mock Data"}
+            </button>
+            <button
+              type="button"
+              onClick={async () => {
+                setIsClearing(true);
+                let remaining = -1;
+                while (remaining !== 0) {
+                  const res = await clearData();
+                  remaining = res.remaining;
+                }
+                setIsClearing(false);
+              }}
+              disabled={isGenerating || isClearing}
+              className="text-xs font-medium text-red-400 hover:text-red-600 dark:text-red-500 dark:hover:text-red-400 disabled:opacity-50"
+            >
+              {isClearing ? "Clearing..." : "Clear Data"}
+            </button>
           </div>
         </div>
       </section>
