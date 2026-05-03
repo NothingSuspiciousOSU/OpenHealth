@@ -87,7 +87,7 @@ export default function Home() {
             },
             {
                 value: "40%",
-                label: "US adults who identify a billing issue do NOT try to fix it",
+                label: "US adults who identify a billing issue and do NOT try to fix it",
             },
             {
                 value: "~76%",
