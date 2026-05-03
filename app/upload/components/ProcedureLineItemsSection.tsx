@@ -29,6 +29,7 @@ type LineItemField = {
 
 const lineItemFields: LineItemField[] = [
     { key: 'cptCode', label: 'CPT Code *', placeholder: '99213' },
+    { key: 'providerName', label: 'Provider Name *', placeholder: 'Dr. Jenkins'},
     { key: 'serviceName', label: 'Service Name', placeholder: 'Office visit' },
     { key: 'units', label: 'Units *', placeholder: '1', type: 'number' },
     { key: 'costPerUnit', label: 'Cost Per Unit *', placeholder: '400.00', type: 'number' },

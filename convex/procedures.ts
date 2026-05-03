@@ -24,6 +24,7 @@ export const create = mutation({
         serviceName: v.union(v.string(), v.null()),
         units: v.int64(),
         costPerUnit: v.int64(),
+        providerName: v.union(v.string(), v.null())
       }),
     ),
   },
@@ -37,6 +38,7 @@ export const create = mutation({
         serviceName: lineItem.serviceName ?? undefined,
         units: lineItem.units,
         costPerUnit: lineItem.costPerUnit,
+        providerName: lineItem.providerName ?? undefined,
         hospitalName: args.procedure.hospitalName,
         city: args.procedure.location.city,
         state: args.procedure.location.state,

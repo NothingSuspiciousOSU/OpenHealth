@@ -19,6 +19,7 @@ export type CptLineItemDraft = {
   serviceName: string;
   units: string;
   costPerUnit: string;
+  providerName: string;
 };
 
 export function createEmptyCptLineItem(): CptLineItemDraft {
@@ -27,5 +28,6 @@ export function createEmptyCptLineItem(): CptLineItemDraft {
     serviceName: '',
     units: '',
     costPerUnit: '',
+    providerName: '',
   };
 }

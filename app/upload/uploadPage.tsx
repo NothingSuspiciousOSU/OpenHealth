@@ -31,6 +31,7 @@ type ProcedureLineItemsPayload = Array<{
     serviceName: string | null;
     units: bigint;
     costPerUnit: bigint;
+    providerName: string | null;
 }>;
 
 type ParsedLineItem = {
@@ -38,6 +39,7 @@ type ParsedLineItem = {
     serviceName?: unknown;
     units?: unknown;
     costPerUnit?: unknown;
+    providerName?: unknown;
 };
 
 function createInitialFormData(): ProcedureFormData {
@@ -67,7 +69,8 @@ export function UploadPage() {
     const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
     const [isDocumentParseLoading, setIsDocumentParseLoading] = useState(false);
     const [isFormChangeLoading, setIsFormChangeLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
+    const [formError, setFormError] = useState<string | null>(null);
+    const [parseError, setParseError] = useState<string | null>(null);
     const [successDocumentParse, setSuccessDocumentParse] = useState(false);
     const [successDBUpdate, setSuccessDBUpdate] = useState(false);
     const [formData, setFormData] = useState<ProcedureFormData>(createInitialFormData);
@@ -78,13 +81,14 @@ export function UploadPage() {
         const validationError = validateUploadSelection(files);
 
         if (validationError) {
-            setError(validationError);
+            setFormError(validationError);
             setSelectedFiles([]);
             return;
         }
 
         setSelectedFiles(files);
-        setError(null);
+        setFormError(null);
+        setParseError(null);
         setSuccessDocumentParse(false);
         setSuccessDBUpdate(false);
     };
@@ -219,12 +223,12 @@ export function UploadPage() {
         const validationError = validateForm();
 
         if (validationError) {
-            setError(validationError);
+            setFormError(validationError);
             return;
         }
 
         setIsFormChangeLoading(true);
-        setError(null);
+        setFormError(null);
         setSuccessDBUpdate(false);
 
         try {
@@ -233,6 +237,7 @@ export function UploadPage() {
                 serviceName: lineItem.serviceName.trim() || null,
                 units: BigInt(Number.parseInt(lineItem.units, 10)),
                 costPerUnit: BigInt(Number.parseInt(lineItem.costPerUnit, 10)),
+                providerName: lineItem.providerName.trim() || null
             }));
 
             await createProcedure({
@@ -264,7 +269,7 @@ export function UploadPage() {
                 input.value = '';
             }
         } catch (err) {
-            setError(err instanceof Error ? err.message : 'Failed to upload procedure');
+            setFormError(err instanceof Error ? err.message : 'Failed to upload procedure');
         } finally {
             setIsFormChangeLoading(false);
         }
@@ -272,12 +277,12 @@ export function UploadPage() {
 
     const handleUpload = async () => {
         if (!selectedFiles || selectedFiles.length === 0) {
-            setError('Please select one or more PDF or image files');
+            setParseError('Please select one or more PDF or image files');
             return;
         }
 
         setIsDocumentParseLoading(true);
-        setError(null);
+        setParseError(null);
         setSuccessDocumentParse(false);
 
         try {
@@ -314,6 +319,9 @@ export function UploadPage() {
             if (parsed?.error) {
                 throw new Error(parsed.error as string);
             }
+            if (parsed.procedures.length === 0) {
+                throw new Error("There was an error parsing the document, please try again or input manually.");
+            }
 
             // Auto-fill the form with parsed data when available
             const firstProcedure = Array.isArray(parsed?.procedures) && parsed.procedures.length > 0 ? parsed.procedures[0] : null;
@@ -348,6 +356,7 @@ export function UploadPage() {
                     serviceName: li.serviceName == null ? '' : String(li.serviceName),
                     units: li.units != null ? String(Math.round(Number(li.units))) : '',
                     costPerUnit: li.costPerUnit != null ? String(Number(li.costPerUnit)) : '',
+                    providerName: li.providerName == null ? '' : String(li.providerName)
                 }));
 
                 setLineItems(mapped.length > 0 ? mapped : createInitialLineItems());
@@ -360,7 +369,7 @@ export function UploadPage() {
             const input = document.querySelector('input[type="file"]') as HTMLInputElement | null;
             if (input) input.value = '';
         } catch (err) {
-            setError(err instanceof Error ? err.message : 'Failed to upload document');
+            setParseError(err instanceof Error ? err.message : 'Failed to upload document. Please try again or input data manually.');
         } finally {
             setIsDocumentParseLoading(false);
         }
@@ -386,6 +395,11 @@ export function UploadPage() {
                     {successDocumentParse && (
                         <div className={successPanelClasses}>
                             <p>Document parsed successfully.</p>
+                        </div>
+                    )}
+                    {parseError && (
+                        <div className={errorPanelClasses}>
+                            <p>{parseError}</p>
                         </div>
                     )}
 
@@ -431,7 +445,7 @@ export function UploadPage() {
                         <div className="grid gap-4 md:grid-cols-2">
                             <div>
                                 <label className={fieldLabelClasses}>
-                                    Provider Name *
+                                    Insurance Provider Name *
                                 </label>
                                 <input
                                     type="text"
@@ -502,9 +516,9 @@ export function UploadPage() {
                         onLineItemChange={handleLineItemChange}
                     />
 
-                    {error && (
+                    {formError && (
                         <div className={errorPanelClasses}>
-                            <p>{error}</p>
+                            <p>{formError}</p>
                         </div>
                     )}
 

@@ -42,6 +42,7 @@ export function DocumentUploadSection({
                     disabled={isLoading}
                     className={fileInputClasses}
                 />
+                <p className={sectionDescriptionClasses + ' italic'}>All files are temporarily stored for parsing, and then immediately deleted.</p>
 
                 {selectedFiles.length > 0 && (
                     <div className={addPanelClasses}>
