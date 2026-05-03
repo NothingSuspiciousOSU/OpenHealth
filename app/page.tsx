@@ -86,8 +86,8 @@ export default function Home() {
                 label: "Medical bills with errors",
             },
             {
-                value: "1 / 5",
-                label: "Only 1/5 U.S. adults reported a medical bill they disagreed with or could not afford",
+                value: "40%",
+                label: "US adults who identify a billing issue do NOT try to fix it",
             },
             {
                 value: "~76%",
