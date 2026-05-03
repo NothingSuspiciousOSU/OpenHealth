@@ -8,8 +8,8 @@
  * @module
  */
 
-import type * as fixup from "../fixup.js";
 import type * as mockData from "../mockData.js";
+import type * as model_procedures from "../model/procedures.js";
 import type * as search from "../search.js";
 
 import type {
@@ -19,8 +19,8 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
-  fixup: typeof fixup;
   mockData: typeof mockData;
+  "model/procedures": typeof model_procedures;
   search: typeof search;
 }>;
 

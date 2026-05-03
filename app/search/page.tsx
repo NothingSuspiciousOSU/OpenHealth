@@ -241,10 +241,10 @@ function SearchPageContent() {
                   {results
                     .sort((a, b) => {
                       if (sortBy === "price_asc") {
-                        return Number(a.allowedAmountCents) - Number(b.allowedAmountCents);
+                        return Number(a.allowedAmount) - Number(b.allowedAmount);
                       }
                       if (sortBy === "price_desc") {
-                        return Number(b.allowedAmountCents) - Number(a.allowedAmountCents);
+                        return Number(b.allowedAmount) - Number(a.allowedAmount);
                       }
                       // Default "relevant" sort: match profile first
                       const aMatches = a.insurance.providerName === profile.providerName && a.insurance.planName === profile.planName;

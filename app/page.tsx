@@ -1,7 +1,6 @@
 "use client";
 
-import { useQuery, useMutation } from "convex/react";
-import { api } from "../convex/_generated/api";
+
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -11,8 +10,6 @@ import { StatsBar } from "./components/StatsBar";
 import { AddUploadProcedureButton } from "./components/AddUploadProcedureButton";
 
 export default function Home() {
-  // @ts-ignore
-  const generateMockData = useMutation(api.mockData?.generate as any);
   const [query, setQuery] = useState("");
   const router = useRouter();
 
@@ -69,15 +66,7 @@ export default function Home() {
               <AddUploadProcedureButton onClick={() => {}} />
             </div>
             
-            <div className="mt-8 flex justify-center">
-              <button
-                type="button"
-                onClick={() => generateMockData()}
-                className="inline-flex items-center rounded-md border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-500 shadow-sm hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-900"
-              >
-                Seed Mock Data
-              </button>
-            </div>
+
           </div>
         </div>
       </section>
