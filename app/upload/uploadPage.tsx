@@ -347,7 +347,7 @@ export function UploadPage() {
                     cptCode: String(li.cptCode || ''),
                     serviceName: li.serviceName == null ? '' : String(li.serviceName),
                     units: li.units != null ? String(Math.round(Number(li.units))) : '',
-                    costPerUnit: li.costPerUnit != null ? String(Math.round(Number(li.costPerUnit) * 100)) : '',
+                    costPerUnit: li.costPerUnit != null ? String(Number(li.costPerUnit)) : '',
                 }));
 
                 setLineItems(mapped.length > 0 ? mapped : createInitialLineItems());
