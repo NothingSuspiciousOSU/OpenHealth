@@ -147,7 +147,7 @@ export function createOpenHealthChatAgent(documentContext?: BillDocumentContext)
   return new ToolLoopAgent({
     model: openrouter(getNemotronModelId()),
     instructions: buildInstructions(documentContext),
-    stopWhen: stepCountIs(40),
+    stopWhen: stepCountIs(80),
     tools: {
       webResearchAgent: tool({
         description:
