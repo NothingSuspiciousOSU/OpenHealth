@@ -4,7 +4,7 @@ import { createOpenHealthChatAgent } from "@/lib/server/ai/chatAgent";
 import { billDocumentContextSchema } from "@/lib/shared/chat/documentContext";
 
 export const runtime = "nodejs";
-export const maxDuration = 120;
+export const maxDuration = 300;
 
 const chatRequestSchema = z.object({
   messages: z.array(z.unknown()),
@@ -20,7 +20,7 @@ export async function POST(request: Request) {
       agent,
       uiMessages: body.messages,
       abortSignal: request.signal,
-      timeout: { totalMs: 120_000 },
+      timeout: { totalMs: 300_000 },
     });
   } catch (error) {
     const message =
