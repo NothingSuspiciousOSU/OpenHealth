@@ -60,7 +60,7 @@ export default function Home() {
       <StatsBar
         stats={[
           {
-            value: "$160-530B",
+            value: "$160-$530B",
             label:
               "Estimated loss every year to healthcare fraud, overpayments, and billing mistakes",
           },
