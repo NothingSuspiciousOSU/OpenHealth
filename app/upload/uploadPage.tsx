@@ -572,7 +572,7 @@ export function UploadPage() {
                                     value={formData.insurance.planName}
                                     onChange={handleFormChange}
                                     disabled={isFormChangeLoading}
-                                    placeholder="Plan name (optional)"
+                                    placeholder="Plan name"
                                     suggestions={planSuggestions}
                                 />
                             </div>
