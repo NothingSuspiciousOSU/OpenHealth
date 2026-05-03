@@ -8,6 +8,7 @@
  * @module
  */
 
+import type * as agent from "../agent.js";
 import type * as mockData from "../mockData.js";
 import type * as mockDataSets from "../mockDataSets.js";
 import type * as model_procedures from "../model/procedures.js";
@@ -21,6 +22,7 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  agent: typeof agent;
   mockData: typeof mockData;
   mockDataSets: typeof mockDataSets;
   "model/procedures": typeof model_procedures;
