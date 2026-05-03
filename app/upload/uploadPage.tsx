@@ -631,7 +631,7 @@ export function UploadPage() {
                         disabled={isFormChangeLoading}
                         className={primaryButtonClasses + ' w-full py-3'}
                     >
-                        {isFormChangeLoading ? 'Uploading...' : 'Add Procedure'}
+                        {isFormChangeLoading ? 'Loading...' : 'Add Procedure'}
                     </button>
                 </div>
             </div>

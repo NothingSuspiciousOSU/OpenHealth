@@ -133,13 +133,13 @@ export function DocumentUploadSection({
                     disabled={selectedFiles.length === 0 || isLoading}
                     className={primaryButtonClasses + ' w-full'}
                 >
-                    {isLoading ? 'Uploading & Parsing...' : 'Upload Files'}
+                    {isLoading ? 'Parsing in Progress...' : 'Upload Files'}
                 </button>
 
                 {(isLoading || (isSuccess && progress > 0)) && (
                     <div className="mt-4 w-full">
                         <div className="mb-1 flex justify-between text-xs font-medium text-zinc-600 dark:text-zinc-400">
-                            <span>{isSuccess && progress === 100 ? 'Complete' : 'Uploading...'}</span>
+                            <span>{isSuccess && progress === 100 ? 'Complete' : 'Parsing...'}</span>
                             <span>{Math.round(progress)}%</span>
                         </div>
                         <div className="h-2 w-full overflow-hidden rounded-full bg-zinc-200 dark:bg-zinc-800">
