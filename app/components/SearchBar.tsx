@@ -10,8 +10,9 @@ export function SearchBar({ value, onChange, onKeyDown, placeholder }: SearchBar
   return (
     <div className="w-full">
       <input
-        className="w-full rounded-md border border-zinc-200 bg-white px-4 py-3 text-sm text-zinc-950 shadow-sm outline-none ring-0 focus:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50"
-        placeholder={placeholder ?? 'Ex: "ACL Surgery" or "Specific CPT"'}
+        id="procedure-search"
+        className="w-full rounded-xl border border-zinc-200 bg-white px-5 py-3.5 text-sm text-zinc-950 shadow-sm outline-none transition-colors focus:border-sky-300 focus:ring-2 focus:ring-sky-100 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-50 dark:focus:border-sky-500 dark:focus:ring-sky-500/20"
+        placeholder={placeholder ?? 'Ex: "ACL Surgery" or Enter a Specific CPT'}
         value={value}
         onChange={(event) => onChange(event.target.value)}
         onKeyDown={onKeyDown}
