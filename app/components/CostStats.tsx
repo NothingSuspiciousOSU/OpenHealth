@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 
 type Procedure = {
   _id: string;
-  allowedAmountCents: bigint;
+  allowedAmount: bigint;
   insurance: { providerName: string };
 };
 
@@ -15,7 +15,7 @@ export function CostStats({ results }: { results: Procedure[] }) {
 
     results.forEach((r) => {
       const provider = r.insurance.providerName || "Unknown";
-      const cost = Number(r.allowedAmountCents) / 100;
+      const cost = Number(r.allowedAmount);
       if (cost > globalMaxCost) globalMaxCost = cost;
 
       if (!providerMap[provider]) {

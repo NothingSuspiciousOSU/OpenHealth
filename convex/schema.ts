@@ -18,8 +18,8 @@ export default defineSchema({
       planName: v.string(),
     }),
 
-    billedAmountCents: v.int64(),
-    allowedAmountCents: v.int64(),
+    billedAmount: v.int64(),
+    allowedAmount: v.int64(),
   })
     .index("by_dateOfProcedure", ["dateOfProcedure"])
     .index("by_hospitalName_and_dateOfProcedure", [
@@ -42,7 +42,8 @@ export default defineSchema({
     cptCode: v.string(),
     serviceName: v.optional(v.string()),
     units: v.int64(),
-    costPerUnitCents: v.int64(),
+    costPerUnit: v.int64(),
+    providerName: v.optional(v.string()),
 
     hospitalName: v.string(),
     city: v.string(),
@@ -52,7 +53,7 @@ export default defineSchema({
     dateOfProcedure: v.int64(),
   })
     .index("by_procedureId", ["procedureId"])
-    .index("by_cptCode", ["cptCode"])
+    // by_cptCode removed: redundant prefix of by_cptCode_and_procedureId
     .index("by_cptCode_and_procedureId", ["cptCode", "procedureId"])
     .index("by_cptCode_hospitalName_date", [
       "cptCode",
@@ -71,5 +72,4 @@ export default defineSchema({
       "insurancePlanName",
       "dateOfProcedure",
     ]),
-
 });
