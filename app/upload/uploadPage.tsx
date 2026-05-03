@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { useMutation, useQuery } from 'convex/react';
+import { useRouter } from "next/navigation";
 import { api } from '@/convex/_generated/api';
 import { createDocumentDataFromImages } from '@/lib/shared/DocumentData';
 import confetti from 'canvas-confetti';
@@ -82,6 +83,7 @@ function createInitialLineItems(): CptLineItemDraft[] {
 export function UploadPage() {
     const filterOptions = useQuery(api.search.getFilterOptions);
 
+    const router = useRouter();
 
     const createProcedure = useMutation(api.procedures.create);
     const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -634,7 +636,10 @@ export function UploadPage() {
                     )}
 
                     <button
-                        onClick={addProcedureToDB}
+                        onClick={() => {
+                            addProcedureToDB();
+                            router.push('/');
+                        }}
                         disabled={isFormChangeLoading}
                         className={primaryButtonClasses + ' w-full py-3'}
                     >
