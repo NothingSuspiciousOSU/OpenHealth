@@ -24,7 +24,7 @@ export const generate = mutation({
       { desc: "Normal Pregnancy Delivery", cpts: [{ code: "59400", name: "Routine obstetric care including antepartum care", cost: 800000 }] },
       { desc: "Knee Replacement", cpts: [{ code: "27447", name: "Total Knee Arthroplasty", cost: 3500000 }, { code: "73200", name: "CT Scan", cost: 150000 }] },
       { desc: "Cataract Surgery", cpts: [{ code: "66984", name: "Extracapsular cataract removal", cost: 300000 }] },
-      { desc: "MRI of Brain", cpts: [{ code: "70551", name: "MRI Brain w/o dye", cost: 85000 }] },
+      { desc: "MRI of Brain", cpts: [{ code: "70551", name: "MRI Brain w/o dye", cost: 1200 }] },
       { desc: "Colonoscopy", cpts: [{ code: "45378", name: "Diagnostic Colonoscopy", cost: 250000 }, { code: "88305", name: "Pathology", cost: 25000 }] },
       { desc: "Comprehensive Metabolic Panel", cpts: [{ code: "80053", name: "Metabolic panel", cost: 5000 }] },
     ];
