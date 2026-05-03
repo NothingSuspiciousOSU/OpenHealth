@@ -101,7 +101,7 @@ export async function parseDocumentStructure(data: DocumentData): Promise<Parsed
             '      "cptCode": string,',
             '      "serviceName": string | null,',
             '      "units": number,',
-            '      "costPerUnitCents": number,',
+            '      "costPerUnit": number,',
             '    }',
             '  ],',
             '}',
