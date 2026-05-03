@@ -38,6 +38,13 @@ export default defineSchema({
     ])
     .searchIndex("search_description", {
       searchField: "procedureDescription",
+      filterFields: [
+        "hospitalName",
+        "location.state",
+        "location.city",
+        "insurance.providerName",
+        "insurance.planName",
+      ],
     }),
 
   procedureLineItems: defineTable({

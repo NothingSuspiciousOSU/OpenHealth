@@ -23,20 +23,19 @@ export const searchProcedures = query({
   handler: async (ctx, args) => {
     // 1. Match procedures by CPT code or text description
     const isCptCode = /^\d{5}$/.test(args.q.trim());
-
-    const matched = isCptCode
-      ? await findProceduresByCpt(ctx, { cptCode: args.q.trim() })
-      : await findProceduresByDescription(ctx, { text: args.q, limit: 500 });
-
-    // 2. Apply filters in-memory
-    const filtered = applyProcedureFilters(matched, {
+    const limit = args.limit ?? 500; // Fetch up to 500 to sort
+    const filters = {
       insuranceProvider: args.insuranceProvider,
       insurancePlan: args.insurancePlan,
       state: args.state,
       city: args.city,
       hospitalName: args.hospitalName,
       afterDate: args.afterDate,
-    });
+    };
+
+    const filtered = isCptCode
+      ? await findProceduresByCpt(ctx, { cptCode: args.q.trim(), limit, filters })
+      : await findProceduresByDescription(ctx, { text: args.q, limit, filters });
 
     // 3. Sort before limiting
     if (args.sortBy === "price_asc") {
@@ -74,21 +73,21 @@ export const searchStats = query({
   handler: async (ctx, args) => {
     // Highly cached query to return raw procedure stats for the graphs (no CPT code fetching overhead)
     const isCptCode = /^\d{5}$/.test(args.q.trim());
-
-    const matched = isCptCode
-      ? await findProceduresByCpt(ctx, { cptCode: args.q.trim() })
-      : await findProceduresByDescription(ctx, { text: args.q, limit: 500 });
-
-    const filtered = applyProcedureFilters(matched, {
+    const limit = 500;
+    const filters = {
       insuranceProvider: args.insuranceProvider,
       insurancePlan: args.insurancePlan,
       state: args.state,
       city: args.city,
       hospitalName: args.hospitalName,
       afterDate: args.afterDate,
-    });
+    };
 
-    return filtered.slice(0, 500);
+    const filtered = isCptCode
+      ? await findProceduresByCpt(ctx, { cptCode: args.q.trim(), limit, filters })
+      : await findProceduresByDescription(ctx, { text: args.q, limit, filters });
+
+    return filtered;
   },
 });
 

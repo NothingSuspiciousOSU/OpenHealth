@@ -17,6 +17,7 @@
     "ai": "^6.0.174",
     "canvas": "^3.2.3",
     "convex": "^1.37.0",
+    "convex-helpers": "^0.1.115",
     "heic2any": "^0.0.4",
     "next": "16.2.4",
     "node-fetch": "^3.3.2",
