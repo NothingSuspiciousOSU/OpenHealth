@@ -118,20 +118,24 @@ export async function findProceduresByDescription(
   }
 
   if (filters) {
-    const conditions: Record<string, any> = {};
-    
-    if (!text && filters.insuranceProvider) conditions["insurance.providerName"] = filters.insuranceProvider;
-    if (!text && filters.insurancePlan) conditions["insurance.planName"] = filters.insurancePlan;
-    if (!text && filters.state) conditions["location.state"] = filters.state;
-    if (!text && filters.city) conditions["location.city"] = filters.city;
-    if (!text && filters.hospitalName) conditions["hospitalName"] = filters.hospitalName;
-
-    if (Object.keys(conditions).length > 0) {
-      query = filter(query, conditions as any);
-    }
-
-    if (filters.afterDate !== undefined) {
-      query = query.filter((q: any) => q.gte(q.field("dateOfProcedure"), filters.afterDate));
+    if (!text) {
+      // For empty query, apply filters manually using .filter()
+      query = query.filter((q: any) => {
+        const conditions = [];
+        if (filters.insuranceProvider) conditions.push(q.eq(q.field("insurance.providerName"), filters.insuranceProvider));
+        if (filters.insurancePlan) conditions.push(q.eq(q.field("insurance.planName"), filters.insurancePlan));
+        if (filters.state) conditions.push(q.eq(q.field("location.state"), filters.state));
+        if (filters.city) conditions.push(q.eq(q.field("location.city"), filters.city));
+        if (filters.hospitalName) conditions.push(q.eq(q.field("hospitalName"), filters.hospitalName));
+        if (filters.afterDate !== undefined) conditions.push(q.gte(q.field("dateOfProcedure"), filters.afterDate));
+        
+        return conditions.length > 0 ? q.and(...conditions) : q.eq(true, true);
+      });
+    } else {
+      // For text searches, only apply afterDate manually (not indexed on search_description)
+      if (filters.afterDate !== undefined) {
+        query = query.filter((q: any) => q.gte(q.field("dateOfProcedure"), filters.afterDate));
+      }
     }
   }
 
