@@ -75,8 +75,8 @@ export default function Home() {
         <StatsBar
           stats={[
             {
-              value: "$88 Billion",
-              label: "Estimated medical debt per year",
+              value: "$160-530B",
+              label: "Estimated loss every year to healthcare fraud, overpayments, and billing mistakes",
             },
             {
               value: "80%",
@@ -87,7 +87,7 @@ export default function Home() {
               label: "Higher odds of errors after emergency care",
             },
             {
-              value: "~76% hrs",
+              value: "~76%s",
               label: "Those who experience financial relief after reaching out",
             },
           ]}
