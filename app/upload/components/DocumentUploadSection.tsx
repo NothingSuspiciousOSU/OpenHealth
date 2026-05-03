@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import type { ChangeEvent } from 'react';
 import {
     addPanelClasses,
@@ -22,7 +23,33 @@ export function DocumentUploadSection({
     onFileSelect,
     handleUpload
 }: DocumentUploadSectionProps) {
-    
+    const [progress, setProgress] = useState(0);
+
+    useEffect(() => {
+        let interval: NodeJS.Timeout;
+        if (isLoading) {
+            setProgress(0);
+            const startTime = Date.now();
+            const duration = 40000; // 40 seconds
+            
+            interval = setInterval(() => {
+                const elapsed = Date.now() - startTime;
+                if (elapsed >= duration) {
+                    setProgress(99);
+                } else {
+                    const nextProgress = Math.floor((elapsed / duration) * 99);
+                    setProgress(nextProgress);
+                }
+            }, 250);
+        } else {
+            setProgress(100);
+        }
+        
+        return () => {
+            if (interval) clearInterval(interval);
+        };
+    }, [isLoading]);
+
     return (
         <div className={sectionCardClasses}>
             <div className="mb-4">
@@ -64,8 +91,17 @@ export function DocumentUploadSection({
                     disabled={selectedFiles.length === 0 || isLoading}
                     className={primaryButtonClasses + ' w-full'}
                 >
-                    {isLoading ? 'Uploading...' : 'Upload Files'}
+                    {isLoading ? `Parsing Document (${progress}%)` : 'Upload Files'}
                 </button>
+
+                {isLoading && (
+                    <div className="w-full bg-zinc-200 rounded-full h-2.5 dark:bg-zinc-800 overflow-hidden mt-3">
+                        <div 
+                            className="bg-sky-500 h-2.5 rounded-full transition-all duration-300 ease-out" 
+                            style={{ width: `${progress}%` }}
+                        ></div>
+                    </div>
+                )}
             </div>
         </div>
     );

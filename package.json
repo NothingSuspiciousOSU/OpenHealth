@@ -10,11 +10,18 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/google": "^3.0.67",
+    "@ai-sdk/openai": "^3.0.58",
     "@api/nim": "file:.api/apis/nim",
+    "@google/generative-ai": "^0.24.1",
     "@thednp/dommatrix": "^3.0.4",
+    "ai": "^3.4.0",
     "canvas": "^3.2.3",
     "convex": "^1.37.0",
+    "dotenv": "^17.4.2",
+    "framer-motion": "^12.38.0",
     "heic2any": "^0.0.4",
+    "lucide-react": "^1.14.0",
     "next": "16.2.4",
     "node-fetch": "^3.3.2",
     "pdfjs-dist": "^5.7.284",

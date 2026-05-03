@@ -124,7 +124,7 @@ function SearchPageContent() {
         <div className="flex flex-col gap-8 lg:flex-row">
           {/* Filters Sidebar */}
           <div className="w-full shrink-0 lg:w-64">
-            <div className="sticky top-6 rounded-lg border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <div className="sticky top-24 rounded-lg border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
               <div className="mb-4 flex items-center justify-between">
                 <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Filters</h2>
                 <button onClick={handleResetFilters} className="text-xs text-blue-600 hover:text-blue-500 dark:text-blue-400">

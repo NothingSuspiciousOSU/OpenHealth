@@ -8,6 +8,7 @@
  * @module
  */
 
+import type * as chat from "../chat.js";
 import type * as mockData from "../mockData.js";
 import type * as model_procedures from "../model/procedures.js";
 import type * as search from "../search.js";
@@ -19,6 +20,7 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  chat: typeof chat;
   mockData: typeof mockData;
   "model/procedures": typeof model_procedures;
   search: typeof search;
