@@ -15,9 +15,11 @@ export default function AdminPage() {
   const generateData = useMutation(api.mockData.generate);
   const clearData = useMutation(api.mockData.clearBatch);
   const loadPrestored = useMutation(api.mockData.loadPrestored);
+  const loadPrestored900 = useMutation(api.mockData.loadPrestored900);
   const [isGenerating, setIsGenerating] = useState(false);
   const [isClearing, setIsClearing] = useState(false);
   const [isLoadingPrestored, setIsLoadingPrestored] = useState(false);
+  const [isLoadingPrestored900, setIsLoadingPrestored900] = useState(false);
   const [message, setMessage] = useState("");
 
   const handleLogin = async (e: React.FormEvent) => {
@@ -49,16 +51,22 @@ export default function AdminPage() {
 
   const handleClear = async () => {
     setIsClearing(true);
-    setMessage("Clearing database...");
+    setMessage("Initializing database purge...");
     try {
-      let remaining = -1;
-      while (remaining !== 0) {
+      let done = false;
+      let totalDeleted = 0;
+      while (!done) {
         const res = await clearData();
-        remaining = res.remaining;
+        done = res.done;
+        totalDeleted += res.deleted;
+        if (!done) {
+          setMessage(`Purging database... (Deleted ${totalDeleted} items)`);
+        }
       }
-      setMessage("Database cleared successfully.");
+      setMessage(`Database cleared successfully. Total ${totalDeleted} items removed.`);
     } catch (err) {
-      setMessage("Error clearing data.");
+      setMessage("Error clearing data. The database might be partially cleared.");
+      console.error(err);
     } finally {
       setIsClearing(false);
     }
@@ -66,14 +74,27 @@ export default function AdminPage() {
 
   const handleLoadPrestored = async () => {
     setIsLoadingPrestored(true);
-    setMessage("Loading realistic prestored data...");
+    setMessage("Loading 2000 realistic prestored entries...");
     try {
       await loadPrestored();
-      setMessage("Realistic data loaded successfully.");
+      setMessage("2000 entries loaded successfully.");
     } catch (err) {
       setMessage("Error loading prestored data.");
     } finally {
       setIsLoadingPrestored(false);
+    }
+  };
+
+  const handleLoadPrestored900 = async () => {
+    setIsLoadingPrestored900(true);
+    setMessage("Loading 900 realistic prestored entries...");
+    try {
+      await loadPrestored900();
+      setMessage("900 entries loaded successfully.");
+    } catch (err) {
+      setMessage("Error loading prestored data.");
+    } finally {
+      setIsLoadingPrestored900(false);
     }
   };
 
@@ -136,7 +157,7 @@ export default function AdminPage() {
             <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Generate 1000 randomized entries for stress testing.</p>
             <button
               onClick={handleGenerate}
-              disabled={isGenerating || isClearing || isLoadingPrestored}
+              disabled={isGenerating || isClearing || isLoadingPrestored || isLoadingPrestored900}
               className="mt-6 w-full rounded-lg bg-zinc-900 py-2.5 text-sm font-semibold text-white transition hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white disabled:opacity-50"
             >
               {isGenerating ? "Processing..." : "Generate Mock Data"}
@@ -145,14 +166,23 @@ export default function AdminPage() {
 
           <div className="rounded-xl border border-sky-100 bg-sky-50/30 p-6 dark:border-sky-900/20 dark:bg-sky-900/10">
             <h3 className="text-lg font-semibold text-sky-900 dark:text-sky-100">Realistic</h3>
-            <p className="mt-2 text-xs text-sky-700/70 dark:text-sky-400/70">Load 1000 researched hospital and insurance entries.</p>
-            <button
-              onClick={handleLoadPrestored}
-              disabled={isGenerating || isClearing || isLoadingPrestored}
-              className="mt-6 w-full rounded-lg bg-sky-600 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-500 disabled:opacity-50"
-            >
-              {isLoadingPrestored ? "Loading..." : "Load Prestored Data"}
-            </button>
+            <p className="mt-2 text-xs text-sky-700/70 dark:text-sky-400/70">Load researched hospital and insurance entries.</p>
+            <div className="mt-6 space-y-3">
+              <button
+                onClick={handleLoadPrestored900}
+                disabled={isGenerating || isClearing || isLoadingPrestored || isLoadingPrestored900}
+                className="w-full rounded-lg bg-sky-600 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-500 disabled:opacity-50"
+              >
+                {isLoadingPrestored900 ? "Loading..." : "Load 900 Entries"}
+              </button>
+              <button
+                onClick={handleLoadPrestored}
+                disabled={isGenerating || isClearing || isLoadingPrestored || isLoadingPrestored900}
+                className="w-full rounded-lg border border-sky-200 bg-white py-2.5 text-sm font-semibold text-sky-700 transition hover:bg-sky-50 dark:border-sky-800 dark:bg-zinc-900 dark:text-sky-400 dark:hover:bg-sky-950/30 disabled:opacity-50"
+              >
+                {isLoadingPrestored ? "Loading..." : "Load 2000 Entries"}
+              </button>
+            </div>
           </div>
 
           <div className="rounded-xl border border-red-100 bg-red-50/30 p-6 dark:border-red-900/20 dark:bg-red-900/10">
@@ -160,7 +190,7 @@ export default function AdminPage() {
             <p className="mt-2 text-xs text-red-700/70 dark:text-red-400/70">Wipe all procedure and line item records from the database.</p>
             <button
               onClick={handleClear}
-              disabled={isGenerating || isClearing || isLoadingPrestored}
+              disabled={isGenerating || isClearing || isLoadingPrestored || isLoadingPrestored900}
               className="mt-6 w-full rounded-lg bg-red-600 py-2.5 text-sm font-semibold text-white transition hover:bg-red-500 disabled:opacity-50"
             >
               {isClearing ? "Clearing..." : "Purge All Data"}
