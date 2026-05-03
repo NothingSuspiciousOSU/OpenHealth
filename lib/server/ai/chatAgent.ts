@@ -16,9 +16,7 @@ import { getNemotronModelId, getOpenRouterProvider } from "./openrouter";
 import { searchWithTavily } from "./tavily";
 
 function buildInstructions(documentContext?: BillDocumentContext) {
-  const documentContextText = documentContext
-    ? JSON.stringify(documentContext, null, 2)
-    : "No bill PDF context was provided for this turn.";
+  const documentContextText = formatDocumentContext(documentContext);
   const hasBillContext = Boolean(documentContext);
 
   return [
@@ -42,6 +40,8 @@ function buildInstructions(documentContext?: BillDocumentContext) {
     'Use action "aggregateData" when the user asks for ranges, typical prices, medians, averages, counts, trends, comparisons, or "is this high".',
     'Use table "procedures" for procedure-level billed/allowed comparisons.',
     'Use table "procedureLineItems" for itemized CPT/service-line comparisons.',
+    'On table "procedures", aggregate dollar fields are "billedAmount" and "allowedAmount".',
+    'On table "procedureLineItems", aggregate dollar fields are "lineTotal" and "costPerUnit"; there is no "allowedAmount" field on procedureLineItems.',
     "",
     "DSL basics:",
     '- For `queryData`, put `table`, `where`, `search`, `sort`, `include`, `limit`, and `cursor` at the top level of the tool input with `action: "queryData"`.',
@@ -50,7 +50,7 @@ function buildInstructions(documentContext?: BillDocumentContext) {
     '- Text search uses `search` with declared search fields: "procedureDescription", "cptCode", or "serviceName".',
     '- Use `include: ["procedure"]` on procedureLineItems when parent bill context helps.',
     '- Use `include: ["lineItems"]` on procedures when itemized CPT details help.',
-    '- For line-item total comparisons, aggregate field "lineTotal".',
+    '- For line-item total comparisons, aggregate field "lineTotal", not "allowedAmount".',
     'Example queryData input: `{ "action": "queryData", "table": "procedureLineItems", "where": [{ "field": "cptCode", "op": "eq", "value": "99284" }], "include": ["procedure"], "limit": 25 }`.',
     'Example aggregateData input: `{ "action": "aggregateData", "table": "procedureLineItems", "where": [{ "field": "cptCode", "op": "eq", "value": "99284" }], "metrics": [{ "op": "count" }, { "op": "median", "field": "lineTotal" }] }`.',
     "",
@@ -80,8 +80,11 @@ function buildInstructions(documentContext?: BillDocumentContext) {
     "Workflow:",
     "- First, understand the user's question and the extracted bill context.",
     hasBillContext
-      ? "- A bill context is available. Use its CPT codes, service descriptions, hospital, insurer, dates, and amounts as query inputs when relevant."
+      ? "- A bill context is available. Use structured fields such as CPT codes, service descriptions, hospital, insurer, dates, and amounts as exact query inputs when relevant."
       : "- No bill context is available. If the user asks to audit a bill, ask them to attach the bill PDF or paste CPT/service lines and amounts before querying OpenHealth data.",
+    "- Prefer structured extracted bill facts for exact OpenHealth filters and calculations.",
+    "- Consult the full extracted document text whenever the user asks about anything not represented in the structured fields, including addresses, claim identifiers, footnotes, adjustments, payer language, payment details, or document-specific wording.",
+    "- Treat uploaded document text as model-extracted/OCR-like evidence. It can contain extraction uncertainty, so do not overstate illegible or ambiguous details.",
     "- If the user asks about prices, fairness, comparisons, or whether something looks high, use OpenHealth data unless the answer is only conceptual.",
     "- If the user asks what a CPT code, charge type, denial, adjustment, or billing term means, use webResearchAgent when current or external context would help.",
     "- If the user provides a bill amount and comparison rows are available, use priceReasoningAgent.",
@@ -101,6 +104,27 @@ function buildInstructions(documentContext?: BillDocumentContext) {
     "",
     "Current extracted bill context:",
     documentContextText,
+  ].join("\n");
+}
+
+function formatDocumentContext(documentContext?: BillDocumentContext) {
+  if (!documentContext) {
+    return "No bill PDF context was provided for this turn.";
+  }
+
+  const { documentMarkdown, pages, ...structuredContext } = documentContext;
+  const fullDocumentText =
+    documentMarkdown.trim() ||
+    pages
+      .map((page) => [`## Page ${page.pageNumber}`, page.text].join("\n\n"))
+      .join("\n\n");
+
+  return [
+    "Structured extracted bill facts:",
+    JSON.stringify(structuredContext, null, 2),
+    "",
+    "Full extracted document text:",
+    fullDocumentText || "No full document text was extracted.",
   ].join("\n");
 }
 

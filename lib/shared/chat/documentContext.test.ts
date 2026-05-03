@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   CHAT_PDF_MIME_TYPE,
   MAX_CHAT_PDF_BYTES,
+  normalizeExtractedBillContext,
   parseExtractedBillContext,
   validatePdfAttachmentSelection,
 } from "./documentContext";
@@ -59,10 +60,60 @@ describe("chat document context validation", () => {
       ],
       missingFields: [],
       confidence: 0.86,
+      source: {
+        fileName: "bill.pdf",
+        mimeType: CHAT_PDF_MIME_TYPE,
+        sizeBytes: 1234,
+      },
+      pageCount: 1,
+      pages: [
+        {
+          pageNumber: 1,
+          text: "Example Hospital\n\n| Code | Charge |\n| --- | --- |\n| 99284 | $1,200.00 |",
+        },
+      ],
+      documentMarkdown:
+        "## Page 1\n\nExample Hospital\n\n| Code | Charge |\n| --- | --- |\n| 99284 | $1,200.00 |",
+      extractionNotes: ["Clear selectable text."],
     });
 
     expect(parsed.lineItems[0]?.cptCode).toBe("99284");
     expect(parsed.allowedAmount).toBe(450);
+    expect(parsed.source.fileName).toBe("bill.pdf");
+    expect(parsed.pages[0]?.text).toContain("Example Hospital");
+    expect(parsed.documentMarkdown).toContain("## Page 1");
+  });
+
+  it("normalizes partial extraction responses into enriched context", () => {
+    const normalized = normalizeExtractedBillContext(
+      {
+        summary: "Emergency department visit bill.",
+        provider_name: "Example Physicians",
+        billed_amount: "$1,200.00",
+        line_items: [
+          {
+            code: "99284",
+            service_name: "Emergency department visit",
+            units: "1",
+            allowed_amount: "$450.00",
+          },
+        ],
+        pages: [{ page_number: "1", markdown: "Example bill text" }],
+        confidence: 1.3,
+      },
+      {
+        fileName: "bill.pdf",
+        mimeType: CHAT_PDF_MIME_TYPE,
+        sizeBytes: 1234,
+      },
+    );
+
+    expect(normalized.providerName).toBe("Example Physicians");
+    expect(normalized.billedAmount).toBe(1200);
+    expect(normalized.lineItems[0]?.allowedAmount).toBe(450);
+    expect(normalized.confidence).toBe(1);
+    expect(normalized.pageCount).toBe(1);
+    expect(normalized.documentMarkdown).toContain("Example bill text");
   });
 
   it("rejects malformed extraction responses", () => {

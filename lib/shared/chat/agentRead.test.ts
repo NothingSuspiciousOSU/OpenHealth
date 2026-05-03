@@ -79,6 +79,29 @@ describe("agent read request validation", () => {
     ).toThrow();
   });
 
+  it("rejects fields and relationships unsupported by the selected table", () => {
+    expect(() =>
+      agentAggregateDataRequestSchema.parse({
+        table: "procedureLineItems",
+        metrics: [{ op: "median", field: "allowedAmount" }],
+      }),
+    ).toThrow(/not aggregatable/);
+
+    expect(() =>
+      agentQueryDataRequestSchema.parse({
+        table: "procedureLineItems",
+        where: [{ field: "allowedAmount", op: "lte", value: 1000 }],
+      }),
+    ).toThrow(/not available/);
+
+    expect(() =>
+      agentQueryDataRequestSchema.parse({
+        table: "procedures",
+        include: ["procedure"],
+      }),
+    ).toThrow(/Relationship/);
+  });
+
   it("caps normalized limits", () => {
     expect(normalizeAgentReadLimit(undefined)).toBe(25);
     expect(normalizeAgentReadLimit(0)).toBe(1);

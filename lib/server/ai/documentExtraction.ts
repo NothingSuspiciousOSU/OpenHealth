@@ -2,9 +2,8 @@ import "server-only";
 
 import { generateText } from "ai";
 import {
-  BillDocumentContext,
   ExtractDocumentRequest,
-  parseExtractedBillContext,
+  normalizeExtractedBillContext,
 } from "@/lib/shared/chat/documentContext";
 import { getOpenRouterProvider, getPdfContextModelId } from "./openrouter";
 
@@ -25,8 +24,13 @@ export async function extractBillContextFromPdf(
           {
             type: "text",
             text: [
-              "Extract structured medical bill context from this PDF.",
-              "Return valid JSON only. Do not use markdown or code fences.",
+              "Extract structured medical bill context and full document text from this PDF.",
+              "Return valid JSON only. No markdown fences.",
+              "Extract all visible document information, not only bill summary fields.",
+              "Preserve labels, headings, table rows, CPT/HCPCS codes, dates, addresses, phone numbers, payer/provider names, totals, adjustments, payments, patient responsibility, claim identifiers, and footnotes when visible.",
+              "Use markdown tables for table-like document regions.",
+              "Separate pages with page numbers.",
+              "Use [illegible] for unreadable visible text and null for unknown structured scalar fields.",
               "Use this exact JSON shape:",
               "{",
               '  "summary": string,',
@@ -40,12 +44,18 @@ export async function extractBillContextFromPdf(
               '  "patientResponsibility": number | null,',
               '  "lineItems": [{ "cptCode": string | null, "description": string | null, "units": number | null, "billedAmount": number | null, "allowedAmount": number | null }],',
               '  "missingFields": string[],',
-              '  "confidence": number',
+              '  "confidence": number,',
+              '  "pageCount": number | null,',
+              '  "pages": [{ "pageNumber": number, "text": string }],',
+              '  "documentMarkdown": string,',
+              '  "extractionNotes": string[]',
               "}",
               "Return only facts visible in the document.",
               "Use null for unknown scalar fields and [] for missing line items.",
               "Amounts should be numbers in dollars, not cents.",
               "For line items, capture CPT/HCPCS codes, descriptions, units, billed amount, and allowed amount when visible.",
+              "For pages[].text and documentMarkdown, include the full extracted document in an LLM-friendly markdown format, not just the summary.",
+              "When document text is duplicated across pages, preserve it on the page where it appears.",
               "Set confidence from 0 to 1 based on legibility and field certainty.",
             ].join("\n"),
           },
@@ -58,10 +68,14 @@ export async function extractBillContextFromPdf(
         ],
       },
     ],
-    maxOutputTokens: 3000,
+    maxOutputTokens: 12000,
   });
 
-  return parseExtractedBillContext(normalizeBillContext(parseJsonText(result.text)));
+  return normalizeExtractedBillContext(parseJsonText(result.text), {
+    fileName: request.fileName,
+    mimeType: request.mimeType,
+    sizeBytes: request.sizeBytes,
+  });
 }
 
 function parseJsonText(text: string) {
@@ -83,69 +97,4 @@ function tryParseJson(text: string) {
   } catch {
     return null;
   }
-}
-
-function normalizeBillContext(value: unknown): BillDocumentContext {
-  const record = isRecord(value) ? value : {};
-  const lineItemsValue = firstDefined(record.lineItems, record.line_items);
-  const lineItems = Array.isArray(lineItemsValue) ? lineItemsValue : [];
-
-  return {
-    summary: stringValue(record.summary) ?? "Extracted medical bill context.",
-    providerName: stringValue(firstDefined(record.providerName, record.provider_name, record.provider)),
-    hospitalName: stringValue(firstDefined(record.hospitalName, record.hospital_name, record.hospital)),
-    insuranceProvider: stringValue(
-      firstDefined(record.insuranceProvider, record.insurance_provider, record.payer),
-    ),
-    insurancePlan: stringValue(firstDefined(record.insurancePlan, record.insurance_plan, record.plan)),
-    dateOfService: stringValue(firstDefined(record.dateOfService, record.date_of_service, record.service_date)),
-    billedAmount: numberValue(firstDefined(record.billedAmount, record.billed_amount)),
-    allowedAmount: numberValue(firstDefined(record.allowedAmount, record.allowed_amount)),
-    patientResponsibility: numberValue(
-      firstDefined(
-        record.patientResponsibility,
-        record.patient_responsibility,
-        record.patient_amount,
-      ),
-    ),
-    lineItems: lineItems.map((item) => {
-      const line = isRecord(item) ? item : {};
-      return {
-        cptCode: stringValue(firstDefined(line.cptCode, line.cpt_code, line.code)),
-        description: stringValue(firstDefined(line.description, line.serviceName, line.service_name)),
-        units: numberValue(line.units),
-        billedAmount: numberValue(firstDefined(line.billedAmount, line.billed_amount)),
-        allowedAmount: numberValue(firstDefined(line.allowedAmount, line.allowed_amount)),
-      };
-    }),
-    missingFields: Array.isArray(record.missingFields)
-      ? record.missingFields.filter((field): field is string => typeof field === "string")
-      : [],
-    confidence: clampConfidence(numberValue(record.confidence) ?? 0.5),
-  };
-}
-
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return value !== null && typeof value === "object" && !Array.isArray(value);
-}
-
-function firstDefined(...values: unknown[]) {
-  return values.find((value) => value !== undefined);
-}
-
-function stringValue(value: unknown) {
-  return typeof value === "string" && value.trim() ? value : null;
-}
-
-function numberValue(value: unknown) {
-  if (typeof value === "number" && Number.isFinite(value)) return value;
-  if (typeof value === "string" && value.trim()) {
-    const parsed = Number(value.replace(/[$,]/g, ""));
-    return Number.isFinite(parsed) ? parsed : null;
-  }
-  return null;
-}
-
-function clampConfidence(value: number) {
-  return Math.min(Math.max(value, 0), 1);
 }
