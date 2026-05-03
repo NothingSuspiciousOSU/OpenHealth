@@ -8,11 +8,11 @@ export interface DocumentData {
     fileTypes: FileType[];
 }
 
-const MAX_IMAGES = 8;
+const MAX_IMAGES = 4;
 
 /**
  * DocumentData must contain:
- * - At least 2 base64 encoded images of types: png, jpeg, jpg, heic
+ * - At least 1 base64 encoded image of type: png, jpeg, jpg, heic
  * 
  * All resources must be base64 encoded images. PDFs should be converted
  * to images on the frontend before creating DocumentData.
@@ -27,7 +27,7 @@ export function createDocumentDataFromImages(
 ): DocumentData {
 
     if (files.length > MAX_IMAGES) {
-        throw new Error('The maximum number of images/pages is 8.')
+        throw new Error(`The maximum number of images/pages is ${MAX_IMAGES}.`)
     }
 
     for (const file of files) {
