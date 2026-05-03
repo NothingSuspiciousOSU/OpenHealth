@@ -21,6 +21,19 @@ function SearchPageContent() {
   const [shareTooltip, setShareTooltip] = useState(false);
   const { profile } = useInsuranceProfile();
   const [sortBy, setSortBy] = useState("relevant"); // "relevant", "price_asc", "price_desc"
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   
   // Filter States — initialize from URL params for shareable links
   const [insuranceProv, setInsuranceProv] = useState(searchParams.get("provider") || "");
@@ -122,9 +135,10 @@ function SearchPageContent() {
         </div>
 
         <div className="flex flex-col gap-8 lg:flex-row">
-          {/* Filters Sidebar */}
-          <div className="w-full shrink-0 lg:w-64">
-            <div className="sticky top-6 rounded-lg border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          {/* Sidebar Area */}
+          <div className="w-full shrink-0 lg:w-64 space-y-6">
+            {/* Filters Box */}
+            <div className="rounded-lg border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
               <div className="mb-4 flex items-center justify-between">
                 <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Filters</h2>
                 <button onClick={handleResetFilters} className="text-xs text-blue-600 hover:text-blue-500 dark:text-blue-400">
@@ -200,6 +214,41 @@ function SearchPageContent() {
                       className="w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm outline-none focus:border-blue-500 dark:border-zinc-800 [color-scheme:light] dark:[color-scheme:dark]"
                     />
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Medical Definitions Box */}
+            <div className="rounded-lg border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+              <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Medical Terms</h2>
+              <div className="space-y-4 text-xs">
+                <div>
+                  <span className="font-semibold text-zinc-900 dark:text-zinc-100">Allowed Amount:</span>
+                  <p className="mt-0.5 text-zinc-600 dark:text-zinc-400">The maximum amount an insurance plan will pay for a covered service.</p>
+                </div>
+                <div>
+                  <span className="font-semibold text-zinc-900 dark:text-zinc-100">Billed Amount:</span>
+                  <p className="mt-0.5 text-zinc-600 dark:text-zinc-400">The original amount charged by the provider before any insurance adjustments.</p>
+                </div>
+                <div>
+                  <span className="font-semibold text-zinc-900 dark:text-zinc-100">Remaining Deductible:</span>
+                  <p className="mt-0.5 text-zinc-600 dark:text-zinc-400">What you still owe for covered services before insurance starts paying.</p>
+                </div>
+                <div>
+                  <span className="font-semibold text-zinc-900 dark:text-zinc-100">Co-Pay / Co-Insurance:</span>
+                  <p className="mt-0.5 text-zinc-600 dark:text-zinc-400">Your fixed fee or percentage share of the costs for a covered service.</p>
+                </div>
+                <div>
+                  <span className="font-semibold text-zinc-900 dark:text-zinc-100">Out-of-Pocket Max:</span>
+                  <p className="mt-0.5 text-zinc-600 dark:text-zinc-400">The most you have to pay before insurance covers 100% of allowed amounts.</p>
+                </div>
+                <div>
+                  <span className="font-semibold text-zinc-900 dark:text-zinc-100">CPT Codes:</span>
+                  <p className="mt-0.5 text-zinc-600 dark:text-zinc-400">Standardized numbers used to identify specific medical procedures.</p>
+                </div>
+                <div className="rounded border border-blue-100 bg-blue-50 p-2.5 dark:border-blue-900/30 dark:bg-blue-900/20">
+                  <span className="font-semibold text-blue-800 dark:text-blue-300">Estimated Price:</span>
+                  <p className="mt-1 text-blue-700 dark:text-blue-400">Our prediction of your cost based on your insurance plan profile, average allowed amounts, and typical structures.</p>
                 </div>
               </div>
             </div>
@@ -311,6 +360,18 @@ function SearchPageContent() {
         isOpen={isProfileModalOpen} 
         onClose={() => setIsProfileModalOpen(false)} 
       />
+
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Scroll to top"
+          className="fixed bottom-8 left-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-zinc-900 text-white shadow-lg transition hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
+        >
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+          </svg>
+        </button>
+      )}
     </div>
   );
 }
