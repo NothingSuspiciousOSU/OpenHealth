@@ -37,7 +37,7 @@ export default function Home() {
             Medical billing is purposefully confusing.
           </h1>
           <p className="mx-auto mt-4 max-w-lg animate-fade-in-up-delay-2 text-md leading-relaxed text-zinc-500 dark:text-zinc-400">
-            Nearly half of insured adults receive bills for care they thought
+            Nearly half of insured adults receive healthcare bills they thought
             should have been covered. We help people estimate costs, spot questionable
             charges, understand what they owe, and push back before they
             overpay.
@@ -53,50 +53,54 @@ export default function Home() {
               }}
               placeholder='Ex: "ACL Surgery" or Enter a Specific CPT'
             />
-            <div className="mt-3 flex items-center justify-center gap-3">
+            <div className="mt-4 flex w-full items-center justify-between gap-4 px-2 sm:px-4">
               <button
                 type="button"
                 onClick={handleSearch}
-                className="inline-flex items-center rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 dark:focus:ring-offset-zinc-950"
+                className="flex flex-1 items-center justify-center rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 dark:focus:ring-offset-zinc-950"
               >
                 Search
               </button>
               <span className="text-xs font-medium text-zinc-400 dark:text-zinc-500">
                 or
               </span>
-              <AddProcedureButton onClick={() => router.push('/upload')} />
+              <AddProcedureButton className="flex-1" onClick={() => router.push('/upload')} />
             </div>
           </div>
 
         </div>
       </section>
 
-      {/* ─── Trending ─── */}
-      <TrendingProcedures />
+      <div>
 
-      {/* ─── Stats ─── */}
-      <StatsBar
-        stats={[
-          {
-            value: "$160B-$530B",
-            label:
-              "Estimated loss every year to healthcare fraud, overpayments, and billing mistakes",
-          },
-          {
-            value: "80%",
-            label: "Medical bills with errors",
-          },
-          {
-            value: "1.5x",
-            label: "Higher odds of errors after emergency care",
-          },
-          {
-            value: "~76%",
-            label:
-              "Those who experience financial relief after disputing their bill",
-          },
-        ]}
-      />
+        {/* ─── Stats ─── */}
+        <StatsBar
+            stats={[
+            {
+                value: "$160B-$530B",
+                label:
+                "Estimated loss every year to healthcare fraud, overpayments, and billing mistakes",
+            },
+            {
+                value: "80%",
+                label: "Medical bills with errors",
+            },
+            {
+                value: "1.5x",
+                label: "Higher odds of errors after emergency care",
+            },
+            {
+                value: "~76%",
+                label:
+                "Those who experience financial relief after disputing their bill",
+            },
+            ]}
+        />
+      </div>
+
+      {/* ─── Trending ─── */}
+        <TrendingProcedures />
+      
     </div>
   );
 }

@@ -8,8 +8,6 @@ export function TrendingProcedures() {
   const router = useRouter();
   const trending = useQuery(api.search.getTrendingProcedures);
 
-  if (!trending || trending.length === 0) return null;
-
   const formatCurrency = (val: number) =>
     new Intl.NumberFormat("en-US", {
       style: "currency",
@@ -18,7 +16,8 @@ export function TrendingProcedures() {
     }).format(val);
 
   return (
-    <section className="w-full px-6 py-12">
+    trending && trending.length !== 0 ?
+    <section className="w-full px-6 py-12 animate-fade-in-up">
       <div className="mx-auto max-w-4xl">
         <h2 className="mb-2 text-center text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
           Most Reported Procedures
@@ -58,5 +57,11 @@ export function TrendingProcedures() {
         </div>
       </div>
     </section>
+    :
+    <div className="skeleton">
+      <div className="skeleton-title" />
+      <div className="skeleton-line" />
+      <div className="skeleton-line" />
+    </div>
   );
 }
