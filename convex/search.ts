@@ -20,7 +20,7 @@ export const searchProcedures = query({
     profilePlan: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
-    // 1. Match procedures by CPT code or text description
+    // Match procedures by CPT code or text description
     const isCptCode = /^\d{5}$/.test(args.q.trim());
     const limit = args.limit ?? 500; // Fetch up to 500 to sort
     const filters = {
@@ -36,7 +36,7 @@ export const searchProcedures = query({
       ? await findProceduresByCpt(ctx, { cptCode: args.q.trim(), limit, filters })
       : await findProceduresByDescription(ctx, { text: args.q, limit, filters });
 
-    // 3. Sort before limiting
+    // Sort before limiting
     if (args.sortBy === "price_asc") {
       filtered.sort((a, b) => Number(a.allowedAmount) - Number(b.allowedAmount));
     } else if (args.sortBy === "price_desc") {
@@ -51,11 +51,7 @@ export const searchProcedures = query({
       });
     }
 
-    // 4. Limit results for pagination (massive performance boost by skipping CPT fetches for unseen items)
-    const limited = filtered.slice(0, args.limit ?? 25);
-
-    // 5. Do not attach CPT codes to avoid expensive DB queries on load
-    return limited;
+    return filtered;
   },
 });
 
