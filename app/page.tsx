@@ -6,19 +6,25 @@ import { useState } from "react";
 
 import { AddUploadProcedureButton } from "./components/AddUploadProcedureButton";
 import { SearchBar } from "./components/SearchBar";
+import { StatsBar } from "./components/StatsBar";
 
 export default function Home() {
   const tasks = useQuery(api.tasks.get);
   const [query, setQuery] = useState("");
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-zinc-50 px-6 py-20 text-zinc-950 dark:bg-black dark:text-zinc-50">
-      <div className="w-full max-w-xl">
-        <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-          Convex + Next.js
-        </p>
+    <main className="flex min-h-screen flex-col items-center bg-zinc-50 py-20 text-zinc-950 dark:bg-black dark:text-zinc-50">
+      <div className="w-full max-w-xl px-6">
+
         <h1 className="mt-3 text-3xl font-semibold tracking-tight">
-          Task list
+          Your medical bill might not be right.
+          <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
+            Nearly half of insured adults receive 
+            bills for care they thought should have been covered, 
+            and 43% of adults say they've seen a medical bill they believed contained 
+            an error. We help patients spot questionable charges, 
+            understand what they owe, and push back before they overpay.
+          </p>
         </h1>
 
         <div className="mt-8 overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
@@ -65,6 +71,28 @@ export default function Home() {
           </div>
         </div>
       </div>
-      </main>
+      <div className="mt-10 w-full">
+        <StatsBar
+          stats={[
+            {
+              value: "$88 Billion",
+              label: "Estimated medical debt per year",
+            },
+            {
+              value: "80%",
+              label: "Medical bills with errors",
+            },
+            {
+              value: "1.5x",
+              label: "Higher odds of errors after emergency care",
+            },
+            {
+              value: "~76% hrs",
+              label: "Those who experience financial relief after reaching out",
+            },
+          ]}
+        />
+      </div>
+    </main>
   );
 }
