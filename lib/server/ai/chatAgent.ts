@@ -67,8 +67,19 @@ function buildInstructions(documentContext?: BillDocumentContext) {
     "When you use web results, cite the returned URLs in your answer.",
     "",
     "3. priceReasoningAgent",
-    "Use this to compute simple comparisons between the user's bill amounts and OpenHealth comparison rows.",
+    "Use this to compute statistical comparisons between the user's bill amounts and OpenHealth comparison rows.",
+    "Returns percentile, zScore, isOutlier, standard deviation, mean, median, quartiles, and range when comparison rows are available.",
     "Use it after collecting relevant comparison rows when the user asks whether a bill, allowed amount, or patient responsibility looks high, low, typical, or unusual.",
+    "Define an outlier as a zScore whose absolute value is greater than 2.",
+    "",
+    "4. reportProgress",
+    "Use this during bill audits to emit short progress messages for the audit trace UI.",
+    "Call it before major steps such as reading bill context, searching comparable procedures, broadening filters, comparing prices, or summarizing concerns.",
+    "",
+    "5. errorConfidenceAgent",
+    "Use this once at the end of a bill audit to produce an Error Confidence Score from 0 to 100.",
+    "Score guidelines: 0-20 likely correct, 21-40 minor concerns, 41-60 moderate concerns, 61-80 likely errors, 81-100 strong evidence.",
+    "Consider price distribution, zScore/outlier status, duplicate or unusual line items, billed-vs-allowed gaps, missing context, and comparison data quality.",
     "",
     "Always distinguish:",
     "- billed amount: what the provider charged",
@@ -88,7 +99,9 @@ function buildInstructions(documentContext?: BillDocumentContext) {
     "- If the user asks about prices, fairness, comparisons, or whether something looks high, use OpenHealth data unless the answer is only conceptual.",
     "- If the user asks what a CPT code, charge type, denial, adjustment, or billing term means, use webResearchAgent when current or external context would help.",
     "- If the user provides a bill amount and comparison rows are available, use priceReasoningAgent.",
-    "- Give a short progress update before tool use when helpful.",
+    "- During bill audits, call reportProgress before major steps so the user can see the audit trace.",
+    "- When priceReasoningAgent returns percentile, zScore, or isOutlier, report those values in plain language.",
+    "- At the end of a bill audit, call errorConfidenceAgent once and use its score and factors in the answer.",
     "- Do not call tools unnecessarily when the answer is already contained in the provided bill context.",
     "- If a tool is unavailable or returns an error, say what was unavailable and continue with the remaining evidence.",
     "- If OpenHealth returns no matches, say that no matching OpenHealth records were found and suggest broader filters.",
@@ -134,7 +147,7 @@ export function createOpenHealthChatAgent(documentContext?: BillDocumentContext)
   return new ToolLoopAgent({
     model: openrouter(getNemotronModelId()),
     instructions: buildInstructions(documentContext),
-    stopWhen: stepCountIs(20),
+    stopWhen: stepCountIs(40),
     tools: {
       webResearchAgent: tool({
         description:
@@ -199,7 +212,7 @@ export function createOpenHealthChatAgent(documentContext?: BillDocumentContext)
       }),
       priceReasoningAgent: tool({
         description:
-          "Compute simple price comparison statistics from bill amounts and OpenHealth comparison rows.",
+          "Compute price comparison statistics from bill amounts and OpenHealth comparison rows, including outlier detection.",
         inputSchema: z.object({
           billedAmount: z.number().nullable().optional(),
           allowedAmount: z.number().nullable().optional(),
@@ -225,6 +238,45 @@ export function createOpenHealthChatAgent(documentContext?: BillDocumentContext)
           };
         },
       }),
+      reportProgress: tool({
+        description:
+          "Emit a short, human-readable progress message for the audit trace UI.",
+        inputSchema: z.object({
+          message: z.string().min(1).max(200),
+        }),
+        execute: async ({ message }) => {
+          return { ok: true, message };
+        },
+      }),
+      errorConfidenceAgent: tool({
+        description:
+          "Produce a structured Error Confidence Score from 0 to 100 for a bill audit.",
+        inputSchema: z.object({
+          score: z.number().int().min(0).max(100),
+          summary: z.string().min(1).max(500),
+          factors: z
+            .array(
+              z.object({
+                factor: z.string().min(1),
+                impact: z.enum(["increases", "decreases", "neutral"]),
+                weight: z.number().min(0).max(1),
+                explanation: z.string().min(1),
+              }),
+            )
+            .min(1)
+            .max(12),
+        }),
+        execute: async ({ score, summary, factors }) => {
+          let level: string;
+          if (score <= 20) level = "likely_correct";
+          else if (score <= 40) level = "minor_concerns";
+          else if (score <= 60) level = "moderate_concerns";
+          else if (score <= 80) level = "likely_errors";
+          else level = "strong_evidence";
+
+          return { ok: true, score, level, summary, factors };
+        },
+      }),
     },
   });
 }
@@ -237,26 +289,48 @@ function summarizeAmount(
     .filter((value) => Number.isFinite(value))
     .sort((a, b) => a - b);
 
+  const med = median(sorted);
+  const avg = mean(sorted);
+  const standardDeviation = stdDev(sorted, avg);
+  const q1 = median(sorted.slice(0, Math.floor(sorted.length / 2)));
+  const q3 = median(sorted.slice(Math.ceil(sorted.length / 2)));
+  const iqr = q1 !== null && q3 !== null ? round2(q3 - q1) : null;
+
+  const base = {
+    comparisonCount: sorted.length,
+    min: sorted[0] ?? null,
+    median: med,
+    max: sorted[sorted.length - 1] ?? null,
+    mean: avg !== null ? round2(avg) : null,
+    stdDev: standardDeviation !== null ? round2(standardDeviation) : null,
+    q1,
+    q3,
+    iqr,
+  };
+
   if (amount === null || amount === undefined) {
     return {
       amount: null,
-      comparisonCount: sorted.length,
       percentile: null,
-      min: sorted[0] ?? null,
-      median: median(sorted),
-      max: sorted[sorted.length - 1] ?? null,
+      zScore: null,
+      isOutlier: false,
+      ...base,
     };
   }
 
   const lessOrEqual = sorted.filter((value) => value <= amount).length;
+  const zScore =
+    avg !== null && standardDeviation !== null && standardDeviation > 0
+      ? round2((amount - avg) / standardDeviation)
+      : null;
+
   return {
     amount,
-    comparisonCount: sorted.length,
     percentile:
       sorted.length === 0 ? null : Math.round((lessOrEqual / sorted.length) * 100),
-    min: sorted[0] ?? null,
-    median: median(sorted),
-    max: sorted[sorted.length - 1] ?? null,
+    zScore,
+    isOutlier: zScore !== null && Math.abs(zScore) > 2,
+    ...base,
   };
 }
 
@@ -264,5 +338,23 @@ function median(values: number[]) {
   if (values.length === 0) return null;
   const middle = Math.floor(values.length / 2);
   if (values.length % 2 === 1) return values[middle];
-  return (values[middle - 1] + values[middle]) / 2;
+  return round2((values[middle - 1] + values[middle]) / 2);
+}
+
+function mean(values: number[]) {
+  if (values.length === 0) return null;
+  return values.reduce((total, value) => total + value, 0) / values.length;
+}
+
+function stdDev(values: number[], average: number | null) {
+  if (values.length < 2 || average === null) return null;
+
+  const variance =
+    values.reduce((total, value) => total + (value - average) ** 2, 0) /
+    values.length;
+  return Math.sqrt(variance);
+}
+
+function round2(value: number) {
+  return Math.round(value * 100) / 100;
 }
