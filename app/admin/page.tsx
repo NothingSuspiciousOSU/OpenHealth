@@ -14,8 +14,10 @@ export default function AdminPage() {
   // Convex mutations
   const generateData = useMutation(api.mockData.generate);
   const clearData = useMutation(api.mockData.clearBatch);
+  const loadPrestored = useMutation(api.mockData.loadPrestored);
   const [isGenerating, setIsGenerating] = useState(false);
   const [isClearing, setIsClearing] = useState(false);
+  const [isLoadingPrestored, setIsLoadingPrestored] = useState(false);
   const [message, setMessage] = useState("");
 
   const handleLogin = async (e: React.FormEvent) => {
@@ -59,6 +61,19 @@ export default function AdminPage() {
       setMessage("Error clearing data.");
     } finally {
       setIsClearing(false);
+    }
+  };
+
+  const handleLoadPrestored = async () => {
+    setIsLoadingPrestored(true);
+    setMessage("Loading realistic prestored data...");
+    try {
+      await loadPrestored();
+      setMessage("Realistic data loaded successfully.");
+    } catch (err) {
+      setMessage("Error loading prestored data.");
+    } finally {
+      setIsLoadingPrestored(false);
     }
   };
 
@@ -115,25 +130,37 @@ export default function AdminPage() {
           </div>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-3">
           <div className="rounded-xl border border-zinc-100 bg-zinc-50 p-6 dark:border-zinc-800 dark:bg-zinc-900/50">
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">Seed Database</h3>
-            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">Populate the system with synthesized medical procedures and hospital records.</p>
+            <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">Synthetic</h3>
+            <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Generate 1000 randomized entries for stress testing.</p>
             <button
               onClick={handleGenerate}
-              disabled={isGenerating || isClearing}
-              className="mt-6 w-full rounded-lg bg-sky-600 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-500 disabled:opacity-50"
+              disabled={isGenerating || isClearing || isLoadingPrestored}
+              className="mt-6 w-full rounded-lg bg-zinc-900 py-2.5 text-sm font-semibold text-white transition hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white disabled:opacity-50"
             >
               {isGenerating ? "Processing..." : "Generate Mock Data"}
             </button>
           </div>
 
+          <div className="rounded-xl border border-sky-100 bg-sky-50/30 p-6 dark:border-sky-900/20 dark:bg-sky-900/10">
+            <h3 className="text-lg font-semibold text-sky-900 dark:text-sky-100">Realistic</h3>
+            <p className="mt-2 text-xs text-sky-700/70 dark:text-sky-400/70">Load 1000 researched hospital and insurance entries.</p>
+            <button
+              onClick={handleLoadPrestored}
+              disabled={isGenerating || isClearing || isLoadingPrestored}
+              className="mt-6 w-full rounded-lg bg-sky-600 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-500 disabled:opacity-50"
+            >
+              {isLoadingPrestored ? "Loading..." : "Load Prestored Data"}
+            </button>
+          </div>
+
           <div className="rounded-xl border border-red-100 bg-red-50/30 p-6 dark:border-red-900/20 dark:bg-red-900/10">
-            <h3 className="text-lg font-semibold text-red-900 dark:text-red-100">Danger Zone</h3>
-            <p className="mt-2 text-sm text-red-700/70 dark:text-red-400/70">Permanently delete all procedure records and line items from the database.</p>
+            <h3 className="text-lg font-semibold text-red-900 dark:text-red-100">Cleanup</h3>
+            <p className="mt-2 text-xs text-red-700/70 dark:text-red-400/70">Wipe all procedure and line item records from the database.</p>
             <button
               onClick={handleClear}
-              disabled={isGenerating || isClearing}
+              disabled={isGenerating || isClearing || isLoadingPrestored}
               className="mt-6 w-full rounded-lg bg-red-600 py-2.5 text-sm font-semibold text-white transition hover:bg-red-500 disabled:opacity-50"
             >
               {isClearing ? "Clearing..." : "Purge All Data"}
