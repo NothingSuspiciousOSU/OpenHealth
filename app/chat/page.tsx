@@ -566,25 +566,255 @@ function MessageParts({
   assistant: boolean;
   parts: RenderablePart[];
 }) {
+  // Group consecutive reportProgress tool parts into trace blocks
+  const grouped: Array<{ type: "text" | "trace" | "tool"; items: RenderablePart[] }> = [];
+
+  for (const part of parts) {
+    const toolName = getToolName(part);
+
+    if (toolName === "reportProgress") {
+      const last = grouped[grouped.length - 1];
+      if (last?.type === "trace") {
+        last.items.push(part);
+      } else {
+        grouped.push({ type: "trace", items: [part] });
+      }
+    } else if (typeof part.type === "string" && part.type.startsWith("tool-")) {
+      grouped.push({ type: "tool", items: [part] });
+    } else {
+      grouped.push({ type: "text", items: [part] });
+    }
+  }
+
   return (
     <div className="space-y-3">
-      {parts.map((part, index) => {
-        if (part.type === "text" && typeof part.text === "string") {
-          return assistant ? (
-            <AssistantMarkdown key={index}>{part.text}</AssistantMarkdown>
-          ) : (
-            <p key={index} className="whitespace-pre-wrap text-sm leading-6">
-              {part.text}
-            </p>
-          );
+      {grouped.map((group, groupIndex) => {
+        if (group.type === "trace") {
+          return <TraceBlock key={groupIndex} steps={group.items} />;
         }
 
-        if (typeof part.type === "string" && part.type.startsWith("tool-")) {
-          return <ToolPart key={index} part={part} />;
+        if (group.type === "tool") {
+          const part = group.items[0];
+          const toolName = getToolName(part);
+
+          if (toolName === "errorConfidenceAgent") {
+            return <ErrorConfidenceCard key={groupIndex} part={part} />;
+          }
+          return <CollapsibleToolCard key={groupIndex} part={part} />;
         }
 
-        return null;
+        // text
+        return group.items.map((part, i) => {
+          if (part.type === "text" && typeof part.text === "string") {
+            return assistant ? (
+              <AssistantMarkdown key={`${groupIndex}-${i}`}>{part.text}</AssistantMarkdown>
+            ) : (
+              <p key={`${groupIndex}-${i}`} className="whitespace-pre-wrap text-sm leading-6">
+                {part.text}
+              </p>
+            );
+          }
+          return null;
+        });
       })}
+    </div>
+  );
+}
+
+function getToolName(part: RenderablePart): string | null {
+  const raw = String(part.type ?? "");
+  if (!raw.startsWith("tool-")) return null;
+  // tool-invocation or tool-result both carry the tool name in input/output
+  // The type is like "tool-invocation" but the tool name is on the part itself
+  // We detect the tool from the input shape
+  const input = part.input as Record<string, unknown> | undefined;
+  if (input?.message !== undefined && Object.keys(input).length <= 1) return "reportProgress";
+  if (input?.score !== undefined && input?.factors !== undefined) return "errorConfidenceAgent";
+  // Check output too for completed parts
+  const output = part.output as Record<string, unknown> | undefined;
+  if (output?.message !== undefined && output?.ok === true && Object.keys(output).length <= 2) return "reportProgress";
+  if (output?.score !== undefined && output?.level !== undefined) return "errorConfidenceAgent";
+  // Fall back to generic tool name from the type string
+  return raw.replace("tool-", "");
+}
+
+function TraceBlock({ steps }: { steps: RenderablePart[] }) {
+  return (
+    <div className="rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 dark:border-zinc-800 dark:bg-zinc-900">
+      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
+        Audit Trace
+      </p>
+      <div className="space-y-1.5">
+        {steps.map((step, i) => {
+          const done = step.state === "output-available";
+          const input = step.input as Record<string, unknown> | undefined;
+          const output = step.output as Record<string, unknown> | undefined;
+          const message =
+            (typeof output?.message === "string" ? output.message : null) ??
+            (typeof input?.message === "string" ? input.message : null) ??
+            "Working…";
+
+          return (
+            <div key={i} className="flex items-start gap-2 text-sm leading-6">
+              {done ? (
+                <span className="mt-0.5 shrink-0 text-emerald-500">✓</span>
+              ) : (
+                <span className="mt-0.5 shrink-0 animate-spin text-sky-500">⟳</span>
+              )}
+              <span
+                className={
+                  done
+                    ? "text-zinc-700 dark:text-zinc-300"
+                    : "text-zinc-500 dark:text-zinc-400"
+                }
+              >
+                {message}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function ErrorConfidenceCard({ part }: { part: RenderablePart }) {
+  const [expanded, setExpanded] = useState(false);
+  const output = part.output as {
+    score?: number;
+    level?: string;
+    summary?: string;
+    factors?: Array<{
+      factor: string;
+      impact: string;
+      weight: number;
+      explanation: string;
+    }>;
+  } | undefined;
+  const pending = part.state !== "output-available";
+
+  if (pending || !output?.score) {
+    return (
+      <div className="rounded-lg border border-zinc-200 bg-zinc-50 p-3 dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="flex items-center gap-2 text-sm text-zinc-500">
+          <span className="animate-spin">⟳</span>
+          Computing error confidence score…
+        </div>
+      </div>
+    );
+  }
+
+  const score = output.score ?? 0;
+  const level = output.level ?? "unknown";
+  const summary = output.summary ?? "";
+  const factors = output.factors ?? [];
+
+  const colorMap: Record<string, { bg: string; border: string; text: string; ring: string }> = {
+    likely_correct: { bg: "bg-emerald-50 dark:bg-emerald-950", border: "border-emerald-200 dark:border-emerald-800", text: "text-emerald-700 dark:text-emerald-300", ring: "ring-emerald-500" },
+    minor_concerns: { bg: "bg-yellow-50 dark:bg-yellow-950", border: "border-yellow-200 dark:border-yellow-800", text: "text-yellow-700 dark:text-yellow-300", ring: "ring-yellow-500" },
+    moderate_concerns: { bg: "bg-amber-50 dark:bg-amber-950", border: "border-amber-200 dark:border-amber-800", text: "text-amber-700 dark:text-amber-300", ring: "ring-amber-500" },
+    likely_errors: { bg: "bg-orange-50 dark:bg-orange-950", border: "border-orange-200 dark:border-orange-800", text: "text-orange-700 dark:text-orange-300", ring: "ring-orange-500" },
+    strong_evidence: { bg: "bg-red-50 dark:bg-red-950", border: "border-red-200 dark:border-red-800", text: "text-red-700 dark:text-red-300", ring: "ring-red-500" },
+  };
+  const colors = colorMap[level] ?? colorMap.moderate_concerns;
+  const levelLabel = level.replace(/_/g, " ").replace(/^./, (c) => c.toUpperCase());
+
+  return (
+    <div className={`rounded-lg border ${colors.border} ${colors.bg} p-4`}>
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <div
+            className={`flex h-12 w-12 items-center justify-center rounded-full ring-2 ${colors.ring} bg-white dark:bg-zinc-950`}
+          >
+            <span className={`text-lg font-bold ${colors.text}`}>{score}</span>
+          </div>
+          <div>
+            <p className={`text-sm font-semibold ${colors.text}`}>
+              Error Confidence: {levelLabel}
+            </p>
+            <p className="mt-0.5 text-xs text-zinc-600 dark:text-zinc-400">
+              {summary}
+            </p>
+          </div>
+        </div>
+        {factors.length > 0 && (
+          <button
+            type="button"
+            onClick={() => setExpanded(!expanded)}
+            className="shrink-0 rounded-md px-2 py-1 text-xs font-medium text-zinc-500 hover:bg-white/60 dark:hover:bg-zinc-800/60"
+          >
+            {expanded ? "Hide" : "Details"}
+          </button>
+        )}
+      </div>
+      {expanded && factors.length > 0 && (
+        <div className="mt-3 space-y-2 border-t border-zinc-200/60 pt-3 dark:border-zinc-700/60">
+          {factors.map((f, i) => (
+            <div key={i} className="flex items-start gap-2 text-xs">
+              <span className="mt-0.5 shrink-0">
+                {f.impact === "increases" ? "🔴" : f.impact === "decreases" ? "🟢" : "⚪"}
+              </span>
+              <div>
+                <span className="font-medium text-zinc-800 dark:text-zinc-200">
+                  {f.factor}
+                </span>
+                <span className="text-zinc-500 dark:text-zinc-400">
+                  {" — "}{f.explanation}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function CollapsibleToolCard({ part }: { part: RenderablePart }) {
+  const [expanded, setExpanded] = useState(false);
+  const label = String(part.type).replace("tool-", "");
+  const done = part.state === "output-available";
+  const running = part.state === "input-available";
+
+  const friendlyNames: Record<string, string> = {
+    convexDatabaseAgent: "OpenHealth Database",
+    webResearchAgent: "Web Research",
+    priceReasoningAgent: "Price Analysis",
+  };
+  const displayName = friendlyNames[label] ?? formatToolName(label);
+
+  return (
+    <div className="rounded-lg border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900">
+      <button
+        type="button"
+        onClick={() => setExpanded(!expanded)}
+        className="flex w-full items-center justify-between gap-3 p-3 text-left"
+      >
+        <div className="flex items-center gap-2">
+          <span className="text-xs">
+            {done ? (
+              <span className="text-emerald-500">✓</span>
+            ) : running ? (
+              <span className="animate-spin text-sky-500">⟳</span>
+            ) : (
+              <span className="text-zinc-400">○</span>
+            )}
+          </span>
+          <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+            {displayName}
+          </p>
+        </div>
+        <span className="text-xs text-zinc-400">
+          {expanded ? "▾" : "▸"}
+        </span>
+      </button>
+      {expanded && part.output !== undefined && (
+        <div className="border-t border-zinc-200 dark:border-zinc-800">
+          <pre className="max-h-44 overflow-auto whitespace-pre-wrap p-3 text-xs leading-5 text-zinc-600 dark:text-zinc-300">
+            {JSON.stringify(part.output, null, 2)}
+          </pre>
+        </div>
+      )}
     </div>
   );
 }
@@ -707,32 +937,6 @@ const markdownComponents: Components = {
     );
   },
 };
-
-function ToolPart({ part }: { part: RenderablePart }) {
-  const label = String(part.type).replace("tool-", "");
-  const status =
-    part.state === "output-available"
-      ? "Done"
-      : part.state === "input-available"
-        ? "Running"
-        : "Pending";
-
-  return (
-    <div className="rounded-lg border border-zinc-200 bg-zinc-50 p-3 text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
-      <div className="flex items-center justify-between gap-3">
-        <p className="text-sm font-semibold">{formatToolName(label)}</p>
-        <span className="rounded-md bg-white px-2 py-1 text-xs font-medium text-zinc-600 dark:bg-zinc-950 dark:text-zinc-300">
-          {status}
-        </span>
-      </div>
-      {part.output !== undefined && (
-        <pre className="mt-3 max-h-44 overflow-auto whitespace-pre-wrap rounded-md bg-white p-3 text-xs leading-5 text-zinc-600 dark:bg-zinc-950 dark:text-zinc-300">
-          {JSON.stringify(part.output, null, 2)}
-        </pre>
-      )}
-    </div>
-  );
-}
 
 function ActivityBar({ label }: { label: string }) {
   return (

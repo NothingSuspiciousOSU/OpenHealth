@@ -11,6 +11,36 @@ const chatRequestSchema = z.object({
   documentContext: billDocumentContextSchema.optional(),
 });
 
+function sanitizeMessages(messages: any[]) {
+  if (!Array.isArray(messages)) return messages;
+  return messages.map((msg) => {
+    if (!msg || typeof msg !== "object") return msg;
+    if (Array.isArray(msg.parts)) {
+      // 1. Filter out errored tool parts because they lack a valid `input` to pass strict Zod validation
+      msg.parts = msg.parts.filter((part: any) => {
+        if (part && typeof part === "object" && typeof part.type === "string" && part.type.startsWith("tool-")) {
+          if (part.state === "output-error") return false;
+        }
+        return true;
+      });
+
+      // 2. Scrub remaining parts to match strict `ToolUIPart` schema
+      msg.parts = msg.parts.map((part: any) => {
+        if (part && typeof part === "object" && typeof part.type === "string" && part.type.startsWith("tool-")) {
+          const cleanPart = { ...part };
+          delete cleanPart.approval;
+          if (!cleanPart.toolName) {
+            cleanPart.toolName = cleanPart.type.replace("tool-", "");
+          }
+          return cleanPart;
+        }
+        return part;
+      });
+    }
+    return msg;
+  });
+}
+
 export async function POST(request: Request) {
   try {
     const body = chatRequestSchema.parse(await request.json());
@@ -18,7 +48,7 @@ export async function POST(request: Request) {
 
     return createAgentUIStreamResponse({
       agent,
-      uiMessages: body.messages,
+      uiMessages: sanitizeMessages(body.messages),
       abortSignal: request.signal,
       timeout: { totalMs: 300_000 },
     });
