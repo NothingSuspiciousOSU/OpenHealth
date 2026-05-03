@@ -38,7 +38,7 @@ export const generate = mutation({
       const noise = (Math.random() * 0.4) - 0.2; // +/- 20%
       const billedCost = BigInt(Math.floor(baseCost * (1 + noise)));
       const allowedCost = BigInt(Math.floor(Number(billedCost) * (0.4 + Math.random() * 0.3))); // 40-70% allowed
-      
+
       const dateOfProcedure = BigInt(Date.now() - Math.floor(Math.random() * 10000000000)); // Past ~115 days
 
       const procedureId = await ctx.db.insert("procedures", {
@@ -73,23 +73,8 @@ export const generate = mutation({
           dateOfProcedure,
         });
       }
-
-      // Generate a mock embedding vector (1536 dims)
-      const embedding = Array.from({ length: 1536 }, () => (Math.random() * 2) - 1);
-      
-      const embeddingId = await ctx.db.insert("procedureEmbeddings", {
-        procedureId,
-        text: procTemplate.desc,
-        embedding,
-        hospitalName: hospital.name,
-        city: hospital.city,
-        state: hospital.state,
-        insuranceProviderName: insurance.provider,
-        insurancePlanName: insurance.plan,
-        dateOfProcedure,
-      });
-
-      await ctx.db.patch(procedureId, { embeddingId });
     }
+
+    return { success: true };
   },
 });
