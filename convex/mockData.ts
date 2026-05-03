@@ -5,7 +5,26 @@ import {
   generatedProviders,
   generatedProceduresData,
 } from "./mockDataSets";
-import { prestoredData } from "./prestoredData";
+import realisticProcedures from "./data/realisticProcedures.json";
+
+type RealisticProcedure = {
+  procedureDescription: string;
+  dateOfProcedure: number;
+  hospitalName: string;
+  city: string;
+  state: string;
+  insuranceProvider: string;
+  insurancePlan: string;
+  billedAmount: number;
+  allowedAmount: number;
+  lineItems: Array<{
+    cptCode: string;
+    serviceName: string;
+    units: number;
+    costPerUnit: number;
+    providerName: string;
+  }>;
+};
 
 /**
  * Delete a batch of data from both tables.
@@ -100,11 +119,13 @@ export const generate = mutation({
 });
 
 /**
- * Load realistic prestored data from prestoredData.ts
+ * Load realistic prestored data from the JSON fixture.
  */
 export const loadPrestored = mutation({
   args: {},
   handler: async (ctx) => {
+    const prestoredData = realisticProcedures as RealisticProcedure[];
+
     for (const entry of prestoredData) {
       const dateOfProcedure = BigInt(entry.dateOfProcedure);
       const billedAmount = BigInt(entry.billedAmount);

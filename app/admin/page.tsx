@@ -40,7 +40,7 @@ export default function AdminPage() {
     try {
       await generateData();
       setMessage("Seed data generated successfully.");
-    } catch (err) {
+    } catch {
       setMessage("Error generating data.");
     } finally {
       setIsGenerating(false);
@@ -57,7 +57,7 @@ export default function AdminPage() {
         remaining = res.remaining;
       }
       setMessage("Database cleared successfully.");
-    } catch (err) {
+    } catch {
       setMessage("Error clearing data.");
     } finally {
       setIsClearing(false);
@@ -70,7 +70,7 @@ export default function AdminPage() {
     try {
       await loadPrestored();
       setMessage("Realistic data loaded successfully.");
-    } catch (err) {
+    } catch {
       setMessage("Error loading prestored data.");
     } finally {
       setIsLoadingPrestored(false);
@@ -145,7 +145,7 @@ export default function AdminPage() {
 
           <div className="rounded-xl border border-sky-100 bg-sky-50/30 p-6 dark:border-sky-900/20 dark:bg-sky-900/10">
             <h3 className="text-lg font-semibold text-sky-900 dark:text-sky-100">Realistic</h3>
-            <p className="mt-2 text-xs text-sky-700/70 dark:text-sky-400/70">Load 1000 researched hospital and insurance entries.</p>
+            <p className="mt-2 text-xs text-sky-700/70 dark:text-sky-400/70">Load 250 researched hospital and insurance entries.</p>
             <button
               onClick={handleLoadPrestored}
               disabled={isGenerating || isClearing || isLoadingPrestored}

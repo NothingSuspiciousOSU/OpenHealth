@@ -5,7 +5,7 @@ import { transformOpenRouterRequestBody } from "./openrouterRequest";
 
 const OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1";
 const DEFAULT_PDF_CONTEXT_MODEL = "google/gemini-3.1-flash-lite-preview";
-const DEFAULT_NEMOTRON_MODEL = "nvidia/nemotron-3-super-120b-a12b";
+const DEFAULT_NEMOTRON_MODEL = "nvidia/nemotron-3-super-120b-a12b:nitro";
 
 let openRouterProvider: ReturnType<typeof createOpenAICompatible> | null = null;
 

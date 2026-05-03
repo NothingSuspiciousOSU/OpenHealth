@@ -15,17 +15,39 @@ describe("transformOpenRouterRequestBody", () => {
     });
   });
 
-  it("preserves tool_choice for other models", () => {
+  it("preserves tool_choice for Nemotron 3 Super Nitro requests", () => {
     const body = transformOpenRouterRequestBody({
-      model: "nvidia/nemotron-3-super-120b-a12b",
+      model: "nvidia/nemotron-3-super-120b-a12b:nitro",
       tools: [{ type: "function" }],
       tool_choice: "auto",
     });
 
     expect(body).toEqual({
-      model: "nvidia/nemotron-3-super-120b-a12b",
+      model: "nvidia/nemotron-3-super-120b-a12b:nitro",
       tools: [{ type: "function" }],
       tool_choice: "auto",
+      provider: {
+        sort: "throughput",
+        allow_fallbacks: false,
+      },
+    });
+  });
+
+  it("routes Nitro requests only to the fastest provider", () => {
+    const body = transformOpenRouterRequestBody({
+      model: "nvidia/nemotron-3-super-120b-a12b:nitro",
+      provider: {
+        require_parameters: true,
+      },
+    });
+
+    expect(body).toEqual({
+      model: "nvidia/nemotron-3-super-120b-a12b:nitro",
+      provider: {
+        require_parameters: true,
+        sort: "throughput",
+        allow_fallbacks: false,
+      },
     });
   });
 });
