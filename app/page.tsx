@@ -37,7 +37,7 @@ export default function Home() {
             Medical billing is purposefully confusing.
           </h1>
           <p className="mx-auto mt-4 max-w-lg animate-fade-in-up-delay-2 text-md leading-relaxed text-zinc-500 dark:text-zinc-400">
-            Nearly half of insured adults receive bills for care they thought
+            Nearly half of insured adults receive healthcare bills they thought
             should have been covered. We help people estimate costs, spot questionable
             charges, understand what they owe, and push back before they
             overpay.
