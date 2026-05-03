@@ -96,7 +96,7 @@ export function SearchResultItem({ procedure }: { procedure: Procedure }) {
           </div>
           {isMatchedProfile && (
             <div className="mt-1 flex flex-col items-start text-xs sm:items-end">
-              <span className="font-bold text-blue-600 dark:text-blue-400">✨ Your Estimated Price: {estimatedCost}</span>
+              <span className="whitespace-nowrap font-bold text-blue-600 dark:text-blue-400">✨ Est. Price: {estimatedCost}</span>
             </div>
           )}
         </div>

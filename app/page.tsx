@@ -1,6 +1,5 @@
 "use client";
 
-
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -8,6 +7,7 @@ import { HeroIcon } from "./components/HeroIcon";
 import { SearchBar } from "./components/SearchBar";
 import { StatsBar } from "./components/StatsBar";
 import { AddUploadProcedureButton } from "./components/AddUploadProcedureButton";
+import { TrendingProcedures } from "./components/TrendingProcedures";
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -20,7 +20,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
+    <div className="flex min-h-[calc(100vh-3.5rem)] flex-col items-center bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
 
       {/* ─── Hero ─── */}
       <section className="flex w-full flex-col items-center px-6 pt-24 pb-12">
@@ -65,11 +65,12 @@ export default function Home() {
               </span>
               <AddUploadProcedureButton onClick={() => {}} />
             </div>
-            
-
           </div>
         </div>
       </section>
+
+      {/* ─── Trending ─── */}
+      <TrendingProcedures />
 
       {/* ─── Stats ─── */}
       <StatsBar
@@ -94,6 +95,6 @@ export default function Home() {
           },
         ]}
       />
-    </main>
+    </div>
   );
 }

@@ -23,7 +23,7 @@ export const searchProcedures = query({
 
     const matched = isCptCode
       ? await findProceduresByCpt(ctx, { cptCode: args.q.trim() })
-      : await findProceduresByDescription(ctx, { text: args.q });
+      : await findProceduresByDescription(ctx, { text: args.q, limit: 500 });
 
     // 2. Apply filters in-memory
     const filtered = applyProcedureFilters(matched, {
@@ -36,7 +36,7 @@ export const searchProcedures = query({
     });
 
     // 3. Limit results to keep reads bounded
-    const limited = filtered.slice(0, 50);
+    const limited = filtered.slice(0, 500);
 
     // 4. Attach CPT codes
     return attachCptCodes(ctx, limited);
@@ -103,3 +103,78 @@ export const getFilterOptions = query({
     };
   },
 });
+
+export const getSuggestions = query({
+  args: {
+    q: v.string(),
+  },
+  handler: async (ctx, args) => {
+    const q = args.q.trim().toLowerCase();
+    if (!q) return { procedures: [], cptCodes: [] };
+
+    // Procedure description suggestions
+    const allProcs = await ctx.db.query("procedures").take(500);
+    const seenDescs = new Set<string>();
+    const procedureSuggestions: string[] = [];
+    for (const p of allProcs) {
+      const desc = p.procedureDescription;
+      if (!seenDescs.has(desc) && desc.toLowerCase().includes(q)) {
+        seenDescs.add(desc);
+        procedureSuggestions.push(desc);
+        if (procedureSuggestions.length >= 6) break;
+      }
+    }
+
+    // CPT code suggestions
+    const allLineItems = await ctx.db.query("procedureLineItems").take(500);
+    const seenCpts = new Set<string>();
+    const cptSuggestions: { code: string; name: string }[] = [];
+    for (const li of allLineItems) {
+      if (
+        !seenCpts.has(li.cptCode) &&
+        (li.cptCode.startsWith(q) ||
+          (li.serviceName && li.serviceName.toLowerCase().includes(q)))
+      ) {
+        seenCpts.add(li.cptCode);
+        cptSuggestions.push({
+          code: li.cptCode,
+          name: li.serviceName || li.cptCode,
+        });
+        if (cptSuggestions.length >= 4) break;
+      }
+    }
+
+    return { procedures: procedureSuggestions, cptCodes: cptSuggestions };
+  },
+});
+
+export const getTrendingProcedures = query({
+  args: {},
+  handler: async (ctx) => {
+    const procedures = await ctx.db.query("procedures").take(500);
+
+    const grouped: Record<
+      string,
+      { count: number; totalCost: number }
+    > = {};
+
+    for (const p of procedures) {
+      const desc = p.procedureDescription;
+      if (!grouped[desc]) grouped[desc] = { count: 0, totalCost: 0 };
+      grouped[desc].count += 1;
+      grouped[desc].totalCost += Number(p.allowedAmount);
+    }
+
+    const trending = Object.entries(grouped)
+      .map(([description, data]) => ({
+        description,
+        count: data.count,
+        avgCost: Math.round(data.totalCost / data.count),
+      }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 6);
+
+    return trending;
+  },
+});
+

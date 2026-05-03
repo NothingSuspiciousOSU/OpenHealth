@@ -65,7 +65,7 @@ export function InsuranceProfileModal({ isOpen, onClose }: InsuranceProfileModal
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/50 p-4 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/50 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="insurance-modal-title">
       <div className="relative w-full max-w-lg rounded-xl border border-zinc-200 bg-white p-6 shadow-xl dark:border-zinc-800 dark:bg-zinc-950">
         <button
           onClick={onClose}
@@ -74,7 +74,7 @@ export function InsuranceProfileModal({ isOpen, onClose }: InsuranceProfileModal
           ✕
         </button>
 
-        <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-50">
+        <h2 id="insurance-modal-title" className="text-xl font-bold text-zinc-900 dark:text-zinc-50">
           My Insurance Profile
         </h2>
         <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
