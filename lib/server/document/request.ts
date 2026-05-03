@@ -71,6 +71,7 @@ export async function parseDocumentStructure(data: DocumentData): Promise<Parsed
             throw err;
         }
     }));
+    console.log(`Uploaded uploadthing files: ${uploadedFiles.join(', ')}`);
     
     try {
         // Build content string with text and embedded image tags
@@ -142,17 +143,7 @@ export async function parseDocumentStructure(data: DocumentData): Promise<Parsed
             .then(async ({ data }) => {
                 // Clean up uploaded files after model responds
                 try {
-                    const keysToDelete = uploadedFiles
-                        .map(fileUrl => {
-                            const urlObj = new URL(fileUrl);
-                            return urlObj.pathname.split('/').pop();
-                        })
-                        .filter((key): key is string => !!key);
-                    
-                    if (keysToDelete.length > 0) {
-                        await utApi.deleteFiles(keysToDelete);
-                        console.log(`Deleted uploadthing files: ${keysToDelete.join(', ')}`);
-                    }
+                    cleanUpUtFiles(uploadedFiles)
                 } catch (err) {
                     console.error('Failed to delete uploadthing files:', err);
                     // Don't reject - we still got the result
@@ -167,20 +158,25 @@ export async function parseDocumentStructure(data: DocumentData): Promise<Parsed
     } catch (err) {
         // If model call fails, still attempt cleanup
         try {
-            const keysToDelete = uploadedFiles
-                .map(fileUrl => {
-                    const urlObj = new URL(fileUrl);
-                    return urlObj.pathname.split('/').pop();
-                })
-                .filter((key): key is string => !!key);
-            
-            if (keysToDelete.length > 0) {
-                await utApi.deleteFiles(keysToDelete);
-            }
+            cleanUpUtFiles(uploadedFiles)
         } catch (cleanupErr) {
             console.error('Cleanup error:', cleanupErr);
         }
         throw err;
+    }
+}
+
+async function cleanUpUtFiles(uploadedFiles: string[]) {
+    const keysToDelete = uploadedFiles
+        .map(fileUrl => {
+            const urlObj = new URL(fileUrl);
+            return urlObj.pathname.split('/').pop();
+        })
+        .filter((key): key is string => !!key);
+    
+    if (keysToDelete.length > 0) {
+        await utApi.deleteFiles(keysToDelete);
+        console.log(`Deleted uploadthing files: ${keysToDelete.join(', ')}`);
     }
 }
 
