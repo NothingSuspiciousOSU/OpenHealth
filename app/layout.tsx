@@ -20,6 +20,8 @@ export const metadata: Metadata = {
     "Americans lose $160–530 billion every year to healthcare fraud, overpayments, and billing mistakes. OpenHealth helps patients find errors, understand charges, and push back.",
 };
 
+import { ToastProvider } from "./components/Toast";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,7 +34,9 @@ export default function RootLayout({
     >
       <body className="h-full">
         <ConvexClientProvider>
-          <AppShell>{children}</AppShell>
+          <ToastProvider>
+            <AppShell>{children}</AppShell>
+          </ToastProvider>
         </ConvexClientProvider>
       </body>
     </html>

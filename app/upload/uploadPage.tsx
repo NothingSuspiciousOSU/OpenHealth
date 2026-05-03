@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import { useMutation, useQuery } from 'convex/react';
 import { api } from '@/convex/_generated/api';
 import { createDocumentDataFromImages } from '@/lib/shared/DocumentData';
+import confetti from 'canvas-confetti';
 import { parseFilesToUploadImages, validateUploadSelection } from '@/lib/shared/documentUploadClient';
 import { DocumentUploadSection } from './components/DocumentUploadSection';
 import { AutocompleteInput } from './components/AutocompleteInput';
@@ -333,6 +334,12 @@ export function UploadPage() {
             });
 
             setSuccessDBUpdate(true);
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#0ea5e9', '#3b82f6', '#2dd4bf']
+            });
             setSelectedFiles([]);
             setFormData(createInitialFormData());
             setLineItems(createInitialLineItems());

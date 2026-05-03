@@ -6,7 +6,7 @@ type Procedure = {
   insurance: { providerName: string };
 };
 
-export function CostStats({ results }: { results: Procedure[] }) {
+export function CostStats({ results, loading }: { results: Procedure[], loading?: boolean }) {
   const { barData, scatterData, maxCost } = useMemo(() => {
     if (!results || results.length === 0) return { barData: [], scatterData: {}, maxCost: 0 };
 
@@ -33,6 +33,35 @@ export function CostStats({ results }: { results: Procedure[] }) {
 
     return { barData: bars, scatterData: providerMap, maxCost: globalMaxCost };
   }, [results]);
+
+  if (loading) {
+    return (
+      <div className="mb-8 grid gap-8 lg:grid-cols-2">
+        <div className="flex flex-col rounded-xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <div className="mb-4 h-5 w-32 animate-pulse rounded bg-zinc-200 dark:bg-zinc-800" />
+          <div className="space-y-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="flex items-center gap-4">
+                <div className="h-3 w-20 animate-pulse rounded bg-zinc-100 dark:bg-zinc-900" />
+                <div className="h-6 flex-1 animate-pulse rounded bg-zinc-100 dark:bg-zinc-900" />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col rounded-xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <div className="mb-4 h-5 w-40 animate-pulse rounded bg-zinc-200 dark:bg-zinc-800" />
+          <div className="space-y-5">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="flex items-center gap-4">
+                <div className="h-3 w-20 animate-pulse rounded bg-zinc-100 dark:bg-zinc-900" />
+                <div className="h-4 flex-1 animate-pulse rounded-full bg-zinc-100 dark:bg-zinc-900" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (results.length === 0) return null;
 

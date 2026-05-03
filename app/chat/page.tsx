@@ -45,6 +45,7 @@ export default function ChatPage() {
   const transcriptRef = useRef<HTMLDivElement>(null);
   const transcriptEndRef = useRef<HTMLDivElement>(null);
   const shouldFollowTranscriptRef = useRef(true);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const { messages, sendMessage, regenerate, stop, status, error } = useChat();
   const busy = status === "submitted" || status === "streaming";
@@ -82,8 +83,18 @@ export default function ChatPage() {
     scrollTranscriptToBottom(status === "streaming" ? "auto" : "smooth");
   }, [messages, scrollTranscriptToBottom, status]);
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  // Auto-resize textarea
+  useEffect(() => {
+    const textarea = textareaRef.current;
+    if (!textarea) return;
+
+    textarea.style.height = "auto";
+    const newHeight = Math.min(textarea.scrollHeight, 144); // 144px is roughly 6 lines
+    textarea.style.height = `${newHeight}px`;
+  }, [input]);
+
+  async function handleSubmit(event?: FormEvent<HTMLFormElement>) {
+    event?.preventDefault();
     const text = input.trim();
     if (!text || busy || readingPdf) return;
 
@@ -95,6 +106,13 @@ export default function ChatPage() {
       { text },
       { body: { documentContext: documentContext ?? undefined } },
     );
+  }
+
+  function handleKeyDown(event: React.KeyboardEvent<HTMLTextAreaElement>) {
+    if (event.key === "Enter" && (event.metaKey || event.ctrlKey)) {
+      event.preventDefault();
+      void handleSubmit();
+    }
   }
 
   async function handleRegenerate() {
@@ -259,12 +277,14 @@ export default function ChatPage() {
             )}
             <form onSubmit={handleSubmit} className="flex flex-col gap-3">
               <textarea
+                ref={textareaRef}
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
-                rows={3}
+                onKeyDown={handleKeyDown}
+                rows={1}
                 disabled={busy}
                 placeholder="Ask whether a charge looks high, what a CPT code means, or what to ask next."
-                className="max-h-36 min-h-20 resize-none rounded-lg border border-zinc-200 bg-white px-3 py-3 text-sm outline-none transition placeholder:text-zinc-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-100 disabled:opacity-60 dark:border-zinc-800 dark:bg-zinc-950 dark:focus:border-sky-400 dark:focus:ring-sky-950"
+                className="max-h-36 min-h-12 overflow-y-auto resize-none rounded-lg border border-zinc-200 bg-white px-3 py-3 text-sm outline-none transition placeholder:text-zinc-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-100 disabled:opacity-60 dark:border-zinc-800 dark:bg-zinc-950 dark:focus:border-sky-400 dark:focus:ring-sky-950"
               />
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div className="min-w-0 text-xs text-zinc-500 dark:text-zinc-400">
