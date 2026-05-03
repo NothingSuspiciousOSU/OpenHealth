@@ -79,23 +79,31 @@ export default function Home() {
             {
                 value: "$160B-$530B",
                 label:
-                "Estimated loss every year to healthcare fraud, overpayments, and billing mistakes",
+                "Estimated loss every year to healthcare fraud, overpayments, and billing mistakes [1][2]",
             },
             {
                 value: "80%",
-                label: "Medical bills with errors",
+                label: "Medical bills with errors [3][4]",
             },
             {
                 value: "40%",
-                label: "US adults who identify a billing issue and do NOT try to fix it",
+                label: "US adults who identify a billing issue and do NOT try to fix it [5]",
             },
             {
                 value: "~76%",
                 label:
-                "Those who experience financial relief after disputing their bill",
+                "Those who experience financial relief after disputing their bill [6]",
             },
             ]}
         />
+        <div className="w-full py-8 mx-auto w-full max-w-5xl px-6">
+        <p>Sources:</p>
+        <a href="https://jamanetwork.com/journals/jama-health-forum/fullarticle/2822788" target="_blank" rel="noopener noreferrer">[1] Jamma Health Forum (2024)  </a>
+        <a href="https://orbdoc.com/blog/medical-bill-errors-80-percent-problem/" target="_blank" rel="noopener noreferrer">[2] Orbdoc (2025)  </a>
+        <a href="https://akasa.com/blog/inaccurate-medical-bills" target="_blank" rel="noopener noreferrer">[3] Akasa (2024)   </a>
+        <a href="https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data/nhe-fact-sheet" target="_blank" rel="noopener noreferrer">[4] CMS (2024)  </a>
+        <a href="https://www.nhcaa.org/tools-insights/about-health-care-fraud/the-challenge-of-health-care-fraud/" target="_blank" rel="noopener noreferrer">[5] NHCAA (2024)  </a>
+        </div> 
       </div>
 
       {/* ─── Trending ─── */}
