@@ -101,6 +101,7 @@ export async function parseDocumentStructure(data: DocumentData): Promise<Parsed
             '      "cptCode": string,',
             '      "serviceName": string | null,',
             '      "units": number,',
+            '      "providerName": string | null',
             '      "costPerUnit": number,',
             '    }',
             '  ],',
@@ -108,9 +109,14 @@ export async function parseDocumentStructure(data: DocumentData): Promise<Parsed
             'Rules:',
             '- Return valid JSON only. No markdown, no code fences, no explanation text.',
             '- dateOfProcedure must be an ISO 8601 datetime format: YYYY-MM-DDThh:mm:ssZ.',
+            '- billedAmount is the total charges from the hospital/provider.',
+            '- allowedAmount is billedAmount minus any contractual adjustments, negotiation, or writeoff. This does not include insurance payments.',
             '- Monetary fields must be float: dollar.cents',
             '- If a value is missing, use an empty string, 0, or null for serviceName.',
         ].join('\n');
+
+        const query_start_time: number = Date.now();
+        console.log(`Parsing ${objects.length} document(s).`)
 
         return new Promise((resolve, reject) => {
             nim.invokeFunction({
@@ -129,10 +135,11 @@ export async function parseDocumentStructure(data: DocumentData): Promise<Parsed
                 reasoning_budget: 16384,
                 seed: 42,
                 stream: false,
-                temperature: 0.6,
+                temperature: 0.1,
             })
             .then(async ({ data }) => {
                 // Clean up uploaded files after model responds
+                console.log(`Query took ${(Date.now() - query_start_time) / 1000} seconds.`)
                 try {
                     cleanUpUtFiles(uploadedFiles)
                 } catch (err) {
@@ -193,7 +200,7 @@ function parseNimJsonResponse(data: unknown): ParsedDocumentJson {
         return normalizeParsedOutput(parsedExtracted);
     }
 
-    throw new Error('Model did not return valid JSON output');
+    throw new Error(`Model did not return valid JSON output: ${data}`);
 }
 
 function extractModelContent(data: unknown): string {

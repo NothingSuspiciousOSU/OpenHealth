@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     const documentData = await request.json();
     const result = await parseDocumentStructure(documentData);
 
-    console.log(result);
+    console.log("parse-document result:\n", result);
 
     return NextResponse.json(result);
   } catch (error) {
