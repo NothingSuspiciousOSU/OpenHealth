@@ -16,6 +16,10 @@ export const searchProcedures = query({
     city: v.optional(v.string()),
     hospitalName: v.optional(v.string()),
     afterDate: v.optional(v.int64()),
+    limit: v.optional(v.number()),
+    sortBy: v.optional(v.string()),
+    profileProvider: v.optional(v.string()),
+    profilePlan: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
     // 1. Match procedures by CPT code or text description
@@ -35,11 +39,57 @@ export const searchProcedures = query({
       afterDate: args.afterDate,
     });
 
-    // 3. Limit results to keep reads bounded
-    const limited = filtered.slice(0, 500);
+    // 3. Sort before limiting
+    if (args.sortBy === "price_asc") {
+      filtered.sort((a, b) => Number(a.allowedAmount) - Number(b.allowedAmount));
+    } else if (args.sortBy === "price_desc") {
+      filtered.sort((a, b) => Number(b.allowedAmount) - Number(a.allowedAmount));
+    } else if (args.profileProvider) {
+      filtered.sort((a, b) => {
+        const aMatches = a.insurance.providerName === args.profileProvider && a.insurance.planName === args.profilePlan;
+        const bMatches = b.insurance.providerName === args.profileProvider && b.insurance.planName === args.profilePlan;
+        if (aMatches && !bMatches) return -1;
+        if (!aMatches && bMatches) return 1;
+        return 0;
+      });
+    }
 
-    // 4. Attach CPT codes
+    // 4. Limit results for pagination (massive performance boost by skipping CPT fetches for unseen items)
+    const limited = filtered.slice(0, args.limit ?? 25);
+
+    // 5. Attach CPT codes ONLY for the paginated slice
     return attachCptCodes(ctx, limited);
+  },
+});
+
+export const searchStats = query({
+  args: {
+    q: v.string(),
+    insuranceProvider: v.optional(v.string()),
+    insurancePlan: v.optional(v.string()),
+    state: v.optional(v.string()),
+    city: v.optional(v.string()),
+    hospitalName: v.optional(v.string()),
+    afterDate: v.optional(v.int64()),
+  },
+  handler: async (ctx, args) => {
+    // Highly cached query to return raw procedure stats for the graphs (no CPT code fetching overhead)
+    const isCptCode = /^\d{5}$/.test(args.q.trim());
+
+    const matched = isCptCode
+      ? await findProceduresByCpt(ctx, { cptCode: args.q.trim() })
+      : await findProceduresByDescription(ctx, { text: args.q, limit: 500 });
+
+    const filtered = applyProcedureFilters(matched, {
+      insuranceProvider: args.insuranceProvider,
+      insurancePlan: args.insurancePlan,
+      state: args.state,
+      city: args.city,
+      hospitalName: args.hospitalName,
+      afterDate: args.afterDate,
+    });
+
+    return filtered.slice(0, 500);
   },
 });
 
