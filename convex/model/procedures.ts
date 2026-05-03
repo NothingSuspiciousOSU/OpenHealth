@@ -12,7 +12,7 @@ export async function findProceduresByCpt(
   const lineItems = await ctx.db
     .query("procedureLineItems")
     .withIndex("by_cptCode_and_procedureId", (q) => q.eq("cptCode", cptCode))
-    .take(500);
+    .take(5000);
 
   const uniqueIds = Array.from(new Set(lineItems.map((li) => li.procedureId)));
   const results: Doc<"procedures">[] = [];
@@ -29,15 +29,16 @@ export async function findProceduresByCpt(
  */
 export async function findProceduresByDescription(
   ctx: QueryCtx,
-  { text, limit = 500 }: { text: string; limit?: number },
+  { text }: { text: string; limit?: number },
 ): Promise<Doc<"procedures">[]> {
-  const allProcedures = await ctx.db.query("procedures").take(limit);
-  if (!text) return allProcedures;
+  if (!text) return await ctx.db.query("procedures").take(2000);
 
-  const qLower = text.toLowerCase();
-  return allProcedures.filter((p) =>
-    p.procedureDescription.toLowerCase().includes(qLower),
-  );
+  return await ctx.db
+    .query("procedures")
+    .withSearchIndex("search_description", (q) =>
+      q.search("procedureDescription", text),
+    )
+    .take(2000);
 }
 
 /**

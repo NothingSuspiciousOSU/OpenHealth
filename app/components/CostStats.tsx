@@ -45,57 +45,45 @@ export function CostStats({ results }: { results: Procedure[] }) {
   return (
     <div className="mb-8 grid gap-8 lg:grid-cols-2">
       {/* Average Cost Bar Chart */}
-      <div className="rounded-xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-        <h3 className="mb-2 text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+      <div className="flex flex-col rounded-xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+        <h3 className="mb-4 text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           Average Cost by Provider
         </h3>
-        <div className="flex h-64 w-full">
-          {/* Y-Axis */}
-          <div className="flex flex-col justify-between py-10 pr-2 text-xs text-zinc-400">
-            <span>{formatCurrency(maxAvgCost)}</span>
-            <span>{formatCurrency(maxAvgCost / 2)}</span>
-            <span>$0</span>
-          </div>
-          
-          {/* Bars */}
-          <div className="flex flex-1 flex-col justify-end gap-2 border-l border-b border-zinc-200 pb-2 pl-2 dark:border-zinc-800 min-w-0">
-            <div className="flex h-full items-end gap-4 overflow-x-auto pt-10">
-              {barData.map((bar) => {
-                const heightPercent = maxAvgCost > 0 ? (bar.avgCost / maxAvgCost) * 100 : 0;
-                
-                return (
-                  <div key={bar.provider} className="group relative flex h-full w-16 shrink-0 flex-col items-center justify-end">
-                    {/* Tooltip */}
-                    <div className="absolute bottom-full mb-2 z-50 hidden whitespace-nowrap rounded-md bg-zinc-900 px-2 py-1 text-xs text-white shadow-md group-hover:block dark:bg-zinc-100 dark:text-zinc-900">
-                      {formatCurrency(bar.avgCost)}
-                    </div>
-                    {/* Bar */}
-                    <div 
-                      className="w-12 rounded-t-sm bg-blue-500 transition-all duration-300 hover:bg-blue-400"
-                      style={{ height: `${Math.max(heightPercent, 2)}%` }}
-                    />
-                    {/* Label */}
-                    <div className="mt-2 w-full truncate text-center text-xs text-zinc-500">
-                      {bar.provider === "Unknown" ? "Other" : bar.provider}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+        <div className="flex w-full flex-col gap-4 overflow-y-auto pr-2 max-h-[350px]">
+          {barData.map((bar) => {
+            const widthPercent = maxAvgCost > 0 ? (bar.avgCost / maxAvgCost) * 100 : 0;
+            return (
+              <div key={bar.provider} className="flex items-center gap-4">
+                <div className="w-24 shrink-0 truncate text-right text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                  {bar.provider === "Unknown" ? "Other" : bar.provider}
+                </div>
+                <div className="group relative flex h-6 flex-1 items-center">
+                  <div 
+                    className="h-full rounded-sm bg-blue-500 transition-all duration-300 group-hover:bg-blue-400 dark:bg-blue-600 dark:group-hover:bg-blue-500"
+                    style={{ width: `${Math.max(widthPercent, 1)}%` }}
+                  />
+                  <span className="ml-3 text-xs font-semibold text-zinc-700 dark:text-zinc-300">
+                    {formatCurrency(bar.avgCost)}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
 
       {/* Cost Range Scatter Plot */}
-      <div className="rounded-xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-        <h3 className="mb-2 text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+      <div className="flex flex-col rounded-xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+        <h3 className="mb-4 text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           Cost Range Distribution
         </h3>
-        <div className="flex flex-col justify-between px-2 pt-8">
+        <div className="flex flex-col gap-5 overflow-y-auto pr-2 max-h-[350px]">
           {Object.entries(scatterData).map(([provider, data]) => (
-            <div key={provider} className="mb-4">
-              <div className="mb-2 text-xs font-medium text-zinc-500">{provider === "Unknown" ? "Other" : provider}</div>
-              <div className="relative h-4 w-full rounded-full bg-zinc-100 dark:bg-zinc-900">
+            <div key={provider} className="flex items-center gap-4">
+              <div className="w-24 shrink-0 truncate text-right text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                {provider === "Unknown" ? "Other" : provider}
+              </div>
+              <div className="relative h-4 flex-1 rounded-full bg-zinc-100 dark:bg-zinc-900/50">
                 {data.costs.map((cost, idx) => {
                   let leftPercent = maxCost > 0 ? (cost / maxCost) * 100 : 0;
                   leftPercent = Math.max(1, Math.min(99, leftPercent));
@@ -103,11 +91,11 @@ export function CostStats({ results }: { results: Procedure[] }) {
                   return (
                     <div
                       key={idx}
-                      className="group absolute top-1/2 -ml-1.5 h-3 w-3 -translate-y-1/2 rounded-full bg-red-500/40 ring-1 ring-white/50 hover:z-50 hover:bg-red-500 hover:ring-white dark:ring-zinc-950/50 dark:hover:ring-zinc-950"
+                      className="group absolute top-1/2 -ml-1.5 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-red-500/50 ring-2 ring-white hover:z-50 hover:bg-red-500 hover:ring-white dark:bg-red-500/60 dark:ring-zinc-950 dark:hover:ring-zinc-950"
                       style={{ left: `${leftPercent}%` }}
                     >
                       {/* Tooltip */}
-                      <div className="absolute bottom-full left-1/2 mb-2 z-50 hidden -translate-x-1/2 whitespace-nowrap rounded-md bg-zinc-900 px-2 py-1 text-xs text-white shadow-md group-hover:block dark:bg-zinc-100 dark:text-zinc-900">
+                      <div className="absolute bottom-full left-1/2 mb-2 z-50 hidden -translate-x-1/2 whitespace-nowrap rounded-md bg-zinc-900 px-2.5 py-1 text-xs font-medium text-white shadow-md group-hover:block dark:bg-zinc-100 dark:text-zinc-900">
                         {formatCurrency(cost)}
                       </div>
                     </div>
@@ -117,7 +105,7 @@ export function CostStats({ results }: { results: Procedure[] }) {
             </div>
           ))}
           {/* Axis marker */}
-          <div className="mt-2 flex justify-between border-t border-zinc-200 pt-2 text-xs text-zinc-400 dark:border-zinc-800">
+          <div className="ml-[112px] flex justify-between border-t border-zinc-200 pt-2 text-[10px] font-medium text-zinc-400 dark:border-zinc-800">
             <span>$0</span>
             <span>{formatCurrency(maxCost / 2)}</span>
             <span>{formatCurrency(maxCost)}</span>

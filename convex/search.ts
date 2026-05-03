@@ -60,7 +60,7 @@ export const getLineItems = query({
 export const getFilterOptions = query({
   args: {},
   handler: async (ctx) => {
-    // Use .take() to bound reads — 500 procedures is enough for filter options
+    // Search a large sample of the database for filter options
     const procedures = await ctx.db.query("procedures").take(500);
     const lineItems = await ctx.db.query("procedureLineItems").take(500);
 
@@ -121,29 +121,41 @@ export const getSuggestions = query({
     const q = args.q.trim().toLowerCase();
     if (!q) return { procedures: [], cptCodes: [] };
 
-    // Procedure description suggestions
-    const allProcs = await ctx.db.query("procedures").take(500);
+    // Procedure description suggestions using Convex Search Index
+    const matchedProcs = await ctx.db
+      .query("procedures")
+      .withSearchIndex("search_description", (qIdx) =>
+        qIdx.search("procedureDescription", q),
+      )
+      .take(100);
+
     const seenDescs = new Set<string>();
     const procedureSuggestions: string[] = [];
-    for (const p of allProcs) {
-      const desc = p.procedureDescription;
-      if (!seenDescs.has(desc) && desc.toLowerCase().includes(q)) {
-        seenDescs.add(desc);
-        procedureSuggestions.push(desc);
+    for (const p of matchedProcs) {
+      if (!seenDescs.has(p.procedureDescription)) {
+        seenDescs.add(p.procedureDescription);
+        procedureSuggestions.push(p.procedureDescription);
         if (procedureSuggestions.length >= 6) break;
       }
     }
 
-    // CPT code suggestions
-    const allLineItems = await ctx.db.query("procedureLineItems").take(500);
+    // CPT code & Service name suggestions using Convex Search Index
+    const matchedLines = /^\d+$/.test(q)
+      ? await ctx.db
+        .query("procedureLineItems")
+        .withSearchIndex("search_cpt", (qIdx) => qIdx.search("cptCode", q))
+        .take(100)
+      : await ctx.db
+        .query("procedureLineItems")
+        .withSearchIndex("search_service", (qIdx) =>
+          qIdx.search("serviceName", q),
+        )
+        .take(100);
+
     const seenCpts = new Set<string>();
     const cptSuggestions: { code: string; name: string }[] = [];
-    for (const li of allLineItems) {
-      if (
-        !seenCpts.has(li.cptCode) &&
-        (li.cptCode.startsWith(q) ||
-          (li.serviceName && li.serviceName.toLowerCase().includes(q)))
-      ) {
+    for (const li of matchedLines) {
+      if (!seenCpts.has(li.cptCode)) {
         seenCpts.add(li.cptCode);
         cptSuggestions.push({
           code: li.cptCode,

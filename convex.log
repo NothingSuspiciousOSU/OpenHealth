@@ -1,0 +1,155 @@
+Run `npx convex login` at any time to create an account and link this deployment.
+- Preparing Convex functions...
+
+✔ 03:58:50 Convex functions ready! (3.33s)
+5/3/2026, 3:59:14 AM [CONVEX M(mockData:generate)] [WARN] Many writes in a single function execution (actual: 15124, limit: 16000).
+5/3/2026, 3:59:31 AM [CONVEX Q(search:searchProcedures)] Your request timed out.
+
+5/3/2026, 3:59:31 AM [CONVEX Q(search:getSuggestions)] Your request timed out.
+
+5/3/2026, 3:59:31 AM [CONVEX Q(search:getSuggestions)] Your request timed out.
+
+5/3/2026, 3:59:31 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 3:59:32 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 3:59:32 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 3:59:32 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 3:59:40 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 3:59:47 AM [CONVEX Q(search:getSuggestions)] Your request timed out.
+
+5/3/2026, 3:59:48 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 3:59:48 AM [CONVEX Q(search:searchProcedures)] Your request timed out.
+
+5/3/2026, 3:59:49 AM [CONVEX Q(search:getSuggestions)] Your request timed out.
+
+5/3/2026, 3:59:49 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 3:59:49 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 3:59:49 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 3:59:50 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+- Preparing Convex functions...
+
+✔ 04:00:00 Convex functions ready! (3.7s)
+5/3/2026, 4:00:03 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:00:03 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:00:04 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:00:06 AM [CONVEX Q(search:searchProcedures)] Your request timed out.
+
+- Preparing Convex functions...
+
+✔ 04:00:09 Convex functions ready! (2.52s)
+5/3/2026, 4:00:06 AM [CONVEX Q(search:getSuggestions)] Your request timed out.
+
+5/3/2026, 4:00:06 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:00:08 AM [CONVEX Q(search:getSuggestions)] Your request timed out.
+
+5/3/2026, 4:00:08 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:00:08 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:00:18 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:00:24 AM [CONVEX Q(search:searchProcedures)] Your request timed out.
+
+5/3/2026, 4:00:27 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:00:27 AM [CONVEX Q(search:getSuggestions)] Your request timed out.
+
+5/3/2026, 4:00:28 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:00:34 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:00:34 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:00:34 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:00:34 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:00:40 AM [CONVEX Q(search:searchProcedures)] Your request timed out.
+
+5/3/2026, 4:00:48 AM [CONVEX Q(search:searchProcedures)] Your request timed out.
+
+5/3/2026, 4:00:49 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:00:49 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:00:49 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:00:50 AM [CONVEX Q(search:getSuggestions)] Your request timed out.
+
+5/3/2026, 4:00:50 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:00:57 AM [CONVEX Q(search:searchProcedures)] Your request timed out.
+
+5/3/2026, 4:01:04 AM [CONVEX Q(search:searchProcedures)] Your request timed out.
+
+5/3/2026, 4:01:05 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:01:06 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:01:06 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:01:06 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:01:06 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:01:29 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:01:29 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:01:29 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:01:30 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:01:30 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:01:30 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:01:48 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:01:55 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:02:09 AM [CONVEX M(mockData:generate)] Uncaught Error: Too many writes in a single function execution (limit: 16000)
+    at async handler (../convex/mockData.ts:79:50)
+
+- Preparing Convex functions...
+
+✔ 04:02:33 Convex functions ready! (1.95s)
+5/3/2026, 4:03:16 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:03:16 AM [CONVEX Q(search:searchProcedures)] Your request timed out.
+
+5/3/2026, 4:03:16 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+5/3/2026, 4:03:31 AM [CONVEX Q(search:getFilterOptions)] Your request timed out.
+
+5/3/2026, 4:03:32 AM [CONVEX Q(search:getFilterOptions)] Your request couldn't be completed. Try again later.
+
+- Preparing Convex functions...
+
+✘ [ERROR] Expected "}" but found ";"
+
+    convex/schema.ts:83:6:
+      83 │     });
+         │       ^
+         ╵       }
+
+- Preparing Convex functions...
+
+✔ Added table indexes:
+  [+] procedureLineItems.search_cpt (text)   cptCode
+  [+] procedureLineItems.search_service (text)   serviceName
+  [+] procedures.search_description (text)   procedureDescription
+✔ 04:18:12 Convex functions ready! (40.37s)

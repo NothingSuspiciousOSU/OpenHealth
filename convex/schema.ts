@@ -35,7 +35,10 @@ export default defineSchema({
       "insurance.providerName",
       "insurance.planName",
       "dateOfProcedure",
-    ]),
+    ])
+    .searchIndex("search_description", {
+      searchField: "procedureDescription",
+    }),
 
   procedureLineItems: defineTable({
     procedureId: v.id("procedures"),
@@ -71,5 +74,11 @@ export default defineSchema({
       "insuranceProviderName",
       "insurancePlanName",
       "dateOfProcedure",
-    ]),
+    ])
+    .searchIndex("search_cpt", {
+      searchField: "cptCode",
+    })
+    .searchIndex("search_service", {
+      searchField: "serviceName",
+    })
 });
