@@ -86,8 +86,8 @@ export default function Home() {
                 label: "Medical bills with errors",
             },
             {
-                value: "1.5x",
-                label: "Higher odds of errors after emergency care",
+                value: "1 / 5",
+                label: "Only 1/5 U.S. adults reported a medical bill they disagreed with or could not afford",
             },
             {
                 value: "~76%",
