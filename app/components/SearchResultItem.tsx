@@ -108,7 +108,7 @@ export function SearchResultItem({ procedure }: { procedure: Procedure }) {
           ) : lineItems.length === 0 ? (
             <div className="text-sm text-zinc-500">No line items found.</div>
           ) : (
-            <div className="overflow-hidden rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+            <div className="overflow-x-scroll rounded-lg border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
               <table className="w-full text-left text-sm">
                 <thead className="bg-zinc-50 text-xs uppercase text-zinc-500 dark:bg-zinc-900">
                   <tr>

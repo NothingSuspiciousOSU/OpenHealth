@@ -15,9 +15,11 @@ export default function AdminPage() {
   const generateData = useMutation(api.mockData.generate);
   const clearData = useMutation(api.mockData.clearBatch);
   const loadPrestored = useMutation(api.mockData.loadPrestored);
+  const loadPrestored900 = useMutation(api.mockData.loadPrestored900);
   const [isGenerating, setIsGenerating] = useState(false);
   const [isClearing, setIsClearing] = useState(false);
   const [isLoadingPrestored, setIsLoadingPrestored] = useState(false);
+  const [isLoadingPrestored900, setIsLoadingPrestored900] = useState(false);
   const [message, setMessage] = useState("");
 
   const handleLogin = async (e: React.FormEvent) => {
@@ -49,12 +51,17 @@ export default function AdminPage() {
 
   const handleClear = async () => {
     setIsClearing(true);
-    setMessage("Clearing database...");
+    setMessage("Initializing database purge...");
     try {
-      let remaining = -1;
-      while (remaining !== 0) {
+      let done = false;
+      let totalDeleted = 0;
+      while (!done) {
         const res = await clearData();
-        remaining = res.remaining;
+        done = res.done;
+        totalDeleted += res.deleted;
+        if (!done) {
+          setMessage(`Purging database... (Deleted ${totalDeleted} items)`);
+        }
       }
       setMessage("Database cleared successfully.");
     } catch {
@@ -66,7 +73,7 @@ export default function AdminPage() {
 
   const handleLoadPrestored = async () => {
     setIsLoadingPrestored(true);
-    setMessage("Loading realistic prestored data...");
+    setMessage("Loading 2000 realistic prestored entries...");
     try {
       await loadPrestored();
       setMessage("Realistic data loaded successfully.");
@@ -74,6 +81,19 @@ export default function AdminPage() {
       setMessage("Error loading prestored data.");
     } finally {
       setIsLoadingPrestored(false);
+    }
+  };
+
+  const handleLoadPrestored900 = async () => {
+    setIsLoadingPrestored900(true);
+    setMessage("Loading 900 realistic prestored entries...");
+    try {
+      await loadPrestored900();
+      setMessage("900 entries loaded successfully.");
+    } catch (err) {
+      setMessage("Error loading prestored data.");
+    } finally {
+      setIsLoadingPrestored900(false);
     }
   };
 
@@ -136,7 +156,7 @@ export default function AdminPage() {
             <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Generate 1000 randomized entries for stress testing.</p>
             <button
               onClick={handleGenerate}
-              disabled={isGenerating || isClearing || isLoadingPrestored}
+              disabled={isGenerating || isClearing || isLoadingPrestored || isLoadingPrestored900}
               className="mt-6 w-full rounded-lg bg-zinc-900 py-2.5 text-sm font-semibold text-white transition hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white disabled:opacity-50"
             >
               {isGenerating ? "Processing..." : "Generate Mock Data"}
@@ -160,7 +180,7 @@ export default function AdminPage() {
             <p className="mt-2 text-xs text-red-700/70 dark:text-red-400/70">Wipe all procedure and line item records from the database.</p>
             <button
               onClick={handleClear}
-              disabled={isGenerating || isClearing || isLoadingPrestored}
+              disabled={isGenerating || isClearing || isLoadingPrestored || isLoadingPrestored900}
               className="mt-6 w-full rounded-lg bg-red-600 py-2.5 text-sm font-semibold text-white transition hover:bg-red-500 disabled:opacity-50"
             >
               {isClearing ? "Clearing..." : "Purge All Data"}

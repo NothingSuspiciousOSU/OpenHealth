@@ -40000,3 +40000,18006 @@ export const prestoredData = [
     ]
   }
 ];
+
+export const prestoredData900 = [
+  {
+    "procedureDescription": "Laryngoscopy",
+    "dateOfProcedure": 1774235500455,
+    "hospitalName": "Huntsville Hospital",
+    "city": "Huntsville",
+    "state": "AL",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 366,
+    "allowedAmount": 179,
+    "lineItems": [
+      {
+        "cptCode": "31505",
+        "serviceName": "Laryngoscopy",
+        "units": 1,
+        "costPerUnit": 366,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1751871588651,
+    "hospitalName": "Banner-University Medical Center Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 49287,
+    "allowedAmount": 33656,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip replacement",
+        "units": 1,
+        "costPerUnit": 49287,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy (EGD)",
+    "dateOfProcedure": 1773065089688,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 1683,
+    "allowedAmount": 1141,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "EGD with biopsy",
+        "units": 1,
+        "costPerUnit": 1683,
+        "providerName": "Dr. Niraj Sehgal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Catheterization",
+    "dateOfProcedure": 1757267047778,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 4669,
+    "allowedAmount": 3063,
+    "lineItems": [
+      {
+        "cptCode": "93451",
+        "serviceName": "Right heart catheterization",
+        "units": 1,
+        "costPerUnit": 4669,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ORIF Fracture Repair",
+    "dateOfProcedure": 1749923483354,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 35452,
+    "allowedAmount": 16588,
+    "lineItems": [
+      {
+        "cptCode": "27236",
+        "serviceName": "ORIF hip fracture",
+        "units": 1,
+        "costPerUnit": 35452,
+        "providerName": "Dr. Peggy Duggan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TPN Administration",
+    "dateOfProcedure": 1747279094962,
+    "hospitalName": "St. Alphonsus Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 449,
+    "allowedAmount": 321,
+    "lineItems": [
+      {
+        "cptCode": "B4185",
+        "serviceName": "TPN administration",
+        "units": 1,
+        "costPerUnit": 449,
+        "providerName": "Dr. Steven Nemerson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1748241536793,
+    "hospitalName": "IU Health Methodist Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 815,
+    "allowedAmount": 386,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 815,
+        "providerName": "Dr. Ryan Nagy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Ablation",
+    "dateOfProcedure": 1766868085479,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 33341,
+    "allowedAmount": 19978,
+    "lineItems": [
+      {
+        "cptCode": "93653",
+        "serviceName": "Cardiac ablation",
+        "units": 1,
+        "costPerUnit": 33341,
+        "providerName": "Dr. Bob Page"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bowel Resection",
+    "dateOfProcedure": 1772862766752,
+    "hospitalName": "Our Lady of the Lake Regional Medical Center",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 25609,
+    "allowedAmount": 11685,
+    "lineItems": [
+      {
+        "cptCode": "44140",
+        "serviceName": "Bowel resection",
+        "units": 1,
+        "costPerUnit": 25609,
+        "providerName": "Dr. Catherine O'Neal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Puncture",
+    "dateOfProcedure": 1752551053489,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 1321,
+    "allowedAmount": 620,
+    "lineItems": [
+      {
+        "cptCode": "62270",
+        "serviceName": "Lumbar puncture diagnostic",
+        "units": 1,
+        "costPerUnit": 1321,
+        "providerName": "Dr. Marcela del Carmen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1767108125610,
+    "hospitalName": "Mayo Clinic Rochester",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 429,
+    "allowedAmount": 213,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 429,
+        "providerName": "Dr. Gianrico Farrugia"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TPN Administration",
+    "dateOfProcedure": 1752470056687,
+    "hospitalName": "St. Luke's Hospital",
+    "city": "Kansas City",
+    "state": "MO",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 428,
+    "allowedAmount": 278,
+    "lineItems": [
+      {
+        "cptCode": "B4185",
+        "serviceName": "TPN administration",
+        "units": 1,
+        "costPerUnit": 428,
+        "providerName": "Dr. Michael Weaver"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1768871859126,
+    "hospitalName": "Bryan Medical Center",
+    "city": "Lincoln",
+    "state": "NE",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 1192,
+    "allowedAmount": 572,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1192,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Amniocentesis",
+    "dateOfProcedure": 1769382563012,
+    "hospitalName": "Dartmouth-Hitchcock Medical Center",
+    "city": "Lebanon",
+    "state": "NH",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 1180,
+    "allowedAmount": 811,
+    "lineItems": [
+      {
+        "cptCode": "59000",
+        "serviceName": "Amniocentesis",
+        "units": 1,
+        "costPerUnit": 1180,
+        "providerName": "Dr. Joanne Conroy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "PEG Tube Placement",
+    "dateOfProcedure": 1774252332051,
+    "hospitalName": "NYU Langone Hospitals",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 3436,
+    "allowedAmount": 2038,
+    "lineItems": [
+      {
+        "cptCode": "43246",
+        "serviceName": "PEG tube placement",
+        "units": 1,
+        "costPerUnit": 3436,
+        "providerName": "Dr. Robert Grossman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Debridement",
+    "dateOfProcedure": 1765695499194,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 842,
+    "allowedAmount": 392,
+    "lineItems": [
+      {
+        "cptCode": "11042",
+        "serviceName": "Wound debridement",
+        "units": 1,
+        "costPerUnit": 842,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thyroidectomy",
+    "dateOfProcedure": 1770190515916,
+    "hospitalName": "Saint Francis Hospital",
+    "city": "Tulsa",
+    "state": "OK",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 9737,
+    "allowedAmount": 4107,
+    "lineItems": [
+      {
+        "cptCode": "60240",
+        "serviceName": "Thyroidectomy",
+        "units": 1,
+        "costPerUnit": 9737,
+        "providerName": "Dr. Mark Frost"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ICD Placement",
+    "dateOfProcedure": 1749533637804,
+    "hospitalName": "Penn State Health Milton S. Hershey Medical Center",
+    "city": "Hershey",
+    "state": "PA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 44216,
+    "allowedAmount": 25110,
+    "lineItems": [
+      {
+        "cptCode": "33249",
+        "serviceName": "ICD placement",
+        "units": 1,
+        "costPerUnit": 44216,
+        "providerName": "Dr. Robert Harbaugh"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Spinal Fusion",
+    "dateOfProcedure": 1762116568333,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 63207,
+    "allowedAmount": 29045,
+    "lineItems": [
+      {
+        "cptCode": "22551",
+        "serviceName": "Spinal fusion",
+        "units": 1,
+        "costPerUnit": 63207,
+        "providerName": "Dr. Paul Hanson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Aspiration",
+    "dateOfProcedure": 1764211675276,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 157,
+    "allowedAmount": 78,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Joint aspiration",
+        "units": 1,
+        "costPerUnit": 157,
+        "providerName": "Dr. Robert Phillips"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endovascular Coiling",
+    "dateOfProcedure": 1748595938945,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 44246,
+    "allowedAmount": 19784,
+    "lineItems": [
+      {
+        "cptCode": "61624",
+        "serviceName": "Endovascular coiling",
+        "units": 1,
+        "costPerUnit": 44246,
+        "providerName": "Dr. Stephen Leffler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mastectomy",
+    "dateOfProcedure": 1764240493620,
+    "hospitalName": "UW Medical Center",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 21167,
+    "allowedAmount": 8958,
+    "lineItems": [
+      {
+        "cptCode": "19307",
+        "serviceName": "Mastectomy",
+        "units": 1,
+        "costPerUnit": 21167,
+        "providerName": "Dr. Tim Dellit"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Venipuncture",
+    "dateOfProcedure": 1753910391726,
+    "hospitalName": "UW Health University Hospital",
+    "city": "Madison",
+    "state": "WI",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 14,
+    "allowedAmount": 6,
+    "lineItems": [
+      {
+        "cptCode": "36415",
+        "serviceName": "Venipuncture (Blood Draw)",
+        "units": 1,
+        "costPerUnit": 14,
+        "providerName": "Dr. Pete Newcomer"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPAP/BiPAP Initiation",
+    "dateOfProcedure": 1747858888018,
+    "hospitalName": "Alaska Native Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 353,
+    "allowedAmount": 150,
+    "lineItems": [
+      {
+        "cptCode": "94660",
+        "serviceName": "CPAP/BiPAP initiation",
+        "units": 1,
+        "costPerUnit": 353,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1746800891797,
+    "hospitalName": "UAMS Medical Center",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 92966,
+    "allowedAmount": 42738,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 92966,
+        "providerName": "Dr. Richard Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CRRT Therapy",
+    "dateOfProcedure": 1775613686136,
+    "hospitalName": "Saint Joseph Hospital",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 4800,
+    "allowedAmount": 2689,
+    "lineItems": [
+      {
+        "cptCode": "90999",
+        "serviceName": "CRRT therapy",
+        "units": 1,
+        "costPerUnit": 4800,
+        "providerName": "Dr. Mark Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Prostatectomy",
+    "dateOfProcedure": 1752023987731,
+    "hospitalName": "Bayhealth Hospital",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 18696,
+    "allowedAmount": 9091,
+    "lineItems": [
+      {
+        "cptCode": "55840",
+        "serviceName": "Prostatectomy",
+        "units": 1,
+        "costPerUnit": 18696,
+        "providerName": "Dr. Gary Siegelman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Circumcision",
+    "dateOfProcedure": 1753123814766,
+    "hospitalName": "Queen's Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 868,
+    "allowedAmount": 642,
+    "lineItems": [
+      {
+        "cptCode": "54150",
+        "serviceName": "Circumcision",
+        "units": 1,
+        "costPerUnit": 868,
+        "providerName": "Dr. Whitney Limm"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Carpal Tunnel Release",
+    "dateOfProcedure": 1765124047384,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 3572,
+    "allowedAmount": 1461,
+    "lineItems": [
+      {
+        "cptCode": "64721",
+        "serviceName": "Carpal tunnel release",
+        "units": 1,
+        "costPerUnit": 3572,
+        "providerName": "Dr. Howard Chrisman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1771057475646,
+    "hospitalName": "University of Iowa Hospitals",
+    "city": "Iowa City",
+    "state": "IA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 8922,
+    "allowedAmount": 3916,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 8922,
+        "providerName": "Dr. Theresa Brennan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1756453884780,
+    "hospitalName": "Baptist Health Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 460,
+    "allowedAmount": 216,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 460,
+        "providerName": "Dr. Michael Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Nephrectomy",
+    "dateOfProcedure": 1776233747803,
+    "hospitalName": "Northern Light Eastern Maine Medical Center",
+    "city": "Bangor",
+    "state": "ME",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 24701,
+    "allowedAmount": 16729,
+    "lineItems": [
+      {
+        "cptCode": "50220",
+        "serviceName": "Nephrectomy",
+        "units": 1,
+        "costPerUnit": 24701,
+        "providerName": "Dr. James Jarvis"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "C-Section Delivery",
+    "dateOfProcedure": 1757791186999,
+    "hospitalName": "University of Michigan Health",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 25833,
+    "allowedAmount": 16699,
+    "lineItems": [
+      {
+        "cptCode": "59510",
+        "serviceName": "C-section delivery",
+        "units": 1,
+        "costPerUnit": 25833,
+        "providerName": "Dr. David Spahlinger"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ultrasound Abdomen",
+    "dateOfProcedure": 1766906168201,
+    "hospitalName": "UMMC Hospital",
+    "city": "Jackson",
+    "state": "MS",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 539,
+    "allowedAmount": 226,
+    "lineItems": [
+      {
+        "cptCode": "76700",
+        "serviceName": "Ultrasound Abdomen complete",
+        "units": 1,
+        "costPerUnit": 539,
+        "providerName": "Dr. LouAnn Woodward"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Echocardiogram",
+    "dateOfProcedure": 1756948333364,
+    "hospitalName": "Billings Clinic",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 884,
+    "allowedAmount": 658,
+    "lineItems": [
+      {
+        "cptCode": "93306",
+        "serviceName": "Echocardiogram complete",
+        "units": 1,
+        "costPerUnit": 884,
+        "providerName": "Dr. Samer Skaf"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Fetal Monitoring",
+    "dateOfProcedure": 1755554091453,
+    "hospitalName": "Sunrise Hospital and Medical Center",
+    "city": "Las Vegas",
+    "state": "NV",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 454,
+    "allowedAmount": 188,
+    "lineItems": [
+      {
+        "cptCode": "59025",
+        "serviceName": "Fetal monitoring",
+        "units": 1,
+        "costPerUnit": 454,
+        "providerName": "Dr. Jeffrey Murawsky"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1750228534575,
+    "hospitalName": "UNM Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 49915,
+    "allowedAmount": 33681,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip replacement",
+        "units": 1,
+        "costPerUnit": 49915,
+        "providerName": "Dr. Kate Becker"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ORIF Fracture Repair",
+    "dateOfProcedure": 1761446476714,
+    "hospitalName": "UNC Hospitals",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 24953,
+    "allowedAmount": 10453,
+    "lineItems": [
+      {
+        "cptCode": "27236",
+        "serviceName": "ORIF hip fracture",
+        "units": 1,
+        "costPerUnit": 24953,
+        "providerName": "Dr. David Zvara"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1776128020090,
+    "hospitalName": "Cleveland Clinic",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 1545,
+    "allowedAmount": 978,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1545,
+        "providerName": "Dr. Robert Wyllie"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Spinal Fusion",
+    "dateOfProcedure": 1765449327711,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 64845,
+    "allowedAmount": 31274,
+    "lineItems": [
+      {
+        "cptCode": "22551",
+        "serviceName": "Spinal fusion",
+        "units": 1,
+        "costPerUnit": 64845,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Carpal Tunnel Release",
+    "dateOfProcedure": 1769816087687,
+    "hospitalName": "The Miriam Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 3565,
+    "allowedAmount": 1677,
+    "lineItems": [
+      {
+        "cptCode": "64721",
+        "serviceName": "Carpal tunnel release",
+        "units": 1,
+        "costPerUnit": 3565,
+        "providerName": "Dr. Maria Ducharme"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy",
+    "dateOfProcedure": 1764320319778,
+    "hospitalName": "Methodist Hospitals of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 2597,
+    "allowedAmount": 1098,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Colonoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 2597,
+        "providerName": "Dr. Michael Ugwueke"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Tube Placement",
+    "dateOfProcedure": 1769681532168,
+    "hospitalName": "University of Utah Hospital",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 1504,
+    "allowedAmount": 688,
+    "lineItems": [
+      {
+        "cptCode": "32551",
+        "serviceName": "Chest tube placement",
+        "units": 1,
+        "costPerUnit": 1504,
+        "providerName": "Dr. Dan Lundergan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hernia Repair",
+    "dateOfProcedure": 1748795031010,
+    "hospitalName": "Inova Fairfax Hospital",
+    "city": "Falls Church",
+    "state": "VA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 8431,
+    "allowedAmount": 3466,
+    "lineItems": [
+      {
+        "cptCode": "49505",
+        "serviceName": "Hernia repair",
+        "units": 1,
+        "costPerUnit": 8431,
+        "providerName": "Dr. Steve Narang"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bowel Resection",
+    "dateOfProcedure": 1768909661999,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 19421,
+    "allowedAmount": 8329,
+    "lineItems": [
+      {
+        "cptCode": "44140",
+        "serviceName": "Bowel resection",
+        "units": 1,
+        "costPerUnit": 19421,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Carpal Tunnel Release",
+    "dateOfProcedure": 1746611001492,
+    "hospitalName": "Huntsville Hospital",
+    "city": "Huntsville",
+    "state": "AL",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 2703,
+    "allowedAmount": 1887,
+    "lineItems": [
+      {
+        "cptCode": "64721",
+        "serviceName": "Carpal tunnel release",
+        "units": 1,
+        "costPerUnit": 2703,
+        "providerName": "Dr. Robert Chirkoff"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bronchoscopy",
+    "dateOfProcedure": 1772842505648,
+    "hospitalName": "Mayo Clinic Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 1835,
+    "allowedAmount": 1176,
+    "lineItems": [
+      {
+        "cptCode": "31622",
+        "serviceName": "Bronchoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 1835,
+        "providerName": "Dr. Richard Gray"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electrocardiogram (EKG)",
+    "dateOfProcedure": 1747665396841,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 169,
+    "allowedAmount": 71,
+    "lineItems": [
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram complete",
+        "units": 1,
+        "costPerUnit": 169,
+        "providerName": "Dr. Niraj Sehgal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1773054268620,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 3344,
+    "allowedAmount": 2214,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 3344,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bronchoscopy",
+    "dateOfProcedure": 1755138217270,
+    "hospitalName": "Sarasota Memorial Health Care System",
+    "city": "Sarasota",
+    "state": "FL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 2504,
+    "allowedAmount": 1049,
+    "lineItems": [
+      {
+        "cptCode": "31622",
+        "serviceName": "Bronchoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 2504,
+        "providerName": "Dr. James Fiorica"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Defibrillation",
+    "dateOfProcedure": 1764257184796,
+    "hospitalName": "St. Luke's Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 1163,
+    "allowedAmount": 553,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Defibrillation",
+        "units": 1,
+        "costPerUnit": 1163,
+        "providerName": "Dr. David Pate"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Fetal Monitoring",
+    "dateOfProcedure": 1777255373588,
+    "hospitalName": "IU Health Methodist Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 467,
+    "allowedAmount": 215,
+    "lineItems": [
+      {
+        "cptCode": "59025",
+        "serviceName": "Fetal monitoring",
+        "units": 1,
+        "costPerUnit": 467,
+        "providerName": "Dr. Michele Saysana"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tracheostomy",
+    "dateOfProcedure": 1770303408410,
+    "hospitalName": "AdventHealth Shawnee Mission",
+    "city": "Merriam",
+    "state": "KS",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 5232,
+    "allowedAmount": 2491,
+    "lineItems": [
+      {
+        "cptCode": "31600",
+        "serviceName": "Tracheostomy",
+        "units": 1,
+        "costPerUnit": 5232,
+        "providerName": "Dr. Larry Botts"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ICD Placement",
+    "dateOfProcedure": 1762414437641,
+    "hospitalName": "Our Lady of the Lake Regional Medical Center",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 43244,
+    "allowedAmount": 21034,
+    "lineItems": [
+      {
+        "cptCode": "33249",
+        "serviceName": "ICD placement",
+        "units": 1,
+        "costPerUnit": 43244,
+        "providerName": "Dr. Catherine O'Neal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Needle Decompression",
+    "dateOfProcedure": 1765998561639,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 1167,
+    "allowedAmount": 482,
+    "lineItems": [
+      {
+        "cptCode": "32422",
+        "serviceName": "Needle decompression",
+        "units": 1,
+        "costPerUnit": 1167,
+        "providerName": "Dr. Marcela del Carmen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mechanical Ventilation",
+    "dateOfProcedure": 1758922717072,
+    "hospitalName": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "state": "MN",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 2597,
+    "allowedAmount": 1889,
+    "lineItems": [
+      {
+        "cptCode": "94002",
+        "serviceName": "Mechanical ventilation",
+        "units": 1,
+        "costPerUnit": 2597,
+        "providerName": "Dr. Penny Wheeler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TEE Echocardiogram",
+    "dateOfProcedure": 1761312188089,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 1211,
+    "allowedAmount": 520,
+    "lineItems": [
+      {
+        "cptCode": "93312",
+        "serviceName": "TEE echocardiogram",
+        "units": 1,
+        "costPerUnit": 1211,
+        "providerName": "Dr. Richard Liekweg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laminectomy",
+    "dateOfProcedure": 1777267708418,
+    "hospitalName": "Bryan Medical Center",
+    "city": "Lincoln",
+    "state": "NE",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 17952,
+    "allowedAmount": 8131,
+    "lineItems": [
+      {
+        "cptCode": "63047",
+        "serviceName": "Laminectomy",
+        "units": 1,
+        "costPerUnit": 17952,
+        "providerName": "Dr. John Trapp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CRRT Therapy",
+    "dateOfProcedure": 1758157670131,
+    "hospitalName": "Elliot Hospital",
+    "city": "Manchester",
+    "state": "NH",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 5174,
+    "allowedAmount": 3125,
+    "lineItems": [
+      {
+        "cptCode": "90999",
+        "serviceName": "CRRT therapy",
+        "units": 1,
+        "costPerUnit": 5174,
+        "providerName": "Dr. Greg Baxter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemorrhoidectomy",
+    "dateOfProcedure": 1757267402062,
+    "hospitalName": "NewYork-Presbyterian Hospital",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 6239,
+    "allowedAmount": 2768,
+    "lineItems": [
+      {
+        "cptCode": "46250",
+        "serviceName": "Hemorrhoidectomy",
+        "units": 1,
+        "costPerUnit": 6239,
+        "providerName": "Dr. Deepa Kumaraiah"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Scan Abdomen",
+    "dateOfProcedure": 1761830543662,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 1140,
+    "allowedAmount": 472,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT Abdomen/Pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 1140,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Puncture",
+    "dateOfProcedure": 1776076193613,
+    "hospitalName": "OU Health Medical Center",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 737,
+    "allowedAmount": 545,
+    "lineItems": [
+      {
+        "cptCode": "62270",
+        "serviceName": "Lumbar puncture diagnostic",
+        "units": 1,
+        "costPerUnit": 737,
+        "providerName": "Dr. Cameron Mantor"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1763875057258,
+    "hospitalName": "UPMC Presbyterian Shadyside",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 877,
+    "allowedAmount": 356,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 877,
+        "providerName": "Dr. Leslie Davis"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bowel Resection",
+    "dateOfProcedure": 1747073943525,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 24493,
+    "allowedAmount": 14195,
+    "lineItems": [
+      {
+        "cptCode": "44140",
+        "serviceName": "Bowel resection",
+        "units": 1,
+        "costPerUnit": 24493,
+        "providerName": "Dr. Paul Hanson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest X-Ray",
+    "dateOfProcedure": 1763491420674,
+    "hospitalName": "Texas Health Resources",
+    "city": "Arlington",
+    "state": "TX",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 144,
+    "allowedAmount": 99,
+    "lineItems": [
+      {
+        "cptCode": "71045",
+        "serviceName": "X-ray chest 1 view",
+        "units": 1,
+        "costPerUnit": 144,
+        "providerName": "Dr. Andrew Masica"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thoracentesis",
+    "dateOfProcedure": 1750058557502,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 1216,
+    "allowedAmount": 590,
+    "lineItems": [
+      {
+        "cptCode": "32554",
+        "serviceName": "Thoracentesis",
+        "units": 1,
+        "costPerUnit": 1216,
+        "providerName": "Dr. Sunny Eappen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1766138528177,
+    "hospitalName": "Providence Sacred Heart Medical Center",
+    "city": "Spokane",
+    "state": "WA",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 164893,
+    "allowedAmount": 105648,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 164893,
+        "providerName": "Dr. Peg Currie"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ultrasound Abdomen",
+    "dateOfProcedure": 1751218901732,
+    "hospitalName": "Froedtert Hospital",
+    "city": "Milwaukee",
+    "state": "WI",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 660,
+    "allowedAmount": 328,
+    "lineItems": [
+      {
+        "cptCode": "76700",
+        "serviceName": "Ultrasound Abdomen complete",
+        "units": 1,
+        "costPerUnit": 660,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Foley Catheter",
+    "dateOfProcedure": 1754374944193,
+    "hospitalName": "Alaska Native Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 258,
+    "allowedAmount": 103,
+    "lineItems": [
+      {
+        "cptCode": "51702",
+        "serviceName": "Foley catheter",
+        "units": 1,
+        "costPerUnit": 258,
+        "providerName": "Dr. John Doe"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1756321540933,
+    "hospitalName": "Baptist Health Medical Center-Little Rock",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 695,
+    "allowedAmount": 453,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 695,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1753714983404,
+    "hospitalName": "UCHealth University of Colorado Hospital",
+    "city": "Aurora",
+    "state": "CO",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 121447,
+    "allowedAmount": 63610,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 121447,
+        "providerName": "Dr. Tom Flaig"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Grafting",
+    "dateOfProcedure": 1765766210247,
+    "hospitalName": "Bayhealth Hospital",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 4760,
+    "allowedAmount": 3219,
+    "lineItems": [
+      {
+        "cptCode": "20900",
+        "serviceName": "Bone grafting",
+        "units": 1,
+        "costPerUnit": 4760,
+        "providerName": "Dr. Gary Siegelman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hysterectomy",
+    "dateOfProcedure": 1757224197683,
+    "hospitalName": "Straub Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 17463,
+    "allowedAmount": 9528,
+    "lineItems": [
+      {
+        "cptCode": "58150",
+        "serviceName": "Hysterectomy",
+        "units": 1,
+        "costPerUnit": 17463,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Catheterization",
+    "dateOfProcedure": 1769351294250,
+    "hospitalName": "University of Chicago Medical Center",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 4685,
+    "allowedAmount": 2099,
+    "lineItems": [
+      {
+        "cptCode": "93451",
+        "serviceName": "Right heart catheterization",
+        "units": 1,
+        "costPerUnit": 4685,
+        "providerName": "Dr. Selwyn Rogers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Nephrectomy",
+    "dateOfProcedure": 1747416957557,
+    "hospitalName": "University of Iowa Hospitals",
+    "city": "Iowa City",
+    "state": "IA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 25089,
+    "allowedAmount": 10780,
+    "lineItems": [
+      {
+        "cptCode": "50220",
+        "serviceName": "Nephrectomy",
+        "units": 1,
+        "costPerUnit": 25089,
+        "providerName": "Dr. Theresa Brennan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPR Procedure",
+    "dateOfProcedure": 1749719401234,
+    "hospitalName": "Baptist Health Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 836,
+    "allowedAmount": 539,
+    "lineItems": [
+      {
+        "cptCode": "92950",
+        "serviceName": "CPR procedure",
+        "units": 1,
+        "costPerUnit": 836,
+        "providerName": "Dr. Michael Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thyroidectomy",
+    "dateOfProcedure": 1760325835401,
+    "hospitalName": "Northern Light Eastern Maine Medical Center",
+    "city": "Bangor",
+    "state": "ME",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 11665,
+    "allowedAmount": 6775,
+    "lineItems": [
+      {
+        "cptCode": "60240",
+        "serviceName": "Thyroidectomy",
+        "units": 1,
+        "costPerUnit": 11665,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1759940990735,
+    "hospitalName": "Corewell Health Beaumont Troy Hospital",
+    "city": "Troy",
+    "state": "MI",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 662,
+    "allowedAmount": 436,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 662,
+        "providerName": "Dr. Paolo Marciano"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pericardiocentesis",
+    "dateOfProcedure": 1760844045887,
+    "hospitalName": "UMMC Hospital",
+    "city": "Jackson",
+    "state": "MS",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 1967,
+    "allowedAmount": 1091,
+    "lineItems": [
+      {
+        "cptCode": "33010",
+        "serviceName": "Pericardiocentesis",
+        "units": 1,
+        "costPerUnit": 1967,
+        "providerName": "Dr. LouAnn Woodward"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electroencephalogram (EEG)",
+    "dateOfProcedure": 1762840652149,
+    "hospitalName": "Billings Clinic",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 833,
+    "allowedAmount": 554,
+    "lineItems": [
+      {
+        "cptCode": "95816",
+        "serviceName": "Electroencephalogram (EEG)",
+        "units": 1,
+        "costPerUnit": 833,
+        "providerName": "Dr. Michelle Pierson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Burr Hole Drainage",
+    "dateOfProcedure": 1771428209361,
+    "hospitalName": "Renown Regional Medical Center",
+    "city": "Reno",
+    "state": "NV",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 11994,
+    "allowedAmount": 5401,
+    "lineItems": [
+      {
+        "cptCode": "61154",
+        "serviceName": "Burr hole drainage",
+        "units": 1,
+        "costPerUnit": 11994,
+        "providerName": "Dr. Thomas Graf"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1764149310757,
+    "hospitalName": "Presbyterian Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 24424,
+    "allowedAmount": 10825,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 24424,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bronchoscopy",
+    "dateOfProcedure": 1776806575422,
+    "hospitalName": "Duke University Hospital",
+    "city": "Durham",
+    "state": "NC",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 1862,
+    "allowedAmount": 1177,
+    "lineItems": [
+      {
+        "cptCode": "31622",
+        "serviceName": "Bronchoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 1862,
+        "providerName": "Dr. David Gallagher"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TURBT Procedure",
+    "dateOfProcedure": 1776467557818,
+    "hospitalName": "Ohio State University Wexner Medical Center",
+    "city": "Columbus",
+    "state": "OH",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 8280,
+    "allowedAmount": 3638,
+    "lineItems": [
+      {
+        "cptCode": "52234",
+        "serviceName": "TURBT procedure",
+        "units": 1,
+        "costPerUnit": 8280,
+        "providerName": "Dr. John Warner"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Paracentesis",
+    "dateOfProcedure": 1756768726136,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 856,
+    "allowedAmount": 407,
+    "lineItems": [
+      {
+        "cptCode": "49082",
+        "serviceName": "Paracentesis",
+        "units": 1,
+        "costPerUnit": 856,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1759194903112,
+    "hospitalName": "The Miriam Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 621,
+    "allowedAmount": 271,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 621,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colostomy Creation",
+    "dateOfProcedure": 1775973186453,
+    "hospitalName": "Vanderbilt University Medical Center",
+    "city": "Nashville",
+    "state": "TN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 14263,
+    "allowedAmount": 8472,
+    "lineItems": [
+      {
+        "cptCode": "44320",
+        "serviceName": "Colostomy creation",
+        "units": 1,
+        "costPerUnit": 14263,
+        "providerName": "Dr. Jeff Balser"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Puncture",
+    "dateOfProcedure": 1757516351532,
+    "hospitalName": "University of Utah Hospital",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 983,
+    "allowedAmount": 542,
+    "lineItems": [
+      {
+        "cptCode": "62270",
+        "serviceName": "Lumbar puncture diagnostic",
+        "units": 1,
+        "costPerUnit": 983,
+        "providerName": "Dr. Dan Lundergan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tubal Ligation",
+    "dateOfProcedure": 1753086242906,
+    "hospitalName": "Inova Fairfax Hospital",
+    "city": "Falls Church",
+    "state": "VA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 6482,
+    "allowedAmount": 3068,
+    "lineItems": [
+      {
+        "cptCode": "58600",
+        "serviceName": "Tubal ligation",
+        "units": 1,
+        "costPerUnit": 6482,
+        "providerName": "Dr. Steve Narang"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Defibrillation",
+    "dateOfProcedure": 1764091300696,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 935,
+    "allowedAmount": 404,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Defibrillation",
+        "units": 1,
+        "costPerUnit": 935,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Debridement",
+    "dateOfProcedure": 1768801831246,
+    "hospitalName": "UAB Hospital",
+    "city": "Birmingham",
+    "state": "AL",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 708,
+    "allowedAmount": 411,
+    "lineItems": [
+      {
+        "cptCode": "11042",
+        "serviceName": "Wound debridement",
+        "units": 1,
+        "costPerUnit": 708,
+        "providerName": "Dr. Tony Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "PEG Tube Placement",
+    "dateOfProcedure": 1759803944770,
+    "hospitalName": "Banner-University Medical Center Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 2386,
+    "allowedAmount": 1047,
+    "lineItems": [
+      {
+        "cptCode": "43246",
+        "serviceName": "PEG tube placement",
+        "units": 1,
+        "costPerUnit": 2386,
+        "providerName": "Dr. Marjorie Bessel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardioversion",
+    "dateOfProcedure": 1768444673608,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 1685,
+    "allowedAmount": 798,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Cardioversion external",
+        "units": 1,
+        "costPerUnit": 1685,
+        "providerName": "Dr. Sarah Green"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1769127493099,
+    "hospitalName": "Hartford Hospital",
+    "city": "Hartford",
+    "state": "CT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 1508,
+    "allowedAmount": 811,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1508,
+        "providerName": "Dr. Adam Steinberg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPAP/BiPAP Initiation",
+    "dateOfProcedure": 1765256104527,
+    "hospitalName": "UF Health Shands Hospital",
+    "city": "Gainesville",
+    "state": "FL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 513,
+    "allowedAmount": 248,
+    "lineItems": [
+      {
+        "cptCode": "94660",
+        "serviceName": "CPAP/BiPAP initiation",
+        "units": 1,
+        "costPerUnit": 513,
+        "providerName": "Dr. Timothy Flynn"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Grafting",
+    "dateOfProcedure": 1756795943248,
+    "hospitalName": "St. Alphonsus Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 5124,
+    "allowedAmount": 3396,
+    "lineItems": [
+      {
+        "cptCode": "20900",
+        "serviceName": "Bone grafting",
+        "units": 1,
+        "costPerUnit": 5124,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1746760254068,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 78,
+    "allowedAmount": 35,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 78,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemorrhoidectomy",
+    "dateOfProcedure": 1746566845129,
+    "hospitalName": "AdventHealth Shawnee Mission",
+    "city": "Merriam",
+    "state": "KS",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 4424,
+    "allowedAmount": 2673,
+    "lineItems": [
+      {
+        "cptCode": "46250",
+        "serviceName": "Hemorrhoidectomy",
+        "units": 1,
+        "costPerUnit": 4424,
+        "providerName": "Dr. Larry Botts"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "VP Shunt Placement",
+    "dateOfProcedure": 1767079680094,
+    "hospitalName": "Ochsner Medical Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 17808,
+    "allowedAmount": 12877,
+    "lineItems": [
+      {
+        "cptCode": "62223",
+        "serviceName": "VP shunt placement",
+        "units": 1,
+        "costPerUnit": 17808,
+        "providerName": "Dr. Robert Hart"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy (EGD)",
+    "dateOfProcedure": 1755828042271,
+    "hospitalName": "Brigham and Women's Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 1648,
+    "allowedAmount": 1088,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "EGD with biopsy",
+        "units": 1,
+        "costPerUnit": 1648,
+        "providerName": "Dr. Giles Boland"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Venipuncture",
+    "dateOfProcedure": 1775737564571,
+    "hospitalName": "Mayo Clinic Rochester",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 15,
+    "allowedAmount": 6,
+    "lineItems": [
+      {
+        "cptCode": "36415",
+        "serviceName": "Venipuncture (Blood Draw)",
+        "units": 1,
+        "costPerUnit": 15,
+        "providerName": "Dr. Gianrico Farrugia"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cholecystectomy",
+    "dateOfProcedure": 1765419808225,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 12143,
+    "allowedAmount": 5948,
+    "lineItems": [
+      {
+        "cptCode": "47562",
+        "serviceName": "Cholecystectomy",
+        "units": 1,
+        "costPerUnit": 12143,
+        "providerName": "Dr. Richard Liekweg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ultrasound Abdomen",
+    "dateOfProcedure": 1771338192985,
+    "hospitalName": "Nebraska Medical Center",
+    "city": "Omaha",
+    "state": "NE",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 635,
+    "allowedAmount": 300,
+    "lineItems": [
+      {
+        "cptCode": "76700",
+        "serviceName": "Ultrasound Abdomen complete",
+        "units": 1,
+        "costPerUnit": 635,
+        "providerName": "Dr. Harris Frankel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Exploratory Laparotomy",
+    "dateOfProcedure": 1767474326256,
+    "hospitalName": "Dartmouth-Hitchcock Medical Center",
+    "city": "Lebanon",
+    "state": "NH",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 12270,
+    "allowedAmount": 5519,
+    "lineItems": [
+      {
+        "cptCode": "49000",
+        "serviceName": "Exploratory laparotomy",
+        "units": 1,
+        "costPerUnit": 12270,
+        "providerName": "Dr. Edward Merrens"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Arterial Line Placement",
+    "dateOfProcedure": 1761493962204,
+    "hospitalName": "NYU Langone Hospitals",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 1207,
+    "allowedAmount": 568,
+    "lineItems": [
+      {
+        "cptCode": "36620",
+        "serviceName": "Arterial line placement",
+        "units": 1,
+        "costPerUnit": 1207,
+        "providerName": "Dr. Andrew Brotman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laryngoscopy",
+    "dateOfProcedure": 1747944750191,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 448,
+    "allowedAmount": 215,
+    "lineItems": [
+      {
+        "cptCode": "31505",
+        "serviceName": "Laryngoscopy",
+        "units": 1,
+        "costPerUnit": 448,
+        "providerName": "Dr. Doug Griffin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1757872430412,
+    "hospitalName": "OU Health Medical Center",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 684,
+    "allowedAmount": 504,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 684,
+        "providerName": "Dr. Cameron Mantor"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ORIF Fracture Repair",
+    "dateOfProcedure": 1759914464674,
+    "hospitalName": "UPMC Presbyterian Shadyside",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 24533,
+    "allowedAmount": 10908,
+    "lineItems": [
+      {
+        "cptCode": "27236",
+        "serviceName": "ORIF hip fracture",
+        "units": 1,
+        "costPerUnit": 24533,
+        "providerName": "Dr. Leslie Davis"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Prostatectomy",
+    "dateOfProcedure": 1767986147937,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 17585,
+    "allowedAmount": 7448,
+    "lineItems": [
+      {
+        "cptCode": "55840",
+        "serviceName": "Prostatectomy",
+        "units": 1,
+        "costPerUnit": 17585,
+        "providerName": "Dr. Mike Wilde"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ECMO Initiation",
+    "dateOfProcedure": 1752064441447,
+    "hospitalName": "UT Southwestern Medical Center",
+    "city": "Dallas",
+    "state": "TX",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 251030,
+    "allowedAmount": 121606,
+    "lineItems": [
+      {
+        "cptCode": "33946",
+        "serviceName": "ECMO initiation",
+        "units": 1,
+        "costPerUnit": 251030,
+        "providerName": "Dr. John Warner"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1753680518472,
+    "hospitalName": "Rutland Regional Medical Center",
+    "city": "Rutland",
+    "state": "VT",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 829,
+    "allowedAmount": 412,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 829,
+        "providerName": "Dr. Philip Lapp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1750443507692,
+    "hospitalName": "Providence Swedish",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 1193,
+    "allowedAmount": 487,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 1193,
+        "providerName": "Dr. Guy Hudson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1755079485935,
+    "hospitalName": "Froedtert Hospital",
+    "city": "Milwaukee",
+    "state": "WI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 25465,
+    "allowedAmount": 11638,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 25465,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lung Resection",
+    "dateOfProcedure": 1764408806027,
+    "hospitalName": "Providence Alaska Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 36270,
+    "allowedAmount": 15309,
+    "lineItems": [
+      {
+        "cptCode": "32480",
+        "serviceName": "Lung resection",
+        "units": 1,
+        "costPerUnit": 36270,
+        "providerName": "Dr. Ella Jenkins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laminectomy",
+    "dateOfProcedure": 1756167953149,
+    "hospitalName": "UAMS Medical Center",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 14663,
+    "allowedAmount": 6756,
+    "lineItems": [
+      {
+        "cptCode": "63047",
+        "serviceName": "Laminectomy",
+        "units": 1,
+        "costPerUnit": 14663,
+        "providerName": "Dr. Steppe Mette"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1746622218215,
+    "hospitalName": "UCHealth University of Colorado Hospital",
+    "city": "Aurora",
+    "state": "CO",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 1468,
+    "allowedAmount": 643,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1468,
+        "providerName": "Dr. Jean Wright"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TEE Echocardiogram",
+    "dateOfProcedure": 1763490652830,
+    "hospitalName": "ChristianaCare",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 1188,
+    "allowedAmount": 534,
+    "lineItems": [
+      {
+        "cptCode": "93312",
+        "serviceName": "TEE echocardiogram",
+        "units": 1,
+        "costPerUnit": 1188,
+        "providerName": "Dr. Janice Nevin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bronchoscopy",
+    "dateOfProcedure": 1774262405715,
+    "hospitalName": "Straub Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 1828,
+    "allowedAmount": 760,
+    "lineItems": [
+      {
+        "cptCode": "31622",
+        "serviceName": "Bronchoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 1828,
+        "providerName": "Dr. Gerard Livaudais"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Heart Valve Replacement",
+    "dateOfProcedure": 1757176384291,
+    "hospitalName": "Cook County Health",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 154455,
+    "allowedAmount": 89108,
+    "lineItems": [
+      {
+        "cptCode": "33405",
+        "serviceName": "Heart valve replacement",
+        "units": 1,
+        "costPerUnit": 154455,
+        "providerName": "Dr. Israel Rocha"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hysterectomy",
+    "dateOfProcedure": 1764001729290,
+    "hospitalName": "MercyOne Des Moines Medical Center",
+    "city": "Des Moines",
+    "state": "IA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 17660,
+    "allowedAmount": 12000,
+    "lineItems": [
+      {
+        "cptCode": "58150",
+        "serviceName": "Hysterectomy",
+        "units": 1,
+        "costPerUnit": 17660,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1761794349738,
+    "hospitalName": "Baptist Health Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 8458,
+    "allowedAmount": 4139,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 8458,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Suturing",
+    "dateOfProcedure": 1761782027987,
+    "hospitalName": "Northern Light Eastern Maine Medical Center",
+    "city": "Bangor",
+    "state": "ME",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 259,
+    "allowedAmount": 105,
+    "lineItems": [
+      {
+        "cptCode": "12001",
+        "serviceName": "Wound suturing",
+        "units": 1,
+        "costPerUnit": 259,
+        "providerName": "Dr. James Jarvis"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mastectomy",
+    "dateOfProcedure": 1773250336487,
+    "hospitalName": "University of Michigan Health",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 14922,
+    "allowedAmount": 8892,
+    "lineItems": [
+      {
+        "cptCode": "19307",
+        "serviceName": "Mastectomy",
+        "units": 1,
+        "costPerUnit": 14922,
+        "providerName": "Dr. David Spahlinger"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Spinal Fusion",
+    "dateOfProcedure": 1747070529399,
+    "hospitalName": "Baptist Memorial Hospital-DeSoto",
+    "city": "Southaven",
+    "state": "MS",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 52942,
+    "allowedAmount": 24836,
+    "lineItems": [
+      {
+        "cptCode": "22551",
+        "serviceName": "Spinal fusion",
+        "units": 1,
+        "costPerUnit": 52942,
+        "providerName": "Dr. James Bowers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy",
+    "dateOfProcedure": 1771826183312,
+    "hospitalName": "Billings Clinic",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 2474,
+    "allowedAmount": 1139,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Colonoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 2474,
+        "providerName": "Dr. Michelle Pierson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1761364525535,
+    "hospitalName": "Renown Regional Medical Center",
+    "city": "Reno",
+    "state": "NV",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 451,
+    "allowedAmount": 182,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 451,
+        "providerName": "Dr. Thomas Graf"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1751396548828,
+    "hospitalName": "Presbyterian Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 11683,
+    "allowedAmount": 5466,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 11683,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "PEG Tube Placement",
+    "dateOfProcedure": 1775391786703,
+    "hospitalName": "Duke University Hospital",
+    "city": "Durham",
+    "state": "NC",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 2566,
+    "allowedAmount": 1053,
+    "lineItems": [
+      {
+        "cptCode": "43246",
+        "serviceName": "PEG tube placement",
+        "units": 1,
+        "costPerUnit": 2566,
+        "providerName": "Dr. Thomas Owens"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1771545407454,
+    "hospitalName": "Cleveland Clinic",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 118728,
+    "allowedAmount": 54203,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 118728,
+        "providerName": "Dr. Robert Wyllie"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thyroidectomy",
+    "dateOfProcedure": 1751630680440,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 12219,
+    "allowedAmount": 7331,
+    "lineItems": [
+      {
+        "cptCode": "60240",
+        "serviceName": "Thyroidectomy",
+        "units": 1,
+        "costPerUnit": 12219,
+        "providerName": "Dr. Robert Scoggins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Scan Abdomen",
+    "dateOfProcedure": 1756078702758,
+    "hospitalName": "Rhode Island Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 1192,
+    "allowedAmount": 529,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT Abdomen/Pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 1192,
+        "providerName": "Dr. Mitchell Levy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1772653871949,
+    "hospitalName": "Methodist Hospitals of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 1458,
+    "allowedAmount": 804,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1458,
+        "providerName": "Dr. Michael Ugwueke"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1754403960062,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 46040,
+    "allowedAmount": 28907,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip replacement",
+        "units": 1,
+        "costPerUnit": 46040,
+        "providerName": "Dr. Mark Briesacher"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Coronary Angioplasty",
+    "dateOfProcedure": 1777161647258,
+    "hospitalName": "Inova Fairfax Hospital",
+    "city": "Falls Church",
+    "state": "VA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 15342,
+    "allowedAmount": 8781,
+    "lineItems": [
+      {
+        "cptCode": "92920",
+        "serviceName": "Coronary angioplasty",
+        "units": 1,
+        "costPerUnit": 15342,
+        "providerName": "Dr. Steve Narang"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemodialysis",
+    "dateOfProcedure": 1768052547215,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 664,
+    "allowedAmount": 309,
+    "lineItems": [
+      {
+        "cptCode": "90935",
+        "serviceName": "Hemodialysis",
+        "units": 1,
+        "costPerUnit": 664,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bowel Resection",
+    "dateOfProcedure": 1765445080702,
+    "hospitalName": "UAB Hospital",
+    "city": "Birmingham",
+    "state": "AL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 19514,
+    "allowedAmount": 11413,
+    "lineItems": [
+      {
+        "cptCode": "44140",
+        "serviceName": "Bowel resection",
+        "units": 1,
+        "costPerUnit": 19514,
+        "providerName": "Dr. Amy Williams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1755236389092,
+    "hospitalName": "Mayo Clinic Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 1185,
+    "allowedAmount": 532,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1185,
+        "providerName": "Dr. Alyson Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Ablation",
+    "dateOfProcedure": 1756472445084,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 50205,
+    "allowedAmount": 24316,
+    "lineItems": [
+      {
+        "cptCode": "93653",
+        "serviceName": "Cardiac ablation",
+        "units": 1,
+        "costPerUnit": 50205,
+        "providerName": "Dr. David Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TEE Echocardiogram",
+    "dateOfProcedure": 1768495443916,
+    "hospitalName": "Hartford Hospital",
+    "city": "Hartford",
+    "state": "CT",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 1154,
+    "allowedAmount": 538,
+    "lineItems": [
+      {
+        "cptCode": "93312",
+        "serviceName": "TEE echocardiogram",
+        "units": 1,
+        "costPerUnit": 1154,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Suturing",
+    "dateOfProcedure": 1751680399457,
+    "hospitalName": "UF Health Shands Hospital",
+    "city": "Gainesville",
+    "state": "FL",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 367,
+    "allowedAmount": 266,
+    "lineItems": [
+      {
+        "cptCode": "12001",
+        "serviceName": "Wound suturing",
+        "units": 1,
+        "costPerUnit": 367,
+        "providerName": "Dr. Maria Rodriguez"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Debridement",
+    "dateOfProcedure": 1755274753620,
+    "hospitalName": "St. Luke's Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 842,
+    "allowedAmount": 400,
+    "lineItems": [
+      {
+        "cptCode": "11042",
+        "serviceName": "Wound debridement",
+        "units": 1,
+        "costPerUnit": 842,
+        "providerName": "Dr. Jim Souza"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bowel Resection",
+    "dateOfProcedure": 1764638584961,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 24583,
+    "allowedAmount": 10375,
+    "lineItems": [
+      {
+        "cptCode": "44140",
+        "serviceName": "Bowel resection",
+        "units": 1,
+        "costPerUnit": 24583,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Ablation",
+    "dateOfProcedure": 1768486830769,
+    "hospitalName": "AdventHealth Shawnee Mission",
+    "city": "Merriam",
+    "state": "KS",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 34199,
+    "allowedAmount": 19871,
+    "lineItems": [
+      {
+        "cptCode": "93653",
+        "serviceName": "Cardiac ablation",
+        "units": 1,
+        "costPerUnit": 34199,
+        "providerName": "Dr. Larry Botts"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1754700522417,
+    "hospitalName": "Ochsner Medical Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 1179,
+    "allowedAmount": 528,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1179,
+        "providerName": "Dr. Warner Thomas"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Grafting",
+    "dateOfProcedure": 1773709398723,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 7194,
+    "allowedAmount": 4969,
+    "lineItems": [
+      {
+        "cptCode": "20900",
+        "serviceName": "Bone grafting",
+        "units": 1,
+        "costPerUnit": 7194,
+        "providerName": "Dr. David Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ultrasound Abdomen",
+    "dateOfProcedure": 1772738028913,
+    "hospitalName": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "state": "MN",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 640,
+    "allowedAmount": 419,
+    "lineItems": [
+      {
+        "cptCode": "76700",
+        "serviceName": "Ultrasound Abdomen complete",
+        "units": 1,
+        "costPerUnit": 640,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Paracentesis",
+    "dateOfProcedure": 1770198414721,
+    "hospitalName": "St. Luke's Hospital",
+    "city": "Kansas City",
+    "state": "MO",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 820,
+    "allowedAmount": 414,
+    "lineItems": [
+      {
+        "cptCode": "49082",
+        "serviceName": "Paracentesis",
+        "units": 1,
+        "costPerUnit": 820,
+        "providerName": "Dr. Michael Weaver"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Grafting",
+    "dateOfProcedure": 1772902978114,
+    "hospitalName": "Bryan Medical Center",
+    "city": "Lincoln",
+    "state": "NE",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 5038,
+    "allowedAmount": 3454,
+    "lineItems": [
+      {
+        "cptCode": "20900",
+        "serviceName": "Bone grafting",
+        "units": 1,
+        "costPerUnit": 5038,
+        "providerName": "Dr. John Trapp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "C-Section Delivery",
+    "dateOfProcedure": 1746285459169,
+    "hospitalName": "Elliot Hospital",
+    "city": "Manchester",
+    "state": "NH",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 24551,
+    "allowedAmount": 10233,
+    "lineItems": [
+      {
+        "cptCode": "59510",
+        "serviceName": "C-section delivery",
+        "units": 1,
+        "costPerUnit": 24551,
+        "providerName": "Dr. Greg Baxter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Catheterization",
+    "dateOfProcedure": 1764078724318,
+    "hospitalName": "NYC Health + Hospitals/Bellevue",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 6237,
+    "allowedAmount": 2548,
+    "lineItems": [
+      {
+        "cptCode": "93451",
+        "serviceName": "Right heart catheterization",
+        "units": 1,
+        "costPerUnit": 6237,
+        "providerName": "Dr. Amit Uppal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Circumcision",
+    "dateOfProcedure": 1756719165806,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 862,
+    "allowedAmount": 582,
+    "lineItems": [
+      {
+        "cptCode": "54150",
+        "serviceName": "Circumcision",
+        "units": 1,
+        "costPerUnit": 862,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endotracheal Intubation",
+    "dateOfProcedure": 1753964384923,
+    "hospitalName": "OU Health Medical Center",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 675,
+    "allowedAmount": 321,
+    "lineItems": [
+      {
+        "cptCode": "31500",
+        "serviceName": "Endotracheal intubation",
+        "units": 1,
+        "costPerUnit": 675,
+        "providerName": "Dr. Richard Lofgren"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Paracentesis",
+    "dateOfProcedure": 1760267801539,
+    "hospitalName": "Penn Presbyterian Medical Center",
+    "city": "Philadelphia",
+    "state": "PA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 874,
+    "allowedAmount": 360,
+    "lineItems": [
+      {
+        "cptCode": "49082",
+        "serviceName": "Paracentesis",
+        "units": 1,
+        "costPerUnit": 874,
+        "providerName": "Dr. Kevin Mahoney"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tissue Biopsy",
+    "dateOfProcedure": 1762781189043,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 254,
+    "allowedAmount": 158,
+    "lineItems": [
+      {
+        "cptCode": "11102",
+        "serviceName": "Skin biopsy single lesion",
+        "units": 1,
+        "costPerUnit": 254,
+        "providerName": "Dr. Paul Hanson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1764050969234,
+    "hospitalName": "UT Southwestern Medical Center",
+    "city": "Dallas",
+    "state": "TX",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 8376,
+    "allowedAmount": 3822,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 8376,
+        "providerName": "Dr. John Warner"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1773775614428,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 71,
+    "allowedAmount": 34,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 71,
+        "providerName": "Dr. Sunny Eappen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Suturing",
+    "dateOfProcedure": 1764016584536,
+    "hospitalName": "Providence Sacred Heart Medical Center",
+    "city": "Spokane",
+    "state": "WA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 356,
+    "allowedAmount": 200,
+    "lineItems": [
+      {
+        "cptCode": "12001",
+        "serviceName": "Wound suturing",
+        "units": 1,
+        "costPerUnit": 356,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "AV Fistula Creation",
+    "dateOfProcedure": 1756041099477,
+    "hospitalName": "UW Health University Hospital",
+    "city": "Madison",
+    "state": "WI",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 8467,
+    "allowedAmount": 5781,
+    "lineItems": [
+      {
+        "cptCode": "36821",
+        "serviceName": "AV fistula creation",
+        "units": 1,
+        "costPerUnit": 8467,
+        "providerName": "Dr. Alan Kaplan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "AV Fistula Creation",
+    "dateOfProcedure": 1752067538034,
+    "hospitalName": "Alaska Native Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 8110,
+    "allowedAmount": 3989,
+    "lineItems": [
+      {
+        "cptCode": "36821",
+        "serviceName": "AV fistula creation",
+        "units": 1,
+        "costPerUnit": 8110,
+        "providerName": "Dr. John Doe"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Circumcision",
+    "dateOfProcedure": 1756594164478,
+    "hospitalName": "Baptist Health Medical Center-Little Rock",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 701,
+    "allowedAmount": 306,
+    "lineItems": [
+      {
+        "cptCode": "54150",
+        "serviceName": "Circumcision",
+        "units": 1,
+        "costPerUnit": 701,
+        "providerName": "Dr. Greg Clowers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1755671345845,
+    "hospitalName": "Saint Joseph Hospital",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 1494,
+    "allowedAmount": 707,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1494,
+        "providerName": "Dr. Kathleen Herrmann"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1766304545561,
+    "hospitalName": "ChristianaCare",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 46653,
+    "allowedAmount": 20357,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee replacement",
+        "units": 1,
+        "costPerUnit": 46653,
+        "providerName": "Dr. Ken Silverstein"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tendon Repair",
+    "dateOfProcedure": 1768550963679,
+    "hospitalName": "Queen's Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 6798,
+    "allowedAmount": 2775,
+    "lineItems": [
+      {
+        "cptCode": "24341",
+        "serviceName": "Tendon repair",
+        "units": 1,
+        "costPerUnit": 6798,
+        "providerName": "Dr. Jason Chang"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1755929101063,
+    "hospitalName": "Cook County Health",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 8194,
+    "allowedAmount": 4016,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 8194,
+        "providerName": "Dr. Lauren Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Appendectomy",
+    "dateOfProcedure": 1761021896852,
+    "hospitalName": "University of Iowa Hospitals",
+    "city": "Iowa City",
+    "state": "IA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 18269,
+    "allowedAmount": 9663,
+    "lineItems": [
+      {
+        "cptCode": "44950",
+        "serviceName": "Appendectomy",
+        "units": 1,
+        "costPerUnit": 18269,
+        "providerName": "Dr. Suresh Gunasekaran"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Paracentesis",
+    "dateOfProcedure": 1746909824091,
+    "hospitalName": "UK Chandler Hospital",
+    "city": "Lexington",
+    "state": "KY",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 867,
+    "allowedAmount": 585,
+    "lineItems": [
+      {
+        "cptCode": "49082",
+        "serviceName": "Paracentesis",
+        "units": 1,
+        "costPerUnit": 867,
+        "providerName": "Dr. Mark Newman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPAP/BiPAP Initiation",
+    "dateOfProcedure": 1758019833029,
+    "hospitalName": "Maine Medical Center",
+    "city": "Portland",
+    "state": "ME",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 333,
+    "allowedAmount": 144,
+    "lineItems": [
+      {
+        "cptCode": "94660",
+        "serviceName": "CPAP/BiPAP initiation",
+        "units": 1,
+        "costPerUnit": 333,
+        "providerName": "Dr. Jeff Sanders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Burr Hole Drainage",
+    "dateOfProcedure": 1768783561601,
+    "hospitalName": "Corewell Health Beaumont Troy Hospital",
+    "city": "Troy",
+    "state": "MI",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 12233,
+    "allowedAmount": 5126,
+    "lineItems": [
+      {
+        "cptCode": "61154",
+        "serviceName": "Burr hole drainage",
+        "units": 1,
+        "costPerUnit": 12233,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endotracheal Intubation",
+    "dateOfProcedure": 1750398517641,
+    "hospitalName": "UMMC Hospital",
+    "city": "Jackson",
+    "state": "MS",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 682,
+    "allowedAmount": 320,
+    "lineItems": [
+      {
+        "cptCode": "31500",
+        "serviceName": "Endotracheal intubation",
+        "units": 1,
+        "costPerUnit": 682,
+        "providerName": "Dr. Alan Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Heart Valve Replacement",
+    "dateOfProcedure": 1764606422143,
+    "hospitalName": "St. Vincent Healthcare",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 157326,
+    "allowedAmount": 96175,
+    "lineItems": [
+      {
+        "cptCode": "33405",
+        "serviceName": "Heart valve replacement",
+        "units": 1,
+        "costPerUnit": 157326,
+        "providerName": "Dr. Michael Bush"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1751636256018,
+    "hospitalName": "Sunrise Hospital and Medical Center",
+    "city": "Las Vegas",
+    "state": "NV",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 8873,
+    "allowedAmount": 4227,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 8873,
+        "providerName": "Dr. Jeffrey Murawsky"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endotracheal Intubation",
+    "dateOfProcedure": 1747460173467,
+    "hospitalName": "UNM Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 858,
+    "allowedAmount": 458,
+    "lineItems": [
+      {
+        "cptCode": "31500",
+        "serviceName": "Endotracheal intubation",
+        "units": 1,
+        "costPerUnit": 858,
+        "providerName": "Dr. Kate Becker"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pericardiocentesis",
+    "dateOfProcedure": 1762558940988,
+    "hospitalName": "Duke University Hospital",
+    "city": "Durham",
+    "state": "NC",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 2465,
+    "allowedAmount": 1034,
+    "lineItems": [
+      {
+        "cptCode": "33010",
+        "serviceName": "Pericardiocentesis",
+        "units": 1,
+        "costPerUnit": 2465,
+        "providerName": "Dr. Thomas Owens"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tissue Biopsy",
+    "dateOfProcedure": 1776687527269,
+    "hospitalName": "Ohio State University Wexner Medical Center",
+    "city": "Columbus",
+    "state": "OH",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 239,
+    "allowedAmount": 109,
+    "lineItems": [
+      {
+        "cptCode": "11102",
+        "serviceName": "Skin biopsy single lesion",
+        "units": 1,
+        "costPerUnit": 239,
+        "providerName": "Dr. Andrew Thomas"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tonsillectomy",
+    "dateOfProcedure": 1768603901596,
+    "hospitalName": "OHSU Hospital",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 3425,
+    "allowedAmount": 1682,
+    "lineItems": [
+      {
+        "cptCode": "42820",
+        "serviceName": "Tonsillectomy",
+        "units": 1,
+        "costPerUnit": 3425,
+        "providerName": "Dr. John Hunter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electrocardiogram (EKG)",
+    "dateOfProcedure": 1755878690785,
+    "hospitalName": "Rhode Island Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 125,
+    "allowedAmount": 55,
+    "lineItems": [
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram complete",
+        "units": 1,
+        "costPerUnit": 125,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Needle Decompression",
+    "dateOfProcedure": 1748180656086,
+    "hospitalName": "Methodist Hospitals of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 882,
+    "allowedAmount": 406,
+    "lineItems": [
+      {
+        "cptCode": "32422",
+        "serviceName": "Needle decompression",
+        "units": 1,
+        "costPerUnit": 882,
+        "providerName": "Dr. Michael Ugwueke"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Exploratory Laparotomy",
+    "dateOfProcedure": 1769755819890,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 11614,
+    "allowedAmount": 5486,
+    "lineItems": [
+      {
+        "cptCode": "49000",
+        "serviceName": "Exploratory laparotomy",
+        "units": 1,
+        "costPerUnit": 11614,
+        "providerName": "Dr. Mark Briesacher"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Circumcision",
+    "dateOfProcedure": 1767091121838,
+    "hospitalName": "UVA Health Medical Center",
+    "city": "Charlottesville",
+    "state": "VA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 820,
+    "allowedAmount": 415,
+    "lineItems": [
+      {
+        "cptCode": "54150",
+        "serviceName": "Circumcision",
+        "units": 1,
+        "costPerUnit": 820,
+        "providerName": "Dr. Reid Adams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Spinal Fusion",
+    "dateOfProcedure": 1754148232507,
+    "hospitalName": "WVU Medicine",
+    "city": "Morgantown",
+    "state": "WV",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 52527,
+    "allowedAmount": 23085,
+    "lineItems": [
+      {
+        "cptCode": "22551",
+        "serviceName": "Spinal fusion",
+        "units": 1,
+        "costPerUnit": 52527,
+        "providerName": "Dr. Michael Grace"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemodialysis",
+    "dateOfProcedure": 1775759602236,
+    "hospitalName": "UAB Hospital",
+    "city": "Birmingham",
+    "state": "AL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 650,
+    "allowedAmount": 388,
+    "lineItems": [
+      {
+        "cptCode": "90935",
+        "serviceName": "Hemodialysis",
+        "units": 1,
+        "costPerUnit": 650,
+        "providerName": "Dr. Amy Williams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pericardiocentesis",
+    "dateOfProcedure": 1763133268803,
+    "hospitalName": "Banner-University Medical Center Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 2500,
+    "allowedAmount": 1212,
+    "lineItems": [
+      {
+        "cptCode": "33010",
+        "serviceName": "Pericardiocentesis",
+        "units": 1,
+        "costPerUnit": 2500,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumpectomy",
+    "dateOfProcedure": 1762795611392,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 11621,
+    "allowedAmount": 4903,
+    "lineItems": [
+      {
+        "cptCode": "19301",
+        "serviceName": "Lumpectomy",
+        "units": 1,
+        "costPerUnit": 11621,
+        "providerName": "Dr. Niraj Sehgal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electrocardiogram (EKG)",
+    "dateOfProcedure": 1766757099390,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 115,
+    "allowedAmount": 54,
+    "lineItems": [
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram complete",
+        "units": 1,
+        "costPerUnit": 115,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Burr Hole Drainage",
+    "dateOfProcedure": 1758422673000,
+    "hospitalName": "Sarasota Memorial Health Care System",
+    "city": "Sarasota",
+    "state": "FL",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 17577,
+    "allowedAmount": 10189,
+    "lineItems": [
+      {
+        "cptCode": "61154",
+        "serviceName": "Burr hole drainage",
+        "units": 1,
+        "costPerUnit": 17577,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thyroidectomy",
+    "dateOfProcedure": 1765859909758,
+    "hospitalName": "St. Luke's Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 12050,
+    "allowedAmount": 7983,
+    "lineItems": [
+      {
+        "cptCode": "60240",
+        "serviceName": "Thyroidectomy",
+        "units": 1,
+        "costPerUnit": 12050,
+        "providerName": "Dr. Jim Souza"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1753088577266,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 435,
+    "allowedAmount": 285,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 435,
+        "providerName": "Dr. Richard Fogel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Debridement",
+    "dateOfProcedure": 1758648261117,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 877,
+    "allowedAmount": 409,
+    "lineItems": [
+      {
+        "cptCode": "11042",
+        "serviceName": "Wound debridement",
+        "units": 1,
+        "costPerUnit": 877,
+        "providerName": "Dr. Bob Page"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Craniotomy",
+    "dateOfProcedure": 1777231929876,
+    "hospitalName": "Ochsner Medical Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 46553,
+    "allowedAmount": 20774,
+    "lineItems": [
+      {
+        "cptCode": "61312",
+        "serviceName": "Craniotomy",
+        "units": 1,
+        "costPerUnit": 46553,
+        "providerName": "Dr. Warner Thomas"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Aspiration",
+    "dateOfProcedure": 1769612824252,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 211,
+    "allowedAmount": 116,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Joint aspiration",
+        "units": 1,
+        "costPerUnit": 211,
+        "providerName": "Dr. David Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bariatric Surgery",
+    "dateOfProcedure": 1758531778004,
+    "hospitalName": "Mayo Clinic Rochester",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 25215,
+    "allowedAmount": 15763,
+    "lineItems": [
+      {
+        "cptCode": "43775",
+        "serviceName": "Bariatric surgery",
+        "units": 1,
+        "costPerUnit": 25215,
+        "providerName": "Dr. Amy Williams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Echocardiogram",
+    "dateOfProcedure": 1753286041251,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 815,
+    "allowedAmount": 607,
+    "lineItems": [
+      {
+        "cptCode": "93306",
+        "serviceName": "Echocardiogram complete",
+        "units": 1,
+        "costPerUnit": 815,
+        "providerName": "Dr. Richard Liekweg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Scan Abdomen",
+    "dateOfProcedure": 1761208273494,
+    "hospitalName": "Nebraska Medical Center",
+    "city": "Omaha",
+    "state": "NE",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 1177,
+    "allowedAmount": 581,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT Abdomen/Pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 1177,
+        "providerName": "Dr. James Linder"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Episiotomy Repair",
+    "dateOfProcedure": 1773007908238,
+    "hospitalName": "Dartmouth-Hitchcock Medical Center",
+    "city": "Lebanon",
+    "state": "NH",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 8439,
+    "allowedAmount": 3698,
+    "lineItems": [
+      {
+        "cptCode": "59400",
+        "serviceName": "Episiotomy repair",
+        "units": 1,
+        "costPerUnit": 8439,
+        "providerName": "Dr. Edward Merrens"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1762343556236,
+    "hospitalName": "NewYork-Presbyterian Hospital",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 17088,
+    "allowedAmount": 11389,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 17088,
+        "providerName": "Dr. Steven Corwin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thyroidectomy",
+    "dateOfProcedure": 1749458441658,
+    "hospitalName": "Essentia Health-Fargo",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 11678,
+    "allowedAmount": 7815,
+    "lineItems": [
+      {
+        "cptCode": "60240",
+        "serviceName": "Thyroidectomy",
+        "units": 1,
+        "costPerUnit": 11678,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPAP/BiPAP Initiation",
+    "dateOfProcedure": 1762210337933,
+    "hospitalName": "Saint Francis Hospital",
+    "city": "Tulsa",
+    "state": "OK",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 275,
+    "allowedAmount": 126,
+    "lineItems": [
+      {
+        "cptCode": "94660",
+        "serviceName": "CPAP/BiPAP initiation",
+        "units": 1,
+        "costPerUnit": 275,
+        "providerName": "Dr. Mark Frost"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Echocardiogram",
+    "dateOfProcedure": 1769896381044,
+    "hospitalName": "Penn Presbyterian Medical Center",
+    "city": "Philadelphia",
+    "state": "PA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 831,
+    "allowedAmount": 362,
+    "lineItems": [
+      {
+        "cptCode": "93306",
+        "serviceName": "Echocardiogram complete",
+        "units": 1,
+        "costPerUnit": 831,
+        "providerName": "Dr. Regina Cunningham"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colostomy Creation",
+    "dateOfProcedure": 1758918567123,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 15364,
+    "allowedAmount": 6732,
+    "lineItems": [
+      {
+        "cptCode": "44320",
+        "serviceName": "Colostomy creation",
+        "units": 1,
+        "costPerUnit": 15364,
+        "providerName": "Dr. Paul Hanson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ultrasound Abdomen",
+    "dateOfProcedure": 1777802373765,
+    "hospitalName": "UT Southwestern Medical Center",
+    "city": "Dallas",
+    "state": "TX",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 661,
+    "allowedAmount": 322,
+    "lineItems": [
+      {
+        "cptCode": "76700",
+        "serviceName": "Ultrasound Abdomen complete",
+        "units": 1,
+        "costPerUnit": 661,
+        "providerName": "Dr. Daniel Podolsky"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electroencephalogram (EEG)",
+    "dateOfProcedure": 1758826039005,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 862,
+    "allowedAmount": 352,
+    "lineItems": [
+      {
+        "cptCode": "95816",
+        "serviceName": "Electroencephalogram (EEG)",
+        "units": 1,
+        "costPerUnit": 862,
+        "providerName": "Dr. Stephen Leffler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Nephrectomy",
+    "dateOfProcedure": 1772126960417,
+    "hospitalName": "Providence Swedish",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 36655,
+    "allowedAmount": 16234,
+    "lineItems": [
+      {
+        "cptCode": "50220",
+        "serviceName": "Nephrectomy",
+        "units": 1,
+        "costPerUnit": 36655,
+        "providerName": "Dr. Chris Chisholm"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mastectomy",
+    "dateOfProcedure": 1768177236722,
+    "hospitalName": "Froedtert Hospital",
+    "city": "Milwaukee",
+    "state": "WI",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 15425,
+    "allowedAmount": 7151,
+    "lineItems": [
+      {
+        "cptCode": "19307",
+        "serviceName": "Mastectomy",
+        "units": 1,
+        "costPerUnit": 15425,
+        "providerName": "Dr. Jonathon Truwit"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electroencephalogram (EEG)",
+    "dateOfProcedure": 1750121423688,
+    "hospitalName": "Providence Alaska Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 883,
+    "allowedAmount": 605,
+    "lineItems": [
+      {
+        "cptCode": "95816",
+        "serviceName": "Electroencephalogram (EEG)",
+        "units": 1,
+        "costPerUnit": 883,
+        "providerName": "Dr. Michael Bernstein"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Suturing",
+    "dateOfProcedure": 1757179262247,
+    "hospitalName": "UAMS Medical Center",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 201,
+    "allowedAmount": 131,
+    "lineItems": [
+      {
+        "cptCode": "12001",
+        "serviceName": "Wound suturing",
+        "units": 1,
+        "costPerUnit": 201,
+        "providerName": "Dr. Richard Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1766045255886,
+    "hospitalName": "UCHealth University of Colorado Hospital",
+    "city": "Aurora",
+    "state": "CO",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 444,
+    "allowedAmount": 213,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 444,
+        "providerName": "Dr. Tom Flaig"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Paracentesis",
+    "dateOfProcedure": 1762316952821,
+    "hospitalName": "ChristianaCare",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 869,
+    "allowedAmount": 639,
+    "lineItems": [
+      {
+        "cptCode": "49082",
+        "serviceName": "Paracentesis",
+        "units": 1,
+        "costPerUnit": 869,
+        "providerName": "Dr. Janice Nevin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardioversion",
+    "dateOfProcedure": 1762966074992,
+    "hospitalName": "Queen's Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 1246,
+    "allowedAmount": 551,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Cardioversion external",
+        "units": 1,
+        "costPerUnit": 1246,
+        "providerName": "Dr. Jason Chang"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Nephrectomy",
+    "dateOfProcedure": 1746691907497,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 26058,
+    "allowedAmount": 12795,
+    "lineItems": [
+      {
+        "cptCode": "50220",
+        "serviceName": "Nephrectomy",
+        "units": 1,
+        "costPerUnit": 26058,
+        "providerName": "Dr. Gary Noskin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Episiotomy Repair",
+    "dateOfProcedure": 1761120391347,
+    "hospitalName": "MercyOne Des Moines Medical Center",
+    "city": "Des Moines",
+    "state": "IA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 8618,
+    "allowedAmount": 4190,
+    "lineItems": [
+      {
+        "cptCode": "59400",
+        "serviceName": "Episiotomy repair",
+        "units": 1,
+        "costPerUnit": 8618,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Vaccinations",
+    "dateOfProcedure": 1748507804707,
+    "hospitalName": "Baptist Health Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 62,
+    "allowedAmount": 35,
+    "lineItems": [
+      {
+        "cptCode": "90471",
+        "serviceName": "Vaccination administration",
+        "units": 1,
+        "costPerUnit": 62,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Suprapubic Catheter",
+    "dateOfProcedure": 1773483289146,
+    "hospitalName": "Northern Light Eastern Maine Medical Center",
+    "city": "Bangor",
+    "state": "ME",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 1177,
+    "allowedAmount": 866,
+    "lineItems": [
+      {
+        "cptCode": "51040",
+        "serviceName": "Suprapubic catheter",
+        "units": 1,
+        "costPerUnit": 1177,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bariatric Surgery",
+    "dateOfProcedure": 1763994942600,
+    "hospitalName": "Corewell Health Beaumont Troy Hospital",
+    "city": "Troy",
+    "state": "MI",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 25941,
+    "allowedAmount": 16332,
+    "lineItems": [
+      {
+        "cptCode": "43775",
+        "serviceName": "Bariatric surgery",
+        "units": 1,
+        "costPerUnit": 25941,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1764312176205,
+    "hospitalName": "UMMC Hospital",
+    "city": "Jackson",
+    "state": "MS",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 1228,
+    "allowedAmount": 850,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1228,
+        "providerName": "Dr. Alan Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1758965328585,
+    "hospitalName": "Billings Clinic",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 1572,
+    "allowedAmount": 941,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1572,
+        "providerName": "Dr. Michelle Pierson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1750504851991,
+    "hospitalName": "Renown Regional Medical Center",
+    "city": "Reno",
+    "state": "NV",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 1196,
+    "allowedAmount": 720,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1196,
+        "providerName": "Dr. Tony Slonim"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Aspiration",
+    "dateOfProcedure": 1775276761953,
+    "hospitalName": "UNM Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 154,
+    "allowedAmount": 71,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Joint aspiration",
+        "units": 1,
+        "costPerUnit": 154,
+        "providerName": "Dr. Irene Agostini"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "General Anesthesia",
+    "dateOfProcedure": 1752573381882,
+    "hospitalName": "UNC Hospitals",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 2475,
+    "allowedAmount": 1799,
+    "lineItems": [
+      {
+        "cptCode": "00100",
+        "serviceName": "General anesthesia",
+        "units": 1,
+        "costPerUnit": 2475,
+        "providerName": "Dr. Gary Park"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Burr Hole Drainage",
+    "dateOfProcedure": 1774115472310,
+    "hospitalName": "Ohio State University Wexner Medical Center",
+    "city": "Columbus",
+    "state": "OH",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 11447,
+    "allowedAmount": 7106,
+    "lineItems": [
+      {
+        "cptCode": "61154",
+        "serviceName": "Burr hole drainage",
+        "units": 1,
+        "costPerUnit": 11447,
+        "providerName": "Dr. Andrew Thomas"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1775340037455,
+    "hospitalName": "OHSU Hospital",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 1820,
+    "allowedAmount": 812,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1820,
+        "providerName": "Dr. Renee Edwards"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Ablation",
+    "dateOfProcedure": 1765966756293,
+    "hospitalName": "The Miriam Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 36058,
+    "allowedAmount": 15613,
+    "lineItems": [
+      {
+        "cptCode": "93653",
+        "serviceName": "Cardiac ablation",
+        "units": 1,
+        "costPerUnit": 36058,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Amniocentesis",
+    "dateOfProcedure": 1757850368590,
+    "hospitalName": "Methodist Hospitals of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 1252,
+    "allowedAmount": 615,
+    "lineItems": [
+      {
+        "cptCode": "59000",
+        "serviceName": "Amniocentesis",
+        "units": 1,
+        "costPerUnit": 1252,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bronchoscopy",
+    "dateOfProcedure": 1772902464048,
+    "hospitalName": "University of Utah Hospital",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 1868,
+    "allowedAmount": 830,
+    "lineItems": [
+      {
+        "cptCode": "31622",
+        "serviceName": "Bronchoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 1868,
+        "providerName": "Dr. Sam Finlayson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1749925365787,
+    "hospitalName": "Inova Fairfax Hospital",
+    "city": "Falls Church",
+    "state": "VA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 1178,
+    "allowedAmount": 522,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1178,
+        "providerName": "Dr. Steve Narang"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "AV Fistula Creation",
+    "dateOfProcedure": 1747256693751,
+    "hospitalName": "WVU Medicine",
+    "city": "Morgantown",
+    "state": "WV",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 6941,
+    "allowedAmount": 3019,
+    "lineItems": [
+      {
+        "cptCode": "36821",
+        "serviceName": "AV fistula creation",
+        "units": 1,
+        "costPerUnit": 6941,
+        "providerName": "Dr. Albert Wright"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Aspiration",
+    "dateOfProcedure": 1761387418028,
+    "hospitalName": "Huntsville Hospital",
+    "city": "Huntsville",
+    "state": "AL",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 115,
+    "allowedAmount": 46,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Joint aspiration",
+        "units": 1,
+        "costPerUnit": 115,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mechanical Ventilation",
+    "dateOfProcedure": 1772025720620,
+    "hospitalName": "Mayo Clinic Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 2572,
+    "allowedAmount": 1091,
+    "lineItems": [
+      {
+        "cptCode": "94002",
+        "serviceName": "Mechanical ventilation",
+        "units": 1,
+        "costPerUnit": 2572,
+        "providerName": "Dr. Alyson Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TURBT Procedure",
+    "dateOfProcedure": 1758372769635,
+    "hospitalName": "UC Davis Medical Center",
+    "city": "Sacramento",
+    "state": "CA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 11765,
+    "allowedAmount": 7639,
+    "lineItems": [
+      {
+        "cptCode": "52234",
+        "serviceName": "TURBT procedure",
+        "units": 1,
+        "costPerUnit": 11765,
+        "providerName": "Dr. Maria Lopez"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1773464097390,
+    "hospitalName": "Hartford Hospital",
+    "city": "Hartford",
+    "state": "CT",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 465,
+    "allowedAmount": 316,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 465,
+        "providerName": "Dr. Adam Steinberg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tonsillectomy",
+    "dateOfProcedure": 1748230869057,
+    "hospitalName": "Mayo Clinic Jacksonville",
+    "city": "Jacksonville",
+    "state": "FL",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 4963,
+    "allowedAmount": 2829,
+    "lineItems": [
+      {
+        "cptCode": "42820",
+        "serviceName": "Tonsillectomy",
+        "units": 1,
+        "costPerUnit": 4963,
+        "providerName": "Dr. Kent Thielen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1756078278485,
+    "hospitalName": "St. Alphonsus Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 76,
+    "allowedAmount": 50,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 76,
+        "providerName": "Dr. Steven Nemerson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TPN Administration",
+    "dateOfProcedure": 1774122332269,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 446,
+    "allowedAmount": 240,
+    "lineItems": [
+      {
+        "cptCode": "B4185",
+        "serviceName": "TPN administration",
+        "units": 1,
+        "costPerUnit": 446,
+        "providerName": "Dr. Richard Fogel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Appendectomy",
+    "dateOfProcedure": 1746653031196,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 17844,
+    "allowedAmount": 8534,
+    "lineItems": [
+      {
+        "cptCode": "44950",
+        "serviceName": "Appendectomy",
+        "units": 1,
+        "costPerUnit": 17844,
+        "providerName": "Dr. Steven Stites"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Nephrectomy",
+    "dateOfProcedure": 1753248519144,
+    "hospitalName": "Our Lady of the Lake Regional Medical Center",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 24731,
+    "allowedAmount": 10056,
+    "lineItems": [
+      {
+        "cptCode": "50220",
+        "serviceName": "Nephrectomy",
+        "units": 1,
+        "costPerUnit": 24731,
+        "providerName": "Dr. Catherine O'Neal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Episiotomy Repair",
+    "dateOfProcedure": 1762287266060,
+    "hospitalName": "Brigham and Women's Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 12073,
+    "allowedAmount": 7302,
+    "lineItems": [
+      {
+        "cptCode": "59400",
+        "serviceName": "Episiotomy repair",
+        "units": 1,
+        "costPerUnit": 12073,
+        "providerName": "Dr. Robert Higgins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1762661831180,
+    "hospitalName": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "state": "MN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 1831,
+    "allowedAmount": 966,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1831,
+        "providerName": "Dr. Penny Wheeler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Defibrillation",
+    "dateOfProcedure": 1762566199068,
+    "hospitalName": "St. Luke's Hospital",
+    "city": "Kansas City",
+    "state": "MO",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 1219,
+    "allowedAmount": 548,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Defibrillation",
+        "units": 1,
+        "costPerUnit": 1219,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ECMO Initiation",
+    "dateOfProcedure": 1748994350488,
+    "hospitalName": "Bryan Medical Center",
+    "city": "Lincoln",
+    "state": "NE",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 259461,
+    "allowedAmount": 122602,
+    "lineItems": [
+      {
+        "cptCode": "33946",
+        "serviceName": "ECMO initiation",
+        "units": 1,
+        "costPerUnit": 259461,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1757295349269,
+    "hospitalName": "Dartmouth-Hitchcock Medical Center",
+    "city": "Lebanon",
+    "state": "NH",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 1723,
+    "allowedAmount": 1109,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1723,
+        "providerName": "Dr. Joanne Conroy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy",
+    "dateOfProcedure": 1759788176012,
+    "hospitalName": "NYC Health + Hospitals/Bellevue",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 3527,
+    "allowedAmount": 1513,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Colonoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 3527,
+        "providerName": "Dr. William Hicks"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tonsillectomy",
+    "dateOfProcedure": 1774402802885,
+    "hospitalName": "Essentia Health-Fargo",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 3370,
+    "allowedAmount": 1794,
+    "lineItems": [
+      {
+        "cptCode": "42820",
+        "serviceName": "Tonsillectomy",
+        "units": 1,
+        "costPerUnit": 3370,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Aspiration",
+    "dateOfProcedure": 1774778258381,
+    "hospitalName": "OU Health Medical Center",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 118,
+    "allowedAmount": 79,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Joint aspiration",
+        "units": 1,
+        "costPerUnit": 118,
+        "providerName": "Dr. Cameron Mantor"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest X-Ray",
+    "dateOfProcedure": 1747338774441,
+    "hospitalName": "Penn State Health Milton S. Hershey Medical Center",
+    "city": "Hershey",
+    "state": "PA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 151,
+    "allowedAmount": 60,
+    "lineItems": [
+      {
+        "cptCode": "71045",
+        "serviceName": "X-ray chest 1 view",
+        "units": 1,
+        "costPerUnit": 151,
+        "providerName": "Dr. Robert Harbaugh"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TEE Echocardiogram",
+    "dateOfProcedure": 1763202933145,
+    "hospitalName": "Avera McKennan Hospital",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 1221,
+    "allowedAmount": 797,
+    "lineItems": [
+      {
+        "cptCode": "93312",
+        "serviceName": "TEE echocardiogram",
+        "units": 1,
+        "costPerUnit": 1221,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1754196916463,
+    "hospitalName": "Texas Health Resources",
+    "city": "Arlington",
+    "state": "TX",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 1739,
+    "allowedAmount": 749,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1739,
+        "providerName": "Dr. Andrew Masica"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Defibrillation",
+    "dateOfProcedure": 1758934817944,
+    "hospitalName": "Rutland Regional Medical Center",
+    "city": "Rutland",
+    "state": "VT",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 1202,
+    "allowedAmount": 500,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Defibrillation",
+        "units": 1,
+        "costPerUnit": 1202,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Paracentesis",
+    "dateOfProcedure": 1773705237515,
+    "hospitalName": "Providence Sacred Heart Medical Center",
+    "city": "Spokane",
+    "state": "WA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 1249,
+    "allowedAmount": 621,
+    "lineItems": [
+      {
+        "cptCode": "49082",
+        "serviceName": "Paracentesis",
+        "units": 1,
+        "costPerUnit": 1249,
+        "providerName": "Dr. Peg Currie"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1757108166714,
+    "hospitalName": "UW Health University Hospital",
+    "city": "Madison",
+    "state": "WI",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 662,
+    "allowedAmount": 266,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 662,
+        "providerName": "Dr. Alan Kaplan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ultrasound Abdomen",
+    "dateOfProcedure": 1748512510040,
+    "hospitalName": "Alaska Native Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 666,
+    "allowedAmount": 312,
+    "lineItems": [
+      {
+        "cptCode": "76700",
+        "serviceName": "Ultrasound Abdomen complete",
+        "units": 1,
+        "costPerUnit": 666,
+        "providerName": "Dr. John Doe"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Catheterization",
+    "dateOfProcedure": 1762059688492,
+    "hospitalName": "UAMS Medical Center",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 3559,
+    "allowedAmount": 1678,
+    "lineItems": [
+      {
+        "cptCode": "93451",
+        "serviceName": "Right heart catheterization",
+        "units": 1,
+        "costPerUnit": 3559,
+        "providerName": "Dr. Steppe Mette"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pericardiocentesis",
+    "dateOfProcedure": 1774577506623,
+    "hospitalName": "Saint Joseph Hospital",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 2529,
+    "allowedAmount": 1350,
+    "lineItems": [
+      {
+        "cptCode": "33010",
+        "serviceName": "Pericardiocentesis",
+        "units": 1,
+        "costPerUnit": 2529,
+        "providerName": "Dr. Kathleen Herrmann"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1763724702244,
+    "hospitalName": "Bayhealth Hospital",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 1253,
+    "allowedAmount": 920,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1253,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1752271855752,
+    "hospitalName": "Straub Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 24057,
+    "allowedAmount": 10941,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 24057,
+        "providerName": "Dr. Gerard Livaudais"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bowel Resection",
+    "dateOfProcedure": 1772618044368,
+    "hospitalName": "Cook County Health",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 24179,
+    "allowedAmount": 13037,
+    "lineItems": [
+      {
+        "cptCode": "44140",
+        "serviceName": "Bowel resection",
+        "units": 1,
+        "costPerUnit": 24179,
+        "providerName": "Dr. Lauren Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ICD Placement",
+    "dateOfProcedure": 1774512682760,
+    "hospitalName": "MercyOne Des Moines Medical Center",
+    "city": "Des Moines",
+    "state": "IA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 46760,
+    "allowedAmount": 27157,
+    "lineItems": [
+      {
+        "cptCode": "33249",
+        "serviceName": "ICD placement",
+        "units": 1,
+        "costPerUnit": 46760,
+        "providerName": "Dr. Hijinio Carreon"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Carpal Tunnel Release",
+    "dateOfProcedure": 1764495102948,
+    "hospitalName": "Baptist Health Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 3367,
+    "allowedAmount": 2075,
+    "lineItems": [
+      {
+        "cptCode": "64721",
+        "serviceName": "Carpal tunnel release",
+        "units": 1,
+        "costPerUnit": 3367,
+        "providerName": "Dr. Michael Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1759859541197,
+    "hospitalName": "Northern Light Eastern Maine Medical Center",
+    "city": "Bangor",
+    "state": "ME",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 666,
+    "allowedAmount": 368,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 666,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Puncture",
+    "dateOfProcedure": 1755168296864,
+    "hospitalName": "University of Michigan Health",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 967,
+    "allowedAmount": 406,
+    "lineItems": [
+      {
+        "cptCode": "62270",
+        "serviceName": "Lumbar puncture diagnostic",
+        "units": 1,
+        "costPerUnit": 967,
+        "providerName": "Dr. David Spahlinger"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Burr Hole Drainage",
+    "dateOfProcedure": 1762756140119,
+    "hospitalName": "Baptist Memorial Hospital-DeSoto",
+    "city": "Southaven",
+    "state": "MS",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 9459,
+    "allowedAmount": 4450,
+    "lineItems": [
+      {
+        "cptCode": "61154",
+        "serviceName": "Burr hole drainage",
+        "units": 1,
+        "costPerUnit": 9459,
+        "providerName": "Dr. James Bowers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1749767045694,
+    "hospitalName": "St. Vincent Healthcare",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 3613,
+    "allowedAmount": 2525,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 3613,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "General Anesthesia",
+    "dateOfProcedure": 1775850426384,
+    "hospitalName": "Sunrise Hospital and Medical Center",
+    "city": "Las Vegas",
+    "state": "NV",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 2522,
+    "allowedAmount": 1439,
+    "lineItems": [
+      {
+        "cptCode": "00100",
+        "serviceName": "General anesthesia",
+        "units": 1,
+        "costPerUnit": 2522,
+        "providerName": "Dr. Jeffrey Murawsky"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endotracheal Intubation",
+    "dateOfProcedure": 1751598781661,
+    "hospitalName": "Presbyterian Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 826,
+    "allowedAmount": 562,
+    "lineItems": [
+      {
+        "cptCode": "31500",
+        "serviceName": "Endotracheal intubation",
+        "units": 1,
+        "costPerUnit": 826,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Amniocentesis",
+    "dateOfProcedure": 1751130950610,
+    "hospitalName": "UNC Hospitals",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 1162,
+    "allowedAmount": 701,
+    "lineItems": [
+      {
+        "cptCode": "59000",
+        "serviceName": "Amniocentesis",
+        "units": 1,
+        "costPerUnit": 1162,
+        "providerName": "Dr. David Zvara"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colostomy Creation",
+    "dateOfProcedure": 1768629853642,
+    "hospitalName": "Cleveland Clinic",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 15598,
+    "allowedAmount": 7594,
+    "lineItems": [
+      {
+        "cptCode": "44320",
+        "serviceName": "Colostomy creation",
+        "units": 1,
+        "costPerUnit": 15598,
+        "providerName": "Dr. Robert Wyllie"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tracheostomy",
+    "dateOfProcedure": 1757776899782,
+    "hospitalName": "OHSU Hospital",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 4986,
+    "allowedAmount": 2289,
+    "lineItems": [
+      {
+        "cptCode": "31600",
+        "serviceName": "Tracheostomy",
+        "units": 1,
+        "costPerUnit": 4986,
+        "providerName": "Dr. John Hunter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumpectomy",
+    "dateOfProcedure": 1765901613378,
+    "hospitalName": "Rhode Island Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 8404,
+    "allowedAmount": 3513,
+    "lineItems": [
+      {
+        "cptCode": "19301",
+        "serviceName": "Lumpectomy",
+        "units": 1,
+        "costPerUnit": 8404,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "PEG Tube Placement",
+    "dateOfProcedure": 1767371995180,
+    "hospitalName": "Methodist Hospitals of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 2524,
+    "allowedAmount": 1141,
+    "lineItems": [
+      {
+        "cptCode": "43246",
+        "serviceName": "PEG tube placement",
+        "units": 1,
+        "costPerUnit": 2524,
+        "providerName": "Dr. Michael Ugwueke"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laryngoscopy",
+    "dateOfProcedure": 1757507144000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 471,
+    "allowedAmount": 206,
+    "lineItems": [
+      {
+        "cptCode": "31505",
+        "serviceName": "Laryngoscopy",
+        "units": 1,
+        "costPerUnit": 471,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPR Procedure",
+    "dateOfProcedure": 1751229485660,
+    "hospitalName": "UVA Health Medical Center",
+    "city": "Charlottesville",
+    "state": "VA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 860,
+    "allowedAmount": 370,
+    "lineItems": [
+      {
+        "cptCode": "92950",
+        "serviceName": "CPR procedure",
+        "units": 1,
+        "costPerUnit": 860,
+        "providerName": "Dr. Reid Adams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hernia Repair",
+    "dateOfProcedure": 1771630860749,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 6501,
+    "allowedAmount": 2606,
+    "lineItems": [
+      {
+        "cptCode": "49505",
+        "serviceName": "Hernia repair",
+        "units": 1,
+        "costPerUnit": 6501,
+        "providerName": "Dr. Glenn Crotty"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pericardiocentesis",
+    "dateOfProcedure": 1769296679556,
+    "hospitalName": "Huntsville Hospital",
+    "city": "Huntsville",
+    "state": "AL",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 2081,
+    "allowedAmount": 1551,
+    "lineItems": [
+      {
+        "cptCode": "33010",
+        "serviceName": "Pericardiocentesis",
+        "units": 1,
+        "costPerUnit": 2081,
+        "providerName": "Dr. Robert Chirkoff"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Fetal Monitoring",
+    "dateOfProcedure": 1775769767264,
+    "hospitalName": "Mayo Clinic Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 439,
+    "allowedAmount": 274,
+    "lineItems": [
+      {
+        "cptCode": "59025",
+        "serviceName": "Fetal monitoring",
+        "units": 1,
+        "costPerUnit": 439,
+        "providerName": "Dr. Richard Gray"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "AV Fistula Creation",
+    "dateOfProcedure": 1758693590327,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 11905,
+    "allowedAmount": 5083,
+    "lineItems": [
+      {
+        "cptCode": "36821",
+        "serviceName": "AV fistula creation",
+        "units": 1,
+        "costPerUnit": 11905,
+        "providerName": "Dr. Elena Rodriguez"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laryngoscopy",
+    "dateOfProcedure": 1747132016937,
+    "hospitalName": "Hartford Hospital",
+    "city": "Hartford",
+    "state": "CT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 430,
+    "allowedAmount": 253,
+    "lineItems": [
+      {
+        "cptCode": "31505",
+        "serviceName": "Laryngoscopy",
+        "units": 1,
+        "costPerUnit": 430,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1751749151478,
+    "hospitalName": "Sarasota Memorial Health Care System",
+    "city": "Sarasota",
+    "state": "FL",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 16040,
+    "allowedAmount": 10572,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 16040,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1764133648615,
+    "hospitalName": "St. Alphonsus Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 679,
+    "allowedAmount": 420,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 679,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Ablation",
+    "dateOfProcedure": 1751666980155,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 33823,
+    "allowedAmount": 19051,
+    "lineItems": [
+      {
+        "cptCode": "93653",
+        "serviceName": "Cardiac ablation",
+        "units": 1,
+        "costPerUnit": 33823,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Needle Decompression",
+    "dateOfProcedure": 1768748670812,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 875,
+    "allowedAmount": 382,
+    "lineItems": [
+      {
+        "cptCode": "32422",
+        "serviceName": "Needle decompression",
+        "units": 1,
+        "costPerUnit": 875,
+        "providerName": "Dr. Steven Stites"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1763483386637,
+    "hospitalName": "Our Lady of the Lake Regional Medical Center",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 1220,
+    "allowedAmount": 665,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1220,
+        "providerName": "Dr. Catherine O'Neal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laminectomy",
+    "dateOfProcedure": 1765434015334,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 25232,
+    "allowedAmount": 11833,
+    "lineItems": [
+      {
+        "cptCode": "63047",
+        "serviceName": "Laminectomy",
+        "units": 1,
+        "costPerUnit": 25232,
+        "providerName": "Dr. David Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1769312112456,
+    "hospitalName": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "state": "MN",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 11605,
+    "allowedAmount": 4997,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 11605,
+        "providerName": "Dr. Penny Wheeler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1751482932081,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 77,
+    "allowedAmount": 34,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 77,
+        "providerName": "Dr. John Lynch"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1756821868760,
+    "hospitalName": "Nebraska Medical Center",
+    "city": "Omaha",
+    "state": "NE",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 1558,
+    "allowedAmount": 777,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1558,
+        "providerName": "Dr. James Linder"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bariatric Surgery",
+    "dateOfProcedure": 1754069376266,
+    "hospitalName": "Elliot Hospital",
+    "city": "Manchester",
+    "state": "NH",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 25321,
+    "allowedAmount": 11851,
+    "lineItems": [
+      {
+        "cptCode": "43775",
+        "serviceName": "Bariatric surgery",
+        "units": 1,
+        "costPerUnit": 25321,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Catheterization",
+    "dateOfProcedure": 1762130040750,
+    "hospitalName": "NYU Langone Hospitals",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 6039,
+    "allowedAmount": 2502,
+    "lineItems": [
+      {
+        "cptCode": "93451",
+        "serviceName": "Right heart catheterization",
+        "units": 1,
+        "costPerUnit": 6039,
+        "providerName": "Dr. Robert Grossman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TEE Echocardiogram",
+    "dateOfProcedure": 1767272622089,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 1229,
+    "allowedAmount": 868,
+    "lineItems": [
+      {
+        "cptCode": "93312",
+        "serviceName": "TEE echocardiogram",
+        "units": 1,
+        "costPerUnit": 1229,
+        "providerName": "Dr. Doug Griffin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Aspiration",
+    "dateOfProcedure": 1777698988671,
+    "hospitalName": "Saint Francis Hospital",
+    "city": "Tulsa",
+    "state": "OK",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 116,
+    "allowedAmount": 54,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Joint aspiration",
+        "units": 1,
+        "costPerUnit": 116,
+        "providerName": "Dr. Mark Frost"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1776122105643,
+    "hospitalName": "Penn Presbyterian Medical Center",
+    "city": "Philadelphia",
+    "state": "PA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 8249,
+    "allowedAmount": 6096,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 8249,
+        "providerName": "Dr. Kevin Mahoney"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1775919409605,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 8264,
+    "allowedAmount": 3680,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 8264,
+        "providerName": "Dr. Paul Hanson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tubal Ligation",
+    "dateOfProcedure": 1764387111400,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 6545,
+    "allowedAmount": 3624,
+    "lineItems": [
+      {
+        "cptCode": "58600",
+        "serviceName": "Tubal ligation",
+        "units": 1,
+        "costPerUnit": 6545,
+        "providerName": "Dr. Marc Boom"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1746320797063,
+    "hospitalName": "Rutland Regional Medical Center",
+    "city": "Rutland",
+    "state": "VT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 1873,
+    "allowedAmount": 1128,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1873,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1750129925720,
+    "hospitalName": "Providence Sacred Heart Medical Center",
+    "city": "Spokane",
+    "state": "WA",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 1602,
+    "allowedAmount": 1009,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1602,
+        "providerName": "Dr. Peg Currie"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Craniotomy",
+    "dateOfProcedure": 1746387220512,
+    "hospitalName": "UW Health University Hospital",
+    "city": "Madison",
+    "state": "WI",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 43608,
+    "allowedAmount": 22039,
+    "lineItems": [
+      {
+        "cptCode": "61312",
+        "serviceName": "Craniotomy",
+        "units": 1,
+        "costPerUnit": 43608,
+        "providerName": "Dr. Pete Newcomer"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1749710010198,
+    "hospitalName": "Providence Alaska Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 45822,
+    "allowedAmount": 22843,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee replacement",
+        "units": 1,
+        "costPerUnit": 45822,
+        "providerName": "Dr. Ella Jenkins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tissue Biopsy",
+    "dateOfProcedure": 1775260736190,
+    "hospitalName": "UAMS Medical Center",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 200,
+    "allowedAmount": 89,
+    "lineItems": [
+      {
+        "cptCode": "11102",
+        "serviceName": "Skin biopsy single lesion",
+        "units": 1,
+        "costPerUnit": 200,
+        "providerName": "Dr. Steppe Mette"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "General Anesthesia",
+    "dateOfProcedure": 1746978449751,
+    "hospitalName": "UCHealth University of Colorado Hospital",
+    "city": "Aurora",
+    "state": "CO",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 2523,
+    "allowedAmount": 1065,
+    "lineItems": [
+      {
+        "cptCode": "00100",
+        "serviceName": "General anesthesia",
+        "units": 1,
+        "costPerUnit": 2523,
+        "providerName": "Dr. Jean Wright"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tubal Ligation",
+    "dateOfProcedure": 1748541663252,
+    "hospitalName": "Bayhealth Hospital",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 6663,
+    "allowedAmount": 3271,
+    "lineItems": [
+      {
+        "cptCode": "58600",
+        "serviceName": "Tubal ligation",
+        "units": 1,
+        "costPerUnit": 6663,
+        "providerName": "Dr. Gary Siegelman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1766171137410,
+    "hospitalName": "Straub Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 12340,
+    "allowedAmount": 5356,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 12340,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1766255145053,
+    "hospitalName": "Cook County Health",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 634,
+    "allowedAmount": 409,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 634,
+        "providerName": "Dr. Israel Rocha"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPR Procedure",
+    "dateOfProcedure": 1755609887373,
+    "hospitalName": "MercyOne Des Moines Medical Center",
+    "city": "Des Moines",
+    "state": "IA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 844,
+    "allowedAmount": 371,
+    "lineItems": [
+      {
+        "cptCode": "92950",
+        "serviceName": "CPR procedure",
+        "units": 1,
+        "costPerUnit": 844,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Nephrectomy",
+    "dateOfProcedure": 1746467147486,
+    "hospitalName": "UK Chandler Hospital",
+    "city": "Lexington",
+    "state": "KY",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 25265,
+    "allowedAmount": 15362,
+    "lineItems": [
+      {
+        "cptCode": "50220",
+        "serviceName": "Nephrectomy",
+        "units": 1,
+        "costPerUnit": 25265,
+        "providerName": "Dr. Philip Chang"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1762297753502,
+    "hospitalName": "Maine Medical Center",
+    "city": "Portland",
+    "state": "ME",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 468,
+    "allowedAmount": 272,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 468,
+        "providerName": "Dr. Joel Botler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1747271783350,
+    "hospitalName": "University of Michigan Health",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 3655,
+    "allowedAmount": 1582,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 3655,
+        "providerName": "Dr. Marschall Runge"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardioversion",
+    "dateOfProcedure": 1755188224573,
+    "hospitalName": "Baptist Memorial Hospital-DeSoto",
+    "city": "Southaven",
+    "state": "MS",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 948,
+    "allowedAmount": 556,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Cardioversion external",
+        "units": 1,
+        "costPerUnit": 948,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Tube Placement",
+    "dateOfProcedure": 1774705256947,
+    "hospitalName": "St. Vincent Healthcare",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 1450,
+    "allowedAmount": 689,
+    "lineItems": [
+      {
+        "cptCode": "32551",
+        "serviceName": "Chest tube placement",
+        "units": 1,
+        "costPerUnit": 1450,
+        "providerName": "Dr. Michael Bush"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endovascular Coiling",
+    "dateOfProcedure": 1746631554133,
+    "hospitalName": "Renown Regional Medical Center",
+    "city": "Reno",
+    "state": "NV",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 43991,
+    "allowedAmount": 31768,
+    "lineItems": [
+      {
+        "cptCode": "61624",
+        "serviceName": "Endovascular coiling",
+        "units": 1,
+        "costPerUnit": 43991,
+        "providerName": "Dr. Tony Slonim"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hernia Repair",
+    "dateOfProcedure": 1777351961170,
+    "hospitalName": "UNM Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 8709,
+    "allowedAmount": 6495,
+    "lineItems": [
+      {
+        "cptCode": "49505",
+        "serviceName": "Hernia repair",
+        "units": 1,
+        "costPerUnit": 8709,
+        "providerName": "Dr. Irene Agostini"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1761536771204,
+    "hospitalName": "Duke University Hospital",
+    "city": "Durham",
+    "state": "NC",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 3589,
+    "allowedAmount": 1754,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 3589,
+        "providerName": "Dr. David Gallagher"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Tube Placement",
+    "dateOfProcedure": 1767518403362,
+    "hospitalName": "Cleveland Clinic",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 1518,
+    "allowedAmount": 1134,
+    "lineItems": [
+      {
+        "cptCode": "32551",
+        "serviceName": "Chest tube placement",
+        "units": 1,
+        "costPerUnit": 1518,
+        "providerName": "Dr. Robert Wyllie"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thyroidectomy",
+    "dateOfProcedure": 1751489085665,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 11416,
+    "allowedAmount": 4946,
+    "lineItems": [
+      {
+        "cptCode": "60240",
+        "serviceName": "Thyroidectomy",
+        "units": 1,
+        "costPerUnit": 11416,
+        "providerName": "Dr. Robert Scoggins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Limb Amputation",
+    "dateOfProcedure": 1759685365889,
+    "hospitalName": "The Miriam Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 14988,
+    "allowedAmount": 9782,
+    "lineItems": [
+      {
+        "cptCode": "27880",
+        "serviceName": "Limb amputation",
+        "units": 1,
+        "costPerUnit": 14988,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1753791394693,
+    "hospitalName": "Methodist Hospitals of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 1489,
+    "allowedAmount": 608,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1489,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endotracheal Intubation",
+    "dateOfProcedure": 1770452548054,
+    "hospitalName": "University of Utah Hospital",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 855,
+    "allowedAmount": 568,
+    "lineItems": [
+      {
+        "cptCode": "31500",
+        "serviceName": "Endotracheal intubation",
+        "units": 1,
+        "costPerUnit": 855,
+        "providerName": "Dr. Dan Lundergan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "D&C Procedure",
+    "dateOfProcedure": 1767724873394,
+    "hospitalName": "UVA Health Medical Center",
+    "city": "Charlottesville",
+    "state": "VA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 3643,
+    "allowedAmount": 2511,
+    "lineItems": [
+      {
+        "cptCode": "58120",
+        "serviceName": "D&C procedure",
+        "units": 1,
+        "costPerUnit": 3643,
+        "providerName": "Dr. Wendy Horton"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Coronary Angioplasty",
+    "dateOfProcedure": 1749822900752,
+    "hospitalName": "WVU Medicine",
+    "city": "Morgantown",
+    "state": "WV",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 12432,
+    "allowedAmount": 5658,
+    "lineItems": [
+      {
+        "cptCode": "92920",
+        "serviceName": "Coronary angioplasty",
+        "units": 1,
+        "costPerUnit": 12432,
+        "providerName": "Dr. Albert Wright"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1776499831137,
+    "hospitalName": "Huntsville Hospital",
+    "city": "Huntsville",
+    "state": "AL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 353,
+    "allowedAmount": 163,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 353,
+        "providerName": "Dr. Robert Chirkoff"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bariatric Surgery",
+    "dateOfProcedure": 1770931093430,
+    "hospitalName": "Mayo Clinic Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 25863,
+    "allowedAmount": 11488,
+    "lineItems": [
+      {
+        "cptCode": "43775",
+        "serviceName": "Bariatric surgery",
+        "units": 1,
+        "costPerUnit": 25863,
+        "providerName": "Dr. Alyson Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Appendectomy",
+    "dateOfProcedure": 1768221109662,
+    "hospitalName": "UC Davis Medical Center",
+    "city": "Sacramento",
+    "state": "CA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 26091,
+    "allowedAmount": 11096,
+    "lineItems": [
+      {
+        "cptCode": "44950",
+        "serviceName": "Appendectomy",
+        "units": 1,
+        "costPerUnit": 26091,
+        "providerName": "Dr. Joseph Galante"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Heart Valve Replacement",
+    "dateOfProcedure": 1764885893765,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 147583,
+    "allowedAmount": 67765,
+    "lineItems": [
+      {
+        "cptCode": "33405",
+        "serviceName": "Heart valve replacement",
+        "units": 1,
+        "costPerUnit": 147583,
+        "providerName": "Dr. Gail D'Onofrio"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardioversion",
+    "dateOfProcedure": 1774326228578,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 1608,
+    "allowedAmount": 713,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Cardioversion external",
+        "units": 1,
+        "costPerUnit": 1608,
+        "providerName": "Dr. Peggy Duggan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Ablation",
+    "dateOfProcedure": 1774535532793,
+    "hospitalName": "St. Luke's Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 34387,
+    "allowedAmount": 25302,
+    "lineItems": [
+      {
+        "cptCode": "93653",
+        "serviceName": "Cardiac ablation",
+        "units": 1,
+        "costPerUnit": 34387,
+        "providerName": "Dr. David Pate"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electrocardiogram (EKG)",
+    "dateOfProcedure": 1768950803860,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 114,
+    "allowedAmount": 46,
+    "lineItems": [
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram complete",
+        "units": 1,
+        "costPerUnit": 114,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1746908325928,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 8751,
+    "allowedAmount": 3772,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 8751,
+        "providerName": "Dr. Bob Page"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Arterial Line Placement",
+    "dateOfProcedure": 1770973927080,
+    "hospitalName": "Ochsner Medical Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 847,
+    "allowedAmount": 540,
+    "lineItems": [
+      {
+        "cptCode": "36620",
+        "serviceName": "Arterial line placement",
+        "units": 1,
+        "costPerUnit": 847,
+        "providerName": "Dr. Robert Hart"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Heart Valve Replacement",
+    "dateOfProcedure": 1769688414870,
+    "hospitalName": "Brigham and Women's Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 216933,
+    "allowedAmount": 95124,
+    "lineItems": [
+      {
+        "cptCode": "33405",
+        "serviceName": "Heart valve replacement",
+        "units": 1,
+        "costPerUnit": 216933,
+        "providerName": "Dr. Robert Higgins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Craniotomy",
+    "dateOfProcedure": 1777590666589,
+    "hospitalName": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "state": "MN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 45172,
+    "allowedAmount": 26219,
+    "lineItems": [
+      {
+        "cptCode": "61312",
+        "serviceName": "Craniotomy",
+        "units": 1,
+        "costPerUnit": 45172,
+        "providerName": "Dr. Penny Wheeler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hernia Repair",
+    "dateOfProcedure": 1771000303885,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 8298,
+    "allowedAmount": 4697,
+    "lineItems": [
+      {
+        "cptCode": "49505",
+        "serviceName": "Hernia repair",
+        "units": 1,
+        "costPerUnit": 8298,
+        "providerName": "Dr. Richard Liekweg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest X-Ray",
+    "dateOfProcedure": 1750910749083,
+    "hospitalName": "Nebraska Medical Center",
+    "city": "Omaha",
+    "state": "NE",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 151,
+    "allowedAmount": 74,
+    "lineItems": [
+      {
+        "cptCode": "71045",
+        "serviceName": "X-ray chest 1 view",
+        "units": 1,
+        "costPerUnit": 151,
+        "providerName": "Dr. James Linder"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1762168029941,
+    "hospitalName": "Elliot Hospital",
+    "city": "Manchester",
+    "state": "NH",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 3412,
+    "allowedAmount": 1685,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 3412,
+        "providerName": "Dr. Greg Baxter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Craniotomy",
+    "dateOfProcedure": 1747288068560,
+    "hospitalName": "NYC Health + Hospitals/Bellevue",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 65303,
+    "allowedAmount": 28626,
+    "lineItems": [
+      {
+        "cptCode": "61312",
+        "serviceName": "Craniotomy",
+        "units": 1,
+        "costPerUnit": 65303,
+        "providerName": "Dr. William Hicks"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Venipuncture",
+    "dateOfProcedure": 1761078492619,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 15,
+    "allowedAmount": 8,
+    "lineItems": [
+      {
+        "cptCode": "36415",
+        "serviceName": "Venipuncture (Blood Draw)",
+        "units": 1,
+        "costPerUnit": 15,
+        "providerName": "Dr. Doug Griffin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electroencephalogram (EEG)",
+    "dateOfProcedure": 1757594487974,
+    "hospitalName": "Saint Francis Hospital",
+    "city": "Tulsa",
+    "state": "OK",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 669,
+    "allowedAmount": 457,
+    "lineItems": [
+      {
+        "cptCode": "95816",
+        "serviceName": "Electroencephalogram (EEG)",
+        "units": 1,
+        "costPerUnit": 669,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Suturing",
+    "dateOfProcedure": 1765195595478,
+    "hospitalName": "Penn Presbyterian Medical Center",
+    "city": "Philadelphia",
+    "state": "PA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 241,
+    "allowedAmount": 97,
+    "lineItems": [
+      {
+        "cptCode": "12001",
+        "serviceName": "Wound suturing",
+        "units": 1,
+        "costPerUnit": 241,
+        "providerName": "Dr. Regina Cunningham"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CRRT Therapy",
+    "dateOfProcedure": 1771374664956,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 5168,
+    "allowedAmount": 2374,
+    "lineItems": [
+      {
+        "cptCode": "90999",
+        "serviceName": "CRRT therapy",
+        "units": 1,
+        "costPerUnit": 5168,
+        "providerName": "Dr. Paul Hanson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mechanical Ventilation",
+    "dateOfProcedure": 1773353446726,
+    "hospitalName": "Texas Health Resources",
+    "city": "Arlington",
+    "state": "TX",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 2422,
+    "allowedAmount": 1109,
+    "lineItems": [
+      {
+        "cptCode": "94002",
+        "serviceName": "Mechanical ventilation",
+        "units": 1,
+        "costPerUnit": 2422,
+        "providerName": "Dr. Barclay Berdan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1753030807004,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 117390,
+    "allowedAmount": 73663,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 117390,
+        "providerName": "Dr. Sunny Eappen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardioversion",
+    "dateOfProcedure": 1753597121732,
+    "hospitalName": "Providence Swedish",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 1708,
+    "allowedAmount": 906,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Cardioversion external",
+        "units": 1,
+        "costPerUnit": 1708,
+        "providerName": "Dr. Chris Chisholm"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Needle Decompression",
+    "dateOfProcedure": 1769319491842,
+    "hospitalName": "UW Health University Hospital",
+    "city": "Madison",
+    "state": "WI",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 826,
+    "allowedAmount": 399,
+    "lineItems": [
+      {
+        "cptCode": "32422",
+        "serviceName": "Needle decompression",
+        "units": 1,
+        "costPerUnit": 826,
+        "providerName": "Dr. Pete Newcomer"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endotracheal Intubation",
+    "dateOfProcedure": 1757431431096,
+    "hospitalName": "Alaska Native Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 849,
+    "allowedAmount": 364,
+    "lineItems": [
+      {
+        "cptCode": "31500",
+        "serviceName": "Endotracheal intubation",
+        "units": 1,
+        "costPerUnit": 849,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ECMO Initiation",
+    "dateOfProcedure": 1754394227754,
+    "hospitalName": "UAMS Medical Center",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 193540,
+    "allowedAmount": 82802,
+    "lineItems": [
+      {
+        "cptCode": "33946",
+        "serviceName": "ECMO initiation",
+        "units": 1,
+        "costPerUnit": 193540,
+        "providerName": "Dr. Steppe Mette"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Nephrectomy",
+    "dateOfProcedure": 1776079783045,
+    "hospitalName": "Saint Joseph Hospital",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 24132,
+    "allowedAmount": 12709,
+    "lineItems": [
+      {
+        "cptCode": "50220",
+        "serviceName": "Nephrectomy",
+        "units": 1,
+        "costPerUnit": 24132,
+        "providerName": "Dr. Kathleen Herrmann"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Carotid Endarterectomy",
+    "dateOfProcedure": 1775378975401,
+    "hospitalName": "Bayhealth Hospital",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 18018,
+    "allowedAmount": 7258,
+    "lineItems": [
+      {
+        "cptCode": "35301",
+        "serviceName": "Carotid endarterectomy",
+        "units": 1,
+        "costPerUnit": 18018,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Episiotomy Repair",
+    "dateOfProcedure": 1762696021562,
+    "hospitalName": "Queen's Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 8534,
+    "allowedAmount": 4803,
+    "lineItems": [
+      {
+        "cptCode": "59400",
+        "serviceName": "Episiotomy repair",
+        "units": 1,
+        "costPerUnit": 8534,
+        "providerName": "Dr. Whitney Limm"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ultrasound Abdomen",
+    "dateOfProcedure": 1775090246309,
+    "hospitalName": "Cook County Health",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 635,
+    "allowedAmount": 296,
+    "lineItems": [
+      {
+        "cptCode": "76700",
+        "serviceName": "Ultrasound Abdomen complete",
+        "units": 1,
+        "costPerUnit": 635,
+        "providerName": "Dr. Lauren Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1776661485357,
+    "hospitalName": "MercyOne Des Moines Medical Center",
+    "city": "Des Moines",
+    "state": "IA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 1444,
+    "allowedAmount": 579,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1444,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Spinal Fusion",
+    "dateOfProcedure": 1752206732551,
+    "hospitalName": "UK Chandler Hospital",
+    "city": "Lexington",
+    "state": "KY",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 63221,
+    "allowedAmount": 27909,
+    "lineItems": [
+      {
+        "cptCode": "22551",
+        "serviceName": "Spinal fusion",
+        "units": 1,
+        "costPerUnit": 63221,
+        "providerName": "Dr. Philip Chang"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Scan Abdomen",
+    "dateOfProcedure": 1751241488415,
+    "hospitalName": "Maine Medical Center",
+    "city": "Portland",
+    "state": "ME",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 1240,
+    "allowedAmount": 573,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT Abdomen/Pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 1240,
+        "providerName": "Dr. Jeff Sanders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Burr Hole Drainage",
+    "dateOfProcedure": 1773661351940,
+    "hospitalName": "Corewell Health Beaumont Troy Hospital",
+    "city": "Troy",
+    "state": "MI",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 12248,
+    "allowedAmount": 8966,
+    "lineItems": [
+      {
+        "cptCode": "61154",
+        "serviceName": "Burr hole drainage",
+        "units": 1,
+        "costPerUnit": 12248,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Defibrillation",
+    "dateOfProcedure": 1750361444258,
+    "hospitalName": "Baptist Memorial Hospital-DeSoto",
+    "city": "Southaven",
+    "state": "MS",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 970,
+    "allowedAmount": 397,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Defibrillation",
+        "units": 1,
+        "costPerUnit": 970,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Paracentesis",
+    "dateOfProcedure": 1747272401680,
+    "hospitalName": "Billings Clinic",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 859,
+    "allowedAmount": 343,
+    "lineItems": [
+      {
+        "cptCode": "49082",
+        "serviceName": "Paracentesis",
+        "units": 1,
+        "costPerUnit": 859,
+        "providerName": "Dr. Samer Skaf"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1773721338307,
+    "hospitalName": "Sunrise Hospital and Medical Center",
+    "city": "Las Vegas",
+    "state": "NV",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 8539,
+    "allowedAmount": 3789,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 8539,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest X-Ray",
+    "dateOfProcedure": 1768903755331,
+    "hospitalName": "UNM Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 148,
+    "allowedAmount": 86,
+    "lineItems": [
+      {
+        "cptCode": "71045",
+        "serviceName": "X-ray chest 1 view",
+        "units": 1,
+        "costPerUnit": 148,
+        "providerName": "Dr. Irene Agostini"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Foley Catheter",
+    "dateOfProcedure": 1772397137689,
+    "hospitalName": "UNC Hospitals",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 256,
+    "allowedAmount": 117,
+    "lineItems": [
+      {
+        "cptCode": "51702",
+        "serviceName": "Foley catheter",
+        "units": 1,
+        "costPerUnit": 256,
+        "providerName": "Dr. David Zvara"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Carotid Endarterectomy",
+    "dateOfProcedure": 1758743888792,
+    "hospitalName": "Ohio State University Wexner Medical Center",
+    "city": "Columbus",
+    "state": "OH",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 17474,
+    "allowedAmount": 11018,
+    "lineItems": [
+      {
+        "cptCode": "35301",
+        "serviceName": "Carotid endarterectomy",
+        "units": 1,
+        "costPerUnit": 17474,
+        "providerName": "Dr. Andrew Thomas"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tissue Biopsy",
+    "dateOfProcedure": 1749642635370,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 254,
+    "allowedAmount": 184,
+    "lineItems": [
+      {
+        "cptCode": "11102",
+        "serviceName": "Skin biopsy single lesion",
+        "units": 1,
+        "costPerUnit": 254,
+        "providerName": "Dr. Robert Scoggins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Scan Abdomen",
+    "dateOfProcedure": 1770973497993,
+    "hospitalName": "Rhode Island Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 1180,
+    "allowedAmount": 573,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT Abdomen/Pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 1180,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1763759837094,
+    "hospitalName": "Methodist Hospitals of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 3537,
+    "allowedAmount": 1766,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 3537,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardioversion",
+    "dateOfProcedure": 1775757552047,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 1238,
+    "allowedAmount": 540,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Cardioversion external",
+        "units": 1,
+        "costPerUnit": 1238,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ORIF Fracture Repair",
+    "dateOfProcedure": 1773495928127,
+    "hospitalName": "Inova Fairfax Hospital",
+    "city": "Falls Church",
+    "state": "VA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 25993,
+    "allowedAmount": 11857,
+    "lineItems": [
+      {
+        "cptCode": "27236",
+        "serviceName": "ORIF hip fracture",
+        "units": 1,
+        "costPerUnit": 25993,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Spinal Fusion",
+    "dateOfProcedure": 1775883959949,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 49765,
+    "allowedAmount": 22564,
+    "lineItems": [
+      {
+        "cptCode": "22551",
+        "serviceName": "Spinal fusion",
+        "units": 1,
+        "costPerUnit": 49765,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Exploratory Laparotomy",
+    "dateOfProcedure": 1768830505019,
+    "hospitalName": "Huntsville Hospital",
+    "city": "Huntsville",
+    "state": "AL",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 9170,
+    "allowedAmount": 5952,
+    "lineItems": [
+      {
+        "cptCode": "49000",
+        "serviceName": "Exploratory laparotomy",
+        "units": 1,
+        "costPerUnit": 9170,
+        "providerName": "Dr. Robert Chirkoff"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Heart Valve Replacement",
+    "dateOfProcedure": 1763211896785,
+    "hospitalName": "Banner-University Medical Center Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 154453,
+    "allowedAmount": 105470,
+    "lineItems": [
+      {
+        "cptCode": "33405",
+        "serviceName": "Heart valve replacement",
+        "units": 1,
+        "costPerUnit": 154453,
+        "providerName": "Dr. Marjorie Bessel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Carotid Endarterectomy",
+    "dateOfProcedure": 1750627074236,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 24038,
+    "allowedAmount": 11185,
+    "lineItems": [
+      {
+        "cptCode": "35301",
+        "serviceName": "Carotid endarterectomy",
+        "units": 1,
+        "costPerUnit": 24038,
+        "providerName": "Dr. David Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lung Resection",
+    "dateOfProcedure": 1774062515443,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 36319,
+    "allowedAmount": 16038,
+    "lineItems": [
+      {
+        "cptCode": "32480",
+        "serviceName": "Lung resection",
+        "units": 1,
+        "costPerUnit": 36319,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Venipuncture",
+    "dateOfProcedure": 1769842796367,
+    "hospitalName": "UF Health Shands Hospital",
+    "city": "Gainesville",
+    "state": "FL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 21,
+    "allowedAmount": 9,
+    "lineItems": [
+      {
+        "cptCode": "36415",
+        "serviceName": "Venipuncture (Blood Draw)",
+        "units": 1,
+        "costPerUnit": 21,
+        "providerName": "Dr. Timothy Flynn"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Burr Hole Drainage",
+    "dateOfProcedure": 1773201243883,
+    "hospitalName": "St. Luke's Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 12216,
+    "allowedAmount": 7674,
+    "lineItems": [
+      {
+        "cptCode": "61154",
+        "serviceName": "Burr hole drainage",
+        "units": 1,
+        "costPerUnit": 12216,
+        "providerName": "Dr. David Pate"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1751663602724,
+    "hospitalName": "IU Health Methodist Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 8099,
+    "allowedAmount": 3800,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 8099,
+        "providerName": "Dr. Ryan Nagy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Appendectomy",
+    "dateOfProcedure": 1776724594365,
+    "hospitalName": "AdventHealth Shawnee Mission",
+    "city": "Merriam",
+    "state": "KS",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 17550,
+    "allowedAmount": 9272,
+    "lineItems": [
+      {
+        "cptCode": "44950",
+        "serviceName": "Appendectomy",
+        "units": 1,
+        "costPerUnit": 17550,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Circumcision",
+    "dateOfProcedure": 1766268856755,
+    "hospitalName": "Ochsner Medical Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 844,
+    "allowedAmount": 405,
+    "lineItems": [
+      {
+        "cptCode": "54150",
+        "serviceName": "Circumcision",
+        "units": 1,
+        "costPerUnit": 844,
+        "providerName": "Dr. Robert Hart"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1746751909065,
+    "hospitalName": "Brigham and Women's Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 2097,
+    "allowedAmount": 967,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 2097,
+        "providerName": "Dr. Giles Boland"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1777491992327,
+    "hospitalName": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "state": "MN",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 25752,
+    "allowedAmount": 18968,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 25752,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laminectomy",
+    "dateOfProcedure": 1747897763854,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 18142,
+    "allowedAmount": 8864,
+    "lineItems": [
+      {
+        "cptCode": "63047",
+        "serviceName": "Laminectomy",
+        "units": 1,
+        "costPerUnit": 18142,
+        "providerName": "Dr. Richard Liekweg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Burr Hole Drainage",
+    "dateOfProcedure": 1777555345212,
+    "hospitalName": "Bryan Medical Center",
+    "city": "Lincoln",
+    "state": "NE",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 11416,
+    "allowedAmount": 4633,
+    "lineItems": [
+      {
+        "cptCode": "61154",
+        "serviceName": "Burr hole drainage",
+        "units": 1,
+        "costPerUnit": 11416,
+        "providerName": "Dr. John Trapp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Foley Catheter",
+    "dateOfProcedure": 1777048374769,
+    "hospitalName": "Elliot Hospital",
+    "city": "Manchester",
+    "state": "NH",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 259,
+    "allowedAmount": 124,
+    "lineItems": [
+      {
+        "cptCode": "51702",
+        "serviceName": "Foley catheter",
+        "units": 1,
+        "costPerUnit": 259,
+        "providerName": "Dr. Greg Baxter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TURBT Procedure",
+    "dateOfProcedure": 1773912189217,
+    "hospitalName": "NYU Langone Hospitals",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 12246,
+    "allowedAmount": 5082,
+    "lineItems": [
+      {
+        "cptCode": "52234",
+        "serviceName": "TURBT procedure",
+        "units": 1,
+        "costPerUnit": 12246,
+        "providerName": "Dr. Andrew Brotman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "PEG Tube Placement",
+    "dateOfProcedure": 1764028506877,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 2409,
+    "allowedAmount": 1267,
+    "lineItems": [
+      {
+        "cptCode": "43246",
+        "serviceName": "PEG tube placement",
+        "units": 1,
+        "costPerUnit": 2409,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "D&C Procedure",
+    "dateOfProcedure": 1772930518091,
+    "hospitalName": "OU Health Medical Center",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 2739,
+    "allowedAmount": 1763,
+    "lineItems": [
+      {
+        "cptCode": "58120",
+        "serviceName": "D&C procedure",
+        "units": 1,
+        "costPerUnit": 2739,
+        "providerName": "Dr. Cameron Mantor"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laryngoscopy",
+    "dateOfProcedure": 1757780725099,
+    "hospitalName": "UPMC Presbyterian Shadyside",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 435,
+    "allowedAmount": 185,
+    "lineItems": [
+      {
+        "cptCode": "31505",
+        "serviceName": "Laryngoscopy",
+        "units": 1,
+        "costPerUnit": 435,
+        "providerName": "Dr. Leslie Davis"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cholecystectomy",
+    "dateOfProcedure": 1773948996130,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 11610,
+    "allowedAmount": 8147,
+    "lineItems": [
+      {
+        "cptCode": "47562",
+        "serviceName": "Cholecystectomy",
+        "units": 1,
+        "costPerUnit": 11610,
+        "providerName": "Dr. Mike Wilde"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Aspiration",
+    "dateOfProcedure": 1759014140605,
+    "hospitalName": "UT Southwestern Medical Center",
+    "city": "Dallas",
+    "state": "TX",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 146,
+    "allowedAmount": 65,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Joint aspiration",
+        "units": 1,
+        "costPerUnit": 146,
+        "providerName": "Dr. John Warner"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1760137808083,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 115221,
+    "allowedAmount": 71718,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 115221,
+        "providerName": "Dr. Stephen Leffler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TEE Echocardiogram",
+    "dateOfProcedure": 1772574009261,
+    "hospitalName": "Providence Sacred Heart Medical Center",
+    "city": "Spokane",
+    "state": "WA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 1754,
+    "allowedAmount": 1066,
+    "lineItems": [
+      {
+        "cptCode": "93312",
+        "serviceName": "TEE echocardiogram",
+        "units": 1,
+        "costPerUnit": 1754,
+        "providerName": "Dr. Peg Currie"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Appendectomy",
+    "dateOfProcedure": 1773687335452,
+    "hospitalName": "UW Health University Hospital",
+    "city": "Madison",
+    "state": "WI",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 18517,
+    "allowedAmount": 8182,
+    "lineItems": [
+      {
+        "cptCode": "44950",
+        "serviceName": "Appendectomy",
+        "units": 1,
+        "costPerUnit": 18517,
+        "providerName": "Dr. Alan Kaplan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lung Resection",
+    "dateOfProcedure": 1777599089163,
+    "hospitalName": "Providence Alaska Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 34672,
+    "allowedAmount": 15520,
+    "lineItems": [
+      {
+        "cptCode": "32480",
+        "serviceName": "Lung resection",
+        "units": 1,
+        "costPerUnit": 34672,
+        "providerName": "Dr. Michael Bernstein"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1750719330286,
+    "hospitalName": "Baptist Health Medical Center-Little Rock",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 6779,
+    "allowedAmount": 3180,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 6779,
+        "providerName": "Dr. Greg Clowers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1770682065767,
+    "hospitalName": "Saint Joseph Hospital",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 439,
+    "allowedAmount": 205,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 439,
+        "providerName": "Dr. Mark Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cholecystectomy",
+    "dateOfProcedure": 1774603860387,
+    "hospitalName": "ChristianaCare",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 12311,
+    "allowedAmount": 5092,
+    "lineItems": [
+      {
+        "cptCode": "47562",
+        "serviceName": "Cholecystectomy",
+        "units": 1,
+        "costPerUnit": 12311,
+        "providerName": "Dr. Ken Silverstein"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1775869740741,
+    "hospitalName": "Queen's Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 1456,
+    "allowedAmount": 693,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1456,
+        "providerName": "Dr. Whitney Limm"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumpectomy",
+    "dateOfProcedure": 1762289105276,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 8851,
+    "allowedAmount": 3592,
+    "lineItems": [
+      {
+        "cptCode": "19301",
+        "serviceName": "Lumpectomy",
+        "units": 1,
+        "costPerUnit": 8851,
+        "providerName": "Dr. Howard Chrisman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ICD Placement",
+    "dateOfProcedure": 1768784707063,
+    "hospitalName": "MercyOne Des Moines Medical Center",
+    "city": "Des Moines",
+    "state": "IA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 43367,
+    "allowedAmount": 30402,
+    "lineItems": [
+      {
+        "cptCode": "33249",
+        "serviceName": "ICD placement",
+        "units": 1,
+        "costPerUnit": 43367,
+        "providerName": "Dr. Hijinio Carreon"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1756870202364,
+    "hospitalName": "Baptist Health Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 24763,
+    "allowedAmount": 10769,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 24763,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Vaccinations",
+    "dateOfProcedure": 1758838106601,
+    "hospitalName": "Maine Medical Center",
+    "city": "Portland",
+    "state": "ME",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 68,
+    "allowedAmount": 47,
+    "lineItems": [
+      {
+        "cptCode": "90471",
+        "serviceName": "Vaccination administration",
+        "units": 1,
+        "costPerUnit": 68,
+        "providerName": "Dr. Joel Botler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1750895733412,
+    "hospitalName": "University of Michigan Health",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 1783,
+    "allowedAmount": 844,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1783,
+        "providerName": "Dr. Marschall Runge"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Debridement",
+    "dateOfProcedure": 1772798079198,
+    "hospitalName": "UMMC Hospital",
+    "city": "Jackson",
+    "state": "MS",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 661,
+    "allowedAmount": 313,
+    "lineItems": [
+      {
+        "cptCode": "11042",
+        "serviceName": "Wound debridement",
+        "units": 1,
+        "costPerUnit": 661,
+        "providerName": "Dr. LouAnn Woodward"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tracheostomy",
+    "dateOfProcedure": 1774402302843,
+    "hospitalName": "St. Vincent Healthcare",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 4938,
+    "allowedAmount": 2431,
+    "lineItems": [
+      {
+        "cptCode": "31600",
+        "serviceName": "Tracheostomy",
+        "units": 1,
+        "costPerUnit": 4938,
+        "providerName": "Dr. Michael Bush"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemodialysis",
+    "dateOfProcedure": 1765197556523,
+    "hospitalName": "Renown Regional Medical Center",
+    "city": "Reno",
+    "state": "NV",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 888,
+    "allowedAmount": 415,
+    "lineItems": [
+      {
+        "cptCode": "90935",
+        "serviceName": "Hemodialysis",
+        "units": 1,
+        "costPerUnit": 888,
+        "providerName": "Dr. Tony Slonim"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1762696959475,
+    "hospitalName": "UNM Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 121566,
+    "allowedAmount": 75751,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 121566,
+        "providerName": "Dr. Irene Agostini"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemodialysis",
+    "dateOfProcedure": 1771437008719,
+    "hospitalName": "UNC Hospitals",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 879,
+    "allowedAmount": 384,
+    "lineItems": [
+      {
+        "cptCode": "90935",
+        "serviceName": "Hemodialysis",
+        "units": 1,
+        "costPerUnit": 879,
+        "providerName": "Dr. Gary Park"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mechanical Ventilation",
+    "dateOfProcedure": 1750862237537,
+    "hospitalName": "Cleveland Clinic",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 2522,
+    "allowedAmount": 1190,
+    "lineItems": [
+      {
+        "cptCode": "94002",
+        "serviceName": "Mechanical ventilation",
+        "units": 1,
+        "costPerUnit": 2522,
+        "providerName": "Dr. Tomislav Mihaljevic"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Coronary Angioplasty",
+    "dateOfProcedure": 1771488925571,
+    "hospitalName": "OHSU Hospital",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 14878,
+    "allowedAmount": 7345,
+    "lineItems": [
+      {
+        "cptCode": "92920",
+        "serviceName": "Coronary angioplasty",
+        "units": 1,
+        "costPerUnit": 14878,
+        "providerName": "Dr. Renee Edwards"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1750927079081,
+    "hospitalName": "The Miriam Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 1787,
+    "allowedAmount": 862,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1787,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Episiotomy Repair",
+    "dateOfProcedure": 1753644554703,
+    "hospitalName": "Methodist Hospitals of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 8774,
+    "allowedAmount": 4326,
+    "lineItems": [
+      {
+        "cptCode": "59400",
+        "serviceName": "Episiotomy repair",
+        "units": 1,
+        "costPerUnit": 8774,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CRRT Therapy",
+    "dateOfProcedure": 1768684029862,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 4847,
+    "allowedAmount": 3613,
+    "lineItems": [
+      {
+        "cptCode": "90999",
+        "serviceName": "CRRT therapy",
+        "units": 1,
+        "costPerUnit": 4847,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Debridement",
+    "dateOfProcedure": 1755669746679,
+    "hospitalName": "UVA Health Medical Center",
+    "city": "Charlottesville",
+    "state": "VA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 847,
+    "allowedAmount": 377,
+    "lineItems": [
+      {
+        "cptCode": "11042",
+        "serviceName": "Wound debridement",
+        "units": 1,
+        "costPerUnit": 847,
+        "providerName": "Dr. Reid Adams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPR Procedure",
+    "dateOfProcedure": 1752852002577,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 663,
+    "allowedAmount": 437,
+    "lineItems": [
+      {
+        "cptCode": "92950",
+        "serviceName": "CPR procedure",
+        "units": 1,
+        "costPerUnit": 663,
+        "providerName": "Dr. Glenn Crotty"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endotracheal Intubation",
+    "dateOfProcedure": 1776181786718,
+    "hospitalName": "UAB Hospital",
+    "city": "Birmingham",
+    "state": "AL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 668,
+    "allowedAmount": 314,
+    "lineItems": [
+      {
+        "cptCode": "31500",
+        "serviceName": "Endotracheal intubation",
+        "units": 1,
+        "costPerUnit": 668,
+        "providerName": "Dr. Tony Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Ablation",
+    "dateOfProcedure": 1765801733864,
+    "hospitalName": "Mayo Clinic Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 34197,
+    "allowedAmount": 16990,
+    "lineItems": [
+      {
+        "cptCode": "93653",
+        "serviceName": "Cardiac ablation",
+        "units": 1,
+        "costPerUnit": 34197,
+        "providerName": "Dr. Richard Gray"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hysterectomy",
+    "dateOfProcedure": 1776377154746,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 25598,
+    "allowedAmount": 17786,
+    "lineItems": [
+      {
+        "cptCode": "58150",
+        "serviceName": "Hysterectomy",
+        "units": 1,
+        "costPerUnit": 25598,
+        "providerName": "Dr. David Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endovascular Coiling",
+    "dateOfProcedure": 1754028463022,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 44746,
+    "allowedAmount": 20142,
+    "lineItems": [
+      {
+        "cptCode": "61624",
+        "serviceName": "Endovascular coiling",
+        "units": 1,
+        "costPerUnit": 44746,
+        "providerName": "Dr. Gail D'Onofrio"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "C-Section Delivery",
+    "dateOfProcedure": 1759576995222,
+    "hospitalName": "Sarasota Memorial Health Care System",
+    "city": "Sarasota",
+    "state": "FL",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 34654,
+    "allowedAmount": 15537,
+    "lineItems": [
+      {
+        "cptCode": "59510",
+        "serviceName": "C-section delivery",
+        "units": 1,
+        "costPerUnit": 34654,
+        "providerName": "Dr. James Fiorica"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "C-Section Delivery",
+    "dateOfProcedure": 1773507566955,
+    "hospitalName": "St. Luke's Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 24204,
+    "allowedAmount": 10132,
+    "lineItems": [
+      {
+        "cptCode": "59510",
+        "serviceName": "C-section delivery",
+        "units": 1,
+        "costPerUnit": 24204,
+        "providerName": "Dr. Jim Souza"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "General Anesthesia",
+    "dateOfProcedure": 1748289719313,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 2489,
+    "allowedAmount": 1709,
+    "lineItems": [
+      {
+        "cptCode": "00100",
+        "serviceName": "General anesthesia",
+        "units": 1,
+        "costPerUnit": 2489,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TPN Administration",
+    "dateOfProcedure": 1767178318385,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 456,
+    "allowedAmount": 192,
+    "lineItems": [
+      {
+        "cptCode": "B4185",
+        "serviceName": "TPN administration",
+        "units": 1,
+        "costPerUnit": 456,
+        "providerName": "Dr. Bob Page"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Carotid Endarterectomy",
+    "dateOfProcedure": 1772079721364,
+    "hospitalName": "Our Lady of the Lake Regional Medical Center",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 18376,
+    "allowedAmount": 9378,
+    "lineItems": [
+      {
+        "cptCode": "35301",
+        "serviceName": "Carotid endarterectomy",
+        "units": 1,
+        "costPerUnit": 18376,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "PEG Tube Placement",
+    "dateOfProcedure": 1757383400105,
+    "hospitalName": "Brigham and Women's Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 3540,
+    "allowedAmount": 2582,
+    "lineItems": [
+      {
+        "cptCode": "43246",
+        "serviceName": "PEG tube placement",
+        "units": 1,
+        "costPerUnit": 3540,
+        "providerName": "Dr. Giles Boland"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1767519836321,
+    "hospitalName": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "state": "MN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 76,
+    "allowedAmount": 38,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 76,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thoracentesis",
+    "dateOfProcedure": 1759579380960,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 1140,
+    "allowedAmount": 634,
+    "lineItems": [
+      {
+        "cptCode": "32554",
+        "serviceName": "Thoracentesis",
+        "units": 1,
+        "costPerUnit": 1140,
+        "providerName": "Dr. John Lynch"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Heart Valve Replacement",
+    "dateOfProcedure": 1769312689714,
+    "hospitalName": "Bryan Medical Center",
+    "city": "Lincoln",
+    "state": "NE",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 152828,
+    "allowedAmount": 72651,
+    "lineItems": [
+      {
+        "cptCode": "33405",
+        "serviceName": "Heart valve replacement",
+        "units": 1,
+        "costPerUnit": 152828,
+        "providerName": "Dr. John Trapp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Exploratory Laparotomy",
+    "dateOfProcedure": 1769253631569,
+    "hospitalName": "Elliot Hospital",
+    "city": "Manchester",
+    "state": "NH",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 12346,
+    "allowedAmount": 5900,
+    "lineItems": [
+      {
+        "cptCode": "49000",
+        "serviceName": "Exploratory laparotomy",
+        "units": 1,
+        "costPerUnit": 12346,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endotracheal Intubation",
+    "dateOfProcedure": 1767189085689,
+    "hospitalName": "NewYork-Presbyterian Hospital",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 1208,
+    "allowedAmount": 542,
+    "lineItems": [
+      {
+        "cptCode": "31500",
+        "serviceName": "Endotracheal intubation",
+        "units": 1,
+        "costPerUnit": 1208,
+        "providerName": "Dr. Steven Corwin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1758615996823,
+    "hospitalName": "Essentia Health-Fargo",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 72,
+    "allowedAmount": 35,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 72,
+        "providerName": "Dr. Richard Vetter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1747469906263,
+    "hospitalName": "Saint Francis Hospital",
+    "city": "Tulsa",
+    "state": "OK",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 917,
+    "allowedAmount": 543,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 917,
+        "providerName": "Dr. Mark Frost"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "General Anesthesia",
+    "dateOfProcedure": 1769757779655,
+    "hospitalName": "Penn State Health Milton S. Hershey Medical Center",
+    "city": "Hershey",
+    "state": "PA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 2595,
+    "allowedAmount": 1266,
+    "lineItems": [
+      {
+        "cptCode": "00100",
+        "serviceName": "General anesthesia",
+        "units": 1,
+        "costPerUnit": 2595,
+        "providerName": "Dr. Robert Harbaugh"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Heart Valve Replacement",
+    "dateOfProcedure": 1748004139484,
+    "hospitalName": "Avera McKennan Hospital",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 156556,
+    "allowedAmount": 99448,
+    "lineItems": [
+      {
+        "cptCode": "33405",
+        "serviceName": "Heart valve replacement",
+        "units": 1,
+        "costPerUnit": 156556,
+        "providerName": "Dr. David Basel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Craniotomy",
+    "dateOfProcedure": 1769892207207,
+    "hospitalName": "UT Southwestern Medical Center",
+    "city": "Dallas",
+    "state": "TX",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 43210,
+    "allowedAmount": 19705,
+    "lineItems": [
+      {
+        "cptCode": "61312",
+        "serviceName": "Craniotomy",
+        "units": 1,
+        "costPerUnit": 43210,
+        "providerName": "Dr. John Warner"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Circumcision",
+    "dateOfProcedure": 1773084975822,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 862,
+    "allowedAmount": 375,
+    "lineItems": [
+      {
+        "cptCode": "54150",
+        "serviceName": "Circumcision",
+        "units": 1,
+        "costPerUnit": 862,
+        "providerName": "Dr. Sunny Eappen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1769017733729,
+    "hospitalName": "Providence Swedish",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 170846,
+    "allowedAmount": 68765,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 170846,
+        "providerName": "Dr. Chris Chisholm"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1776978019251,
+    "hospitalName": "UW Health University Hospital",
+    "city": "Madison",
+    "state": "WI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 8591,
+    "allowedAmount": 3453,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 8591,
+        "providerName": "Dr. Pete Newcomer"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Scan Abdomen",
+    "dateOfProcedure": 1760783331850,
+    "hospitalName": "Alaska Native Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 1140,
+    "allowedAmount": 467,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT Abdomen/Pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 1140,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1754162330362,
+    "hospitalName": "Baptist Health Medical Center-Little Rock",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 648,
+    "allowedAmount": 298,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 648,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pericardiocentesis",
+    "dateOfProcedure": 1759915714228,
+    "hospitalName": "Saint Joseph Hospital",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 2472,
+    "allowedAmount": 1376,
+    "lineItems": [
+      {
+        "cptCode": "33010",
+        "serviceName": "Pericardiocentesis",
+        "units": 1,
+        "costPerUnit": 2472,
+        "providerName": "Dr. Mark Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1759238538990,
+    "hospitalName": "ChristianaCare",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 1556,
+    "allowedAmount": 703,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1556,
+        "providerName": "Dr. Ken Silverstein"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1773919925266,
+    "hospitalName": "Queen's Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 3567,
+    "allowedAmount": 2007,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 3567,
+        "providerName": "Dr. Jason Chang"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Vaccinations",
+    "dateOfProcedure": 1776787027259,
+    "hospitalName": "Cook County Health",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 67,
+    "allowedAmount": 30,
+    "lineItems": [
+      {
+        "cptCode": "90471",
+        "serviceName": "Vaccination administration",
+        "units": 1,
+        "costPerUnit": 67,
+        "providerName": "Dr. Lauren Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "General Anesthesia",
+    "dateOfProcedure": 1762928550040,
+    "hospitalName": "MercyOne Des Moines Medical Center",
+    "city": "Des Moines",
+    "state": "IA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 2533,
+    "allowedAmount": 1570,
+    "lineItems": [
+      {
+        "cptCode": "00100",
+        "serviceName": "General anesthesia",
+        "units": 1,
+        "costPerUnit": 2533,
+        "providerName": "Dr. Hijinio Carreon"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tracheostomy",
+    "dateOfProcedure": 1754720981292,
+    "hospitalName": "Baptist Health Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 5166,
+    "allowedAmount": 2069,
+    "lineItems": [
+      {
+        "cptCode": "31600",
+        "serviceName": "Tracheostomy",
+        "units": 1,
+        "costPerUnit": 5166,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tonsillectomy",
+    "dateOfProcedure": 1751711149826,
+    "hospitalName": "Maine Medical Center",
+    "city": "Portland",
+    "state": "ME",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 3431,
+    "allowedAmount": 1579,
+    "lineItems": [
+      {
+        "cptCode": "42820",
+        "serviceName": "Tonsillectomy",
+        "units": 1,
+        "costPerUnit": 3431,
+        "providerName": "Dr. Joel Botler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1773518976385,
+    "hospitalName": "Corewell Health Beaumont Troy Hospital",
+    "city": "Troy",
+    "state": "MI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 462,
+    "allowedAmount": 222,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 462,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Exploratory Laparotomy",
+    "dateOfProcedure": 1765628718204,
+    "hospitalName": "Baptist Memorial Hospital-DeSoto",
+    "city": "Southaven",
+    "state": "MS",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 9409,
+    "allowedAmount": 4945,
+    "lineItems": [
+      {
+        "cptCode": "49000",
+        "serviceName": "Exploratory laparotomy",
+        "units": 1,
+        "costPerUnit": 9409,
+        "providerName": "Dr. James Bowers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endotracheal Intubation",
+    "dateOfProcedure": 1763960711550,
+    "hospitalName": "St. Vincent Healthcare",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 816,
+    "allowedAmount": 349,
+    "lineItems": [
+      {
+        "cptCode": "31500",
+        "serviceName": "Endotracheal intubation",
+        "units": 1,
+        "costPerUnit": 816,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "DBS Insertion",
+    "dateOfProcedure": 1774175133588,
+    "hospitalName": "Sunrise Hospital and Medical Center",
+    "city": "Las Vegas",
+    "state": "NV",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 57581,
+    "allowedAmount": 31737,
+    "lineItems": [
+      {
+        "cptCode": "61867",
+        "serviceName": "DBS insertion",
+        "units": 1,
+        "costPerUnit": 57581,
+        "providerName": "Dr. Jeffrey Murawsky"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemodialysis",
+    "dateOfProcedure": 1748049176335,
+    "hospitalName": "Presbyterian Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 840,
+    "allowedAmount": 352,
+    "lineItems": [
+      {
+        "cptCode": "90935",
+        "serviceName": "Hemodialysis",
+        "units": 1,
+        "costPerUnit": 840,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumpectomy",
+    "dateOfProcedure": 1761128469746,
+    "hospitalName": "UNC Hospitals",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 8755,
+    "allowedAmount": 5166,
+    "lineItems": [
+      {
+        "cptCode": "19301",
+        "serviceName": "Lumpectomy",
+        "units": 1,
+        "costPerUnit": 8755,
+        "providerName": "Dr. Gary Park"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1757976847242,
+    "hospitalName": "Cleveland Clinic",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 1779,
+    "allowedAmount": 955,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1779,
+        "providerName": "Dr. Tomislav Mihaljevic"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1751893803418,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 8309,
+    "allowedAmount": 4038,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 8309,
+        "providerName": "Dr. Robert Scoggins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Amniocentesis",
+    "dateOfProcedure": 1768624792741,
+    "hospitalName": "The Miriam Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 1220,
+    "allowedAmount": 569,
+    "lineItems": [
+      {
+        "cptCode": "59000",
+        "serviceName": "Amniocentesis",
+        "units": 1,
+        "costPerUnit": 1220,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1748022796712,
+    "hospitalName": "Vanderbilt University Medical Center",
+    "city": "Nashville",
+    "state": "TN",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 666,
+    "allowedAmount": 266,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 666,
+        "providerName": "Dr. Jeff Balser"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1777458350997,
+    "hospitalName": "University of Utah Hospital",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 655,
+    "allowedAmount": 285,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 655,
+        "providerName": "Dr. Dan Lundergan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Echocardiogram",
+    "dateOfProcedure": 1752330850260,
+    "hospitalName": "UVA Health Medical Center",
+    "city": "Charlottesville",
+    "state": "VA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 834,
+    "allowedAmount": 420,
+    "lineItems": [
+      {
+        "cptCode": "93306",
+        "serviceName": "Echocardiogram complete",
+        "units": 1,
+        "costPerUnit": 834,
+        "providerName": "Dr. Wendy Horton"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hernia Repair",
+    "dateOfProcedure": 1775411052199,
+    "hospitalName": "WVU Medicine",
+    "city": "Morgantown",
+    "state": "WV",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 6512,
+    "allowedAmount": 2980,
+    "lineItems": [
+      {
+        "cptCode": "49505",
+        "serviceName": "Hernia repair",
+        "units": 1,
+        "costPerUnit": 6512,
+        "providerName": "Dr. Albert Wright"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Needle Decompression",
+    "dateOfProcedure": 1758337959871,
+    "hospitalName": "UAB Hospital",
+    "city": "Birmingham",
+    "state": "AL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 653,
+    "allowedAmount": 318,
+    "lineItems": [
+      {
+        "cptCode": "32422",
+        "serviceName": "Needle decompression",
+        "units": 1,
+        "costPerUnit": 653,
+        "providerName": "Dr. Amy Williams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endotracheal Intubation",
+    "dateOfProcedure": 1762217046496,
+    "hospitalName": "Banner-University Medical Center Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 821,
+    "allowedAmount": 362,
+    "lineItems": [
+      {
+        "cptCode": "31500",
+        "serviceName": "Endotracheal intubation",
+        "units": 1,
+        "costPerUnit": 821,
+        "providerName": "Dr. Marjorie Bessel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Suprapubic Catheter",
+    "dateOfProcedure": 1765822615125,
+    "hospitalName": "UC Davis Medical Center",
+    "city": "Sacramento",
+    "state": "CA",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 1681,
+    "allowedAmount": 1044,
+    "lineItems": [
+      {
+        "cptCode": "51040",
+        "serviceName": "Suprapubic catheter",
+        "units": 1,
+        "costPerUnit": 1681,
+        "providerName": "Dr. Joseph Galante"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tubal Ligation",
+    "dateOfProcedure": 1767621126476,
+    "hospitalName": "Hartford Hospital",
+    "city": "Hartford",
+    "state": "CT",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 6650,
+    "allowedAmount": 3261,
+    "lineItems": [
+      {
+        "cptCode": "58600",
+        "serviceName": "Tubal ligation",
+        "units": 1,
+        "costPerUnit": 6650,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Grafting",
+    "dateOfProcedure": 1750038664152,
+    "hospitalName": "Sarasota Memorial Health Care System",
+    "city": "Sarasota",
+    "state": "FL",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 6872,
+    "allowedAmount": 4762,
+    "lineItems": [
+      {
+        "cptCode": "20900",
+        "serviceName": "Bone grafting",
+        "units": 1,
+        "costPerUnit": 6872,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Craniotomy",
+    "dateOfProcedure": 1774308176931,
+    "hospitalName": "St. Luke's Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 44339,
+    "allowedAmount": 29593,
+    "lineItems": [
+      {
+        "cptCode": "61312",
+        "serviceName": "Craniotomy",
+        "units": 1,
+        "costPerUnit": 44339,
+        "providerName": "Dr. David Pate"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Limb Amputation",
+    "dateOfProcedure": 1759579497073,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 14571,
+    "allowedAmount": 8038,
+    "lineItems": [
+      {
+        "cptCode": "27880",
+        "serviceName": "Limb amputation",
+        "units": 1,
+        "costPerUnit": 14571,
+        "providerName": "Dr. Richard Fogel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Prostatectomy",
+    "dateOfProcedure": 1766798288397,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 18753,
+    "allowedAmount": 12308,
+    "lineItems": [
+      {
+        "cptCode": "55840",
+        "serviceName": "Prostatectomy",
+        "units": 1,
+        "costPerUnit": 18753,
+        "providerName": "Dr. Bob Page"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ultrasound Abdomen",
+    "dateOfProcedure": 1755010500466,
+    "hospitalName": "Our Lady of the Lake Regional Medical Center",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 662,
+    "allowedAmount": 384,
+    "lineItems": [
+      {
+        "cptCode": "76700",
+        "serviceName": "Ultrasound Abdomen complete",
+        "units": 1,
+        "costPerUnit": 662,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TURBT Procedure",
+    "dateOfProcedure": 1751729459832,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 11538,
+    "allowedAmount": 5650,
+    "lineItems": [
+      {
+        "cptCode": "52234",
+        "serviceName": "TURBT procedure",
+        "units": 1,
+        "costPerUnit": 11538,
+        "providerName": "Dr. David Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1758493554978,
+    "hospitalName": "Mayo Clinic Rochester",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 75,
+    "allowedAmount": 33,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 75,
+        "providerName": "Dr. Amy Williams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tracheostomy",
+    "dateOfProcedure": 1752267819931,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 4944,
+    "allowedAmount": 3061,
+    "lineItems": [
+      {
+        "cptCode": "31600",
+        "serviceName": "Tracheostomy",
+        "units": 1,
+        "costPerUnit": 4944,
+        "providerName": "Dr. Richard Liekweg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Tube Placement",
+    "dateOfProcedure": 1756489098702,
+    "hospitalName": "Nebraska Medical Center",
+    "city": "Omaha",
+    "state": "NE",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 1475,
+    "allowedAmount": 905,
+    "lineItems": [
+      {
+        "cptCode": "32551",
+        "serviceName": "Chest tube placement",
+        "units": 1,
+        "costPerUnit": 1475,
+        "providerName": "Dr. James Linder"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mastectomy",
+    "dateOfProcedure": 1768408083032,
+    "hospitalName": "Elliot Hospital",
+    "city": "Manchester",
+    "state": "NH",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 14308,
+    "allowedAmount": 6170,
+    "lineItems": [
+      {
+        "cptCode": "19307",
+        "serviceName": "Mastectomy",
+        "units": 1,
+        "costPerUnit": 14308,
+        "providerName": "Dr. Greg Baxter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Limb Amputation",
+    "dateOfProcedure": 1750970102192,
+    "hospitalName": "NYC Health + Hospitals/Bellevue",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 20351,
+    "allowedAmount": 8555,
+    "lineItems": [
+      {
+        "cptCode": "27880",
+        "serviceName": "Limb amputation",
+        "units": 1,
+        "costPerUnit": 20351,
+        "providerName": "Dr. Amit Uppal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1767490942513,
+    "hospitalName": "Essentia Health-Fargo",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 849,
+    "allowedAmount": 379,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 849,
+        "providerName": "Dr. Richard Vetter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Heart Valve Replacement",
+    "dateOfProcedure": 1750734644540,
+    "hospitalName": "OU Health Medical Center",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 122694,
+    "allowedAmount": 74977,
+    "lineItems": [
+      {
+        "cptCode": "33405",
+        "serviceName": "Heart valve replacement",
+        "units": 1,
+        "costPerUnit": 122694,
+        "providerName": "Dr. Cameron Mantor"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1763034420557,
+    "hospitalName": "Penn Presbyterian Medical Center",
+    "city": "Philadelphia",
+    "state": "PA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 1183,
+    "allowedAmount": 538,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1183,
+        "providerName": "Dr. Regina Cunningham"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ICD Placement",
+    "dateOfProcedure": 1763323713627,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 46063,
+    "allowedAmount": 28962,
+    "lineItems": [
+      {
+        "cptCode": "33249",
+        "serviceName": "ICD placement",
+        "units": 1,
+        "costPerUnit": 46063,
+        "providerName": "Dr. Mike Wilde"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Tube Placement",
+    "dateOfProcedure": 1749127608413,
+    "hospitalName": "UT Southwestern Medical Center",
+    "city": "Dallas",
+    "state": "TX",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 1459,
+    "allowedAmount": 651,
+    "lineItems": [
+      {
+        "cptCode": "32551",
+        "serviceName": "Chest tube placement",
+        "units": 1,
+        "costPerUnit": 1459,
+        "providerName": "Dr. Daniel Podolsky"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "D&C Procedure",
+    "dateOfProcedure": 1771250072683,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 3616,
+    "allowedAmount": 2004,
+    "lineItems": [
+      {
+        "cptCode": "58120",
+        "serviceName": "D&C procedure",
+        "units": 1,
+        "costPerUnit": 3616,
+        "providerName": "Dr. Sunny Eappen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pericardiocentesis",
+    "dateOfProcedure": 1762542794082,
+    "hospitalName": "UW Medical Center",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 3576,
+    "allowedAmount": 1743,
+    "lineItems": [
+      {
+        "cptCode": "33010",
+        "serviceName": "Pericardiocentesis",
+        "units": 1,
+        "costPerUnit": 3576,
+        "providerName": "Dr. Tom Staiger"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TPN Administration",
+    "dateOfProcedure": 1746503540576,
+    "hospitalName": "UW Health University Hospital",
+    "city": "Madison",
+    "state": "WI",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 438,
+    "allowedAmount": 245,
+    "lineItems": [
+      {
+        "cptCode": "B4185",
+        "serviceName": "TPN administration",
+        "units": 1,
+        "costPerUnit": 438,
+        "providerName": "Dr. Pete Newcomer"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPR Procedure",
+    "dateOfProcedure": 1765381270219,
+    "hospitalName": "Alaska Native Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 834,
+    "allowedAmount": 390,
+    "lineItems": [
+      {
+        "cptCode": "92950",
+        "serviceName": "CPR procedure",
+        "units": 1,
+        "costPerUnit": 834,
+        "providerName": "Dr. John Doe"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laryngoscopy",
+    "dateOfProcedure": 1756484039950,
+    "hospitalName": "Baptist Health Medical Center-Little Rock",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 371,
+    "allowedAmount": 152,
+    "lineItems": [
+      {
+        "cptCode": "31505",
+        "serviceName": "Laryngoscopy",
+        "units": 1,
+        "costPerUnit": 371,
+        "providerName": "Dr. Greg Clowers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electrocardiogram (EKG)",
+    "dateOfProcedure": 1752085534587,
+    "hospitalName": "UCHealth University of Colorado Hospital",
+    "city": "Aurora",
+    "state": "CO",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 116,
+    "allowedAmount": 51,
+    "lineItems": [
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram complete",
+        "units": 1,
+        "costPerUnit": 116,
+        "providerName": "Dr. Tom Flaig"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Fetal Monitoring",
+    "dateOfProcedure": 1761882352543,
+    "hospitalName": "ChristianaCare",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 459,
+    "allowedAmount": 190,
+    "lineItems": [
+      {
+        "cptCode": "59025",
+        "serviceName": "Fetal monitoring",
+        "units": 1,
+        "costPerUnit": 459,
+        "providerName": "Dr. Janice Nevin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bowel Resection",
+    "dateOfProcedure": 1751506637780,
+    "hospitalName": "Straub Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 24569,
+    "allowedAmount": 12269,
+    "lineItems": [
+      {
+        "cptCode": "44140",
+        "serviceName": "Bowel resection",
+        "units": 1,
+        "costPerUnit": 24569,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Needle Decompression",
+    "dateOfProcedure": 1752882264824,
+    "hospitalName": "Cook County Health",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 873,
+    "allowedAmount": 373,
+    "lineItems": [
+      {
+        "cptCode": "32422",
+        "serviceName": "Needle decompression",
+        "units": 1,
+        "costPerUnit": 873,
+        "providerName": "Dr. Lauren Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electrocardiogram (EKG)",
+    "dateOfProcedure": 1774385697468,
+    "hospitalName": "University of Iowa Hospitals",
+    "city": "Iowa City",
+    "state": "IA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 122,
+    "allowedAmount": 60,
+    "lineItems": [
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram complete",
+        "units": 1,
+        "costPerUnit": 122,
+        "providerName": "Dr. Theresa Brennan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TURBT Procedure",
+    "dateOfProcedure": 1750638221472,
+    "hospitalName": "UK Chandler Hospital",
+    "city": "Lexington",
+    "state": "KY",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 8813,
+    "allowedAmount": 5056,
+    "lineItems": [
+      {
+        "cptCode": "52234",
+        "serviceName": "TURBT procedure",
+        "units": 1,
+        "costPerUnit": 8813,
+        "providerName": "Dr. Mark Newman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Heart Valve Replacement",
+    "dateOfProcedure": 1764519622912,
+    "hospitalName": "Maine Medical Center",
+    "city": "Portland",
+    "state": "ME",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 142682,
+    "allowedAmount": 60329,
+    "lineItems": [
+      {
+        "cptCode": "33405",
+        "serviceName": "Heart valve replacement",
+        "units": 1,
+        "costPerUnit": 142682,
+        "providerName": "Dr. Jeff Sanders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemorrhoidectomy",
+    "dateOfProcedure": 1748741961744,
+    "hospitalName": "Corewell Health Beaumont Troy Hospital",
+    "city": "Troy",
+    "state": "MI",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 4483,
+    "allowedAmount": 2723,
+    "lineItems": [
+      {
+        "cptCode": "46250",
+        "serviceName": "Hemorrhoidectomy",
+        "units": 1,
+        "costPerUnit": 4483,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "AV Fistula Creation",
+    "dateOfProcedure": 1760129935832,
+    "hospitalName": "Baptist Memorial Hospital-DeSoto",
+    "city": "Southaven",
+    "state": "MS",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 7137,
+    "allowedAmount": 3338,
+    "lineItems": [
+      {
+        "cptCode": "36821",
+        "serviceName": "AV fistula creation",
+        "units": 1,
+        "costPerUnit": 7137,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Venipuncture",
+    "dateOfProcedure": 1777624752972,
+    "hospitalName": "St. Vincent Healthcare",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 15,
+    "allowedAmount": 10,
+    "lineItems": [
+      {
+        "cptCode": "36415",
+        "serviceName": "Venipuncture (Blood Draw)",
+        "units": 1,
+        "costPerUnit": 15,
+        "providerName": "Dr. Michael Bush"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "C-Section Delivery",
+    "dateOfProcedure": 1774453760216,
+    "hospitalName": "Sunrise Hospital and Medical Center",
+    "city": "Las Vegas",
+    "state": "NV",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 24580,
+    "allowedAmount": 15865,
+    "lineItems": [
+      {
+        "cptCode": "59510",
+        "serviceName": "C-section delivery",
+        "units": 1,
+        "costPerUnit": 24580,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1750521220658,
+    "hospitalName": "UNM Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 1745,
+    "allowedAmount": 994,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1745,
+        "providerName": "Dr. Kate Becker"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1770867579439,
+    "hospitalName": "UNC Hospitals",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 428,
+    "allowedAmount": 317,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 428,
+        "providerName": "Dr. David Zvara"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cholecystectomy",
+    "dateOfProcedure": 1754107896214,
+    "hospitalName": "Cleveland Clinic",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 12276,
+    "allowedAmount": 5083,
+    "lineItems": [
+      {
+        "cptCode": "47562",
+        "serviceName": "Cholecystectomy",
+        "units": 1,
+        "costPerUnit": 12276,
+        "providerName": "Dr. Tomislav Mihaljevic"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPR Procedure",
+    "dateOfProcedure": 1756059064783,
+    "hospitalName": "OHSU Hospital",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 889,
+    "allowedAmount": 543,
+    "lineItems": [
+      {
+        "cptCode": "92950",
+        "serviceName": "CPR procedure",
+        "units": 1,
+        "costPerUnit": 889,
+        "providerName": "Dr. Renee Edwards"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electrocardiogram (EKG)",
+    "dateOfProcedure": 1767661432305,
+    "hospitalName": "Rhode Island Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 114,
+    "allowedAmount": 48,
+    "lineItems": [
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram complete",
+        "units": 1,
+        "costPerUnit": 114,
+        "providerName": "Dr. Mitchell Levy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1776808918033,
+    "hospitalName": "Vanderbilt University Medical Center",
+    "city": "Nashville",
+    "state": "TN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 8355,
+    "allowedAmount": 4517,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 8355,
+        "providerName": "Dr. Jeff Balser"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ICD Placement",
+    "dateOfProcedure": 1766990657370,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 43762,
+    "allowedAmount": 18607,
+    "lineItems": [
+      {
+        "cptCode": "33249",
+        "serviceName": "ICD placement",
+        "units": 1,
+        "costPerUnit": 43762,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pericardiocentesis",
+    "dateOfProcedure": 1760495246469,
+    "hospitalName": "Inova Fairfax Hospital",
+    "city": "Falls Church",
+    "state": "VA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 2496,
+    "allowedAmount": 1644,
+    "lineItems": [
+      {
+        "cptCode": "33010",
+        "serviceName": "Pericardiocentesis",
+        "units": 1,
+        "costPerUnit": 2496,
+        "providerName": "Dr. Steve Narang"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1774898460935,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 1236,
+    "allowedAmount": 877,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1236,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bowel Resection",
+    "dateOfProcedure": 1748693418730,
+    "hospitalName": "Huntsville Hospital",
+    "city": "Huntsville",
+    "state": "AL",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 19777,
+    "allowedAmount": 9333,
+    "lineItems": [
+      {
+        "cptCode": "44140",
+        "serviceName": "Bowel resection",
+        "units": 1,
+        "costPerUnit": 19777,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Suturing",
+    "dateOfProcedure": 1747420856289,
+    "hospitalName": "Banner-University Medical Center Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 240,
+    "allowedAmount": 117,
+    "lineItems": [
+      {
+        "cptCode": "12001",
+        "serviceName": "Wound suturing",
+        "units": 1,
+        "costPerUnit": 240,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Puncture",
+    "dateOfProcedure": 1756511280596,
+    "hospitalName": "UC Davis Medical Center",
+    "city": "Sacramento",
+    "state": "CA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 1296,
+    "allowedAmount": 928,
+    "lineItems": [
+      {
+        "cptCode": "62270",
+        "serviceName": "Lumbar puncture diagnostic",
+        "units": 1,
+        "costPerUnit": 1296,
+        "providerName": "Dr. Maria Lopez"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TURBT Procedure",
+    "dateOfProcedure": 1746439895293,
+    "hospitalName": "Hartford Hospital",
+    "city": "Hartford",
+    "state": "CT",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 8353,
+    "allowedAmount": 6028,
+    "lineItems": [
+      {
+        "cptCode": "52234",
+        "serviceName": "TURBT procedure",
+        "units": 1,
+        "costPerUnit": 8353,
+        "providerName": "Dr. Adam Steinberg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Tube Placement",
+    "dateOfProcedure": 1764093411040,
+    "hospitalName": "Mayo Clinic Jacksonville",
+    "city": "Jacksonville",
+    "state": "FL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 2065,
+    "allowedAmount": 841,
+    "lineItems": [
+      {
+        "cptCode": "32551",
+        "serviceName": "Chest tube placement",
+        "units": 1,
+        "costPerUnit": 2065,
+        "providerName": "Dr. Kent Thielen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1765043571679,
+    "hospitalName": "St. Luke's Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 25929,
+    "allowedAmount": 11082,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 25929,
+        "providerName": "Dr. David Pate"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1775156515167,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 1867,
+    "allowedAmount": 977,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1867,
+        "providerName": "Dr. Richard Fogel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Puncture",
+    "dateOfProcedure": 1753679460444,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 943,
+    "allowedAmount": 454,
+    "lineItems": [
+      {
+        "cptCode": "62270",
+        "serviceName": "Lumbar puncture diagnostic",
+        "units": 1,
+        "costPerUnit": 943,
+        "providerName": "Dr. Bob Page"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPAP/BiPAP Initiation",
+    "dateOfProcedure": 1756730902460,
+    "hospitalName": "Our Lady of the Lake Regional Medical Center",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 359,
+    "allowedAmount": 215,
+    "lineItems": [
+      {
+        "cptCode": "94660",
+        "serviceName": "CPAP/BiPAP initiation",
+        "units": 1,
+        "costPerUnit": 359,
+        "providerName": "Dr. Catherine O'Neal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Paracentesis",
+    "dateOfProcedure": 1755609364834,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 1154,
+    "allowedAmount": 762,
+    "lineItems": [
+      {
+        "cptCode": "49082",
+        "serviceName": "Paracentesis",
+        "units": 1,
+        "costPerUnit": 1154,
+        "providerName": "Dr. Marcela del Carmen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1761776067125,
+    "hospitalName": "Mayo Clinic Rochester",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 1810,
+    "allowedAmount": 782,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1810,
+        "providerName": "Dr. Gianrico Farrugia"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Nephrectomy",
+    "dateOfProcedure": 1762352241473,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 24227,
+    "allowedAmount": 10864,
+    "lineItems": [
+      {
+        "cptCode": "50220",
+        "serviceName": "Nephrectomy",
+        "units": 1,
+        "costPerUnit": 24227,
+        "providerName": "Dr. John Lynch"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tendon Repair",
+    "dateOfProcedure": 1755125107165,
+    "hospitalName": "Nebraska Medical Center",
+    "city": "Omaha",
+    "state": "NE",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 6585,
+    "allowedAmount": 4108,
+    "lineItems": [
+      {
+        "cptCode": "24341",
+        "serviceName": "Tendon repair",
+        "units": 1,
+        "costPerUnit": 6585,
+        "providerName": "Dr. James Linder"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Heart Valve Replacement",
+    "dateOfProcedure": 1764189599648,
+    "hospitalName": "Dartmouth-Hitchcock Medical Center",
+    "city": "Lebanon",
+    "state": "NH",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 154298,
+    "allowedAmount": 72477,
+    "lineItems": [
+      {
+        "cptCode": "33405",
+        "serviceName": "Heart valve replacement",
+        "units": 1,
+        "costPerUnit": 154298,
+        "providerName": "Dr. Joanne Conroy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Venipuncture",
+    "dateOfProcedure": 1755200017616,
+    "hospitalName": "NYC Health + Hospitals/Bellevue",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 21,
+    "allowedAmount": 8,
+    "lineItems": [
+      {
+        "cptCode": "36415",
+        "serviceName": "Venipuncture (Blood Draw)",
+        "units": 1,
+        "costPerUnit": 21,
+        "providerName": "Dr. Amit Uppal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ECMO Initiation",
+    "dateOfProcedure": 1774512200766,
+    "hospitalName": "Essentia Health-Fargo",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 249433,
+    "allowedAmount": 110229,
+    "lineItems": [
+      {
+        "cptCode": "33946",
+        "serviceName": "ECMO initiation",
+        "units": 1,
+        "costPerUnit": 249433,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Circumcision",
+    "dateOfProcedure": 1777690326539,
+    "hospitalName": "Saint Francis Hospital",
+    "city": "Tulsa",
+    "state": "OK",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 677,
+    "allowedAmount": 289,
+    "lineItems": [
+      {
+        "cptCode": "54150",
+        "serviceName": "Circumcision",
+        "units": 1,
+        "costPerUnit": 677,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Scan Abdomen",
+    "dateOfProcedure": 1751941976876,
+    "hospitalName": "Penn State Health Milton S. Hershey Medical Center",
+    "city": "Hershey",
+    "state": "PA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 1215,
+    "allowedAmount": 502,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT Abdomen/Pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 1215,
+        "providerName": "Dr. Deborah Berini"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1752425613225,
+    "hospitalName": "Avera McKennan Hospital",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 8678,
+    "allowedAmount": 4141,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 8678,
+        "providerName": "Dr. David Basel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1777544934559,
+    "hospitalName": "UT Southwestern Medical Center",
+    "city": "Dallas",
+    "state": "TX",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 1548,
+    "allowedAmount": 745,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1548,
+        "providerName": "Dr. Daniel Podolsky"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "PEG Tube Placement",
+    "dateOfProcedure": 1758430080532,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 2425,
+    "allowedAmount": 1056,
+    "lineItems": [
+      {
+        "cptCode": "43246",
+        "serviceName": "PEG tube placement",
+        "units": 1,
+        "costPerUnit": 2425,
+        "providerName": "Dr. Stephen Leffler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thyroidectomy",
+    "dateOfProcedure": 1749305416930,
+    "hospitalName": "Providence Sacred Heart Medical Center",
+    "city": "Spokane",
+    "state": "WA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 16990,
+    "allowedAmount": 10174,
+    "lineItems": [
+      {
+        "cptCode": "60240",
+        "serviceName": "Thyroidectomy",
+        "units": 1,
+        "costPerUnit": 16990,
+        "providerName": "Dr. Peg Currie"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1771523957632,
+    "hospitalName": "Froedtert Hospital",
+    "city": "Milwaukee",
+    "state": "WI",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 1465,
+    "allowedAmount": 668,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1465,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Fetal Monitoring",
+    "dateOfProcedure": 1771114024446,
+    "hospitalName": "Providence Alaska Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 428,
+    "allowedAmount": 268,
+    "lineItems": [
+      {
+        "cptCode": "59025",
+        "serviceName": "Fetal monitoring",
+        "units": 1,
+        "costPerUnit": 428,
+        "providerName": "Dr. Michael Bernstein"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ICD Placement",
+    "dateOfProcedure": 1774580490935,
+    "hospitalName": "Baptist Health Medical Center-Little Rock",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 36842,
+    "allowedAmount": 23699,
+    "lineItems": [
+      {
+        "cptCode": "33249",
+        "serviceName": "ICD placement",
+        "units": 1,
+        "costPerUnit": 36842,
+        "providerName": "Dr. Greg Clowers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "VP Shunt Placement",
+    "dateOfProcedure": 1769702298698,
+    "hospitalName": "UCHealth University of Colorado Hospital",
+    "city": "Aurora",
+    "state": "CO",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 18018,
+    "allowedAmount": 8531,
+    "lineItems": [
+      {
+        "cptCode": "62223",
+        "serviceName": "VP shunt placement",
+        "units": 1,
+        "costPerUnit": 18018,
+        "providerName": "Dr. Tom Flaig"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1748262959912,
+    "hospitalName": "ChristianaCare",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 114698,
+    "allowedAmount": 82297,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 114698,
+        "providerName": "Dr. Ken Silverstein"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1760935647582,
+    "hospitalName": "Straub Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 1450,
+    "allowedAmount": 919,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1450,
+        "providerName": "Dr. Gerard Livaudais"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "DBS Insertion",
+    "dateOfProcedure": 1751719281498,
+    "hospitalName": "University of Chicago Medical Center",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 52378,
+    "allowedAmount": 22645,
+    "lineItems": [
+      {
+        "cptCode": "61867",
+        "serviceName": "DBS insertion",
+        "units": 1,
+        "costPerUnit": 52378,
+        "providerName": "Dr. Mark Anderson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laminectomy",
+    "dateOfProcedure": 1765702708663,
+    "hospitalName": "MercyOne Des Moines Medical Center",
+    "city": "Des Moines",
+    "state": "IA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 18499,
+    "allowedAmount": 11750,
+    "lineItems": [
+      {
+        "cptCode": "63047",
+        "serviceName": "Laminectomy",
+        "units": 1,
+        "costPerUnit": 18499,
+        "providerName": "Dr. Hijinio Carreon"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1762331553551,
+    "hospitalName": "Baptist Health Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 842,
+    "allowedAmount": 432,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 842,
+        "providerName": "Dr. Michael Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1769810027815,
+    "hospitalName": "Northern Light Eastern Maine Medical Center",
+    "city": "Bangor",
+    "state": "ME",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 11427,
+    "allowedAmount": 4690,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 11427,
+        "providerName": "Dr. James Jarvis"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1755571886194,
+    "hospitalName": "University of Michigan Health",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 1553,
+    "allowedAmount": 1090,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1553,
+        "providerName": "Dr. Marschall Runge"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hysterectomy",
+    "dateOfProcedure": 1768873587943,
+    "hospitalName": "Baptist Memorial Hospital-DeSoto",
+    "city": "Southaven",
+    "state": "MS",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 14442,
+    "allowedAmount": 7645,
+    "lineItems": [
+      {
+        "cptCode": "58150",
+        "serviceName": "Hysterectomy",
+        "units": 1,
+        "costPerUnit": 14442,
+        "providerName": "Dr. James Bowers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1762644470421,
+    "hospitalName": "Billings Clinic",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 1213,
+    "allowedAmount": 540,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1213,
+        "providerName": "Dr. Michelle Pierson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardioversion",
+    "dateOfProcedure": 1749577891401,
+    "hospitalName": "Sunrise Hospital and Medical Center",
+    "city": "Las Vegas",
+    "state": "NV",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 1159,
+    "allowedAmount": 724,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Cardioversion external",
+        "units": 1,
+        "costPerUnit": 1159,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thyroidectomy",
+    "dateOfProcedure": 1762818655220,
+    "hospitalName": "Presbyterian Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 12036,
+    "allowedAmount": 5255,
+    "lineItems": [
+      {
+        "cptCode": "60240",
+        "serviceName": "Thyroidectomy",
+        "units": 1,
+        "costPerUnit": 12036,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Coronary Angioplasty",
+    "dateOfProcedure": 1758791130770,
+    "hospitalName": "Duke University Hospital",
+    "city": "Durham",
+    "state": "NC",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 15631,
+    "allowedAmount": 7390,
+    "lineItems": [
+      {
+        "cptCode": "92920",
+        "serviceName": "Coronary angioplasty",
+        "units": 1,
+        "costPerUnit": 15631,
+        "providerName": "Dr. David Gallagher"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Ablation",
+    "dateOfProcedure": 1771897477578,
+    "hospitalName": "Cleveland Clinic",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 33838,
+    "allowedAmount": 15409,
+    "lineItems": [
+      {
+        "cptCode": "93653",
+        "serviceName": "Cardiac ablation",
+        "units": 1,
+        "costPerUnit": 33838,
+        "providerName": "Dr. Robert Wyllie"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Aspiration",
+    "dateOfProcedure": 1753195622608,
+    "hospitalName": "OHSU Hospital",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 148,
+    "allowedAmount": 71,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Joint aspiration",
+        "units": 1,
+        "costPerUnit": 148,
+        "providerName": "Dr. Renee Edwards"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1759472736000,
+    "hospitalName": "Rhode Island Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 12464,
+    "allowedAmount": 6902,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 12464,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endovascular Coiling",
+    "dateOfProcedure": 1761733811376,
+    "hospitalName": "Vanderbilt University Medical Center",
+    "city": "Nashville",
+    "state": "TN",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 44961,
+    "allowedAmount": 32894,
+    "lineItems": [
+      {
+        "cptCode": "61624",
+        "serviceName": "Endovascular coiling",
+        "units": 1,
+        "costPerUnit": 44961,
+        "providerName": "Dr. Rick Wright"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Skin Grafting",
+    "dateOfProcedure": 1768538417631,
+    "hospitalName": "University of Utah Hospital",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 4952,
+    "allowedAmount": 2042,
+    "lineItems": [
+      {
+        "cptCode": "15100",
+        "serviceName": "Skin grafting",
+        "units": 1,
+        "costPerUnit": 4952,
+        "providerName": "Dr. Sam Finlayson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemorrhoidectomy",
+    "dateOfProcedure": 1751713622916,
+    "hospitalName": "Inova Fairfax Hospital",
+    "city": "Falls Church",
+    "state": "VA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 4685,
+    "allowedAmount": 2090,
+    "lineItems": [
+      {
+        "cptCode": "46250",
+        "serviceName": "Hemorrhoidectomy",
+        "units": 1,
+        "costPerUnit": 4685,
+        "providerName": "Dr. Steve Narang"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ICD Placement",
+    "dateOfProcedure": 1752787529293,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 37152,
+    "allowedAmount": 15401,
+    "lineItems": [
+      {
+        "cptCode": "33249",
+        "serviceName": "ICD placement",
+        "units": 1,
+        "costPerUnit": 37152,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tonsillectomy",
+    "dateOfProcedure": 1746724636426,
+    "hospitalName": "UAB Hospital",
+    "city": "Birmingham",
+    "state": "AL",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 2813,
+    "allowedAmount": 1844,
+    "lineItems": [
+      {
+        "cptCode": "42820",
+        "serviceName": "Tonsillectomy",
+        "units": 1,
+        "costPerUnit": 2813,
+        "providerName": "Dr. Tony Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1753231102493,
+    "hospitalName": "Banner-University Medical Center Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 1507,
+    "allowedAmount": 694,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1507,
+        "providerName": "Dr. Marjorie Bessel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tendon Repair",
+    "dateOfProcedure": 1760132326262,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 8688,
+    "allowedAmount": 4813,
+    "lineItems": [
+      {
+        "cptCode": "24341",
+        "serviceName": "Tendon repair",
+        "units": 1,
+        "costPerUnit": 8688,
+        "providerName": "Dr. Niraj Sehgal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Arterial Line Placement",
+    "dateOfProcedure": 1771395964577,
+    "hospitalName": "Hartford Hospital",
+    "city": "Hartford",
+    "state": "CT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 853,
+    "allowedAmount": 493,
+    "lineItems": [
+      {
+        "cptCode": "36620",
+        "serviceName": "Arterial line placement",
+        "units": 1,
+        "costPerUnit": 853,
+        "providerName": "Dr. Adam Steinberg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mastectomy",
+    "dateOfProcedure": 1753786226532,
+    "hospitalName": "UF Health Shands Hospital",
+    "city": "Gainesville",
+    "state": "FL",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 20062,
+    "allowedAmount": 8662,
+    "lineItems": [
+      {
+        "cptCode": "19307",
+        "serviceName": "Mastectomy",
+        "units": 1,
+        "costPerUnit": 20062,
+        "providerName": "Dr. Timothy Flynn"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hernia Repair",
+    "dateOfProcedure": 1777785644231,
+    "hospitalName": "St. Alphonsus Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 8183,
+    "allowedAmount": 3692,
+    "lineItems": [
+      {
+        "cptCode": "49505",
+        "serviceName": "Hernia repair",
+        "units": 1,
+        "costPerUnit": 8183,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thyroidectomy",
+    "dateOfProcedure": 1747743238406,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 11540,
+    "allowedAmount": 5140,
+    "lineItems": [
+      {
+        "cptCode": "60240",
+        "serviceName": "Thyroidectomy",
+        "units": 1,
+        "costPerUnit": 11540,
+        "providerName": "Dr. Richard Fogel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thoracentesis",
+    "dateOfProcedure": 1764852433552,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 1245,
+    "allowedAmount": 615,
+    "lineItems": [
+      {
+        "cptCode": "32554",
+        "serviceName": "Thoracentesis",
+        "units": 1,
+        "costPerUnit": 1245,
+        "providerName": "Dr. Steven Stites"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Catheterization",
+    "dateOfProcedure": 1771681924653,
+    "hospitalName": "Ochsner Medical Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 4491,
+    "allowedAmount": 1987,
+    "lineItems": [
+      {
+        "cptCode": "93451",
+        "serviceName": "Right heart catheterization",
+        "units": 1,
+        "costPerUnit": 4491,
+        "providerName": "Dr. Warner Thomas"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Fetal Monitoring",
+    "dateOfProcedure": 1756796252771,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 613,
+    "allowedAmount": 455,
+    "lineItems": [
+      {
+        "cptCode": "59025",
+        "serviceName": "Fetal monitoring",
+        "units": 1,
+        "costPerUnit": 613,
+        "providerName": "Dr. David Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Foley Catheter",
+    "dateOfProcedure": 1748484016779,
+    "hospitalName": "Mayo Clinic Rochester",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 246,
+    "allowedAmount": 126,
+    "lineItems": [
+      {
+        "cptCode": "51702",
+        "serviceName": "Foley catheter",
+        "units": 1,
+        "costPerUnit": 246,
+        "providerName": "Dr. Gianrico Farrugia"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Appendectomy",
+    "dateOfProcedure": 1751116952506,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 18350,
+    "allowedAmount": 8686,
+    "lineItems": [
+      {
+        "cptCode": "44950",
+        "serviceName": "Appendectomy",
+        "units": 1,
+        "costPerUnit": 18350,
+        "providerName": "Dr. John Lynch"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1770042081978,
+    "hospitalName": "Nebraska Medical Center",
+    "city": "Omaha",
+    "state": "NE",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 860,
+    "allowedAmount": 397,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 860,
+        "providerName": "Dr. Harris Frankel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thyroidectomy",
+    "dateOfProcedure": 1750544880975,
+    "hospitalName": "Elliot Hospital",
+    "city": "Manchester",
+    "state": "NH",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 12228,
+    "allowedAmount": 5097,
+    "lineItems": [
+      {
+        "cptCode": "60240",
+        "serviceName": "Thyroidectomy",
+        "units": 1,
+        "costPerUnit": 12228,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Suturing",
+    "dateOfProcedure": 1756298385542,
+    "hospitalName": "NewYork-Presbyterian Hospital",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 354,
+    "allowedAmount": 207,
+    "lineItems": [
+      {
+        "cptCode": "12001",
+        "serviceName": "Wound suturing",
+        "units": 1,
+        "costPerUnit": 354,
+        "providerName": "Dr. Steven Corwin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Suturing",
+    "dateOfProcedure": 1767124033065,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 240,
+    "allowedAmount": 156,
+    "lineItems": [
+      {
+        "cptCode": "12001",
+        "serviceName": "Wound suturing",
+        "units": 1,
+        "costPerUnit": 240,
+        "providerName": "Dr. Doug Griffin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Amniocentesis",
+    "dateOfProcedure": 1757098088842,
+    "hospitalName": "OU Health Medical Center",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 946,
+    "allowedAmount": 396,
+    "lineItems": [
+      {
+        "cptCode": "59000",
+        "serviceName": "Amniocentesis",
+        "units": 1,
+        "costPerUnit": 946,
+        "providerName": "Dr. Richard Lofgren"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Limb Amputation",
+    "dateOfProcedure": 1776114393504,
+    "hospitalName": "UPMC Presbyterian Shadyside",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 15187,
+    "allowedAmount": 7582,
+    "lineItems": [
+      {
+        "cptCode": "27880",
+        "serviceName": "Limb amputation",
+        "units": 1,
+        "costPerUnit": 15187,
+        "providerName": "Dr. Joon Lee"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemodialysis",
+    "dateOfProcedure": 1759201017948,
+    "hospitalName": "Avera McKennan Hospital",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 873,
+    "allowedAmount": 417,
+    "lineItems": [
+      {
+        "cptCode": "90935",
+        "serviceName": "Hemodialysis",
+        "units": 1,
+        "costPerUnit": 873,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Prostatectomy",
+    "dateOfProcedure": 1764024081380,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 18540,
+    "allowedAmount": 8469,
+    "lineItems": [
+      {
+        "cptCode": "55840",
+        "serviceName": "Prostatectomy",
+        "units": 1,
+        "costPerUnit": 18540,
+        "providerName": "Dr. Marc Boom"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1758426368108,
+    "hospitalName": "Rutland Regional Medical Center",
+    "city": "Rutland",
+    "state": "VT",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 1566,
+    "allowedAmount": 710,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1566,
+        "providerName": "Dr. Philip Lapp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1749113109340,
+    "hospitalName": "UW Medical Center",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 103,
+    "allowedAmount": 45,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 103,
+        "providerName": "Dr. Tim Dellit"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Suprapubic Catheter",
+    "dateOfProcedure": 1762338816361,
+    "hospitalName": "UW Health University Hospital",
+    "city": "Madison",
+    "state": "WI",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 1248,
+    "allowedAmount": 588,
+    "lineItems": [
+      {
+        "cptCode": "51040",
+        "serviceName": "Suprapubic catheter",
+        "units": 1,
+        "costPerUnit": 1248,
+        "providerName": "Dr. Alan Kaplan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CRRT Therapy",
+    "dateOfProcedure": 1746483058805,
+    "hospitalName": "Providence Alaska Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 5040,
+    "allowedAmount": 3738,
+    "lineItems": [
+      {
+        "cptCode": "90999",
+        "serviceName": "CRRT therapy",
+        "units": 1,
+        "costPerUnit": 5040,
+        "providerName": "Dr. Ella Jenkins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Episiotomy Repair",
+    "dateOfProcedure": 1777286242938,
+    "hospitalName": "UAMS Medical Center",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 6504,
+    "allowedAmount": 2816,
+    "lineItems": [
+      {
+        "cptCode": "59400",
+        "serviceName": "Episiotomy repair",
+        "units": 1,
+        "costPerUnit": 6504,
+        "providerName": "Dr. Richard Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPR Procedure",
+    "dateOfProcedure": 1769727049603,
+    "hospitalName": "Saint Joseph Hospital",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 879,
+    "allowedAmount": 371,
+    "lineItems": [
+      {
+        "cptCode": "92950",
+        "serviceName": "CPR procedure",
+        "units": 1,
+        "costPerUnit": 879,
+        "providerName": "Dr. Mark Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Needle Decompression",
+    "dateOfProcedure": 1746965386532,
+    "hospitalName": "Bayhealth Hospital",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 832,
+    "allowedAmount": 363,
+    "lineItems": [
+      {
+        "cptCode": "32422",
+        "serviceName": "Needle decompression",
+        "units": 1,
+        "costPerUnit": 832,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1750276853599,
+    "hospitalName": "Straub Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 8620,
+    "allowedAmount": 3502,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 8620,
+        "providerName": "Dr. Gerard Livaudais"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1769942621946,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 125260,
+    "allowedAmount": 51959,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 125260,
+        "providerName": "Dr. Howard Chrisman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lung Resection",
+    "dateOfProcedure": 1747361802055,
+    "hospitalName": "MercyOne Des Moines Medical Center",
+    "city": "Des Moines",
+    "state": "IA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 33276,
+    "allowedAmount": 23279,
+    "lineItems": [
+      {
+        "cptCode": "32480",
+        "serviceName": "Lung resection",
+        "units": 1,
+        "costPerUnit": 33276,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Arterial Line Placement",
+    "dateOfProcedure": 1774642572601,
+    "hospitalName": "Baptist Health Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 870,
+    "allowedAmount": 405,
+    "lineItems": [
+      {
+        "cptCode": "36620",
+        "serviceName": "Arterial line placement",
+        "units": 1,
+        "costPerUnit": 870,
+        "providerName": "Dr. Michael Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Foley Catheter",
+    "dateOfProcedure": 1767712812638,
+    "hospitalName": "Maine Medical Center",
+    "city": "Portland",
+    "state": "ME",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 252,
+    "allowedAmount": 124,
+    "lineItems": [
+      {
+        "cptCode": "51702",
+        "serviceName": "Foley catheter",
+        "units": 1,
+        "costPerUnit": 252,
+        "providerName": "Dr. Joel Botler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tendon Repair",
+    "dateOfProcedure": 1775689364638,
+    "hospitalName": "University of Michigan Health",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 6523,
+    "allowedAmount": 4553,
+    "lineItems": [
+      {
+        "cptCode": "24341",
+        "serviceName": "Tendon repair",
+        "units": 1,
+        "costPerUnit": 6523,
+        "providerName": "Dr. David Spahlinger"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bariatric Surgery",
+    "dateOfProcedure": 1776806897680,
+    "hospitalName": "UMMC Hospital",
+    "city": "Jackson",
+    "state": "MS",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 20624,
+    "allowedAmount": 14346,
+    "lineItems": [
+      {
+        "cptCode": "43775",
+        "serviceName": "Bariatric surgery",
+        "units": 1,
+        "costPerUnit": 20624,
+        "providerName": "Dr. LouAnn Woodward"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1749034741555,
+    "hospitalName": "St. Vincent Healthcare",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 11411,
+    "allowedAmount": 7080,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 11411,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Defibrillation",
+    "dateOfProcedure": 1753898336783,
+    "hospitalName": "Sunrise Hospital and Medical Center",
+    "city": "Las Vegas",
+    "state": "NV",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 1175,
+    "allowedAmount": 690,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Defibrillation",
+        "units": 1,
+        "costPerUnit": 1175,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy (EGD)",
+    "dateOfProcedure": 1760443895171,
+    "hospitalName": "Presbyterian Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 1247,
+    "allowedAmount": 585,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "EGD with biopsy",
+        "units": 1,
+        "costPerUnit": 1247,
+        "providerName": "Dr. Jason Mitchell"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Appendectomy",
+    "dateOfProcedure": 1769838184881,
+    "hospitalName": "UNC Hospitals",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 17916,
+    "allowedAmount": 12094,
+    "lineItems": [
+      {
+        "cptCode": "44950",
+        "serviceName": "Appendectomy",
+        "units": 1,
+        "costPerUnit": 17916,
+        "providerName": "Dr. David Zvara"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Aspiration",
+    "dateOfProcedure": 1758878473186,
+    "hospitalName": "Ohio State University Wexner Medical Center",
+    "city": "Columbus",
+    "state": "OH",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 156,
+    "allowedAmount": 67,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Joint aspiration",
+        "units": 1,
+        "costPerUnit": 156,
+        "providerName": "Dr. John Warner"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Grafting",
+    "dateOfProcedure": 1767789591206,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 5094,
+    "allowedAmount": 2064,
+    "lineItems": [
+      {
+        "cptCode": "20900",
+        "serviceName": "Bone grafting",
+        "units": 1,
+        "costPerUnit": 5094,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tonsillectomy",
+    "dateOfProcedure": 1767448935694,
+    "hospitalName": "The Miriam Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 3464,
+    "allowedAmount": 1480,
+    "lineItems": [
+      {
+        "cptCode": "42820",
+        "serviceName": "Tonsillectomy",
+        "units": 1,
+        "costPerUnit": 3464,
+        "providerName": "Dr. Maria Ducharme"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tubal Ligation",
+    "dateOfProcedure": 1772113339840,
+    "hospitalName": "Methodist Hospitals of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 6659,
+    "allowedAmount": 4929,
+    "lineItems": [
+      {
+        "cptCode": "58600",
+        "serviceName": "Tubal ligation",
+        "units": 1,
+        "costPerUnit": 6659,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1749129642711,
+    "hospitalName": "University of Utah Hospital",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 48074,
+    "allowedAmount": 20242,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip replacement",
+        "units": 1,
+        "costPerUnit": 48074,
+        "providerName": "Dr. Sam Finlayson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Arterial Line Placement",
+    "dateOfProcedure": 1750949458479,
+    "hospitalName": "UVA Health Medical Center",
+    "city": "Charlottesville",
+    "state": "VA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 836,
+    "allowedAmount": 500,
+    "lineItems": [
+      {
+        "cptCode": "36620",
+        "serviceName": "Arterial line placement",
+        "units": 1,
+        "costPerUnit": 836,
+        "providerName": "Dr. Reid Adams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Tube Placement",
+    "dateOfProcedure": 1758182292699,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 1156,
+    "allowedAmount": 494,
+    "lineItems": [
+      {
+        "cptCode": "32551",
+        "serviceName": "Chest tube placement",
+        "units": 1,
+        "costPerUnit": 1156,
+        "providerName": "Dr. Glenn Crotty"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1750611496491,
+    "hospitalName": "UAB Hospital",
+    "city": "Birmingham",
+    "state": "AL",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 19651,
+    "allowedAmount": 12882,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 19651,
+        "providerName": "Dr. Amy Williams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Echocardiogram",
+    "dateOfProcedure": 1763842423903,
+    "hospitalName": "Mayo Clinic Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 828,
+    "allowedAmount": 375,
+    "lineItems": [
+      {
+        "cptCode": "93306",
+        "serviceName": "Echocardiogram complete",
+        "units": 1,
+        "costPerUnit": 828,
+        "providerName": "Dr. Alyson Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ORIF Fracture Repair",
+    "dateOfProcedure": 1757029896083,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 35514,
+    "allowedAmount": 21818,
+    "lineItems": [
+      {
+        "cptCode": "27236",
+        "serviceName": "ORIF hip fracture",
+        "units": 1,
+        "costPerUnit": 35514,
+        "providerName": "Dr. Robert Cherry"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Prostatectomy",
+    "dateOfProcedure": 1762055997151,
+    "hospitalName": "Hartford Hospital",
+    "city": "Hartford",
+    "state": "CT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 17866,
+    "allowedAmount": 9547,
+    "lineItems": [
+      {
+        "cptCode": "55840",
+        "serviceName": "Prostatectomy",
+        "units": 1,
+        "costPerUnit": 17866,
+        "providerName": "Dr. Adam Steinberg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hernia Repair",
+    "dateOfProcedure": 1747648541479,
+    "hospitalName": "Sarasota Memorial Health Care System",
+    "city": "Sarasota",
+    "state": "FL",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 11371,
+    "allowedAmount": 7736,
+    "lineItems": [
+      {
+        "cptCode": "49505",
+        "serviceName": "Hernia repair",
+        "units": 1,
+        "costPerUnit": 11371,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Coronary Angioplasty",
+    "dateOfProcedure": 1755678254351,
+    "hospitalName": "St. Alphonsus Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 15735,
+    "allowedAmount": 8725,
+    "lineItems": [
+      {
+        "cptCode": "92920",
+        "serviceName": "Coronary angioplasty",
+        "units": 1,
+        "costPerUnit": 15735,
+        "providerName": "Dr. Steven Nemerson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Aspiration",
+    "dateOfProcedure": 1772447949252,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 153,
+    "allowedAmount": 64,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Joint aspiration",
+        "units": 1,
+        "costPerUnit": 153,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1755109771464,
+    "hospitalName": "AdventHealth Shawnee Mission",
+    "city": "Merriam",
+    "state": "KS",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 44597,
+    "allowedAmount": 26389,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee replacement",
+        "units": 1,
+        "costPerUnit": 44597,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1773540654786,
+    "hospitalName": "Our Lady of the Lake Regional Medical Center",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 115131,
+    "allowedAmount": 63527,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 115131,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1777459956076,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 942,
+    "allowedAmount": 414,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 942,
+        "providerName": "Dr. David Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy",
+    "dateOfProcedure": 1747345667232,
+    "hospitalName": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "state": "MN",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 2422,
+    "allowedAmount": 1365,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Colonoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 2422,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1770684985652,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 118056,
+    "allowedAmount": 67914,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 118056,
+        "providerName": "Dr. Richard Liekweg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "DBS Insertion",
+    "dateOfProcedure": 1764351412075,
+    "hospitalName": "Bryan Medical Center",
+    "city": "Lincoln",
+    "state": "NE",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 55497,
+    "allowedAmount": 26337,
+    "lineItems": [
+      {
+        "cptCode": "61867",
+        "serviceName": "DBS insertion",
+        "units": 1,
+        "costPerUnit": 55497,
+        "providerName": "Dr. John Trapp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cystoscopy",
+    "dateOfProcedure": 1762899301665,
+    "hospitalName": "Elliot Hospital",
+    "city": "Manchester",
+    "state": "NH",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 811,
+    "allowedAmount": 376,
+    "lineItems": [
+      {
+        "cptCode": "52000",
+        "serviceName": "Cystoscopy",
+        "units": 1,
+        "costPerUnit": 811,
+        "providerName": "Dr. Greg Baxter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPR Procedure",
+    "dateOfProcedure": 1751037157104,
+    "hospitalName": "NewYork-Presbyterian Hospital",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 1236,
+    "allowedAmount": 495,
+    "lineItems": [
+      {
+        "cptCode": "92950",
+        "serviceName": "CPR procedure",
+        "units": 1,
+        "costPerUnit": 1236,
+        "providerName": "Dr. Steven Corwin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1764452860272,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 1430,
+    "allowedAmount": 575,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1430,
+        "providerName": "Dr. Doug Griffin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy (EGD)",
+    "dateOfProcedure": 1762682833922,
+    "hospitalName": "Saint Francis Hospital",
+    "city": "Tulsa",
+    "state": "OK",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 930,
+    "allowedAmount": 566,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "EGD with biopsy",
+        "units": 1,
+        "costPerUnit": 930,
+        "providerName": "Dr. Mark Frost"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy (EGD)",
+    "dateOfProcedure": 1752298044256,
+    "hospitalName": "UPMC Presbyterian Shadyside",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 1252,
+    "allowedAmount": 617,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "EGD with biopsy",
+        "units": 1,
+        "costPerUnit": 1252,
+        "providerName": "Dr. Leslie Davis"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Arterial Line Placement",
+    "dateOfProcedure": 1752651745205,
+    "hospitalName": "Avera McKennan Hospital",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 837,
+    "allowedAmount": 382,
+    "lineItems": [
+      {
+        "cptCode": "36620",
+        "serviceName": "Arterial line placement",
+        "units": 1,
+        "costPerUnit": 837,
+        "providerName": "Dr. David Basel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Prostatectomy",
+    "dateOfProcedure": 1770050743025,
+    "hospitalName": "UT Southwestern Medical Center",
+    "city": "Dallas",
+    "state": "TX",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 17627,
+    "allowedAmount": 8191,
+    "lineItems": [
+      {
+        "cptCode": "55840",
+        "serviceName": "Prostatectomy",
+        "units": 1,
+        "costPerUnit": 17627,
+        "providerName": "Dr. John Warner"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mastectomy",
+    "dateOfProcedure": 1749132758249,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 15205,
+    "allowedAmount": 9078,
+    "lineItems": [
+      {
+        "cptCode": "19307",
+        "serviceName": "Mastectomy",
+        "units": 1,
+        "costPerUnit": 15205,
+        "providerName": "Dr. Sunny Eappen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Exploratory Laparotomy",
+    "dateOfProcedure": 1774583892496,
+    "hospitalName": "UW Medical Center",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 16969,
+    "allowedAmount": 9790,
+    "lineItems": [
+      {
+        "cptCode": "49000",
+        "serviceName": "Exploratory laparotomy",
+        "units": 1,
+        "costPerUnit": 16969,
+        "providerName": "Dr. Tim Dellit"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tendon Repair",
+    "dateOfProcedure": 1771546975560,
+    "hospitalName": "UW Health University Hospital",
+    "city": "Madison",
+    "state": "WI",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 6395,
+    "allowedAmount": 4097,
+    "lineItems": [
+      {
+        "cptCode": "24341",
+        "serviceName": "Tendon repair",
+        "units": 1,
+        "costPerUnit": 6395,
+        "providerName": "Dr. Pete Newcomer"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Carotid Endarterectomy",
+    "dateOfProcedure": 1774506440563,
+    "hospitalName": "Alaska Native Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 17767,
+    "allowedAmount": 7615,
+    "lineItems": [
+      {
+        "cptCode": "35301",
+        "serviceName": "Carotid endarterectomy",
+        "units": 1,
+        "costPerUnit": 17767,
+        "providerName": "Dr. John Doe"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest X-Ray",
+    "dateOfProcedure": 1769117044695,
+    "hospitalName": "UAMS Medical Center",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 116,
+    "allowedAmount": 67,
+    "lineItems": [
+      {
+        "cptCode": "71045",
+        "serviceName": "X-ray chest 1 view",
+        "units": 1,
+        "costPerUnit": 116,
+        "providerName": "Dr. Richard Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Debridement",
+    "dateOfProcedure": 1763303304407,
+    "hospitalName": "UCHealth University of Colorado Hospital",
+    "city": "Aurora",
+    "state": "CO",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 833,
+    "allowedAmount": 334,
+    "lineItems": [
+      {
+        "cptCode": "11042",
+        "serviceName": "Wound debridement",
+        "units": 1,
+        "costPerUnit": 833,
+        "providerName": "Dr. Tom Flaig"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Suturing",
+    "dateOfProcedure": 1750911362947,
+    "hospitalName": "Bayhealth Hospital",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 250,
+    "allowedAmount": 177,
+    "lineItems": [
+      {
+        "cptCode": "12001",
+        "serviceName": "Wound suturing",
+        "units": 1,
+        "costPerUnit": 250,
+        "providerName": "Dr. Gary Siegelman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1750542829684,
+    "hospitalName": "Straub Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 1247,
+    "allowedAmount": 590,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1247,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1760257978793,
+    "hospitalName": "University of Chicago Medical Center",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 1181,
+    "allowedAmount": 784,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1181,
+        "providerName": "Dr. Mark Anderson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Appendectomy",
+    "dateOfProcedure": 1756845547560,
+    "hospitalName": "University of Iowa Hospitals",
+    "city": "Iowa City",
+    "state": "IA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 18315,
+    "allowedAmount": 8067,
+    "lineItems": [
+      {
+        "cptCode": "44950",
+        "serviceName": "Appendectomy",
+        "units": 1,
+        "costPerUnit": 18315,
+        "providerName": "Dr. Suresh Gunasekaran"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Echocardiogram",
+    "dateOfProcedure": 1765020837500,
+    "hospitalName": "UK Chandler Hospital",
+    "city": "Lexington",
+    "state": "KY",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 860,
+    "allowedAmount": 366,
+    "lineItems": [
+      {
+        "cptCode": "93306",
+        "serviceName": "Echocardiogram complete",
+        "units": 1,
+        "costPerUnit": 860,
+        "providerName": "Dr. Mark Newman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Arterial Line Placement",
+    "dateOfProcedure": 1765690518153,
+    "hospitalName": "Maine Medical Center",
+    "city": "Portland",
+    "state": "ME",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 853,
+    "allowedAmount": 373,
+    "lineItems": [
+      {
+        "cptCode": "36620",
+        "serviceName": "Arterial line placement",
+        "units": 1,
+        "costPerUnit": 853,
+        "providerName": "Dr. Joel Botler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tissue Biopsy",
+    "dateOfProcedure": 1772041415022,
+    "hospitalName": "Corewell Health Beaumont Troy Hospital",
+    "city": "Troy",
+    "state": "MI",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 238,
+    "allowedAmount": 106,
+    "lineItems": [
+      {
+        "cptCode": "11102",
+        "serviceName": "Skin biopsy single lesion",
+        "units": 1,
+        "costPerUnit": 238,
+        "providerName": "Dr. Paolo Marciano"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Ablation",
+    "dateOfProcedure": 1766011515093,
+    "hospitalName": "Baptist Memorial Hospital-DeSoto",
+    "city": "Southaven",
+    "state": "MS",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 28277,
+    "allowedAmount": 15218,
+    "lineItems": [
+      {
+        "cptCode": "93653",
+        "serviceName": "Cardiac ablation",
+        "units": 1,
+        "costPerUnit": 28277,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cystoscopy",
+    "dateOfProcedure": 1768397594930,
+    "hospitalName": "Billings Clinic",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 836,
+    "allowedAmount": 534,
+    "lineItems": [
+      {
+        "cptCode": "52000",
+        "serviceName": "Cystoscopy",
+        "units": 1,
+        "costPerUnit": 836,
+        "providerName": "Dr. Michelle Pierson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "C-Section Delivery",
+    "dateOfProcedure": 1751180383002,
+    "hospitalName": "Sunrise Hospital and Medical Center",
+    "city": "Las Vegas",
+    "state": "NV",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 23855,
+    "allowedAmount": 15675,
+    "lineItems": [
+      {
+        "cptCode": "59510",
+        "serviceName": "C-section delivery",
+        "units": 1,
+        "costPerUnit": 23855,
+        "providerName": "Dr. Jeffrey Murawsky"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laryngoscopy",
+    "dateOfProcedure": 1775501505811,
+    "hospitalName": "Presbyterian Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 440,
+    "allowedAmount": 207,
+    "lineItems": [
+      {
+        "cptCode": "31505",
+        "serviceName": "Laryngoscopy",
+        "units": 1,
+        "costPerUnit": 440,
+        "providerName": "Dr. Jason Mitchell"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Prostatectomy",
+    "dateOfProcedure": 1757869820222,
+    "hospitalName": "Duke University Hospital",
+    "city": "Durham",
+    "state": "NC",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 18699,
+    "allowedAmount": 8110,
+    "lineItems": [
+      {
+        "cptCode": "55840",
+        "serviceName": "Prostatectomy",
+        "units": 1,
+        "costPerUnit": 18699,
+        "providerName": "Dr. David Gallagher"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1754817401691,
+    "hospitalName": "Ohio State University Wexner Medical Center",
+    "city": "Columbus",
+    "state": "OH",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 628,
+    "allowedAmount": 312,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 628,
+        "providerName": "Dr. Andrew Thomas"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1765840198374,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 24602,
+    "allowedAmount": 11328,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 24602,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electroencephalogram (EEG)",
+    "dateOfProcedure": 1772357973158,
+    "hospitalName": "Rhode Island Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 886,
+    "allowedAmount": 452,
+    "lineItems": [
+      {
+        "cptCode": "95816",
+        "serviceName": "Electroencephalogram (EEG)",
+        "units": 1,
+        "costPerUnit": 886,
+        "providerName": "Dr. Mitchell Levy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hysterectomy",
+    "dateOfProcedure": 1763671176712,
+    "hospitalName": "Vanderbilt University Medical Center",
+    "city": "Nashville",
+    "state": "TN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 18580,
+    "allowedAmount": 10796,
+    "lineItems": [
+      {
+        "cptCode": "58150",
+        "serviceName": "Hysterectomy",
+        "units": 1,
+        "costPerUnit": 18580,
+        "providerName": "Dr. Jeff Balser"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thoracentesis",
+    "dateOfProcedure": 1747778240583,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 1182,
+    "allowedAmount": 563,
+    "lineItems": [
+      {
+        "cptCode": "32554",
+        "serviceName": "Thoracentesis",
+        "units": 1,
+        "costPerUnit": 1182,
+        "providerName": "Dr. Mark Briesacher"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1768918964989,
+    "hospitalName": "UVA Health Medical Center",
+    "city": "Charlottesville",
+    "state": "VA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 42908,
+    "allowedAmount": 20705,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee replacement",
+        "units": 1,
+        "costPerUnit": 42908,
+        "providerName": "Dr. Wendy Horton"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Tube Placement",
+    "dateOfProcedure": 1756260928099,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 1188,
+    "allowedAmount": 666,
+    "lineItems": [
+      {
+        "cptCode": "32551",
+        "serviceName": "Chest tube placement",
+        "units": 1,
+        "costPerUnit": 1188,
+        "providerName": "Dr. Glenn Crotty"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1762594597798,
+    "hospitalName": "Huntsville Hospital",
+    "city": "Huntsville",
+    "state": "AL",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 38663,
+    "allowedAmount": 19070,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip replacement",
+        "units": 1,
+        "costPerUnit": 38663,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1752772926625,
+    "hospitalName": "Banner-University Medical Center Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 11531,
+    "allowedAmount": 4998,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 11531,
+        "providerName": "Dr. Marjorie Bessel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Skin Grafting",
+    "dateOfProcedure": 1754007560594,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 6956,
+    "allowedAmount": 2949,
+    "lineItems": [
+      {
+        "cptCode": "15100",
+        "serviceName": "Skin grafting",
+        "units": 1,
+        "costPerUnit": 6956,
+        "providerName": "Dr. Robert Cherry"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1765160401580,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 8347,
+    "allowedAmount": 4439,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 8347,
+        "providerName": "Dr. Gail D'Onofrio"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Amniocentesis",
+    "dateOfProcedure": 1758388226367,
+    "hospitalName": "Sarasota Memorial Health Care System",
+    "city": "Sarasota",
+    "state": "FL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 1614,
+    "allowedAmount": 943,
+    "lineItems": [
+      {
+        "cptCode": "59000",
+        "serviceName": "Amniocentesis",
+        "units": 1,
+        "costPerUnit": 1614,
+        "providerName": "Dr. James Fiorica"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Echocardiogram",
+    "dateOfProcedure": 1771754807040,
+    "hospitalName": "St. Luke's Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 883,
+    "allowedAmount": 607,
+    "lineItems": [
+      {
+        "cptCode": "93306",
+        "serviceName": "Echocardiogram complete",
+        "units": 1,
+        "costPerUnit": 883,
+        "providerName": "Dr. David Pate"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Limb Amputation",
+    "dateOfProcedure": 1753024741263,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 15291,
+    "allowedAmount": 10269,
+    "lineItems": [
+      {
+        "cptCode": "27880",
+        "serviceName": "Limb amputation",
+        "units": 1,
+        "costPerUnit": 15291,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Episiotomy Repair",
+    "dateOfProcedure": 1765265471727,
+    "hospitalName": "AdventHealth Shawnee Mission",
+    "city": "Merriam",
+    "state": "KS",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 8219,
+    "allowedAmount": 3678,
+    "lineItems": [
+      {
+        "cptCode": "59400",
+        "serviceName": "Episiotomy repair",
+        "units": 1,
+        "costPerUnit": 8219,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Vaccinations",
+    "dateOfProcedure": 1763972032952,
+    "hospitalName": "Ochsner Medical Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 61,
+    "allowedAmount": 39,
+    "lineItems": [
+      {
+        "cptCode": "90471",
+        "serviceName": "Vaccination administration",
+        "units": 1,
+        "costPerUnit": 61,
+        "providerName": "Dr. Robert Hart"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy (EGD)",
+    "dateOfProcedure": 1774862187120,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 1706,
+    "allowedAmount": 1047,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "EGD with biopsy",
+        "units": 1,
+        "costPerUnit": 1706,
+        "providerName": "Dr. David Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1770330197492,
+    "hospitalName": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "state": "MN",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 1453,
+    "allowedAmount": 658,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1453,
+        "providerName": "Dr. Penny Wheeler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1751135947887,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 3325,
+    "allowedAmount": 2382,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 3325,
+        "providerName": "Dr. Richard Liekweg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1765900070043,
+    "hospitalName": "Bryan Medical Center",
+    "city": "Lincoln",
+    "state": "NE",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 889,
+    "allowedAmount": 367,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 889,
+        "providerName": "Dr. John Trapp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CRRT Therapy",
+    "dateOfProcedure": 1756210132148,
+    "hospitalName": "Elliot Hospital",
+    "city": "Manchester",
+    "state": "NH",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 4932,
+    "allowedAmount": 2044,
+    "lineItems": [
+      {
+        "cptCode": "90999",
+        "serviceName": "CRRT therapy",
+        "units": 1,
+        "costPerUnit": 4932,
+        "providerName": "Dr. Greg Baxter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mechanical Ventilation",
+    "dateOfProcedure": 1754207036579,
+    "hospitalName": "NYU Langone Hospitals",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 3542,
+    "allowedAmount": 2073,
+    "lineItems": [
+      {
+        "cptCode": "94002",
+        "serviceName": "Mechanical ventilation",
+        "units": 1,
+        "costPerUnit": 3542,
+        "providerName": "Dr. Robert Grossman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Vaccinations",
+    "dateOfProcedure": 1772022738091,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 64,
+    "allowedAmount": 25,
+    "lineItems": [
+      {
+        "cptCode": "90471",
+        "serviceName": "Vaccination administration",
+        "units": 1,
+        "costPerUnit": 64,
+        "providerName": "Dr. Doug Griffin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1749986917959,
+    "hospitalName": "Saint Francis Hospital",
+    "city": "Tulsa",
+    "state": "OK",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 1166,
+    "allowedAmount": 513,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1166,
+        "providerName": "Dr. Mark Frost"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1749799433898,
+    "hospitalName": "Penn Presbyterian Medical Center",
+    "city": "Philadelphia",
+    "state": "PA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 3604,
+    "allowedAmount": 1798,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 3604,
+        "providerName": "Dr. Kevin Mahoney"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1775429149207,
+    "hospitalName": "Avera McKennan Hospital",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 1163,
+    "allowedAmount": 797,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1163,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPR Procedure",
+    "dateOfProcedure": 1759303204156,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 855,
+    "allowedAmount": 585,
+    "lineItems": [
+      {
+        "cptCode": "92950",
+        "serviceName": "CPR procedure",
+        "units": 1,
+        "costPerUnit": 855,
+        "providerName": "Dr. Robert Phillips"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Fetal Monitoring",
+    "dateOfProcedure": 1753069179584,
+    "hospitalName": "Rutland Regional Medical Center",
+    "city": "Rutland",
+    "state": "VT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 459,
+    "allowedAmount": 203,
+    "lineItems": [
+      {
+        "cptCode": "59025",
+        "serviceName": "Fetal monitoring",
+        "units": 1,
+        "costPerUnit": 459,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1766476992113,
+    "hospitalName": "UW Medical Center",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 1147,
+    "allowedAmount": 783,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 1147,
+        "providerName": "Dr. Tim Dellit"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electroencephalogram (EEG)",
+    "dateOfProcedure": 1762668354615,
+    "hospitalName": "Froedtert Hospital",
+    "city": "Milwaukee",
+    "state": "WI",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 884,
+    "allowedAmount": 375,
+    "lineItems": [
+      {
+        "cptCode": "95816",
+        "serviceName": "Electroencephalogram (EEG)",
+        "units": 1,
+        "costPerUnit": 884,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1764546516027,
+    "hospitalName": "Providence Alaska Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 469,
+    "allowedAmount": 337,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 469,
+        "providerName": "Dr. Michael Bernstein"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Coronary Angioplasty",
+    "dateOfProcedure": 1776110737719,
+    "hospitalName": "Baptist Health Medical Center-Little Rock",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 11813,
+    "allowedAmount": 4864,
+    "lineItems": [
+      {
+        "cptCode": "92920",
+        "serviceName": "Coronary angioplasty",
+        "units": 1,
+        "costPerUnit": 11813,
+        "providerName": "Dr. Greg Clowers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy",
+    "dateOfProcedure": 1768980509711,
+    "hospitalName": "UCHealth University of Colorado Hospital",
+    "city": "Aurora",
+    "state": "CO",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 2459,
+    "allowedAmount": 1222,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Colonoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 2459,
+        "providerName": "Dr. Jean Wright"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Exploratory Laparotomy",
+    "dateOfProcedure": 1751500913699,
+    "hospitalName": "ChristianaCare",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 11816,
+    "allowedAmount": 8070,
+    "lineItems": [
+      {
+        "cptCode": "49000",
+        "serviceName": "Exploratory laparotomy",
+        "units": 1,
+        "costPerUnit": 11816,
+        "providerName": "Dr. Janice Nevin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Suprapubic Catheter",
+    "dateOfProcedure": 1768420232157,
+    "hospitalName": "Straub Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 1241,
+    "allowedAmount": 847,
+    "lineItems": [
+      {
+        "cptCode": "51040",
+        "serviceName": "Suprapubic catheter",
+        "units": 1,
+        "costPerUnit": 1241,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Grafting",
+    "dateOfProcedure": 1774102328182,
+    "hospitalName": "University of Chicago Medical Center",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 5180,
+    "allowedAmount": 2568,
+    "lineItems": [
+      {
+        "cptCode": "20900",
+        "serviceName": "Bone grafting",
+        "units": 1,
+        "costPerUnit": 5180,
+        "providerName": "Dr. Mark Anderson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1777110604828,
+    "hospitalName": "University of Iowa Hospitals",
+    "city": "Iowa City",
+    "state": "IA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 438,
+    "allowedAmount": 215,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 438,
+        "providerName": "Dr. Theresa Brennan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tissue Biopsy",
+    "dateOfProcedure": 1777751140409,
+    "hospitalName": "UK Chandler Hospital",
+    "city": "Lexington",
+    "state": "KY",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 260,
+    "allowedAmount": 117,
+    "lineItems": [
+      {
+        "cptCode": "11102",
+        "serviceName": "Skin biopsy single lesion",
+        "units": 1,
+        "costPerUnit": 260,
+        "providerName": "Dr. Mark Newman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1746992850984,
+    "hospitalName": "Maine Medical Center",
+    "city": "Portland",
+    "state": "ME",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 452,
+    "allowedAmount": 208,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 452,
+        "providerName": "Dr. Jeff Sanders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumpectomy",
+    "dateOfProcedure": 1775103292868,
+    "hospitalName": "University of Michigan Health",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 8905,
+    "allowedAmount": 4287,
+    "lineItems": [
+      {
+        "cptCode": "19301",
+        "serviceName": "Lumpectomy",
+        "units": 1,
+        "costPerUnit": 8905,
+        "providerName": "Dr. David Spahlinger"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Scan Abdomen",
+    "dateOfProcedure": 1776639496718,
+    "hospitalName": "Baptist Memorial Hospital-DeSoto",
+    "city": "Southaven",
+    "state": "MS",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 950,
+    "allowedAmount": 391,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT Abdomen/Pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 950,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1757636361590,
+    "hospitalName": "Billings Clinic",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 25735,
+    "allowedAmount": 11568,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 25735,
+        "providerName": "Dr. Michelle Pierson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPR Procedure",
+    "dateOfProcedure": 1765955361968,
+    "hospitalName": "Sunrise Hospital and Medical Center",
+    "city": "Las Vegas",
+    "state": "NV",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 812,
+    "allowedAmount": 466,
+    "lineItems": [
+      {
+        "cptCode": "92950",
+        "serviceName": "CPR procedure",
+        "units": 1,
+        "costPerUnit": 812,
+        "providerName": "Dr. Jeffrey Murawsky"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Foley Catheter",
+    "dateOfProcedure": 1767173109825,
+    "hospitalName": "UNM Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 239,
+    "allowedAmount": 133,
+    "lineItems": [
+      {
+        "cptCode": "51702",
+        "serviceName": "Foley catheter",
+        "units": 1,
+        "costPerUnit": 239,
+        "providerName": "Dr. Irene Agostini"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electroencephalogram (EEG)",
+    "dateOfProcedure": 1774438734037,
+    "hospitalName": "Duke University Hospital",
+    "city": "Durham",
+    "state": "NC",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 853,
+    "allowedAmount": 565,
+    "lineItems": [
+      {
+        "cptCode": "95816",
+        "serviceName": "Electroencephalogram (EEG)",
+        "units": 1,
+        "costPerUnit": 853,
+        "providerName": "Dr. David Gallagher"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Limb Amputation",
+    "dateOfProcedure": 1748781760510,
+    "hospitalName": "Cleveland Clinic",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 14683,
+    "allowedAmount": 6984,
+    "lineItems": [
+      {
+        "cptCode": "27880",
+        "serviceName": "Limb amputation",
+        "units": 1,
+        "costPerUnit": 14683,
+        "providerName": "Dr. Tomislav Mihaljevic"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Needle Decompression",
+    "dateOfProcedure": 1754208065402,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 864,
+    "allowedAmount": 386,
+    "lineItems": [
+      {
+        "cptCode": "32422",
+        "serviceName": "Needle decompression",
+        "units": 1,
+        "costPerUnit": 864,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1774291655149,
+    "hospitalName": "The Miriam Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 25529,
+    "allowedAmount": 11978,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 25529,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1770866225542,
+    "hospitalName": "Vanderbilt University Medical Center",
+    "city": "Nashville",
+    "state": "TN",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 1437,
+    "allowedAmount": 844,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1437,
+        "providerName": "Dr. Jeff Balser"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy",
+    "dateOfProcedure": 1777643373447,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 2463,
+    "allowedAmount": 1270,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Colonoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 2463,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "General Anesthesia",
+    "dateOfProcedure": 1753332566327,
+    "hospitalName": "UVA Health Medical Center",
+    "city": "Charlottesville",
+    "state": "VA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 2446,
+    "allowedAmount": 1059,
+    "lineItems": [
+      {
+        "cptCode": "00100",
+        "serviceName": "General anesthesia",
+        "units": 1,
+        "costPerUnit": 2446,
+        "providerName": "Dr. Reid Adams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colostomy Creation",
+    "dateOfProcedure": 1760621974257,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 11793,
+    "allowedAmount": 7405,
+    "lineItems": [
+      {
+        "cptCode": "44320",
+        "serviceName": "Colostomy creation",
+        "units": 1,
+        "costPerUnit": 11793,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Aspiration",
+    "dateOfProcedure": 1749594835251,
+    "hospitalName": "Huntsville Hospital",
+    "city": "Huntsville",
+    "state": "AL",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 116,
+    "allowedAmount": 55,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Joint aspiration",
+        "units": 1,
+        "costPerUnit": 116,
+        "providerName": "Dr. Robert Chirkoff"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest X-Ray",
+    "dateOfProcedure": 1760385472918,
+    "hospitalName": "Banner-University Medical Center Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 156,
+    "allowedAmount": 65,
+    "lineItems": [
+      {
+        "cptCode": "71045",
+        "serviceName": "X-ray chest 1 view",
+        "units": 1,
+        "costPerUnit": 156,
+        "providerName": "Dr. Marjorie Bessel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Fetal Monitoring",
+    "dateOfProcedure": 1751081610622,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 657,
+    "allowedAmount": 295,
+    "lineItems": [
+      {
+        "cptCode": "59025",
+        "serviceName": "Fetal monitoring",
+        "units": 1,
+        "costPerUnit": 657,
+        "providerName": "Dr. Elena Rodriguez"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1746587042293,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 659,
+    "allowedAmount": 301,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 659,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TEE Echocardiogram",
+    "dateOfProcedure": 1776492600116,
+    "hospitalName": "Mayo Clinic Jacksonville",
+    "city": "Jacksonville",
+    "state": "FL",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 1698,
+    "allowedAmount": 795,
+    "lineItems": [
+      {
+        "cptCode": "93312",
+        "serviceName": "TEE echocardiogram",
+        "units": 1,
+        "costPerUnit": 1698,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laminectomy",
+    "dateOfProcedure": 1752113054099,
+    "hospitalName": "St. Luke's Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 17512,
+    "allowedAmount": 11395,
+    "lineItems": [
+      {
+        "cptCode": "63047",
+        "serviceName": "Laminectomy",
+        "units": 1,
+        "costPerUnit": 17512,
+        "providerName": "Dr. David Pate"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "VP Shunt Placement",
+    "dateOfProcedure": 1748844055361,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 18165,
+    "allowedAmount": 8477,
+    "lineItems": [
+      {
+        "cptCode": "62223",
+        "serviceName": "VP shunt placement",
+        "units": 1,
+        "costPerUnit": 18165,
+        "providerName": "Dr. Richard Fogel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colostomy Creation",
+    "dateOfProcedure": 1777605590122,
+    "hospitalName": "AdventHealth Shawnee Mission",
+    "city": "Merriam",
+    "state": "KS",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 14668,
+    "allowedAmount": 10865,
+    "lineItems": [
+      {
+        "cptCode": "44320",
+        "serviceName": "Colostomy creation",
+        "units": 1,
+        "costPerUnit": 14668,
+        "providerName": "Dr. Larry Botts"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1754599907895,
+    "hospitalName": "Ochsner Medical Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 1849,
+    "allowedAmount": 800,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1849,
+        "providerName": "Dr. Robert Hart"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Fetal Monitoring",
+    "dateOfProcedure": 1754503053310,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 601,
+    "allowedAmount": 366,
+    "lineItems": [
+      {
+        "cptCode": "59025",
+        "serviceName": "Fetal monitoring",
+        "units": 1,
+        "costPerUnit": 601,
+        "providerName": "Dr. David Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electroencephalogram (EEG)",
+    "dateOfProcedure": 1774971154715,
+    "hospitalName": "Mayo Clinic Rochester",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 860,
+    "allowedAmount": 355,
+    "lineItems": [
+      {
+        "cptCode": "95816",
+        "serviceName": "Electroencephalogram (EEG)",
+        "units": 1,
+        "costPerUnit": 860,
+        "providerName": "Dr. Amy Williams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electroencephalogram (EEG)",
+    "dateOfProcedure": 1763804131399,
+    "hospitalName": "St. Luke's Hospital",
+    "city": "Kansas City",
+    "state": "MO",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 854,
+    "allowedAmount": 492,
+    "lineItems": [
+      {
+        "cptCode": "95816",
+        "serviceName": "Electroencephalogram (EEG)",
+        "units": 1,
+        "costPerUnit": 854,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Blood Transfusion",
+    "dateOfProcedure": 1747706817969,
+    "hospitalName": "Nebraska Medical Center",
+    "city": "Omaha",
+    "state": "NE",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 887,
+    "allowedAmount": 659,
+    "lineItems": [
+      {
+        "cptCode": "36430",
+        "serviceName": "Blood transfusion",
+        "units": 1,
+        "costPerUnit": 887,
+        "providerName": "Dr. James Linder"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bowel Resection",
+    "dateOfProcedure": 1761977265662,
+    "hospitalName": "Dartmouth-Hitchcock Medical Center",
+    "city": "Lebanon",
+    "state": "NH",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 25341,
+    "allowedAmount": 16384,
+    "lineItems": [
+      {
+        "cptCode": "44140",
+        "serviceName": "Bowel resection",
+        "units": 1,
+        "costPerUnit": 25341,
+        "providerName": "Dr. Joanne Conroy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Appendectomy",
+    "dateOfProcedure": 1774657836232,
+    "hospitalName": "NewYork-Presbyterian Hospital",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 24942,
+    "allowedAmount": 12140,
+    "lineItems": [
+      {
+        "cptCode": "44950",
+        "serviceName": "Appendectomy",
+        "units": 1,
+        "costPerUnit": 24942,
+        "providerName": "Dr. Steven Corwin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cystoscopy",
+    "dateOfProcedure": 1761328879993,
+    "hospitalName": "Essentia Health-Fargo",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 890,
+    "allowedAmount": 364,
+    "lineItems": [
+      {
+        "cptCode": "52000",
+        "serviceName": "Cystoscopy",
+        "units": 1,
+        "costPerUnit": 890,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardioversion",
+    "dateOfProcedure": 1746699451527,
+    "hospitalName": "OU Health Medical Center",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 969,
+    "allowedAmount": 602,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Cardioversion external",
+        "units": 1,
+        "costPerUnit": 969,
+        "providerName": "Dr. Richard Lofgren"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1755455508177,
+    "hospitalName": "Penn State Health Milton S. Hershey Medical Center",
+    "city": "Hershey",
+    "state": "PA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 73,
+    "allowedAmount": 29,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 73,
+        "providerName": "Dr. Deborah Berini"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "DBS Insertion",
+    "dateOfProcedure": 1774790550311,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 52528,
+    "allowedAmount": 24378,
+    "lineItems": [
+      {
+        "cptCode": "61867",
+        "serviceName": "DBS insertion",
+        "units": 1,
+        "costPerUnit": 52528,
+        "providerName": "Dr. Paul Hanson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Limb Amputation",
+    "dateOfProcedure": 1748151559987,
+    "hospitalName": "Texas Health Resources",
+    "city": "Arlington",
+    "state": "TX",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 14314,
+    "allowedAmount": 8843,
+    "lineItems": [
+      {
+        "cptCode": "27880",
+        "serviceName": "Limb amputation",
+        "units": 1,
+        "costPerUnit": 14314,
+        "providerName": "Dr. Barclay Berdan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Catheterization",
+    "dateOfProcedure": 1772281627686,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 4565,
+    "allowedAmount": 3047,
+    "lineItems": [
+      {
+        "cptCode": "93451",
+        "serviceName": "Right heart catheterization",
+        "units": 1,
+        "costPerUnit": 4565,
+        "providerName": "Dr. Sunny Eappen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tubal Ligation",
+    "dateOfProcedure": 1768442713515,
+    "hospitalName": "Providence Sacred Heart Medical Center",
+    "city": "Spokane",
+    "state": "WA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 8841,
+    "allowedAmount": 3705,
+    "lineItems": [
+      {
+        "cptCode": "58600",
+        "serviceName": "Tubal ligation",
+        "units": 1,
+        "costPerUnit": 8841,
+        "providerName": "Dr. Peg Currie"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Aspiration",
+    "dateOfProcedure": 1774783846317,
+    "hospitalName": "UW Health University Hospital",
+    "city": "Madison",
+    "state": "WI",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 150,
+    "allowedAmount": 102,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Joint aspiration",
+        "units": 1,
+        "costPerUnit": 150,
+        "providerName": "Dr. Alan Kaplan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1762647176737,
+    "hospitalName": "Providence Alaska Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 45762,
+    "allowedAmount": 19614,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip replacement",
+        "units": 1,
+        "costPerUnit": 45762,
+        "providerName": "Dr. Michael Bernstein"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laryngoscopy",
+    "dateOfProcedure": 1773403863300,
+    "hospitalName": "UAMS Medical Center",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 375,
+    "allowedAmount": 158,
+    "lineItems": [
+      {
+        "cptCode": "31505",
+        "serviceName": "Laryngoscopy",
+        "units": 1,
+        "costPerUnit": 375,
+        "providerName": "Dr. Richard Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardioversion",
+    "dateOfProcedure": 1776847710189,
+    "hospitalName": "Saint Joseph Hospital",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 1240,
+    "allowedAmount": 509,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Cardioversion external",
+        "units": 1,
+        "costPerUnit": 1240,
+        "providerName": "Dr. Mark Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ultrasound Abdomen",
+    "dateOfProcedure": 1759310426836,
+    "hospitalName": "Bayhealth Hospital",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 645,
+    "allowedAmount": 303,
+    "lineItems": [
+      {
+        "cptCode": "76700",
+        "serviceName": "Ultrasound Abdomen complete",
+        "units": 1,
+        "costPerUnit": 645,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1765434529027,
+    "hospitalName": "Straub Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 1476,
+    "allowedAmount": 683,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1476,
+        "providerName": "Dr. Gerard Livaudais"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Coronary Angioplasty",
+    "dateOfProcedure": 1773654111856,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 14505,
+    "allowedAmount": 8693,
+    "lineItems": [
+      {
+        "cptCode": "92920",
+        "serviceName": "Coronary angioplasty",
+        "units": 1,
+        "costPerUnit": 14505,
+        "providerName": "Dr. Gary Noskin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colostomy Creation",
+    "dateOfProcedure": 1760733946145,
+    "hospitalName": "MercyOne Des Moines Medical Center",
+    "city": "Des Moines",
+    "state": "IA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 15410,
+    "allowedAmount": 7434,
+    "lineItems": [
+      {
+        "cptCode": "44320",
+        "serviceName": "Colostomy creation",
+        "units": 1,
+        "costPerUnit": 15410,
+        "providerName": "Dr. Hijinio Carreon"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Skin Grafting",
+    "dateOfProcedure": 1749401323710,
+    "hospitalName": "UK Chandler Hospital",
+    "city": "Lexington",
+    "state": "KY",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 4752,
+    "allowedAmount": 2732,
+    "lineItems": [
+      {
+        "cptCode": "15100",
+        "serviceName": "Skin grafting",
+        "units": 1,
+        "costPerUnit": 4752,
+        "providerName": "Dr. Mark Newman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "C-Section Delivery",
+    "dateOfProcedure": 1761219241094,
+    "hospitalName": "Maine Medical Center",
+    "city": "Portland",
+    "state": "ME",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 25052,
+    "allowedAmount": 12286,
+    "lineItems": [
+      {
+        "cptCode": "59510",
+        "serviceName": "C-section delivery",
+        "units": 1,
+        "costPerUnit": 25052,
+        "providerName": "Dr. Joel Botler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Burr Hole Drainage",
+    "dateOfProcedure": 1775861950676,
+    "hospitalName": "University of Michigan Health",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 12241,
+    "allowedAmount": 6087,
+    "lineItems": [
+      {
+        "cptCode": "61154",
+        "serviceName": "Burr hole drainage",
+        "units": 1,
+        "costPerUnit": 12241,
+        "providerName": "Dr. David Spahlinger"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endovascular Coiling",
+    "dateOfProcedure": 1760674604883,
+    "hospitalName": "UMMC Hospital",
+    "city": "Jackson",
+    "state": "MS",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 35899,
+    "allowedAmount": 15686,
+    "lineItems": [
+      {
+        "cptCode": "61624",
+        "serviceName": "Endovascular coiling",
+        "units": 1,
+        "costPerUnit": 35899,
+        "providerName": "Dr. Alan Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Tube Placement",
+    "dateOfProcedure": 1776264134377,
+    "hospitalName": "St. Vincent Healthcare",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 1503,
+    "allowedAmount": 1092,
+    "lineItems": [
+      {
+        "cptCode": "32551",
+        "serviceName": "Chest tube placement",
+        "units": 1,
+        "costPerUnit": 1503,
+        "providerName": "Dr. Michael Bush"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Debridement",
+    "dateOfProcedure": 1749836466837,
+    "hospitalName": "Sunrise Hospital and Medical Center",
+    "city": "Las Vegas",
+    "state": "NV",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 839,
+    "allowedAmount": 393,
+    "lineItems": [
+      {
+        "cptCode": "11042",
+        "serviceName": "Wound debridement",
+        "units": 1,
+        "costPerUnit": 839,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1752857713109,
+    "hospitalName": "Presbyterian Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 8182,
+    "allowedAmount": 3533,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 8182,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Skin Grafting",
+    "dateOfProcedure": 1759826914639,
+    "hospitalName": "UNC Hospitals",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 4969,
+    "allowedAmount": 2283,
+    "lineItems": [
+      {
+        "cptCode": "15100",
+        "serviceName": "Skin grafting",
+        "units": 1,
+        "costPerUnit": 4969,
+        "providerName": "Dr. Gary Park"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hysterectomy",
+    "dateOfProcedure": 1760993976969,
+    "hospitalName": "Ohio State University Wexner Medical Center",
+    "city": "Columbus",
+    "state": "OH",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 17738,
+    "allowedAmount": 7361,
+    "lineItems": [
+      {
+        "cptCode": "58150",
+        "serviceName": "Hysterectomy",
+        "units": 1,
+        "costPerUnit": 17738,
+        "providerName": "Dr. Andrew Thomas"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1757600858455,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 449,
+    "allowedAmount": 201,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 449,
+        "providerName": "Dr. Robert Scoggins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Splinting & Casting",
+    "dateOfProcedure": 1763520945683,
+    "hospitalName": "Rhode Island Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 459,
+    "allowedAmount": 295,
+    "lineItems": [
+      {
+        "cptCode": "29000",
+        "serviceName": "Splinting & casting",
+        "units": 1,
+        "costPerUnit": 459,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1774602545051,
+    "hospitalName": "Methodist Hospitals of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 119271,
+    "allowedAmount": 58666,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 119271,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Foley Catheter",
+    "dateOfProcedure": 1756632993656,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 251,
+    "allowedAmount": 161,
+    "lineItems": [
+      {
+        "cptCode": "51702",
+        "serviceName": "Foley catheter",
+        "units": 1,
+        "costPerUnit": 251,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1759983422774,
+    "hospitalName": "UVA Health Medical Center",
+    "city": "Charlottesville",
+    "state": "VA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 625,
+    "allowedAmount": 292,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 625,
+        "providerName": "Dr. Reid Adams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Amniocentesis",
+    "dateOfProcedure": 1749973287891,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 964,
+    "allowedAmount": 471,
+    "lineItems": [
+      {
+        "cptCode": "59000",
+        "serviceName": "Amniocentesis",
+        "units": 1,
+        "costPerUnit": 964,
+        "providerName": "Dr. Glenn Crotty"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1775655527189,
+    "hospitalName": "UAB Hospital",
+    "city": "Birmingham",
+    "state": "AL",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 59,
+    "allowedAmount": 24,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 59,
+        "providerName": "Dr. Tony Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1759072671904,
+    "hospitalName": "Banner-University Medical Center Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 12460,
+    "allowedAmount": 5022,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 12460,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "PEG Tube Placement",
+    "dateOfProcedure": 1769820509702,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 3628,
+    "allowedAmount": 1601,
+    "lineItems": [
+      {
+        "cptCode": "43246",
+        "serviceName": "PEG tube placement",
+        "units": 1,
+        "costPerUnit": 3628,
+        "providerName": "Dr. Niraj Sehgal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Limb Amputation",
+    "dateOfProcedure": 1751864661235,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 14620,
+    "allowedAmount": 6280,
+    "lineItems": [
+      {
+        "cptCode": "27880",
+        "serviceName": "Limb amputation",
+        "units": 1,
+        "costPerUnit": 14620,
+        "providerName": "Dr. Gail D'Onofrio"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Debridement",
+    "dateOfProcedure": 1751953975302,
+    "hospitalName": "Sarasota Memorial Health Care System",
+    "city": "Sarasota",
+    "state": "FL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 1233,
+    "allowedAmount": 563,
+    "lineItems": [
+      {
+        "cptCode": "11042",
+        "serviceName": "Wound debridement",
+        "units": 1,
+        "costPerUnit": 1233,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1775148673592,
+    "hospitalName": "St. Alphonsus Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 8162,
+    "allowedAmount": 3827,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 8162,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1770891854976,
+    "hospitalName": "IU Health Methodist Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 44475,
+    "allowedAmount": 27034,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee replacement",
+        "units": 1,
+        "costPerUnit": 44475,
+        "providerName": "Dr. Michele Saysana"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1756362702625,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 25491,
+    "allowedAmount": 16315,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 25491,
+        "providerName": "Dr. Bob Page"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bronchoscopy",
+    "dateOfProcedure": 1776547112372,
+    "hospitalName": "Ochsner Medical Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 1856,
+    "allowedAmount": 883,
+    "lineItems": [
+      {
+        "cptCode": "31622",
+        "serviceName": "Bronchoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 1856,
+        "providerName": "Dr. Warner Thomas"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "AV Fistula Creation",
+    "dateOfProcedure": 1773069128224,
+    "hospitalName": "Brigham and Women's Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 12372,
+    "allowedAmount": 7147,
+    "lineItems": [
+      {
+        "cptCode": "36821",
+        "serviceName": "AV fistula creation",
+        "units": 1,
+        "costPerUnit": 12372,
+        "providerName": "Dr. Robert Higgins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Vaccinations",
+    "dateOfProcedure": 1773845348235,
+    "hospitalName": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "state": "MN",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 63,
+    "allowedAmount": 41,
+    "lineItems": [
+      {
+        "cptCode": "90471",
+        "serviceName": "Vaccination administration",
+        "units": 1,
+        "costPerUnit": 63,
+        "providerName": "Dr. Penny Wheeler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Scan Abdomen",
+    "dateOfProcedure": 1767572712509,
+    "hospitalName": "St. Luke's Hospital",
+    "city": "Kansas City",
+    "state": "MO",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 1143,
+    "allowedAmount": 684,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT Abdomen/Pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 1143,
+        "providerName": "Dr. Michael Weaver"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ICD Placement",
+    "dateOfProcedure": 1765080074101,
+    "hospitalName": "Nebraska Medical Center",
+    "city": "Omaha",
+    "state": "NE",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 46592,
+    "allowedAmount": 24092,
+    "lineItems": [
+      {
+        "cptCode": "33249",
+        "serviceName": "ICD placement",
+        "units": 1,
+        "costPerUnit": 46592,
+        "providerName": "Dr. James Linder"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPAP/BiPAP Initiation",
+    "dateOfProcedure": 1754137725584,
+    "hospitalName": "Dartmouth-Hitchcock Medical Center",
+    "city": "Lebanon",
+    "state": "NH",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 339,
+    "allowedAmount": 225,
+    "lineItems": [
+      {
+        "cptCode": "94660",
+        "serviceName": "CPAP/BiPAP initiation",
+        "units": 1,
+        "costPerUnit": 339,
+        "providerName": "Dr. Edward Merrens"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1760607300442,
+    "hospitalName": "NYC Health + Hospitals/Bellevue",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 104,
+    "allowedAmount": 41,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 104,
+        "providerName": "Dr. William Hicks"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "DBS Insertion",
+    "dateOfProcedure": 1761169791784,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 52332,
+    "allowedAmount": 39133,
+    "lineItems": [
+      {
+        "cptCode": "61867",
+        "serviceName": "DBS insertion",
+        "units": 1,
+        "costPerUnit": 52332,
+        "providerName": "Dr. Doug Griffin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mastectomy",
+    "dateOfProcedure": 1758748151944,
+    "hospitalName": "OU Health Medical Center",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 11816,
+    "allowedAmount": 5255,
+    "lineItems": [
+      {
+        "cptCode": "19307",
+        "serviceName": "Mastectomy",
+        "units": 1,
+        "costPerUnit": 11816,
+        "providerName": "Dr. Cameron Mantor"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardioversion",
+    "dateOfProcedure": 1755887742616,
+    "hospitalName": "UPMC Presbyterian Shadyside",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 1147,
+    "allowedAmount": 675,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Cardioversion external",
+        "units": 1,
+        "costPerUnit": 1147,
+        "providerName": "Dr. Joon Lee"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1762205191094,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 1535,
+    "allowedAmount": 713,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1535,
+        "providerName": "Dr. Mike Wilde"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CRRT Therapy",
+    "dateOfProcedure": 1770019126218,
+    "hospitalName": "UT Southwestern Medical Center",
+    "city": "Dallas",
+    "state": "TX",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 4759,
+    "allowedAmount": 2086,
+    "lineItems": [
+      {
+        "cptCode": "90999",
+        "serviceName": "CRRT therapy",
+        "units": 1,
+        "costPerUnit": 4759,
+        "providerName": "Dr. John Warner"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1748001490471,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 74,
+    "allowedAmount": 43,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 74,
+        "providerName": "Dr. Sunny Eappen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thoracentesis",
+    "dateOfProcedure": 1754174420551,
+    "hospitalName": "Providence Sacred Heart Medical Center",
+    "city": "Spokane",
+    "state": "WA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 1681,
+    "allowedAmount": 773,
+    "lineItems": [
+      {
+        "cptCode": "32554",
+        "serviceName": "Thoracentesis",
+        "units": 1,
+        "costPerUnit": 1681,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TURBT Procedure",
+    "dateOfProcedure": 1748220560734,
+    "hospitalName": "Froedtert Hospital",
+    "city": "Milwaukee",
+    "state": "WI",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 8916,
+    "allowedAmount": 6142,
+    "lineItems": [
+      {
+        "cptCode": "52234",
+        "serviceName": "TURBT procedure",
+        "units": 1,
+        "costPerUnit": 8916,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Scan Abdomen",
+    "dateOfProcedure": 1757955149217,
+    "hospitalName": "Providence Alaska Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 1143,
+    "allowedAmount": 552,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT Abdomen/Pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 1143,
+        "providerName": "Dr. Michael Bernstein"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1761586978644,
+    "hospitalName": "Baptist Health Medical Center-Little Rock",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 36418,
+    "allowedAmount": 26117,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee replacement",
+        "units": 1,
+        "costPerUnit": 36418,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "D&C Procedure",
+    "dateOfProcedure": 1755591078673,
+    "hospitalName": "Saint Joseph Hospital",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 3631,
+    "allowedAmount": 1476,
+    "lineItems": [
+      {
+        "cptCode": "58120",
+        "serviceName": "D&C procedure",
+        "units": 1,
+        "costPerUnit": 3631,
+        "providerName": "Dr. Mark Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "AV Fistula Creation",
+    "dateOfProcedure": 1763104899648,
+    "hospitalName": "Bayhealth Hospital",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 8166,
+    "allowedAmount": 3437,
+    "lineItems": [
+      {
+        "cptCode": "36821",
+        "serviceName": "AV fistula creation",
+        "units": 1,
+        "costPerUnit": 8166,
+        "providerName": "Dr. Gary Siegelman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Grafting",
+    "dateOfProcedure": 1774321298971,
+    "hospitalName": "Queen's Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 4791,
+    "allowedAmount": 3563,
+    "lineItems": [
+      {
+        "cptCode": "20900",
+        "serviceName": "Bone grafting",
+        "units": 1,
+        "costPerUnit": 4791,
+        "providerName": "Dr. Whitney Limm"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Limb Amputation",
+    "dateOfProcedure": 1764360160830,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 15637,
+    "allowedAmount": 7036,
+    "lineItems": [
+      {
+        "cptCode": "27880",
+        "serviceName": "Limb amputation",
+        "units": 1,
+        "costPerUnit": 15637,
+        "providerName": "Dr. Gary Noskin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endovascular Coiling",
+    "dateOfProcedure": 1748012797086,
+    "hospitalName": "University of Iowa Hospitals",
+    "city": "Iowa City",
+    "state": "IA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 44349,
+    "allowedAmount": 18891,
+    "lineItems": [
+      {
+        "cptCode": "61624",
+        "serviceName": "Endovascular coiling",
+        "units": 1,
+        "costPerUnit": 44349,
+        "providerName": "Dr. Theresa Brennan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "PEG Tube Placement",
+    "dateOfProcedure": 1765631169184,
+    "hospitalName": "UK Chandler Hospital",
+    "city": "Lexington",
+    "state": "KY",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 2555,
+    "allowedAmount": 1244,
+    "lineItems": [
+      {
+        "cptCode": "43246",
+        "serviceName": "PEG tube placement",
+        "units": 1,
+        "costPerUnit": 2555,
+        "providerName": "Dr. Mark Newman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Echocardiogram",
+    "dateOfProcedure": 1761363680210,
+    "hospitalName": "Maine Medical Center",
+    "city": "Portland",
+    "state": "ME",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 888,
+    "allowedAmount": 611,
+    "lineItems": [
+      {
+        "cptCode": "93306",
+        "serviceName": "Echocardiogram complete",
+        "units": 1,
+        "costPerUnit": 888,
+        "providerName": "Dr. Jeff Sanders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ECMO Initiation",
+    "dateOfProcedure": 1757264461429,
+    "hospitalName": "Corewell Health Beaumont Troy Hospital",
+    "city": "Troy",
+    "state": "MI",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 259751,
+    "allowedAmount": 121140,
+    "lineItems": [
+      {
+        "cptCode": "33946",
+        "serviceName": "ECMO initiation",
+        "units": 1,
+        "costPerUnit": 259751,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Episiotomy Repair",
+    "dateOfProcedure": 1749828352192,
+    "hospitalName": "UMMC Hospital",
+    "city": "Jackson",
+    "state": "MS",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 6469,
+    "allowedAmount": 2893,
+    "lineItems": [
+      {
+        "cptCode": "59400",
+        "serviceName": "Episiotomy repair",
+        "units": 1,
+        "costPerUnit": 6469,
+        "providerName": "Dr. Alan Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Exploratory Laparotomy",
+    "dateOfProcedure": 1765013554769,
+    "hospitalName": "Billings Clinic",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 12240,
+    "allowedAmount": 5866,
+    "lineItems": [
+      {
+        "cptCode": "49000",
+        "serviceName": "Exploratory laparotomy",
+        "units": 1,
+        "costPerUnit": 12240,
+        "providerName": "Dr. Michelle Pierson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thoracentesis",
+    "dateOfProcedure": 1767247047866,
+    "hospitalName": "Renown Regional Medical Center",
+    "city": "Reno",
+    "state": "NV",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 1164,
+    "allowedAmount": 755,
+    "lineItems": [
+      {
+        "cptCode": "32554",
+        "serviceName": "Thoracentesis",
+        "units": 1,
+        "costPerUnit": 1164,
+        "providerName": "Dr. Tony Slonim"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest X-Ray",
+    "dateOfProcedure": 1769726414989,
+    "hospitalName": "UNM Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 152,
+    "allowedAmount": 71,
+    "lineItems": [
+      {
+        "cptCode": "71045",
+        "serviceName": "X-ray chest 1 view",
+        "units": 1,
+        "costPerUnit": 152,
+        "providerName": "Dr. Irene Agostini"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Carotid Endarterectomy",
+    "dateOfProcedure": 1750944141714,
+    "hospitalName": "Duke University Hospital",
+    "city": "Durham",
+    "state": "NC",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 17445,
+    "allowedAmount": 10760,
+    "lineItems": [
+      {
+        "cptCode": "35301",
+        "serviceName": "Carotid endarterectomy",
+        "units": 1,
+        "costPerUnit": 17445,
+        "providerName": "Dr. Thomas Owens"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Circumcision",
+    "dateOfProcedure": 1777074985225,
+    "hospitalName": "Ohio State University Wexner Medical Center",
+    "city": "Columbus",
+    "state": "OH",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 854,
+    "allowedAmount": 401,
+    "lineItems": [
+      {
+        "cptCode": "54150",
+        "serviceName": "Circumcision",
+        "units": 1,
+        "costPerUnit": 854,
+        "providerName": "Dr. John Warner"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tonsillectomy",
+    "dateOfProcedure": 1765674142461,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 3383,
+    "allowedAmount": 2424,
+    "lineItems": [
+      {
+        "cptCode": "42820",
+        "serviceName": "Tonsillectomy",
+        "units": 1,
+        "costPerUnit": 3383,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemodialysis",
+    "dateOfProcedure": 1758442968453,
+    "hospitalName": "The Miriam Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 881,
+    "allowedAmount": 370,
+    "lineItems": [
+      {
+        "cptCode": "90935",
+        "serviceName": "Hemodialysis",
+        "units": 1,
+        "costPerUnit": 881,
+        "providerName": "Dr. Maria Ducharme"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Fetal Monitoring",
+    "dateOfProcedure": 1765436406915,
+    "hospitalName": "Methodist Hospitals of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Access Managed Choice",
+    "billedAmount": 436,
+    "allowedAmount": 232,
+    "lineItems": [
+      {
+        "cptCode": "59025",
+        "serviceName": "Fetal monitoring",
+        "units": 1,
+        "costPerUnit": 436,
+        "providerName": "Dr. Michael Ugwueke"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tracheostomy",
+    "dateOfProcedure": 1760800066898,
+    "hospitalName": "University of Utah Hospital",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 4896,
+    "allowedAmount": 2132,
+    "lineItems": [
+      {
+        "cptCode": "31600",
+        "serviceName": "Tracheostomy",
+        "units": 1,
+        "costPerUnit": 4896,
+        "providerName": "Dr. Dan Lundergan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tubal Ligation",
+    "dateOfProcedure": 1763129453836,
+    "hospitalName": "UVA Health Medical Center",
+    "city": "Charlottesville",
+    "state": "VA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 6574,
+    "allowedAmount": 2781,
+    "lineItems": [
+      {
+        "cptCode": "58600",
+        "serviceName": "Tubal ligation",
+        "units": 1,
+        "costPerUnit": 6574,
+        "providerName": "Dr. Wendy Horton"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Tube Placement",
+    "dateOfProcedure": 1776769246211,
+    "hospitalName": "WVU Medicine",
+    "city": "Morgantown",
+    "state": "WV",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 1238,
+    "allowedAmount": 743,
+    "lineItems": [
+      {
+        "cptCode": "32551",
+        "serviceName": "Chest tube placement",
+        "units": 1,
+        "costPerUnit": 1238,
+        "providerName": "Dr. Michael Grace"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Limb Amputation",
+    "dateOfProcedure": 1771891361403,
+    "hospitalName": "Huntsville Hospital",
+    "city": "Huntsville",
+    "state": "AL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 12530,
+    "allowedAmount": 6862,
+    "lineItems": [
+      {
+        "cptCode": "27880",
+        "serviceName": "Limb amputation",
+        "units": 1,
+        "costPerUnit": 12530,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemorrhoidectomy",
+    "dateOfProcedure": 1761077143199,
+    "hospitalName": "Banner-University Medical Center Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 4360,
+    "allowedAmount": 2171,
+    "lineItems": [
+      {
+        "cptCode": "46250",
+        "serviceName": "Hemorrhoidectomy",
+        "units": 1,
+        "costPerUnit": 4360,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1756261861554,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 11998,
+    "allowedAmount": 6367,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 11998,
+        "providerName": "Dr. Elena Rodriguez"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Scan Abdomen",
+    "dateOfProcedure": 1771414497034,
+    "hospitalName": "Hartford Hospital",
+    "city": "Hartford",
+    "state": "CT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 1175,
+    "allowedAmount": 686,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT Abdomen/Pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 1175,
+        "providerName": "Dr. Adam Steinberg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Debridement",
+    "dateOfProcedure": 1747817852540,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 1248,
+    "allowedAmount": 704,
+    "lineItems": [
+      {
+        "cptCode": "11042",
+        "serviceName": "Wound debridement",
+        "units": 1,
+        "costPerUnit": 1248,
+        "providerName": "Dr. John Couris"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Craniotomy",
+    "dateOfProcedure": 1775704869029,
+    "hospitalName": "St. Alphonsus Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 42943,
+    "allowedAmount": 23868,
+    "lineItems": [
+      {
+        "cptCode": "61312",
+        "serviceName": "Craniotomy",
+        "units": 1,
+        "costPerUnit": 42943,
+        "providerName": "Dr. Steven Nemerson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electrocardiogram (EKG)",
+    "dateOfProcedure": 1765267716750,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 123,
+    "allowedAmount": 53,
+    "lineItems": [
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram complete",
+        "units": 1,
+        "costPerUnit": 123,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Amniocentesis",
+    "dateOfProcedure": 1771083890847,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 1164,
+    "allowedAmount": 579,
+    "lineItems": [
+      {
+        "cptCode": "59000",
+        "serviceName": "Amniocentesis",
+        "units": 1,
+        "costPerUnit": 1164,
+        "providerName": "Dr. Steven Stites"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Craniotomy",
+    "dateOfProcedure": 1763719797465,
+    "hospitalName": "Ochsner Medical Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 44600,
+    "allowedAmount": 20431,
+    "lineItems": [
+      {
+        "cptCode": "61312",
+        "serviceName": "Craniotomy",
+        "units": 1,
+        "costPerUnit": 44600,
+        "providerName": "Dr. Robert Hart"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "D&C Procedure",
+    "dateOfProcedure": 1753128810713,
+    "hospitalName": "Brigham and Women's Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 4893,
+    "allowedAmount": 3218,
+    "lineItems": [
+      {
+        "cptCode": "58120",
+        "serviceName": "D&C procedure",
+        "units": 1,
+        "costPerUnit": 4893,
+        "providerName": "Dr. Robert Higgins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Suturing",
+    "dateOfProcedure": 1771832498131,
+    "hospitalName": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "state": "MN",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 245,
+    "allowedAmount": 149,
+    "lineItems": [
+      {
+        "cptCode": "12001",
+        "serviceName": "Wound suturing",
+        "units": 1,
+        "costPerUnit": 245,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Episiotomy Repair",
+    "dateOfProcedure": 1752987226772,
+    "hospitalName": "St. Luke's Hospital",
+    "city": "Kansas City",
+    "state": "MO",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 8614,
+    "allowedAmount": 6280,
+    "lineItems": [
+      {
+        "cptCode": "59400",
+        "serviceName": "Episiotomy repair",
+        "units": 1,
+        "costPerUnit": 8614,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electroencephalogram (EEG)",
+    "dateOfProcedure": 1762926761873,
+    "hospitalName": "Nebraska Medical Center",
+    "city": "Omaha",
+    "state": "NE",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 830,
+    "allowedAmount": 339,
+    "lineItems": [
+      {
+        "cptCode": "95816",
+        "serviceName": "Electroencephalogram (EEG)",
+        "units": 1,
+        "costPerUnit": 830,
+        "providerName": "Dr. Harris Frankel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ECMO Initiation",
+    "dateOfProcedure": 1763010428295,
+    "hospitalName": "Dartmouth-Hitchcock Medical Center",
+    "city": "Lebanon",
+    "state": "NH",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 240097,
+    "allowedAmount": 105013,
+    "lineItems": [
+      {
+        "cptCode": "33946",
+        "serviceName": "ECMO initiation",
+        "units": 1,
+        "costPerUnit": 240097,
+        "providerName": "Dr. Joanne Conroy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1774620328110,
+    "hospitalName": "NYC Health + Hospitals/Bellevue",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 1645,
+    "allowedAmount": 782,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1645,
+        "providerName": "Dr. Amit Uppal"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1766323056176,
+    "hospitalName": "Essentia Health-Fargo",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 1448,
+    "allowedAmount": 634,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1448,
+        "providerName": "Dr. Richard Vetter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPAP/BiPAP Initiation",
+    "dateOfProcedure": 1772438463751,
+    "hospitalName": "OU Health Medical Center",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 274,
+    "allowedAmount": 127,
+    "lineItems": [
+      {
+        "cptCode": "94660",
+        "serviceName": "CPAP/BiPAP initiation",
+        "units": 1,
+        "costPerUnit": 274,
+        "providerName": "Dr. Cameron Mantor"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1753488090176,
+    "hospitalName": "Penn State Health Milton S. Hershey Medical Center",
+    "city": "Hershey",
+    "state": "PA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 73,
+    "allowedAmount": 40,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 73,
+        "providerName": "Dr. Robert Harbaugh"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain",
+    "dateOfProcedure": 1772273156025,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 1822,
+    "allowedAmount": 1243,
+    "lineItems": [
+      {
+        "cptCode": "70551",
+        "serviceName": "MRI Brain without contrast",
+        "units": 1,
+        "costPerUnit": 1822,
+        "providerName": "Dr. Paul Hanson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Spinal Fusion",
+    "dateOfProcedure": 1760819158884,
+    "hospitalName": "Texas Health Resources",
+    "city": "Arlington",
+    "state": "TX",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 65306,
+    "allowedAmount": 43850,
+    "lineItems": [
+      {
+        "cptCode": "22551",
+        "serviceName": "Spinal fusion",
+        "units": 1,
+        "costPerUnit": 65306,
+        "providerName": "Dr. Barclay Berdan"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Ablation",
+    "dateOfProcedure": 1748227398834,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 33344,
+    "allowedAmount": 15121,
+    "lineItems": [
+      {
+        "cptCode": "93653",
+        "serviceName": "Cardiac ablation",
+        "units": 1,
+        "costPerUnit": 33344,
+        "providerName": "Dr. Sunny Eappen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "D&C Procedure",
+    "dateOfProcedure": 1765220684600,
+    "hospitalName": "UW Medical Center",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 4681,
+    "allowedAmount": 2108,
+    "lineItems": [
+      {
+        "cptCode": "58120",
+        "serviceName": "D&C procedure",
+        "units": 1,
+        "costPerUnit": 4681,
+        "providerName": "Dr. Tom Staiger"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Vaccinations",
+    "dateOfProcedure": 1765799085227,
+    "hospitalName": "Froedtert Hospital",
+    "city": "Milwaukee",
+    "state": "WI",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 66,
+    "allowedAmount": 30,
+    "lineItems": [
+      {
+        "cptCode": "90471",
+        "serviceName": "Vaccination administration",
+        "units": 1,
+        "costPerUnit": 66,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "AV Fistula Creation",
+    "dateOfProcedure": 1776865953174,
+    "hospitalName": "Alaska Native Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 8796,
+    "allowedAmount": 4272,
+    "lineItems": [
+      {
+        "cptCode": "36821",
+        "serviceName": "AV fistula creation",
+        "units": 1,
+        "costPerUnit": 8796,
+        "providerName": "Dr. John Doe"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Endotracheal Intubation",
+    "dateOfProcedure": 1747659361635,
+    "hospitalName": "Baptist Health Medical Center-Little Rock",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 689,
+    "allowedAmount": 329,
+    "lineItems": [
+      {
+        "cptCode": "31500",
+        "serviceName": "Endotracheal intubation",
+        "units": 1,
+        "costPerUnit": 689,
+        "providerName": "Dr. Greg Clowers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest X-Ray",
+    "dateOfProcedure": 1753380827991,
+    "hospitalName": "UCHealth University of Colorado Hospital",
+    "city": "Aurora",
+    "state": "CO",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 147,
+    "allowedAmount": 61,
+    "lineItems": [
+      {
+        "cptCode": "71045",
+        "serviceName": "X-ray chest 1 view",
+        "units": 1,
+        "costPerUnit": 147,
+        "providerName": "Dr. Jean Wright"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TURBT Procedure",
+    "dateOfProcedure": 1752845096619,
+    "hospitalName": "Bayhealth Hospital",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 8147,
+    "allowedAmount": 3649,
+    "lineItems": [
+      {
+        "cptCode": "52234",
+        "serviceName": "TURBT procedure",
+        "units": 1,
+        "costPerUnit": 8147,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Puncture",
+    "dateOfProcedure": 1751877258741,
+    "hospitalName": "Straub Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 945,
+    "allowedAmount": 633,
+    "lineItems": [
+      {
+        "cptCode": "62270",
+        "serviceName": "Lumbar puncture diagnostic",
+        "units": 1,
+        "costPerUnit": 945,
+        "providerName": "Dr. Gerard Livaudais"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Heart Valve Replacement",
+    "dateOfProcedure": 1752684547752,
+    "hospitalName": "University of Chicago Medical Center",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 157395,
+    "allowedAmount": 70198,
+    "lineItems": [
+      {
+        "cptCode": "33405",
+        "serviceName": "Heart valve replacement",
+        "units": 1,
+        "costPerUnit": 157395,
+        "providerName": "Dr. Selwyn Rogers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Nephrectomy",
+    "dateOfProcedure": 1750979377300,
+    "hospitalName": "MercyOne Des Moines Medical Center",
+    "city": "Des Moines",
+    "state": "IA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 24081,
+    "allowedAmount": 11298,
+    "lineItems": [
+      {
+        "cptCode": "50220",
+        "serviceName": "Nephrectomy",
+        "units": 1,
+        "costPerUnit": 24081,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Scan Abdomen",
+    "dateOfProcedure": 1764678319528,
+    "hospitalName": "Baptist Health Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 1144,
+    "allowedAmount": 483,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT Abdomen/Pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 1144,
+        "providerName": "Dr. Michael Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1759317367524,
+    "hospitalName": "Northern Light Eastern Maine Medical Center",
+    "city": "Bangor",
+    "state": "ME",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 8575,
+    "allowedAmount": 3996,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 8575,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1767287327936,
+    "hospitalName": "University of Michigan Health",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 11589,
+    "allowedAmount": 4708,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 11589,
+        "providerName": "Dr. David Spahlinger"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Cardiac Catheterization",
+    "dateOfProcedure": 1757227907737,
+    "hospitalName": "Baptist Memorial Hospital-DeSoto",
+    "city": "Southaven",
+    "state": "MS",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Constant Care",
+    "billedAmount": 3460,
+    "allowedAmount": 1610,
+    "lineItems": [
+      {
+        "cptCode": "93451",
+        "serviceName": "Right heart catheterization",
+        "units": 1,
+        "costPerUnit": 3460,
+        "providerName": "Dr. James Bowers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laryngoscopy",
+    "dateOfProcedure": 1760553210395,
+    "hospitalName": "St. Vincent Healthcare",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 442,
+    "allowedAmount": 215,
+    "lineItems": [
+      {
+        "cptCode": "31505",
+        "serviceName": "Laryngoscopy",
+        "units": 1,
+        "costPerUnit": 442,
+        "providerName": "Dr. Michael Bush"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Venipuncture",
+    "dateOfProcedure": 1766320156435,
+    "hospitalName": "Renown Regional Medical Center",
+    "city": "Reno",
+    "state": "NV",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 14,
+    "allowedAmount": 9,
+    "lineItems": [
+      {
+        "cptCode": "36415",
+        "serviceName": "Venipuncture (Blood Draw)",
+        "units": 1,
+        "costPerUnit": 14,
+        "providerName": "Dr. Tony Slonim"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1769892937588,
+    "hospitalName": "UNM Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 1508,
+    "allowedAmount": 657,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1508,
+        "providerName": "Dr. Irene Agostini"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "AV Fistula Creation",
+    "dateOfProcedure": 1770227105262,
+    "hospitalName": "Duke University Hospital",
+    "city": "Durham",
+    "state": "NC",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Deductible Plan",
+    "billedAmount": 8817,
+    "allowedAmount": 6472,
+    "lineItems": [
+      {
+        "cptCode": "36821",
+        "serviceName": "AV fistula creation",
+        "units": 1,
+        "costPerUnit": 8817,
+        "providerName": "Dr. Thomas Owens"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tracheostomy",
+    "dateOfProcedure": 1759346122831,
+    "hospitalName": "Ohio State University Wexner Medical Center",
+    "city": "Columbus",
+    "state": "OH",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 4815,
+    "allowedAmount": 2348,
+    "lineItems": [
+      {
+        "cptCode": "31600",
+        "serviceName": "Tracheostomy",
+        "units": 1,
+        "costPerUnit": 4815,
+        "providerName": "Dr. John Warner"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1747222994857,
+    "hospitalName": "OHSU Hospital",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 1567,
+    "allowedAmount": 676,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1567,
+        "providerName": "Dr. John Hunter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPAP/BiPAP Initiation",
+    "dateOfProcedure": 1752456506993,
+    "hospitalName": "The Miriam Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 364,
+    "allowedAmount": 179,
+    "lineItems": [
+      {
+        "cptCode": "94660",
+        "serviceName": "CPAP/BiPAP initiation",
+        "units": 1,
+        "costPerUnit": 364,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "PEG Tube Placement",
+    "dateOfProcedure": 1766584481497,
+    "hospitalName": "Vanderbilt University Medical Center",
+    "city": "Nashville",
+    "state": "TN",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 2525,
+    "allowedAmount": 1057,
+    "lineItems": [
+      {
+        "cptCode": "43246",
+        "serviceName": "PEG tube placement",
+        "units": 1,
+        "costPerUnit": 2525,
+        "providerName": "Dr. Rick Wright"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CABG Surgery",
+    "dateOfProcedure": 1749770375458,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 115160,
+    "allowedAmount": 49782,
+    "lineItems": [
+      {
+        "cptCode": "33533",
+        "serviceName": "CABG 1 artery",
+        "units": 1,
+        "costPerUnit": 115160,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lung Resection",
+    "dateOfProcedure": 1773543465568,
+    "hospitalName": "UVA Health Medical Center",
+    "city": "Charlottesville",
+    "state": "VA",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 35052,
+    "allowedAmount": 22514,
+    "lineItems": [
+      {
+        "cptCode": "32480",
+        "serviceName": "Lung resection",
+        "units": 1,
+        "costPerUnit": 35052,
+        "providerName": "Dr. Reid Adams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1748941486996,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 2820,
+    "allowedAmount": 1607,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 2820,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Craniotomy",
+    "dateOfProcedure": 1769522665176,
+    "hospitalName": "UAB Hospital",
+    "city": "Birmingham",
+    "state": "AL",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 34872,
+    "allowedAmount": 15925,
+    "lineItems": [
+      {
+        "cptCode": "61312",
+        "serviceName": "Craniotomy",
+        "units": 1,
+        "costPerUnit": 34872,
+        "providerName": "Dr. Tony Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Spinal Fusion",
+    "dateOfProcedure": 1750614612681,
+    "hospitalName": "Mayo Clinic Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 67115,
+    "allowedAmount": 27490,
+    "lineItems": [
+      {
+        "cptCode": "22551",
+        "serviceName": "Spinal fusion",
+        "units": 1,
+        "costPerUnit": 67115,
+        "providerName": "Dr. Alyson Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Amniocentesis",
+    "dateOfProcedure": 1766569587775,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 1690,
+    "allowedAmount": 770,
+    "lineItems": [
+      {
+        "cptCode": "59000",
+        "serviceName": "Amniocentesis",
+        "units": 1,
+        "costPerUnit": 1690,
+        "providerName": "Dr. Josh Adler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Defibrillation",
+    "dateOfProcedure": 1748099154634,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 1199,
+    "allowedAmount": 727,
+    "lineItems": [
+      {
+        "cptCode": "92960",
+        "serviceName": "Defibrillation",
+        "units": 1,
+        "costPerUnit": 1199,
+        "providerName": "Dr. Gail D'Onofrio"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Amniocentesis",
+    "dateOfProcedure": 1756334150621,
+    "hospitalName": "Mayo Clinic Jacksonville",
+    "city": "Jacksonville",
+    "state": "FL",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 1695,
+    "allowedAmount": 776,
+    "lineItems": [
+      {
+        "cptCode": "59000",
+        "serviceName": "Amniocentesis",
+        "units": 1,
+        "costPerUnit": 1695,
+        "providerName": "Dr. Kent Thielen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Limb Amputation",
+    "dateOfProcedure": 1750253801707,
+    "hospitalName": "St. Luke's Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Advantage PPO",
+    "billedAmount": 14491,
+    "allowedAmount": 9375,
+    "lineItems": [
+      {
+        "cptCode": "27880",
+        "serviceName": "Limb amputation",
+        "units": 1,
+        "costPerUnit": 14491,
+        "providerName": "Dr. Jim Souza"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Appendectomy",
+    "dateOfProcedure": 1773823835226,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 17261,
+    "allowedAmount": 10660,
+    "lineItems": [
+      {
+        "cptCode": "44950",
+        "serviceName": "Appendectomy",
+        "units": 1,
+        "costPerUnit": 17261,
+        "providerName": "Dr. Richard Fogel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy (EGD)",
+    "dateOfProcedure": 1767312141584,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 1213,
+    "allowedAmount": 556,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "EGD with biopsy",
+        "units": 1,
+        "costPerUnit": 1213,
+        "providerName": "Dr. Steven Stites"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "D&C Procedure",
+    "dateOfProcedure": 1755031172975,
+    "hospitalName": "Ochsner Medical Center",
+    "city": "New Orleans",
+    "state": "LA",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Explorer PPO",
+    "billedAmount": 3385,
+    "allowedAmount": 2265,
+    "lineItems": [
+      {
+        "cptCode": "58120",
+        "serviceName": "D&C procedure",
+        "units": 1,
+        "costPerUnit": 3385,
+        "providerName": "Dr. Warner Thomas"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1777309651633,
+    "hospitalName": "Brigham and Women's Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 34273,
+    "allowedAmount": 14843,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 34273,
+        "providerName": "Dr. Robert Higgins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thoracentesis",
+    "dateOfProcedure": 1755692217072,
+    "hospitalName": "Abbott Northwestern Hospital",
+    "city": "Minneapolis",
+    "state": "MN",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Confident Care",
+    "billedAmount": 1208,
+    "allowedAmount": 594,
+    "lineItems": [
+      {
+        "cptCode": "32554",
+        "serviceName": "Thoracentesis",
+        "units": 1,
+        "costPerUnit": 1208,
+        "providerName": "Dr. Penny Wheeler"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Heart Valve Replacement",
+    "dateOfProcedure": 1752782507691,
+    "hospitalName": "St. Luke's Hospital",
+    "city": "Kansas City",
+    "state": "MO",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 152437,
+    "allowedAmount": 71410,
+    "lineItems": [
+      {
+        "cptCode": "33405",
+        "serviceName": "Heart valve replacement",
+        "units": 1,
+        "costPerUnit": 152437,
+        "providerName": "Dr. Michael Weaver"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy",
+    "dateOfProcedure": 1747746747314,
+    "hospitalName": "Bryan Medical Center",
+    "city": "Lincoln",
+    "state": "NE",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 2504,
+    "allowedAmount": 1239,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Colonoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 2504,
+        "providerName": "Dr. John Trapp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1752441339945,
+    "hospitalName": "Elliot Hospital",
+    "city": "Manchester",
+    "state": "NH",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 45698,
+    "allowedAmount": 22449,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip replacement",
+        "units": 1,
+        "costPerUnit": 45698,
+        "providerName": "Dr. Greg Baxter"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mechanical Ventilation",
+    "dateOfProcedure": 1758474013898,
+    "hospitalName": "NYC Health + Hospitals/Bellevue",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 3423,
+    "allowedAmount": 2271,
+    "lineItems": [
+      {
+        "cptCode": "94002",
+        "serviceName": "Mechanical ventilation",
+        "units": 1,
+        "costPerUnit": 3423,
+        "providerName": "Dr. William Hicks"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Spinal Fusion",
+    "dateOfProcedure": 1764126499079,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 61958,
+    "allowedAmount": 27256,
+    "lineItems": [
+      {
+        "cptCode": "22551",
+        "serviceName": "Spinal fusion",
+        "units": 1,
+        "costPerUnit": 61958,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Craniotomy",
+    "dateOfProcedure": 1762449272166,
+    "hospitalName": "Saint Francis Hospital",
+    "city": "Tulsa",
+    "state": "OK",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 35106,
+    "allowedAmount": 19576,
+    "lineItems": [
+      {
+        "cptCode": "61312",
+        "serviceName": "Craniotomy",
+        "units": 1,
+        "costPerUnit": 35106,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Epidural Anesthesia",
+    "dateOfProcedure": 1761809227864,
+    "hospitalName": "Penn Presbyterian Medical Center",
+    "city": "Philadelphia",
+    "state": "PA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 1564,
+    "allowedAmount": 860,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Epidural anesthesia",
+        "units": 1,
+        "costPerUnit": 1564,
+        "providerName": "Dr. Regina Cunningham"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TPN Administration",
+    "dateOfProcedure": 1751669092848,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Gold Plus HMO",
+    "billedAmount": 469,
+    "allowedAmount": 200,
+    "lineItems": [
+      {
+        "cptCode": "B4185",
+        "serviceName": "TPN administration",
+        "units": 1,
+        "costPerUnit": 469,
+        "providerName": "Dr. Mike Wilde"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TPN Administration",
+    "dateOfProcedure": 1768938756526,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 456,
+    "allowedAmount": 188,
+    "lineItems": [
+      {
+        "cptCode": "B4185",
+        "serviceName": "TPN administration",
+        "units": 1,
+        "costPerUnit": 456,
+        "providerName": "Dr. Marc Boom"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ICD Placement",
+    "dateOfProcedure": 1770458313269,
+    "hospitalName": "UVH Medical Center",
+    "city": "Burlington",
+    "state": "VT",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Essential Care",
+    "billedAmount": 43425,
+    "allowedAmount": 19053,
+    "lineItems": [
+      {
+        "cptCode": "33249",
+        "serviceName": "ICD placement",
+        "units": 1,
+        "costPerUnit": 43425,
+        "providerName": "Dr. Sunny Eappen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Laminectomy",
+    "dateOfProcedure": 1756015284704,
+    "hospitalName": "Providence Sacred Heart Medical Center",
+    "city": "Spokane",
+    "state": "WA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 24799,
+    "allowedAmount": 10566,
+    "lineItems": [
+      {
+        "cptCode": "63047",
+        "serviceName": "Laminectomy",
+        "units": 1,
+        "costPerUnit": 24799,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TEE Echocardiogram",
+    "dateOfProcedure": 1763694054013,
+    "hospitalName": "UW Health University Hospital",
+    "city": "Madison",
+    "state": "WI",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 1179,
+    "allowedAmount": 861,
+    "lineItems": [
+      {
+        "cptCode": "93312",
+        "serviceName": "TEE echocardiogram",
+        "units": 1,
+        "costPerUnit": 1179,
+        "providerName": "Dr. Pete Newcomer"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "AV Fistula Creation",
+    "dateOfProcedure": 1772297249171,
+    "hospitalName": "Providence Alaska Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 8581,
+    "allowedAmount": 6237,
+    "lineItems": [
+      {
+        "cptCode": "36821",
+        "serviceName": "AV fistula creation",
+        "units": 1,
+        "costPerUnit": 8581,
+        "providerName": "Dr. Ella Jenkins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electrocardiogram (EKG)",
+    "dateOfProcedure": 1776829559155,
+    "hospitalName": "Baptist Health Medical Center-Little Rock",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 96,
+    "allowedAmount": 49,
+    "lineItems": [
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram complete",
+        "units": 1,
+        "costPerUnit": 96,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hernia Repair",
+    "dateOfProcedure": 1746939092757,
+    "hospitalName": "Saint Joseph Hospital",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 8836,
+    "allowedAmount": 5109,
+    "lineItems": [
+      {
+        "cptCode": "49505",
+        "serviceName": "Hernia repair",
+        "units": 1,
+        "costPerUnit": 8836,
+        "providerName": "Dr. Mark Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1765332774366,
+    "hospitalName": "ChristianaCare",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 3634,
+    "allowedAmount": 1504,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 3634,
+        "providerName": "Dr. Ken Silverstein"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemorrhoidectomy",
+    "dateOfProcedure": 1748842263462,
+    "hospitalName": "Queen's Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 4529,
+    "allowedAmount": 3344,
+    "lineItems": [
+      {
+        "cptCode": "46250",
+        "serviceName": "Hemorrhoidectomy",
+        "units": 1,
+        "costPerUnit": 4529,
+        "providerName": "Dr. Whitney Limm"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TEE Echocardiogram",
+    "dateOfProcedure": 1749981664842,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 1253,
+    "allowedAmount": 512,
+    "lineItems": [
+      {
+        "cptCode": "93312",
+        "serviceName": "TEE echocardiogram",
+        "units": 1,
+        "costPerUnit": 1253,
+        "providerName": "Dr. Gary Noskin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TPN Administration",
+    "dateOfProcedure": 1759144233236,
+    "hospitalName": "University of Iowa Hospitals",
+    "city": "Iowa City",
+    "state": "IA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Together in Health",
+    "billedAmount": 457,
+    "allowedAmount": 215,
+    "lineItems": [
+      {
+        "cptCode": "B4185",
+        "serviceName": "TPN administration",
+        "units": 1,
+        "costPerUnit": 457,
+        "providerName": "Dr. Suresh Gunasekaran"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TURBT Procedure",
+    "dateOfProcedure": 1749315039972,
+    "hospitalName": "UK Chandler Hospital",
+    "city": "Lexington",
+    "state": "KY",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 8404,
+    "allowedAmount": 3977,
+    "lineItems": [
+      {
+        "cptCode": "52234",
+        "serviceName": "TURBT procedure",
+        "units": 1,
+        "costPerUnit": 8404,
+        "providerName": "Dr. Philip Chang"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemodialysis",
+    "dateOfProcedure": 1761383145909,
+    "hospitalName": "Northern Light Eastern Maine Medical Center",
+    "city": "Bangor",
+    "state": "ME",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 814,
+    "allowedAmount": 382,
+    "lineItems": [
+      {
+        "cptCode": "90935",
+        "serviceName": "Hemodialysis",
+        "units": 1,
+        "costPerUnit": 814,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1755610639615,
+    "hospitalName": "Corewell Health Beaumont Troy Hospital",
+    "city": "Troy",
+    "state": "MI",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 1436,
+    "allowedAmount": 946,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1436,
+        "providerName": "Dr. Paolo Marciano"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "C-Section Delivery",
+    "dateOfProcedure": 1752307349235,
+    "hospitalName": "UMMC Hospital",
+    "city": "Jackson",
+    "state": "MS",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 19169,
+    "allowedAmount": 12761,
+    "lineItems": [
+      {
+        "cptCode": "59510",
+        "serviceName": "C-section delivery",
+        "units": 1,
+        "costPerUnit": 19169,
+        "providerName": "Dr. Alan Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1755726421510,
+    "hospitalName": "Billings Clinic",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 47231,
+    "allowedAmount": 26350,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee replacement",
+        "units": 1,
+        "costPerUnit": 47231,
+        "providerName": "Dr. Michelle Pierson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1759266331057,
+    "hospitalName": "Renown Regional Medical Center",
+    "city": "Reno",
+    "state": "NV",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 3424,
+    "allowedAmount": 1561,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 3424,
+        "providerName": "Dr. Thomas Graf"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thyroidectomy",
+    "dateOfProcedure": 1760593772659,
+    "hospitalName": "UNM Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 12196,
+    "allowedAmount": 5516,
+    "lineItems": [
+      {
+        "cptCode": "60240",
+        "serviceName": "Thyroidectomy",
+        "units": 1,
+        "costPerUnit": 12196,
+        "providerName": "Dr. Kate Becker"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Circumcision",
+    "dateOfProcedure": 1762639224463,
+    "hospitalName": "UNC Hospitals",
+    "city": "Chapel Hill",
+    "state": "NC",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 869,
+    "allowedAmount": 351,
+    "lineItems": [
+      {
+        "cptCode": "54150",
+        "serviceName": "Circumcision",
+        "units": 1,
+        "costPerUnit": 869,
+        "providerName": "Dr. David Zvara"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Coronary Angioplasty",
+    "dateOfProcedure": 1771245276579,
+    "hospitalName": "Cleveland Clinic",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 15009,
+    "allowedAmount": 6557,
+    "lineItems": [
+      {
+        "cptCode": "92920",
+        "serviceName": "Coronary angioplasty",
+        "units": 1,
+        "costPerUnit": 15009,
+        "providerName": "Dr. Tomislav Mihaljevic"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CPAP/BiPAP Initiation",
+    "dateOfProcedure": 1765712666106,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Navigator",
+    "billedAmount": 365,
+    "allowedAmount": 249,
+    "lineItems": [
+      {
+        "cptCode": "94660",
+        "serviceName": "CPAP/BiPAP initiation",
+        "units": 1,
+        "costPerUnit": 365,
+        "providerName": "Dr. Robert Scoggins"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ureteral Stent",
+    "dateOfProcedure": 1753273612561,
+    "hospitalName": "Rhode Island Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 3469,
+    "allowedAmount": 1515,
+    "lineItems": [
+      {
+        "cptCode": "52332",
+        "serviceName": "Ureteral stent",
+        "units": 1,
+        "costPerUnit": 3469,
+        "providerName": "Dr. Mitchell Levy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hysterectomy",
+    "dateOfProcedure": 1774857776879,
+    "hospitalName": "Vanderbilt University Medical Center",
+    "city": "Nashville",
+    "state": "TN",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 17995,
+    "allowedAmount": 7778,
+    "lineItems": [
+      {
+        "cptCode": "58150",
+        "serviceName": "Hysterectomy",
+        "units": 1,
+        "costPerUnit": 17995,
+        "providerName": "Dr. Rick Wright"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "DBS Insertion",
+    "dateOfProcedure": 1750701369415,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 57601,
+    "allowedAmount": 39058,
+    "lineItems": [
+      {
+        "cptCode": "61867",
+        "serviceName": "DBS insertion",
+        "units": 1,
+        "costPerUnit": 57601,
+        "providerName": "Dr. Mark Briesacher"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TURBT Procedure",
+    "dateOfProcedure": 1770354832365,
+    "hospitalName": "UVA Health Medical Center",
+    "city": "Charlottesville",
+    "state": "VA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 8556,
+    "allowedAmount": 4189,
+    "lineItems": [
+      {
+        "cptCode": "52234",
+        "serviceName": "TURBT procedure",
+        "units": 1,
+        "costPerUnit": 8556,
+        "providerName": "Dr. Reid Adams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "PEG Tube Placement",
+    "dateOfProcedure": 1771039910551,
+    "hospitalName": "Charleston Area Medical Center",
+    "city": "Charleston",
+    "state": "WV",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 1920,
+    "allowedAmount": 768,
+    "lineItems": [
+      {
+        "cptCode": "43246",
+        "serviceName": "PEG tube placement",
+        "units": 1,
+        "costPerUnit": 1920,
+        "providerName": "Dr. Glenn Crotty"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bowel Resection",
+    "dateOfProcedure": 1750234853943,
+    "hospitalName": "UAB Hospital",
+    "city": "Birmingham",
+    "state": "AL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 20489,
+    "allowedAmount": 9562,
+    "lineItems": [
+      {
+        "cptCode": "44140",
+        "serviceName": "Bowel resection",
+        "units": 1,
+        "costPerUnit": 20489,
+        "providerName": "Dr. Tony Jones"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mechanical Ventilation",
+    "dateOfProcedure": 1755860512301,
+    "hospitalName": "Mayo Clinic Phoenix",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Silver Classic",
+    "billedAmount": 2381,
+    "allowedAmount": 1099,
+    "lineItems": [
+      {
+        "cptCode": "94002",
+        "serviceName": "Mechanical ventilation",
+        "units": 1,
+        "costPerUnit": 2381,
+        "providerName": "Dr. Alyson Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bronchoscopy",
+    "dateOfProcedure": 1775825278169,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 2493,
+    "allowedAmount": 1824,
+    "lineItems": [
+      {
+        "cptCode": "31622",
+        "serviceName": "Bronchoscopy diagnostic",
+        "units": 1,
+        "costPerUnit": 2493,
+        "providerName": "Dr. Robert Cherry"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1761678827815,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Basic",
+    "billedAmount": 1496,
+    "allowedAmount": 849,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1496,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Nephrectomy",
+    "dateOfProcedure": 1751867130032,
+    "hospitalName": "Sarasota Memorial Health Care System",
+    "city": "Sarasota",
+    "state": "FL",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Charter",
+    "billedAmount": 33349,
+    "allowedAmount": 14829,
+    "lineItems": [
+      {
+        "cptCode": "50220",
+        "serviceName": "Nephrectomy",
+        "units": 1,
+        "costPerUnit": 33349,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "IO Line Insertion",
+    "dateOfProcedure": 1747477247947,
+    "hospitalName": "St. Alphonsus Regional Medical Center",
+    "city": "Boise",
+    "state": "ID",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 663,
+    "allowedAmount": 292,
+    "lineItems": [
+      {
+        "cptCode": "36680",
+        "serviceName": "IO line insertion",
+        "units": 1,
+        "costPerUnit": 663,
+        "providerName": "Dr. Steven Nemerson"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1762382044666,
+    "hospitalName": "St. Vincent Indianapolis Hospital",
+    "city": "Indianapolis",
+    "state": "IN",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 8637,
+    "allowedAmount": 3826,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 8637,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Echocardiogram",
+    "dateOfProcedure": 1757574193482,
+    "hospitalName": "University of Kansas Hospital",
+    "city": "Kansas City",
+    "state": "KS",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 852,
+    "allowedAmount": 351,
+    "lineItems": [
+      {
+        "cptCode": "93306",
+        "serviceName": "Echocardiogram complete",
+        "units": 1,
+        "costPerUnit": 852,
+        "providerName": "Dr. Steven Stites"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TURBT Procedure",
+    "dateOfProcedure": 1773543536632,
+    "hospitalName": "Our Lady of the Lake Regional Medical Center",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 8336,
+    "allowedAmount": 5052,
+    "lineItems": [
+      {
+        "cptCode": "52234",
+        "serviceName": "TURBT procedure",
+        "units": 1,
+        "costPerUnit": 8336,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bowel Resection",
+    "dateOfProcedure": 1768862294935,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Humana Choice PPO",
+    "billedAmount": 34592,
+    "allowedAmount": 17166,
+    "lineItems": [
+      {
+        "cptCode": "44140",
+        "serviceName": "Bowel resection",
+        "units": 1,
+        "costPerUnit": 34592,
+        "providerName": "Dr. David Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1767790671935,
+    "hospitalName": "Mayo Clinic Rochester",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 12231,
+    "allowedAmount": 5457,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 12231,
+        "providerName": "Dr. Amy Williams"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1746656381182,
+    "hospitalName": "Barnes-Jewish Hospital",
+    "city": "St. Louis",
+    "state": "MO",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 8334,
+    "allowedAmount": 4056,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 8334,
+        "providerName": "Dr. Richard Liekweg"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Nephrectomy",
+    "dateOfProcedure": 1764109018402,
+    "hospitalName": "Nebraska Medical Center",
+    "city": "Omaha",
+    "state": "NE",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 23917,
+    "allowedAmount": 15774,
+    "lineItems": [
+      {
+        "cptCode": "50220",
+        "serviceName": "Nephrectomy",
+        "units": 1,
+        "costPerUnit": 23917,
+        "providerName": "Dr. Harris Frankel"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mastectomy",
+    "dateOfProcedure": 1755418830651,
+    "hospitalName": "Dartmouth-Hitchcock Medical Center",
+    "city": "Lebanon",
+    "state": "NH",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 14471,
+    "allowedAmount": 9527,
+    "lineItems": [
+      {
+        "cptCode": "19307",
+        "serviceName": "Mastectomy",
+        "units": 1,
+        "costPerUnit": 14471,
+        "providerName": "Dr. Joanne Conroy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1759916809382,
+    "hospitalName": "NYU Langone Hospitals",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Connect",
+    "billedAmount": 12360,
+    "allowedAmount": 5965,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 12360,
+        "providerName": "Dr. Robert Grossman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Foley Catheter",
+    "dateOfProcedure": 1757817435781,
+    "hospitalName": "Sanford Medical Center",
+    "city": "Fargo",
+    "state": "ND",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Core Essential",
+    "billedAmount": 257,
+    "allowedAmount": 112,
+    "lineItems": [
+      {
+        "cptCode": "51702",
+        "serviceName": "Foley catheter",
+        "units": 1,
+        "costPerUnit": 257,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ICD Placement",
+    "dateOfProcedure": 1757216496962,
+    "hospitalName": "OU Health Medical Center",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 35945,
+    "allowedAmount": 16157,
+    "lineItems": [
+      {
+        "cptCode": "33249",
+        "serviceName": "ICD placement",
+        "units": 1,
+        "costPerUnit": 35945,
+        "providerName": "Dr. Richard Lofgren"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thoracentesis",
+    "dateOfProcedure": 1768806450735,
+    "hospitalName": "Penn Presbyterian Medical Center",
+    "city": "Philadelphia",
+    "state": "PA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 1162,
+    "allowedAmount": 562,
+    "lineItems": [
+      {
+        "cptCode": "32554",
+        "serviceName": "Thoracentesis",
+        "units": 1,
+        "costPerUnit": 1162,
+        "providerName": "Dr. Regina Cunningham"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Thyroidectomy",
+    "dateOfProcedure": 1767473744480,
+    "hospitalName": "Sanford USD Medical Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Select",
+    "billedAmount": 12547,
+    "allowedAmount": 6636,
+    "lineItems": [
+      {
+        "cptCode": "60240",
+        "serviceName": "Thyroidectomy",
+        "units": 1,
+        "costPerUnit": 12547,
+        "providerName": "Dr. Mike Wilde"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Bone Marrow Aspiration",
+    "dateOfProcedure": 1773640322483,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Choice Fund PPO",
+    "billedAmount": 1204,
+    "allowedAmount": 591,
+    "lineItems": [
+      {
+        "cptCode": "38220",
+        "serviceName": "Bone marrow aspiration",
+        "units": 1,
+        "costPerUnit": 1204,
+        "providerName": "Dr. Marc Boom"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Wound Debridement",
+    "dateOfProcedure": 1767247344634,
+    "hospitalName": "Rutland Regional Medical Center",
+    "city": "Rutland",
+    "state": "VT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 883,
+    "allowedAmount": 520,
+    "lineItems": [
+      {
+        "cptCode": "11042",
+        "serviceName": "Wound debridement",
+        "units": 1,
+        "costPerUnit": 883,
+        "providerName": "Dr. Linda Brown"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1777803337001,
+    "hospitalName": "Providence Swedish",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 12067,
+    "allowedAmount": 5361,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 12067,
+        "providerName": "Dr. Chris Chisholm"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TURBT Procedure",
+    "dateOfProcedure": 1759883726577,
+    "hospitalName": "Froedtert Hospital",
+    "city": "Milwaukee",
+    "state": "WI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 8659,
+    "allowedAmount": 3909,
+    "lineItems": [
+      {
+        "cptCode": "52234",
+        "serviceName": "TURBT procedure",
+        "units": 1,
+        "costPerUnit": 8659,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Needle Decompression",
+    "dateOfProcedure": 1759168439692,
+    "hospitalName": "Alaska Native Medical Center",
+    "city": "Anchorage",
+    "state": "AK",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Pathfinder",
+    "billedAmount": 888,
+    "allowedAmount": 601,
+    "lineItems": [
+      {
+        "cptCode": "32422",
+        "serviceName": "Needle decompression",
+        "units": 1,
+        "costPerUnit": 888,
+        "providerName": "Dr. John Doe"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mechanical Ventilation",
+    "dateOfProcedure": 1750804426590,
+    "hospitalName": "Baptist Health Medical Center-Little Rock",
+    "city": "Little Rock",
+    "state": "AR",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 1912,
+    "allowedAmount": 845,
+    "lineItems": [
+      {
+        "cptCode": "94002",
+        "serviceName": "Mechanical ventilation",
+        "units": 1,
+        "costPerUnit": 1912,
+        "providerName": "Dr. Greg Clowers"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lithotripsy",
+    "dateOfProcedure": 1764907698078,
+    "hospitalName": "UCHealth University of Colorado Hospital",
+    "city": "Aurora",
+    "state": "CO",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Essentials HMO",
+    "billedAmount": 12514,
+    "allowedAmount": 7727,
+    "lineItems": [
+      {
+        "cptCode": "50590",
+        "serviceName": "Lithotripsy",
+        "units": 1,
+        "costPerUnit": 12514,
+        "providerName": "Dr. Tom Flaig"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Spinal Fusion",
+    "dateOfProcedure": 1747512190892,
+    "hospitalName": "ChristianaCare",
+    "city": "Newark",
+    "state": "DE",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 65488,
+    "allowedAmount": 45242,
+    "lineItems": [
+      {
+        "cptCode": "22551",
+        "serviceName": "Spinal fusion",
+        "units": 1,
+        "costPerUnit": 65488,
+        "providerName": "Dr. Janice Nevin"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Joint Arthroscopy",
+    "dateOfProcedure": 1749397198632,
+    "hospitalName": "Queen's Medical Center",
+    "city": "Honolulu",
+    "state": "HI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 8303,
+    "allowedAmount": 3617,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy",
+        "units": 1,
+        "costPerUnit": 8303,
+        "providerName": "Dr. Whitney Limm"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Oophorectomy",
+    "dateOfProcedure": 1759835260516,
+    "hospitalName": "Cook County Health",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente HMO",
+    "billedAmount": 8783,
+    "allowedAmount": 6039,
+    "lineItems": [
+      {
+        "cptCode": "58940",
+        "serviceName": "Oophorectomy",
+        "units": 1,
+        "costPerUnit": 8783,
+        "providerName": "Dr. Lauren Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Needle Decompression",
+    "dateOfProcedure": 1747544773216,
+    "hospitalName": "University of Iowa Hospitals",
+    "city": "Iowa City",
+    "state": "IA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Molina Core Care",
+    "billedAmount": 847,
+    "allowedAmount": 404,
+    "lineItems": [
+      {
+        "cptCode": "32422",
+        "serviceName": "Needle decompression",
+        "units": 1,
+        "costPerUnit": 847,
+        "providerName": "Dr. Suresh Gunasekaran"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electrocardiogram (EKG)",
+    "dateOfProcedure": 1755836421538,
+    "hospitalName": "UK Chandler Hospital",
+    "city": "Lexington",
+    "state": "KY",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Gold Classic",
+    "billedAmount": 124,
+    "allowedAmount": 59,
+    "lineItems": [
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram complete",
+        "units": 1,
+        "costPerUnit": 124,
+        "providerName": "Dr. Mark Newman"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "General Anesthesia",
+    "dateOfProcedure": 1752489485075,
+    "hospitalName": "Maine Medical Center",
+    "city": "Portland",
+    "state": "ME",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice POS",
+    "billedAmount": 2560,
+    "allowedAmount": 1485,
+    "lineItems": [
+      {
+        "cptCode": "00100",
+        "serviceName": "General anesthesia",
+        "units": 1,
+        "costPerUnit": 2560,
+        "providerName": "Dr. Jeff Sanders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemodialysis",
+    "dateOfProcedure": 1755131294435,
+    "hospitalName": "University of Michigan Health",
+    "city": "Ann Arbor",
+    "state": "MI",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 859,
+    "allowedAmount": 507,
+    "lineItems": [
+      {
+        "cptCode": "90935",
+        "serviceName": "Hemodialysis",
+        "units": 1,
+        "costPerUnit": 859,
+        "providerName": "Dr. Marschall Runge"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "General Anesthesia",
+    "dateOfProcedure": 1770909183097,
+    "hospitalName": "Baptist Memorial Hospital-DeSoto",
+    "city": "Southaven",
+    "state": "MS",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 2089,
+    "allowedAmount": 983,
+    "lineItems": [
+      {
+        "cptCode": "00100",
+        "serviceName": "General anesthesia",
+        "units": 1,
+        "costPerUnit": 2089,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Peripheral IV",
+    "dateOfProcedure": 1757120116548,
+    "hospitalName": "St. Vincent Healthcare",
+    "city": "Billings",
+    "state": "MT",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "SureFit",
+    "billedAmount": 75,
+    "allowedAmount": 36,
+    "lineItems": [
+      {
+        "cptCode": "36410",
+        "serviceName": "Peripheral IV insertion",
+        "units": 1,
+        "costPerUnit": 75,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Hemorrhoidectomy",
+    "dateOfProcedure": 1757208006232,
+    "hospitalName": "Renown Regional Medical Center",
+    "city": "Reno",
+    "state": "NV",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 4608,
+    "allowedAmount": 2851,
+    "lineItems": [
+      {
+        "cptCode": "46250",
+        "serviceName": "Hemorrhoidectomy",
+        "units": 1,
+        "costPerUnit": 4608,
+        "providerName": "Dr. Thomas Graf"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "ECMO Initiation",
+    "dateOfProcedure": 1770159263276,
+    "hospitalName": "Presbyterian Hospital",
+    "city": "Albuquerque",
+    "state": "NM",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "FEP Blue Standard",
+    "billedAmount": 259263,
+    "allowedAmount": 164081,
+    "lineItems": [
+      {
+        "cptCode": "33946",
+        "serviceName": "ECMO initiation",
+        "units": 1,
+        "costPerUnit": 259263,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Tendon Repair",
+    "dateOfProcedure": 1756548035143,
+    "hospitalName": "Duke University Hospital",
+    "city": "Durham",
+    "state": "NC",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "Kaiser Permanente Senior Advantage",
+    "billedAmount": 6492,
+    "allowedAmount": 4664,
+    "lineItems": [
+      {
+        "cptCode": "24341",
+        "serviceName": "Tendon repair",
+        "units": 1,
+        "costPerUnit": 6492,
+        "providerName": "Dr. Thomas Owens"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Pacemaker Insertion",
+    "dateOfProcedure": 1762733428075,
+    "hospitalName": "Cleveland Clinic",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "NexusACO",
+    "billedAmount": 24904,
+    "allowedAmount": 10670,
+    "lineItems": [
+      {
+        "cptCode": "33208",
+        "serviceName": "Pacemaker insertion",
+        "units": 1,
+        "costPerUnit": 24904,
+        "providerName": "Dr. Robert Wyllie"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Carotid Endarterectomy",
+    "dateOfProcedure": 1755376856716,
+    "hospitalName": "Providence St. Vincent Medical Center",
+    "city": "Portland",
+    "state": "OR",
+    "insuranceProvider": "PacificSource",
+    "insurancePlan": "Voyager",
+    "billedAmount": 17767,
+    "allowedAmount": 11558,
+    "lineItems": [
+      {
+        "cptCode": "35301",
+        "serviceName": "Carotid endarterectomy",
+        "units": 1,
+        "costPerUnit": 17767,
+        "providerName": "Dr. Linda White"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Central Line Placement",
+    "dateOfProcedure": 1767062038690,
+    "hospitalName": "Rhode Island Hospital",
+    "city": "Providence",
+    "state": "RI",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Oscar Bronze Classic",
+    "billedAmount": 1496,
+    "allowedAmount": 601,
+    "lineItems": [
+      {
+        "cptCode": "36556",
+        "serviceName": "Central line placement",
+        "units": 1,
+        "costPerUnit": 1496,
+        "providerName": "Dr. Mitchell Levy"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Electrocardiogram (EKG)",
+    "dateOfProcedure": 1774015585249,
+    "hospitalName": "Methodist Hospitals of Memphis",
+    "city": "Memphis",
+    "state": "TN",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Navigate",
+    "billedAmount": 114,
+    "allowedAmount": 54,
+    "lineItems": [
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram complete",
+        "units": 1,
+        "costPerUnit": 114,
+        "providerName": "Dr. Michael Ugwueke"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "TPN Administration",
+    "dateOfProcedure": 1777392688282,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Secure Care",
+    "billedAmount": 451,
+    "allowedAmount": 213,
+    "lineItems": [
+      {
+        "cptCode": "B4185",
+        "serviceName": "TPN administration",
+        "units": 1,
+        "costPerUnit": 451,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Skin Grafting",
+    "dateOfProcedure": 1760275257521,
+    "hospitalName": "Inova Fairfax Hospital",
+    "city": "Falls Church",
+    "state": "VA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Open Choice PPO",
+    "billedAmount": 5150,
+    "allowedAmount": 2695,
+    "lineItems": [
+      {
+        "cptCode": "15100",
+        "serviceName": "Skin grafting",
+        "units": 1,
+        "costPerUnit": 5150,
+        "providerName": "Dr. John Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Mastectomy",
+    "dateOfProcedure": 1759475409687,
+    "hospitalName": "WVU Medicine",
+    "city": "Morgantown",
+    "state": "WV",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 12023,
+    "allowedAmount": 4884,
+    "lineItems": [
+      {
+        "cptCode": "19307",
+        "serviceName": "Mastectomy",
+        "units": 1,
+        "costPerUnit": 12023,
+        "providerName": "Dr. Albert Wright"
+      }
+    ]
+  }
+];
