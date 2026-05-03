@@ -4,6 +4,17 @@ OpenHealth is a medical bill transparency site that helps users search for
 and compare procedure and CPT prices across insurance providers, locations,
 hospitals, and other billing factors.
 
+## Features
+
+- **Procedure and CPT price search**: Search medical procedures by plain-language description or CPT code, then compare billed and allowed amounts across hospitals, locations, insurers, and plans.
+- **Advanced filtering and sorting**: Narrow results by insurance provider, plan, state, city, hospital, and procedure date, then sort by relevance, lowest price, or highest price.
+- **Cost insights**: View result-level price details, average cost by provider, cost distribution charts, trending procedures, and expanded CPT line items.
+- **Personalized insurance estimates**: Save an insurance profile with plan, deductible, copay, coinsurance, and out-of-pocket details to prioritize matching results and estimate likely patient cost.
+- **Community bill contribution flow**: Upload PDF or image bills, auto-extract procedure details, review or correct the parsed fields, and submit procedures with CPT line items to the Convex database.
+- **AI bill chat**: Attach a bill PDF and ask questions about charges, CPT codes, allowed amounts, comparison data, negotiation points, insurer questions, or call scripts.
+- **Price-data agent tools**: The chat agent can query OpenHealth procedure and line-item data, run bounded aggregate comparisons, and use web research for public billing terminology or CPT context.
+- **Admin data controls**: Password-gated admin tools can generate synthetic demo procedure data or purge existing procedure and line-item records.
+
 ## Prerequisites
 
 - Node.js 20 or newer
@@ -35,23 +46,35 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Environment Variables
+
+Core app data depends on Convex. AI, document parsing, external research, file
+upload, and admin-only data controls also use these environment-backed services
+when their corresponding features are enabled:
+
+- Convex deployment values, including `NEXT_PUBLIC_CONVEX_URL`
+- OpenRouter model credentials
+- Tavily search credentials
+- NVIDIA NIM credentials
+- UploadThing credentials
+- `ADMIN_PAGE_PASSWORD`
+
+Do not commit `.env.local`; each teammate should create their own local Convex
+deployment config by running `npx convex dev`.
+
 ## Seed Sample Data
 
-The app currently reads tasks from the Convex `tasks` table. To add the sample tasks used by the starter screen, run this after `npx convex dev` has connected successfully:
-
-```bash
-npx convex import --table tasks sampleData.jsonl
-```
-
-Only run the import once per Convex deployment unless you intentionally want duplicate sample rows.
+Use the password-gated admin page to generate synthetic demo procedure data or
+purge existing procedure and line-item records. The same mock data generator is
+implemented by the Convex `mockData.generate` mutation.
 
 ## Convex Project Notes
 
 - Backend schema lives in `convex/schema.ts`.
-- Backend functions live in `convex/`, such as `convex/tasks.ts`.
+- Backend functions live in `convex/`.
 - The frontend Convex provider is in `app/ConvexClientProvider.tsx`.
-- The task list calls `api.tasks.get` from `app/page.tsx`.
-- Do not commit `.env.local`; each teammate should create their own local Convex deployment config by running `npx convex dev`.
+- Procedure and line-item records are stored in the Convex `procedures` and
+  `procedureLineItems` tables.
 
 ## Useful Commands
 
