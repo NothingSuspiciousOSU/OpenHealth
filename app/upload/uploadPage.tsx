@@ -384,7 +384,7 @@ export function UploadPage() {
             });
 
             if (!response.ok) {
-                throw new Error(`API error: ${response.statusText}`);
+                throw new Error(`Failed to parse documents: ${response.statusText}`);
             }
 
             const parsed = await response.json();
