@@ -40,9 +40,9 @@ export default function Home() {
 
           {/* Headline */}
           <h1 className="mt-10 animate-fade-in-up-delay-2 text-2xl font-semibold tracking-tight sm:text-3xl">
-            Your medical bill might not be right.
+            Medical billing is purposefully confusing.
           </h1>
-          <p className="mx-auto mt-4 max-w-lg animate-fade-in-up-delay-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
+          <p className="mx-auto mt-4 max-w-lg animate-fade-in-up-delay-2 text-md leading-relaxed text-zinc-500 dark:text-zinc-400">
             Nearly half of insured adults receive bills for care they thought
             should have been covered. We help people estimate costs, spot questionable
             charges, understand what they owe, and push back before they
