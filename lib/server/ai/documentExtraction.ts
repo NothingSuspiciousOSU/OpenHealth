@@ -2,46 +2,49 @@ import "server-only";
 
 import { generateText } from "ai";
 import {
-  BillDocumentContext,
   ExtractDocumentRequest,
-  parseExtractedBillContext,
+  normalizeExtractedBillContext,
 } from "@/lib/shared/chat/documentContext";
 import { getOpenRouterProvider, getPdfContextModelId } from "./openrouter";
 
 const MEDICAL_BILL_EXTRACTION_PROMPT = [
-  "Parse this medical billing document and return JSON only.",
-  "Use this exact top-level shape:",
+  "Extract structured medical bill context and full document text from this PDF.",
+  "Return valid JSON only. No markdown fences, no code fences, no explanation text.",
+  "Extract all visible document information, not only bill summary fields.",
+  "Preserve labels, headings, table rows, CPT/HCPCS codes, dates, addresses, phone numbers, payer/provider names, totals, adjustments, payments, patient responsibility, claim identifiers, and footnotes when visible.",
+  "Use markdown tables for table-like document regions.",
+  "Separate pages with page numbers.",
+  "Use [illegible] for unreadable visible text and null for unknown structured scalar fields.",
+  "Use this exact JSON shape:",
   "{",
-  '  "procedures": [',
-  "    {",
-  '      "procedureDescription": string,',
-  '      "dateOfProcedure": string,',
-  '      "hospitalName": string,',
-  '      "location": { "city": string, "state": string },',
-  '      "insurance": { "providerName": string, "planName": string },',
-  '      "billedAmount": number,',
-  '      "allowedAmount": number',
-  "    }",
-  "  ],",
-  '  "procedureLineItems": [',
-  "    {",
-  '      "cptCode": string,',
-  '      "serviceName": string | null,',
-  '      "units": number,',
-  '      "providerName": string | null,',
-  '      "costPerUnit": number',
-  "    }",
-  "  ]",
+  '  "summary": string,',
+  '  "providerName": string | null,',
+  '  "hospitalName": string | null,',
+  '  "insuranceProvider": string | null,',
+  '  "insurancePlan": string | null,',
+  '  "dateOfService": string | null,',
+  '  "billedAmount": number | null,',
+  '  "allowedAmount": number | null,',
+  '  "patientResponsibility": number | null,',
+  '  "lineItems": [{ "cptCode": string | null, "description": string | null, "units": number | null, "billedAmount": number | null, "allowedAmount": number | null }],',
+  '  "missingFields": string[],',
+  '  "confidence": number,',
+  '  "pageCount": number | null,',
+  '  "pages": [{ "pageNumber": number, "text": string }],',
+  '  "documentMarkdown": string,',
+  '  "extractionNotes": string[]',
   "}",
   "Rules:",
-  "- Return valid JSON only. No markdown, no code fences, no explanation text.",
-  "- dateOfProcedure must be an ISO 8601 datetime format: YYYY-MM-DDThh:mm:ssZ.",
-  "- billedAmount is the total charges from the hospital/provider.",
-  "- allowedAmount is billedAmount minus any contractual adjustments, negotiation, or writeoff. Do NOT include payments by insurance.",
-  "- costPerUnit should always be positive charges. Do not include any negative charges such as adjustments or payments to amount.",
-  "- Monetary fields must be float: dollar.cents.",
-  "- State code should be two letters.",
-  "- If a value is missing, use an empty string, 0, or null for serviceName.",
+  "- Return only facts visible in the document.",
+  "- Use null for unknown scalar fields and [] for missing arrays.",
+  "- Amounts should be numbers in dollars, not cents.",
+  "- billedAmount is the total charge from the hospital/provider.",
+  "- allowedAmount is billedAmount minus contractual adjustments, negotiation, or writeoff. Do not include insurance payments.",
+  "- For line items, capture CPT/HCPCS codes, descriptions, units, billed amount, and allowed amount when visible.",
+  "- For pages[].text and documentMarkdown, include the full extracted document in an LLM-friendly markdown format, not just the summary.",
+  "- When document text is duplicated across pages, preserve it on the page where it appears.",
+  "- State codes should be two letters when visible.",
+  "- Set confidence from 0 to 1 based on legibility and field certainty.",
 ].join("\n");
 
 export async function extractBillContextFromPdf(
@@ -72,10 +75,14 @@ export async function extractBillContextFromPdf(
         ],
       },
     ],
-    maxOutputTokens: 3000,
+    maxOutputTokens: 12000,
   });
 
-  return parseExtractedBillContext(normalizeBillContext(parseJsonText(result.text)));
+  return normalizeExtractedBillContext(parseJsonText(result.text), {
+    fileName: request.fileName,
+    mimeType: request.mimeType,
+    sizeBytes: request.sizeBytes,
+  });
 }
 
 function parseJsonText(text: string) {
@@ -97,172 +104,4 @@ function tryParseJson(text: string) {
   } catch {
     return null;
   }
-}
-
-function normalizeBillContext(value: unknown): BillDocumentContext {
-  const record = isRecord(value) ? value : {};
-  const proceduresValue = firstDefined(record.procedures, record.Procedures);
-  const procedures = Array.isArray(proceduresValue) ? proceduresValue : [];
-  const firstProcedure = isRecord(procedures[0]) ? procedures[0] : {};
-  const insurance = isRecord(firstProcedure.insurance) ? firstProcedure.insurance : {};
-  const procedureLocation = isRecord(firstProcedure.location) ? firstProcedure.location : {};
-  const lineItemsValue = firstDefined(
-    record.procedureLineItems,
-    record.procedure_line_items,
-    record.lineItems,
-    record.line_items,
-  );
-  const lineItems = Array.isArray(lineItemsValue) ? lineItemsValue : [];
-  const firstLineItem = isRecord(lineItems[0]) ? lineItems[0] : {};
-  const providerName = stringValue(
-    firstDefined(
-      record.providerName,
-      record.provider_name,
-      record.provider,
-      firstLineItem.providerName,
-      firstLineItem.provider_name,
-    ),
-  );
-  const hospitalName = stringValue(
-    firstDefined(
-      record.hospitalName,
-      record.hospital_name,
-      record.hospital,
-      firstProcedure.hospitalName,
-      firstProcedure.hospital_name,
-    ),
-  );
-  const insuranceProvider = stringValue(
-    firstDefined(
-      record.insuranceProvider,
-      record.insurance_provider,
-      record.payer,
-      insurance.providerName,
-      insurance.provider_name,
-    ),
-  );
-  const insurancePlan = stringValue(
-    firstDefined(
-      record.insurancePlan,
-      record.insurance_plan,
-      record.plan,
-      insurance.planName,
-      insurance.plan_name,
-    ),
-  );
-  const dateOfService = stringValue(
-    firstDefined(
-      record.dateOfService,
-      record.date_of_service,
-      record.service_date,
-      firstProcedure.dateOfProcedure,
-      firstProcedure.date_of_procedure,
-    ),
-  );
-  const billedAmount = numberValue(
-    firstDefined(
-      record.billedAmount,
-      record.billed_amount,
-      firstProcedure.billedAmount,
-      firstProcedure.billed_amount,
-    ),
-  );
-  const allowedAmount = numberValue(
-    firstDefined(
-      record.allowedAmount,
-      record.allowed_amount,
-      firstProcedure.allowedAmount,
-      firstProcedure.allowed_amount,
-    ),
-  );
-
-  return {
-    summary: stringValue(record.summary) ?? buildSummary({
-      procedureDescription: stringValue(
-        firstDefined(firstProcedure.procedureDescription, firstProcedure.procedure_description),
-      ),
-      hospitalName,
-      city: stringValue(firstDefined(procedureLocation.city, record.city)),
-      state: stringValue(firstDefined(procedureLocation.state, record.state)),
-    }),
-    providerName,
-    hospitalName,
-    insuranceProvider,
-    insurancePlan,
-    dateOfService,
-    billedAmount,
-    allowedAmount,
-    patientResponsibility: numberValue(
-      firstDefined(
-        record.patientResponsibility,
-        record.patient_responsibility,
-        record.patient_amount,
-      ),
-    ),
-    lineItems: lineItems.map((item) => {
-      const line = isRecord(item) ? item : {};
-      const units = numberValue(line.units);
-      const costPerUnit = numberValue(firstDefined(line.costPerUnit, line.cost_per_unit));
-      return {
-        cptCode: stringValue(firstDefined(line.cptCode, line.cpt_code, line.code)),
-        description: stringValue(firstDefined(line.description, line.serviceName, line.service_name)),
-        units,
-        billedAmount: numberValue(firstDefined(line.billedAmount, line.billed_amount))
-          ?? totalLineCharge(units, costPerUnit),
-        allowedAmount: numberValue(firstDefined(line.allowedAmount, line.allowed_amount)),
-      };
-    }),
-    missingFields: Array.isArray(record.missingFields)
-      ? record.missingFields.filter((field): field is string => typeof field === "string")
-      : [],
-    confidence: clampConfidence(numberValue(record.confidence) ?? 0.5),
-  };
-}
-
-function buildSummary({
-  procedureDescription,
-  hospitalName,
-  city,
-  state,
-}: {
-  procedureDescription: string | null;
-  hospitalName: string | null;
-  city: string | null;
-  state: string | null;
-}) {
-  const location = [city, state].filter(Boolean).join(", ");
-  const details = [procedureDescription, hospitalName, location].filter(Boolean);
-  return details.length > 0
-    ? `Extracted medical bill context: ${details.join(" at ")}.`
-    : "Extracted medical bill context.";
-}
-
-function totalLineCharge(units: number | null, costPerUnit: number | null) {
-  if (units === null || costPerUnit === null) return null;
-  return Math.round(units * costPerUnit * 100) / 100;
-}
-
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return value !== null && typeof value === "object" && !Array.isArray(value);
-}
-
-function firstDefined(...values: unknown[]) {
-  return values.find((value) => value !== undefined);
-}
-
-function stringValue(value: unknown) {
-  return typeof value === "string" && value.trim() ? value : null;
-}
-
-function numberValue(value: unknown) {
-  if (typeof value === "number" && Number.isFinite(value)) return value;
-  if (typeof value === "string" && value.trim()) {
-    const parsed = Number(value.replace(/[$,]/g, ""));
-    return Number.isFinite(parsed) ? parsed : null;
-  }
-  return null;
-}
-
-function clampConfidence(value: number) {
-  return Math.min(Math.max(value, 0), 1);
 }

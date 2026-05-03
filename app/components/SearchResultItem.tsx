@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { useInsuranceProfile } from "../hooks/useInsuranceProfile";
+import { useToast } from "./Toast";
 
 type Procedure = {
   _id: string;
@@ -18,6 +19,7 @@ type Procedure = {
 export function SearchResultItem({ procedure }: { procedure: Procedure }) {
   const [expanded, setExpanded] = useState(false);
   const { profile, isLoaded } = useInsuranceProfile();
+  const { showToast } = useToast();
   const lineItems = useQuery(api.search.getLineItems, expanded ? { procedureId: procedure._id as any } : "skip");
 
   const formatCurrency = (dollars: number | bigint) => {
@@ -118,8 +120,27 @@ export function SearchResultItem({ procedure }: { procedure: Procedure }) {
                 </thead>
                 <tbody className="divide-y divide-zinc-200 dark:divide-zinc-800">
                   {lineItems.map((item) => (
-                    <tr key={item._id} className="hover:bg-zinc-50 dark:hover:bg-zinc-900">
-                      <td className="px-4 py-3 font-mono text-zinc-900 dark:text-zinc-100">{item.cptCode}</td>
+                    <tr key={item._id} className="group/line-item hover:bg-zinc-50 dark:hover:bg-zinc-900">
+                      <td className="px-4 py-3 font-mono text-zinc-900 dark:text-zinc-100">
+                        <div className="flex items-center gap-2">
+                          {item.cptCode}
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              navigator.clipboard.writeText(item.cptCode);
+                              showToast(`Copied CPT code: ${item.cptCode}`);
+                            }}
+                            className="opacity-0 group-hover/line-item:opacity-100 transition-opacity p-1 text-zinc-400 hover:text-blue-500"
+                            title="Copy CPT code"
+                          >
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
                       <td className="px-4 py-3">
                         <div>{item.serviceName || "—"}</div>
                         {item.providerName && (

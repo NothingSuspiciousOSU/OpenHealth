@@ -20,6 +20,8 @@ export const metadata: Metadata = {
     "Bringing transparency to medical billing.",
 };
 
+import { ToastProvider } from "./components/Toast";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,7 +34,9 @@ export default function RootLayout({
     >
       <body className="h-full">
         <ConvexClientProvider>
-          <AppShell>{children}</AppShell>
+          <ToastProvider>
+            <AppShell>{children}</AppShell>
+          </ToastProvider>
         </ConvexClientProvider>
       </body>
     </html>

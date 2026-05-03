@@ -9,6 +9,7 @@ import { SearchResultItem } from "../components/SearchResultItem";
 import { CostStats } from "../components/CostStats";
 import { InsuranceProfileModal } from "../components/InsuranceProfileModal";
 import { useInsuranceProfile } from "../hooks/useInsuranceProfile";
+import { useToast } from "../components/Toast";
 
 function SearchPageContent() {
   const searchParams = useSearchParams();
@@ -18,11 +19,18 @@ function SearchPageContent() {
   const [query, setQuery] = useState(initialQuery);
   const [activeQuery, setActiveQuery] = useState(initialQuery);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
-  const [shareTooltip, setShareTooltip] = useState(false);
   const { profile } = useInsuranceProfile();
+  const { showToast } = useToast();
   const [sortBy, setSortBy] = useState("relevant"); // "relevant", "price_asc", "price_desc"
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [displayLimit, setDisplayLimit] = useState(25);
+  
+  // Sync state with URL params
+  useEffect(() => {
+    const q = searchParams.get("q") || "";
+    setQuery(q);
+    setActiveQuery(q);
+  }, [searchParams]);
   
   useEffect(() => {
     const handleScroll = () => {
@@ -90,8 +98,7 @@ function SearchPageContent() {
     const url = `${window.location.origin}/search?${buildParams(activeQuery).toString()}`;
     try {
       await navigator.clipboard.writeText(url);
-      setShareTooltip(true);
-      setTimeout(() => setShareTooltip(false), 2000);
+      showToast("Link copied to clipboard!");
     } catch {
       // Fallback
       window.prompt("Copy this link:", url);
@@ -196,9 +203,9 @@ function SearchPageContent() {
 
         <div className="flex flex-col gap-8 lg:flex-row">
           {/* Sidebar Area */}
-          <div className="w-full shrink-0 lg:w-64 space-y-6">
+          <div id="filter-sidebar" className="w-full shrink-0 lg:w-64 space-y-6 scroll-mt-20">
             {/* Filters Box */}
-            <div className="rounded-lg border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <div className="rounded-lg border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 print:hidden">
               <div className="mb-4 flex items-center justify-between">
                 <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Filters</h2>
                 <button onClick={handleResetFilters} className="text-xs text-blue-600 hover:text-blue-500 dark:text-blue-400">
@@ -338,11 +345,6 @@ function SearchPageContent() {
                       </svg>
                       Share
                     </button>
-                    {shareTooltip && (
-                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-zinc-900 px-2.5 py-1 text-xs font-medium text-white shadow-md dark:bg-zinc-100 dark:text-zinc-900">
-                        Link copied!
-                      </div>
-                    )}
                   </div>
                   <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400">Sort by:</label>
                   <select
@@ -359,25 +361,57 @@ function SearchPageContent() {
             </div>
 
             {isInitialLoading ? (
-              <div className="space-y-4">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="h-32 w-full animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-800" />
-                ))}
+              <div className="space-y-8">
+                <CostStats results={[]} loading={true} />
+                <div className="space-y-4">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="h-32 w-full animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-800" />
+                  ))}
+                </div>
               </div>
             ) : displayStats.length === 0 ? (
-              <div className="flex flex-col items-center justify-center rounded-lg border border-zinc-200 border-dashed py-24 text-center dark:border-zinc-800">
-                <div className="mb-4 text-6xl">😢</div>
-                <h3 className="mb-2 text-lg font-medium">No results found</h3>
-                <p className="max-w-sm text-sm text-zinc-500 dark:text-zinc-400">
-                  We couldn't find any procedures matching your search criteria. 
-                  You can add your bill after your procedure to help others save on their bills!
+              <div className="flex flex-col items-center justify-center rounded-lg border border-zinc-200 border-dashed py-16 text-center dark:border-zinc-800">
+                <div className="mb-4 text-5xl">🔍</div>
+                <h3 className="mb-2 text-lg font-semibold">No results found for "{activeQuery}"</h3>
+                <p className="mb-6 max-w-sm text-sm text-zinc-500 dark:text-zinc-400">
+                  We couldn't find any procedures matching your search. Try adjusting your filters or search for something more general.
                 </p>
-                <button
-                  className="mt-6 inline-flex items-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
-                  onClick={() => {}}
-                >
-                  Add a procedure bill
-                </button>
+                
+                <div className="mb-8 w-full max-w-md">
+                  <h4 className="mb-3 text-xs font-bold uppercase tracking-widest text-zinc-400">Try these instead:</h4>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {["Knee Replacement", "MRI Scan", "Blood Test", "Physical Therapy", "Emergency Room"].map((term) => (
+                      <button
+                        key={term}
+                        onClick={() => {
+                          setQuery(term);
+                          setActiveQuery(term);
+                          router.push(`/search?q=${encodeURIComponent(term)}`);
+                        }}
+                        className="rounded-full border border-zinc-200 bg-white px-4 py-1.5 text-xs font-medium text-zinc-700 transition hover:bg-zinc-50 hover:text-blue-600 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-blue-400"
+                      >
+                        {term}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-3">
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                    Have a bill? Help the community by contributing data.
+                  </p>
+                  <button
+                    className="inline-flex items-center gap-2 rounded-md bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    onClick={() => router.push("/upload")}
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                      <polyline points="17 8 12 3 7 8"/>
+                      <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                    Upload your bill
+                  </button>
+                </div>
               </div>
             ) : (
               <div className="flex flex-col">
@@ -417,13 +451,25 @@ function SearchPageContent() {
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="Scroll to top"
-          className="fixed bottom-8 left-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-zinc-900 text-white shadow-lg transition hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
+          className="fixed bottom-8 left-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-zinc-900 text-white shadow-lg transition hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white print:hidden"
         >
           <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="m18 15-6-6-6 6"/>
           </svg>
         </button>
       )}
+
+      {/* Mobile Sticky Filter Button */}
+      <button
+        onClick={() => document.getElementById("filter-sidebar")?.scrollIntoView({ behavior: "smooth" })}
+        className="fixed bottom-8 right-8 z-50 flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 font-semibold text-white shadow-xl transition hover:bg-blue-500 lg:hidden print:hidden"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+        </svg>
+        Filters
+      </button>
+
     </div>
   );
 }

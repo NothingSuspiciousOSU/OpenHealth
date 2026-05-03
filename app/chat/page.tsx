@@ -35,6 +35,39 @@ type RenderablePart = {
   output?: unknown;
 };
 
+const BILL_TEMPLATE_PROMPTS = [
+  {
+    label: "Audit this bill",
+    prompt:
+      "Review the uploaded bill for confusing charges, duplicate-looking line items, unusually high amounts, missing context, and questions I should ask before paying.",
+  },
+  {
+    label: "Compare prices",
+    prompt:
+      "Compare the bill's CPT codes, service descriptions, billed amounts, and allowed amounts against OpenHealth data. Tell me what looks high, low, or typical.",
+  },
+  {
+    label: "Explain line items",
+    prompt:
+      "Explain each extracted line item in plain English, including CPT/HCPCS codes, units, billed amount, allowed amount, and what each charge likely represents.",
+  },
+  {
+    label: "Find negotiation points",
+    prompt:
+      "Based on the uploaded bill, identify specific charges or issues I could ask the provider or billing department to review, reduce, itemize, or correct.",
+  },
+  {
+    label: "Insurance questions",
+    prompt:
+      "Based on the uploaded bill, list the most important questions I should ask my insurer about coverage, allowed amount, patient responsibility, deductible, copay, coinsurance, and network status.",
+  },
+  {
+    label: "Draft call script",
+    prompt:
+      "Write a concise phone script I can use when calling the provider billing office and my insurer about this bill. Include the exact details from the uploaded document where useful.",
+  },
+] as const;
+
 export default function ChatPage() {
   const [input, setInput] = useState("");
   const [documentContext, setDocumentContext] =
@@ -45,6 +78,7 @@ export default function ChatPage() {
   const transcriptRef = useRef<HTMLDivElement>(null);
   const transcriptEndRef = useRef<HTMLDivElement>(null);
   const shouldFollowTranscriptRef = useRef(true);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const { messages, sendMessage, regenerate, stop, status, error } = useChat();
   const busy = status === "submitted" || status === "streaming";
@@ -82,8 +116,18 @@ export default function ChatPage() {
     scrollTranscriptToBottom(status === "streaming" ? "auto" : "smooth");
   }, [messages, scrollTranscriptToBottom, status]);
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  // Auto-resize textarea
+  useEffect(() => {
+    const textarea = textareaRef.current;
+    if (!textarea) return;
+
+    textarea.style.height = "auto";
+    const newHeight = Math.min(textarea.scrollHeight, 144); // 144px is roughly 6 lines
+    textarea.style.height = `${newHeight}px`;
+  }, [input]);
+
+  async function handleSubmit(event?: FormEvent<HTMLFormElement>) {
+    event?.preventDefault();
     const text = input.trim();
     if (!text || busy || readingPdf) return;
 
@@ -97,6 +141,13 @@ export default function ChatPage() {
     );
   }
 
+  function handleKeyDown(event: React.KeyboardEvent<HTMLTextAreaElement>) {
+    if (event.key === "Enter" && (event.metaKey || event.ctrlKey)) {
+      event.preventDefault();
+      void handleSubmit();
+    }
+  }
+
   async function handleRegenerate() {
     if (busy) return;
 
@@ -105,6 +156,18 @@ export default function ChatPage() {
     await regenerate({
       body: { documentContext: documentContext ?? undefined },
     });
+  }
+
+  async function handleTemplatePrompt(prompt: string) {
+    if (busy || readingPdf || !documentContext) return;
+
+    shouldFollowTranscriptRef.current = true;
+    setClientError(null);
+    scrollTranscriptToBottom("smooth");
+    await sendMessage(
+      { text: prompt },
+      { body: { documentContext } },
+    );
   }
 
   async function handleFileChange(files: FileList | null) {
@@ -194,7 +257,9 @@ export default function ChatPage() {
             fileInputRef={fileInputRef}
             onFileChange={handleFileChange}
             onRemoveAttachment={removeAttachment}
+            onTemplatePrompt={handleTemplatePrompt}
             readingPdf={readingPdf}
+            templatesDisabled={busy || readingPdf || !documentContext}
           />
         </aside>
 
@@ -259,12 +324,14 @@ export default function ChatPage() {
             )}
             <form onSubmit={handleSubmit} className="flex flex-col gap-3">
               <textarea
+                ref={textareaRef}
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
-                rows={3}
+                onKeyDown={handleKeyDown}
+                rows={1}
                 disabled={busy}
                 placeholder="Ask whether a charge looks high, what a CPT code means, or what to ask next."
-                className="max-h-36 min-h-20 resize-none rounded-lg border border-zinc-200 bg-white px-3 py-3 text-sm outline-none transition placeholder:text-zinc-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-100 disabled:opacity-60 dark:border-zinc-800 dark:bg-zinc-950 dark:focus:border-sky-400 dark:focus:ring-sky-950"
+                className="max-h-36 min-h-12 overflow-y-auto resize-none rounded-lg border border-zinc-200 bg-white px-3 py-3 text-sm outline-none transition placeholder:text-zinc-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-100 disabled:opacity-60 dark:border-zinc-800 dark:bg-zinc-950 dark:focus:border-sky-400 dark:focus:ring-sky-950"
               />
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div className="min-w-0 text-xs text-zinc-500 dark:text-zinc-400">
@@ -314,7 +381,9 @@ function ContextPanel({
   fileInputRef,
   onFileChange,
   onRemoveAttachment,
+  onTemplatePrompt,
   readingPdf,
+  templatesDisabled,
 }: {
   attachment: AttachmentState | null;
   attachmentStatusLabel: string;
@@ -323,7 +392,9 @@ function ContextPanel({
   fileInputRef: React.RefObject<HTMLInputElement | null>;
   onFileChange: (files: FileList | null) => void;
   onRemoveAttachment: () => void;
+  onTemplatePrompt: (prompt: string) => void;
   readingPdf: boolean;
+  templatesDisabled: boolean;
 }) {
   return (
     <div className="flex max-h-[34dvh] min-h-0 flex-col overflow-hidden rounded-lg border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 sm:max-h-[28dvh] lg:h-full lg:max-h-none lg:p-4">
@@ -395,6 +466,24 @@ function ContextPanel({
                   value={formatMoney(documentContext.allowedAmount)}
                 />
               </dl>
+              <div className="mt-4 border-t border-zinc-200 pt-3 dark:border-zinc-800">
+                <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                  Suggested actions
+                </p>
+                <div className="mt-2 grid gap-2">
+                  {BILL_TEMPLATE_PROMPTS.map((template) => (
+                    <button
+                      key={template.label}
+                      type="button"
+                      disabled={templatesDisabled}
+                      onClick={() => onTemplatePrompt(template.prompt)}
+                      className="w-full rounded-md border border-zinc-200 bg-zinc-50 px-3 py-2 text-left text-xs font-medium text-zinc-700 transition hover:border-sky-200 hover:bg-sky-50 hover:text-sky-800 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-sky-900 dark:hover:bg-sky-950 dark:hover:text-sky-100"
+                    >
+                      {template.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           )}
         </div>
