@@ -1,5 +1,5 @@
 # OpenHealth 🏥
-### *Unmasking the hidden cost of care.*
+### *Medical billing is purposefully confusing.*
 
 OpenHealth is a medical bill transparency platform that helps users search for and compare procedure and CPT prices across insurance providers, locations, hospitals, and other billing factors.
 
