@@ -13,9 +13,9 @@ export function Footer() {
           and may not reflect your actual charges. Always verify with your
           provider and insurance.
         </p>
-        <div className="flex items-center justify-center gap-4 pt-2">
+        <div className="flex items-center justify-center gap-2 pt-2">
           <a
-            href="https://github.com/sarveshta/OpenHealth"
+            href="https://github.com/NothingSuspiciousOSU/OpenHealth"
             target="_blank"
             rel="noopener noreferrer"
             className="text-zinc-400 transition hover:text-zinc-600 dark:hover:text-zinc-300"
@@ -24,7 +24,11 @@ export function Footer() {
             GitHub
           </a>
           <span className="text-zinc-300 dark:text-zinc-700">·</span>
-          <span>© {new Date().getFullYear()} OpenHealth by NothingSuspicious</span>
+          <span> &copy; {new Date().getFullYear()} OpenHealth by 
+            <a href="https://github.com/orgs/NothingSuspiciousOSU/people" target="_blank" rel="noopener noreferrer" className="text-zinc-400 transition hover:text-zinc-600 dark:hover:text-zinc-300"
+            > NothingSuspicious
+            </a>
+            </span>
         </div>
       </div>
     </footer>
