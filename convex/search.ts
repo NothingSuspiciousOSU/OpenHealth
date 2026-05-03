@@ -4,7 +4,6 @@ import {
   findProceduresByCpt,
   findProceduresByDescription,
   applyProcedureFilters,
-  attachCptCodes,
 } from "./model/procedures";
 
 export const searchProcedures = query({
@@ -57,8 +56,8 @@ export const searchProcedures = query({
     // 4. Limit results for pagination (massive performance boost by skipping CPT fetches for unseen items)
     const limited = filtered.slice(0, args.limit ?? 25);
 
-    // 5. Attach CPT codes ONLY for the paginated slice
-    return attachCptCodes(ctx, limited);
+    // 5. Do not attach CPT codes to avoid expensive DB queries on load
+    return limited;
   },
 });
 
