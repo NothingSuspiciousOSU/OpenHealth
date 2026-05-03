@@ -2,10 +2,11 @@
 type SearchBarProps = {
   value: string;
   onChange: (value: string) => void;
+  onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   placeholder?: string;
 };
 
-export function SearchBar({ value, onChange, placeholder }: SearchBarProps) {
+export function SearchBar({ value, onChange, onKeyDown, placeholder }: SearchBarProps) {
   return (
     <div className="w-full">
       <input
@@ -13,6 +14,7 @@ export function SearchBar({ value, onChange, placeholder }: SearchBarProps) {
         placeholder={placeholder ?? 'Ex: "ACL Surgery" or "Specific CPT"'}
         value={value}
         onChange={(event) => onChange(event.target.value)}
+        onKeyDown={onKeyDown}
       />
     </div>
   );
