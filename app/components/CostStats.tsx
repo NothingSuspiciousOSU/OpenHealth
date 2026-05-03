@@ -106,6 +106,12 @@ export function CostStats({ results, loading }: { results: Procedure[], loading?
         <h3 className="mb-4 text-sm font-semibold text-zinc-900 dark:text-zinc-100">
           Cost Range Distribution
         </h3>
+        {/* Axis marker */}
+          <div className="ml-[112px] pb-2 mb-4 flex justify-between border-b border-zinc-200 pt-2 text-[10px] font-medium text-zinc-400 dark:border-zinc-800">
+            <span>$0</span>
+            <span>{formatCurrency(maxCost / 2)}</span>
+            <span>{formatCurrency(maxCost)}</span>
+          </div>
         <div className="flex flex-col gap-5 overflow-y-auto pr-2 max-h-[350px]">
           {Object.entries(scatterData).map(([provider, data]) => (
             <div key={provider} className="flex items-center gap-4">
@@ -133,12 +139,6 @@ export function CostStats({ results, loading }: { results: Procedure[], loading?
               </div>
             </div>
           ))}
-          {/* Axis marker */}
-          <div className="ml-[112px] flex justify-between border-t border-zinc-200 pt-2 text-[10px] font-medium text-zinc-400 dark:border-zinc-800">
-            <span>$0</span>
-            <span>{formatCurrency(maxCost / 2)}</span>
-            <span>{formatCurrency(maxCost)}</span>
-          </div>
         </div>
       </div>
     </div>
