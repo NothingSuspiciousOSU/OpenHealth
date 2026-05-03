@@ -16,6 +16,11 @@ OpenHealth is a medical bill transparency platform that helps users search for a
 - **Admin Controls:** Secure tools for database hydration, synthetic data, and maintenance.
 
 ---
+<p align="center">
+  <img width="567" height="793" alt="Screenshot 2026-05-03 at 8 03 49 AM" src="https://github.com/user-attachments/assets/b5d8e291-6012-456d-a2b0-dbc7cb974522" />
+</p>
+
+---
 
 ## 🚀 Quick Start
 
