@@ -20,8 +20,6 @@ export default defineSchema({
 
     billedAmountCents: v.int64(),
     allowedAmountCents: v.int64(),
-
-    embeddingId: v.optional(v.id("procedureEmbeddings")),
   })
     .index("by_dateOfProcedure", ["dateOfProcedure"])
     .index("by_hospitalName_and_dateOfProcedure", [
@@ -37,8 +35,7 @@ export default defineSchema({
       "insurance.providerName",
       "insurance.planName",
       "dateOfProcedure",
-    ])
-    .index("by_embeddingId", ["embeddingId"]),
+    ]),
 
   procedureLineItems: defineTable({
     procedureId: v.id("procedures"),
@@ -75,29 +72,4 @@ export default defineSchema({
       "dateOfProcedure",
     ]),
 
-  procedureEmbeddings: defineTable({
-    procedureId: v.id("procedures"),
-    text: v.string(),
-    embedding: v.array(v.float64()),
-
-    hospitalName: v.string(),
-    city: v.string(),
-    state: v.string(),
-    insuranceProviderName: v.string(),
-    insurancePlanName: v.string(),
-    dateOfProcedure: v.int64(),
-  })
-    .index("by_procedureId", ["procedureId"])
-    .vectorIndex("by_embedding", {
-      vectorField: "embedding",
-      dimensions: 1536,
-      filterFields: [
-        "hospitalName",
-        "city",
-        "state",
-        "insuranceProviderName",
-        "insurancePlanName",
-        "dateOfProcedure",
-      ],
-    }),
 });
