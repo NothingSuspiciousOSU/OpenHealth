@@ -18,16 +18,30 @@ function SearchPageContent() {
   const [query, setQuery] = useState(initialQuery);
   const [activeQuery, setActiveQuery] = useState(initialQuery);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+  const [shareTooltip, setShareTooltip] = useState(false);
   const { profile } = useInsuranceProfile();
   const [sortBy, setSortBy] = useState("relevant"); // "relevant", "price_asc", "price_desc"
+  const [showScrollTop, setShowScrollTop] = useState(false);
   
-  // Filter States
-  const [insuranceProv, setInsuranceProv] = useState("");
-  const [insurancePlan, setInsurancePlan] = useState("");
-  const [state, setState] = useState("");
-  const [city, setCity] = useState("");
-  const [hospital, setHospital] = useState("");
-  const [date, setDate] = useState("");
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+  // Filter States — initialize from URL params for shareable links
+  const [insuranceProv, setInsuranceProv] = useState(searchParams.get("provider") || "");
+  const [insurancePlan, setInsurancePlan] = useState(searchParams.get("plan") || "");
+  const [state, setState] = useState(searchParams.get("state") || "");
+  const [city, setCity] = useState(searchParams.get("city") || "");
+  const [hospital, setHospital] = useState(searchParams.get("hospital") || "");
+  const [date, setDate] = useState(searchParams.get("after") || "");
   
   const filterOptions = useQuery(api.search.getFilterOptions);
   
@@ -41,12 +55,35 @@ function SearchPageContent() {
     afterDate: date ? BigInt(new Date(date).getTime()) : undefined,
   });
 
+  /** Build a URLSearchParams with all current filters */
+  const buildParams = (q?: string) => {
+    const params = new URLSearchParams();
+    const searchQ = q ?? query;
+    if (searchQ) params.set("q", searchQ);
+    if (insuranceProv) params.set("provider", insuranceProv);
+    if (insurancePlan) params.set("plan", insurancePlan);
+    if (state) params.set("state", state);
+    if (city) params.set("city", city);
+    if (hospital) params.set("hospital", hospital);
+    if (date) params.set("after", date);
+    return params;
+  };
+
   const handleSearch = () => {
     setActiveQuery(query);
-    // Optionally update URL
-    const params = new URLSearchParams();
-    if (query) params.set("q", query);
-    router.replace(`/search?${params.toString()}`);
+    router.replace(`/search?${buildParams().toString()}`);
+  };
+
+  const handleShareResults = async () => {
+    const url = `${window.location.origin}/search?${buildParams(activeQuery).toString()}`;
+    try {
+      await navigator.clipboard.writeText(url);
+      setShareTooltip(true);
+      setTimeout(() => setShareTooltip(false), 2000);
+    } catch {
+      // Fallback
+      window.prompt("Copy this link:", url);
+    }
   };
 
   const handleResetFilters = () => {
@@ -98,9 +135,10 @@ function SearchPageContent() {
         </div>
 
         <div className="flex flex-col gap-8 lg:flex-row">
-          {/* Filters Sidebar */}
-          <div className="w-full shrink-0 lg:w-64">
-            <div className="sticky top-6 rounded-lg border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          {/* Sidebar Area */}
+          <div className="w-full shrink-0 lg:w-64 space-y-6">
+            {/* Filters Box */}
+            <div className="rounded-lg border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
               <div className="mb-4 flex items-center justify-between">
                 <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Filters</h2>
                 <button onClick={handleResetFilters} className="text-xs text-blue-600 hover:text-blue-500 dark:text-blue-400">
@@ -179,6 +217,41 @@ function SearchPageContent() {
                 </div>
               </div>
             </div>
+
+            {/* Medical Definitions Box */}
+            <div className="rounded-lg border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+              <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Medical Terms</h2>
+              <div className="space-y-4 text-xs">
+                <div>
+                  <span className="font-semibold text-zinc-900 dark:text-zinc-100">Allowed Amount:</span>
+                  <p className="mt-0.5 text-zinc-600 dark:text-zinc-400">The maximum amount an insurance plan will pay for a covered service.</p>
+                </div>
+                <div>
+                  <span className="font-semibold text-zinc-900 dark:text-zinc-100">Billed Amount:</span>
+                  <p className="mt-0.5 text-zinc-600 dark:text-zinc-400">The original amount charged by the provider before any insurance adjustments.</p>
+                </div>
+                <div>
+                  <span className="font-semibold text-zinc-900 dark:text-zinc-100">Remaining Deductible:</span>
+                  <p className="mt-0.5 text-zinc-600 dark:text-zinc-400">What you still owe for covered services before insurance starts paying.</p>
+                </div>
+                <div>
+                  <span className="font-semibold text-zinc-900 dark:text-zinc-100">Co-Pay / Co-Insurance:</span>
+                  <p className="mt-0.5 text-zinc-600 dark:text-zinc-400">Your fixed fee or percentage share of the costs for a covered service.</p>
+                </div>
+                <div>
+                  <span className="font-semibold text-zinc-900 dark:text-zinc-100">Out-of-Pocket Max:</span>
+                  <p className="mt-0.5 text-zinc-600 dark:text-zinc-400">The most you have to pay before insurance covers 100% of allowed amounts.</p>
+                </div>
+                <div>
+                  <span className="font-semibold text-zinc-900 dark:text-zinc-100">CPT Codes:</span>
+                  <p className="mt-0.5 text-zinc-600 dark:text-zinc-400">Standardized numbers used to identify specific medical procedures.</p>
+                </div>
+                <div className="rounded border border-blue-100 bg-blue-50 p-2.5 dark:border-blue-900/30 dark:bg-blue-900/20">
+                  <span className="font-semibold text-blue-800 dark:text-blue-300">Estimated Price:</span>
+                  <p className="mt-1 text-blue-700 dark:text-blue-400">Our prediction of your cost based on your insurance plan profile, average allowed amounts, and typical structures.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Results Area */}
@@ -191,6 +264,26 @@ function SearchPageContent() {
               </h2>
               {results !== undefined && results.length > 0 && (
                 <div className="mt-2 flex items-center gap-2 sm:mt-0">
+                  <div className="relative">
+                    <button
+                      type="button"
+                      onClick={handleShareResults}
+                      aria-label="Share search results"
+                      className="inline-flex items-center gap-1.5 rounded-md border border-zinc-200 bg-white px-3 py-1 text-sm font-medium text-zinc-600 shadow-sm transition hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-400 dark:hover:bg-zinc-900"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                        <polyline points="16 6 12 2 8 6"/>
+                        <line x1="12" y1="2" x2="12" y2="15"/>
+                      </svg>
+                      Share
+                    </button>
+                    {shareTooltip && (
+                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-zinc-900 px-2.5 py-1 text-xs font-medium text-white shadow-md dark:bg-zinc-100 dark:text-zinc-900">
+                        Link copied!
+                      </div>
+                    )}
+                  </div>
                   <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400">Sort by:</label>
                   <select
                     value={sortBy}
@@ -241,10 +334,10 @@ function SearchPageContent() {
                   {results
                     .sort((a, b) => {
                       if (sortBy === "price_asc") {
-                        return Number(a.allowedAmountCents) - Number(b.allowedAmountCents);
+                        return Number(a.allowedAmount) - Number(b.allowedAmount);
                       }
                       if (sortBy === "price_desc") {
-                        return Number(b.allowedAmountCents) - Number(a.allowedAmountCents);
+                        return Number(b.allowedAmount) - Number(a.allowedAmount);
                       }
                       // Default "relevant" sort: match profile first
                       const aMatches = a.insurance.providerName === profile.providerName && a.insurance.planName === profile.planName;
@@ -267,6 +360,18 @@ function SearchPageContent() {
         isOpen={isProfileModalOpen} 
         onClose={() => setIsProfileModalOpen(false)} 
       />
+
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Scroll to top"
+          className="fixed bottom-8 left-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-zinc-900 text-white shadow-lg transition hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
+        >
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+          </svg>
+        </button>
+      )}
     </div>
   );
 }

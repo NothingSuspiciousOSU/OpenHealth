@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 
 type Procedure = {
   _id: string;
-  allowedAmountCents: bigint;
+  allowedAmount: bigint;
   insurance: { providerName: string };
 };
 
@@ -15,7 +15,7 @@ export function CostStats({ results }: { results: Procedure[] }) {
 
     results.forEach((r) => {
       const provider = r.insurance.providerName || "Unknown";
-      const cost = Number(r.allowedAmountCents) / 100;
+      const cost = Number(r.allowedAmount);
       if (cost > globalMaxCost) globalMaxCost = cost;
 
       if (!providerMap[provider]) {
@@ -58,7 +58,7 @@ export function CostStats({ results }: { results: Procedure[] }) {
           </div>
           
           {/* Bars */}
-          <div className="flex flex-1 flex-col justify-end gap-2 border-l border-b border-zinc-200 pb-2 pl-2 dark:border-zinc-800">
+          <div className="flex flex-1 flex-col justify-end gap-2 border-l border-b border-zinc-200 pb-2 pl-2 dark:border-zinc-800 min-w-0">
             <div className="flex h-full items-end gap-4 overflow-x-auto pt-10">
               {barData.map((bar) => {
                 const heightPercent = maxAvgCost > 0 ? (bar.avgCost / maxAvgCost) * 100 : 0;

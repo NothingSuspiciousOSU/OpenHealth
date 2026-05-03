@@ -1,6 +1,8 @@
 # OpenHealth
 
-OpenHealth is a Next.js app with Convex as the backend.
+OpenHealth is a medical bill transparency site that helps users search for
+and compare procedure and CPT prices across insurance providers, locations,
+hospitals, and other billing factors.
 
 ## Prerequisites
 

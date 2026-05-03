@@ -10,8 +10,8 @@ type Procedure = {
   hospitalName: string;
   location: { city: string; state: string };
   insurance: { providerName: string; planName: string };
-  billedAmountCents: bigint;
-  allowedAmountCents: bigint;
+  billedAmount: bigint;
+  allowedAmount: bigint;
   cptCodes: string[];
 };
 
@@ -20,12 +20,12 @@ export function SearchResultItem({ procedure }: { procedure: Procedure }) {
   const { profile, isLoaded } = useInsuranceProfile();
   const lineItems = useQuery(api.search.getLineItems, expanded ? { procedureId: procedure._id as any } : "skip");
 
-  const formatCurrency = (cents: number | bigint) => {
+  const formatCurrency = (dollars: number | bigint) => {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
       maximumFractionDigits: 0,
-    }).format(Number(cents) / 100);
+    }).format(Number(dollars));
   };
 
   const formatDate = (ms: number | bigint) => {
@@ -41,10 +41,10 @@ export function SearchResultItem({ procedure }: { procedure: Procedure }) {
   
   const estimatedCost = isMatchedProfile ? formatCurrency(
     (() => {
-      const allowed = Number(procedure.allowedAmountCents);
-      const ded = typeof profile.deductible === "number" ? profile.deductible * 100 : 0;
-      const oop = typeof profile.oopMax === "number" ? profile.oopMax * 100 : Infinity;
-      const copay = typeof profile.copay === "number" ? profile.copay * 100 : 0;
+      const allowed = Number(procedure.allowedAmount);
+      const ded = typeof profile.deductible === "number" ? profile.deductible : 0;
+      const oop = typeof profile.oopMax === "number" ? profile.oopMax : Infinity;
+      const copay = typeof profile.copay === "number" ? profile.copay : 0;
       const coinsurancePercent = typeof profile.coinsurance === "number" ? profile.coinsurance : 0;
 
       const costAgainstDeductible = Math.min(ded, allowed);
@@ -89,14 +89,14 @@ export function SearchResultItem({ procedure }: { procedure: Procedure }) {
         {/* Amount Column */}
         <div className="flex flex-col items-start sm:col-span-3 sm:items-end">
           <div className="font-bold text-zinc-900 dark:text-zinc-100 text-base">
-            Allowed: {formatCurrency(procedure.allowedAmountCents)}
+            Allowed: {formatCurrency(procedure.allowedAmount)}
           </div>
           <div className="flex flex-col items-start text-xs text-zinc-500 sm:items-end dark:text-zinc-400 mt-0.5">
-            <span>Billed: {formatCurrency(procedure.billedAmountCents)}</span>
+            <span>Billed: {formatCurrency(procedure.billedAmount)}</span>
           </div>
           {isMatchedProfile && (
             <div className="mt-1 flex flex-col items-start text-xs sm:items-end">
-              <span className="font-bold text-blue-600 dark:text-blue-400">✨ Your Estimated Price: {estimatedCost}</span>
+              <span className="whitespace-nowrap font-bold text-blue-600 dark:text-blue-400">✨ Est. Price: {estimatedCost}</span>
             </div>
           )}
         </div>
@@ -123,9 +123,14 @@ export function SearchResultItem({ procedure }: { procedure: Procedure }) {
                   {lineItems.map((item) => (
                     <tr key={item._id} className="hover:bg-zinc-50 dark:hover:bg-zinc-900">
                       <td className="px-4 py-3 font-mono text-zinc-900 dark:text-zinc-100">{item.cptCode}</td>
-                      <td className="px-4 py-3">{item.serviceName || "—"}</td>
+                      <td className="px-4 py-3">
+                        <div>{item.serviceName || "—"}</div>
+                        {item.providerName && (
+                          <div className="text-xs text-zinc-500 dark:text-zinc-400">{item.providerName}</div>
+                        )}
+                      </td>
                       <td className="px-4 py-3 text-right">{item.units}</td>
-                      <td className="px-4 py-3 text-right font-medium">{formatCurrency(item.costPerUnitCents)}</td>
+                      <td className="px-4 py-3 text-right font-medium">{formatCurrency(item.costPerUnit)}</td>
                     </tr>
                   ))}
                 </tbody>
