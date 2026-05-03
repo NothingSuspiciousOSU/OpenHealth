@@ -8,6 +8,42 @@ import {
 } from "@/lib/shared/chat/documentContext";
 import { getOpenRouterProvider, getPdfContextModelId } from "./openrouter";
 
+const MEDICAL_BILL_EXTRACTION_PROMPT = [
+  "Parse this medical billing document and return JSON only.",
+  "Use this exact top-level shape:",
+  "{",
+  '  "procedures": [',
+  "    {",
+  '      "procedureDescription": string,',
+  '      "dateOfProcedure": string,',
+  '      "hospitalName": string,',
+  '      "location": { "city": string, "state": string },',
+  '      "insurance": { "providerName": string, "planName": string },',
+  '      "billedAmount": number,',
+  '      "allowedAmount": number',
+  "    }",
+  "  ],",
+  '  "procedureLineItems": [',
+  "    {",
+  '      "cptCode": string,',
+  '      "serviceName": string | null,',
+  '      "units": number,',
+  '      "providerName": string | null,',
+  '      "costPerUnit": number',
+  "    }",
+  "  ]",
+  "}",
+  "Rules:",
+  "- Return valid JSON only. No markdown, no code fences, no explanation text.",
+  "- dateOfProcedure must be an ISO 8601 datetime format: YYYY-MM-DDThh:mm:ssZ.",
+  "- billedAmount is the total charges from the hospital/provider.",
+  "- allowedAmount is billedAmount minus any contractual adjustments, negotiation, or writeoff. Do NOT include payments by insurance.",
+  "- costPerUnit should always be positive charges. Do not include any negative charges such as adjustments or payments to amount.",
+  "- Monetary fields must be float: dollar.cents.",
+  "- State code should be two letters.",
+  "- If a value is missing, use an empty string, 0, or null for serviceName.",
+].join("\n");
+
 export async function extractBillContextFromPdf(
   request: ExtractDocumentRequest,
 ) {
@@ -18,36 +54,14 @@ export async function extractBillContextFromPdf(
 
   const result = await generateText({
     model: openrouter(getPdfContextModelId()),
+    system: MEDICAL_BILL_EXTRACTION_PROMPT,
     messages: [
       {
         role: "user",
         content: [
           {
             type: "text",
-            text: [
-              "Extract structured medical bill context from this PDF.",
-              "Return valid JSON only. Do not use markdown or code fences.",
-              "Use this exact JSON shape:",
-              "{",
-              '  "summary": string,',
-              '  "providerName": string | null,',
-              '  "hospitalName": string | null,',
-              '  "insuranceProvider": string | null,',
-              '  "insurancePlan": string | null,',
-              '  "dateOfService": string | null,',
-              '  "billedAmount": number | null,',
-              '  "allowedAmount": number | null,',
-              '  "patientResponsibility": number | null,',
-              '  "lineItems": [{ "cptCode": string | null, "description": string | null, "units": number | null, "billedAmount": number | null, "allowedAmount": number | null }],',
-              '  "missingFields": string[],',
-              '  "confidence": number',
-              "}",
-              "Return only facts visible in the document.",
-              "Use null for unknown scalar fields and [] for missing line items.",
-              "Amounts should be numbers in dollars, not cents.",
-              "For line items, capture CPT/HCPCS codes, descriptions, units, billed amount, and allowed amount when visible.",
-              "Set confidence from 0 to 1 based on legibility and field certainty.",
-            ].join("\n"),
+            text: "Extract the attached PDF according to the system instructions.",
           },
           {
             type: "file",
@@ -87,20 +101,97 @@ function tryParseJson(text: string) {
 
 function normalizeBillContext(value: unknown): BillDocumentContext {
   const record = isRecord(value) ? value : {};
-  const lineItemsValue = firstDefined(record.lineItems, record.line_items);
+  const proceduresValue = firstDefined(record.procedures, record.Procedures);
+  const procedures = Array.isArray(proceduresValue) ? proceduresValue : [];
+  const firstProcedure = isRecord(procedures[0]) ? procedures[0] : {};
+  const insurance = isRecord(firstProcedure.insurance) ? firstProcedure.insurance : {};
+  const procedureLocation = isRecord(firstProcedure.location) ? firstProcedure.location : {};
+  const lineItemsValue = firstDefined(
+    record.procedureLineItems,
+    record.procedure_line_items,
+    record.lineItems,
+    record.line_items,
+  );
   const lineItems = Array.isArray(lineItemsValue) ? lineItemsValue : [];
+  const firstLineItem = isRecord(lineItems[0]) ? lineItems[0] : {};
+  const providerName = stringValue(
+    firstDefined(
+      record.providerName,
+      record.provider_name,
+      record.provider,
+      firstLineItem.providerName,
+      firstLineItem.provider_name,
+    ),
+  );
+  const hospitalName = stringValue(
+    firstDefined(
+      record.hospitalName,
+      record.hospital_name,
+      record.hospital,
+      firstProcedure.hospitalName,
+      firstProcedure.hospital_name,
+    ),
+  );
+  const insuranceProvider = stringValue(
+    firstDefined(
+      record.insuranceProvider,
+      record.insurance_provider,
+      record.payer,
+      insurance.providerName,
+      insurance.provider_name,
+    ),
+  );
+  const insurancePlan = stringValue(
+    firstDefined(
+      record.insurancePlan,
+      record.insurance_plan,
+      record.plan,
+      insurance.planName,
+      insurance.plan_name,
+    ),
+  );
+  const dateOfService = stringValue(
+    firstDefined(
+      record.dateOfService,
+      record.date_of_service,
+      record.service_date,
+      firstProcedure.dateOfProcedure,
+      firstProcedure.date_of_procedure,
+    ),
+  );
+  const billedAmount = numberValue(
+    firstDefined(
+      record.billedAmount,
+      record.billed_amount,
+      firstProcedure.billedAmount,
+      firstProcedure.billed_amount,
+    ),
+  );
+  const allowedAmount = numberValue(
+    firstDefined(
+      record.allowedAmount,
+      record.allowed_amount,
+      firstProcedure.allowedAmount,
+      firstProcedure.allowed_amount,
+    ),
+  );
 
   return {
-    summary: stringValue(record.summary) ?? "Extracted medical bill context.",
-    providerName: stringValue(firstDefined(record.providerName, record.provider_name, record.provider)),
-    hospitalName: stringValue(firstDefined(record.hospitalName, record.hospital_name, record.hospital)),
-    insuranceProvider: stringValue(
-      firstDefined(record.insuranceProvider, record.insurance_provider, record.payer),
-    ),
-    insurancePlan: stringValue(firstDefined(record.insurancePlan, record.insurance_plan, record.plan)),
-    dateOfService: stringValue(firstDefined(record.dateOfService, record.date_of_service, record.service_date)),
-    billedAmount: numberValue(firstDefined(record.billedAmount, record.billed_amount)),
-    allowedAmount: numberValue(firstDefined(record.allowedAmount, record.allowed_amount)),
+    summary: stringValue(record.summary) ?? buildSummary({
+      procedureDescription: stringValue(
+        firstDefined(firstProcedure.procedureDescription, firstProcedure.procedure_description),
+      ),
+      hospitalName,
+      city: stringValue(firstDefined(procedureLocation.city, record.city)),
+      state: stringValue(firstDefined(procedureLocation.state, record.state)),
+    }),
+    providerName,
+    hospitalName,
+    insuranceProvider,
+    insurancePlan,
+    dateOfService,
+    billedAmount,
+    allowedAmount,
     patientResponsibility: numberValue(
       firstDefined(
         record.patientResponsibility,
@@ -110,11 +201,14 @@ function normalizeBillContext(value: unknown): BillDocumentContext {
     ),
     lineItems: lineItems.map((item) => {
       const line = isRecord(item) ? item : {};
+      const units = numberValue(line.units);
+      const costPerUnit = numberValue(firstDefined(line.costPerUnit, line.cost_per_unit));
       return {
         cptCode: stringValue(firstDefined(line.cptCode, line.cpt_code, line.code)),
         description: stringValue(firstDefined(line.description, line.serviceName, line.service_name)),
-        units: numberValue(line.units),
-        billedAmount: numberValue(firstDefined(line.billedAmount, line.billed_amount)),
+        units,
+        billedAmount: numberValue(firstDefined(line.billedAmount, line.billed_amount))
+          ?? totalLineCharge(units, costPerUnit),
         allowedAmount: numberValue(firstDefined(line.allowedAmount, line.allowed_amount)),
       };
     }),
@@ -123,6 +217,29 @@ function normalizeBillContext(value: unknown): BillDocumentContext {
       : [],
     confidence: clampConfidence(numberValue(record.confidence) ?? 0.5),
   };
+}
+
+function buildSummary({
+  procedureDescription,
+  hospitalName,
+  city,
+  state,
+}: {
+  procedureDescription: string | null;
+  hospitalName: string | null;
+  city: string | null;
+  state: string | null;
+}) {
+  const location = [city, state].filter(Boolean).join(", ");
+  const details = [procedureDescription, hospitalName, location].filter(Boolean);
+  return details.length > 0
+    ? `Extracted medical bill context: ${details.join(" at ")}.`
+    : "Extracted medical bill context.";
+}
+
+function totalLineCharge(units: number | null, costPerUnit: number | null) {
+  if (units === null || costPerUnit === null) return null;
+  return Math.round(units * costPerUnit * 100) / 100;
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
