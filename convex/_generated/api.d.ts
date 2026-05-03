@@ -12,6 +12,7 @@ import type * as agent from "../agent.js";
 import type * as mockData from "../mockData.js";
 import type * as mockDataSets from "../mockDataSets.js";
 import type * as model_procedures from "../model/procedures.js";
+import type * as prestoredData from "../prestoredData.js";
 import type * as procedures from "../procedures.js";
 import type * as search from "../search.js";
 
@@ -26,6 +27,7 @@ declare const fullApi: ApiFromModules<{
   mockData: typeof mockData;
   mockDataSets: typeof mockDataSets;
   "model/procedures": typeof model_procedures;
+  prestoredData: typeof prestoredData;
   procedures: typeof procedures;
   search: typeof search;
 }>;
