@@ -2,9 +2,14 @@
 
 import { useQuery } from "convex/react";
 import { api } from "../convex/_generated/api";
+import { useState } from "react";
+
+import { AddUploadProcedureButton } from "./components/AddUploadProcedureButton";
+import { SearchBar } from "./components/SearchBar";
 
 export default function Home() {
   const tasks = useQuery(api.tasks.get);
+  const [query, setQuery] = useState("");
 
   return (
     <main className="flex min-h-screen flex-col items-center bg-zinc-50 px-6 py-20 text-zinc-950 dark:bg-black dark:text-zinc-50">
@@ -36,6 +41,17 @@ export default function Home() {
               ))}
             </ul>
           )}
+        </div>
+
+        <div className="mt-6">
+          <SearchBar
+            value={query}
+            onChange={setQuery}
+            placeholder="Ex: ACL Surgery or Specific CPT"
+          />
+          <div className="mt-3 flex justify-end">
+            <AddUploadProcedureButton onClick={() => {}} />
+          </div>
         </div>
       </div>
       </main>
