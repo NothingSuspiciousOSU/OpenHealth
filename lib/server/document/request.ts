@@ -108,7 +108,7 @@ export async function parseDocumentStructure(data: DocumentData): Promise<Parsed
             'Rules:',
             '- Return valid JSON only. No markdown, no code fences, no explanation text.',
             '- dateOfProcedure must be an ISO 8601 datetime format: YYYY-MM-DDThh:mm:ssZ.',
-            '- Monetary fields must be float.',
+            '- Monetary fields must be float: dollar.cents',
             '- If a value is missing, use an empty string, 0, or null for serviceName.',
         ].join('\n');
 
