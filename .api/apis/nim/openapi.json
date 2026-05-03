@@ -1,0 +1,2098 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "NVIDIA NIM API for nvidia/nemotron-parse",
+    "description": "The NVIDIA NIM REST API. Please see https://docs.api.nvidia.com/nim/reference/nvidia-nemotron-parse for more details.",
+    "version": "1.0.0",
+    "termsOfService": "https://nvidia.com/legal/terms-of-use",
+    "contact": {
+      "name": "NVIDIA Support",
+      "url": "https://help.nvidia.com/"
+    },
+    "license": {
+      "name": "NVIDIA Software and Model Evaluation License Agreement",
+      "url": "https://developer.download.nvidia.com/licenses/NVIDIA_Software_and_Model_Evaluation_License_Agreement.pdf"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://integrate.api.nvidia.com/v1/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Multimodal API",
+      "description": "This API performs inference using document content extraction models"
+    }
+  ],
+  "paths": {
+    "/chat/completions": {
+      "post": {
+        "tags": [
+          "Multimodal API"
+        ],
+        "summary": "Request response from the model",
+        "description": "Invokes inference using the model chat parameters. If uploading large images, this POST should be used in conjunction with the NVCF API which allows for the upload of large assets. \nYou can find details on how to use NVCF Asset APIs here: https://docs.api.nvidia.com/cloud-functions/reference/createasset",
+        "operationId": "invokeFunction",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "NVCF-INPUT-ASSET-REFERENCES",
+            "schema": {
+              "type": "string",
+              "maxLength": 370,
+              "format": "uuid"
+            },
+            "required": false,
+            "description": "String of asset IDs separated by commas. Data is uploaded to AWS S3 using NVCF Asset APIs and associated with these asset IDs.If the size of an image is more than 180KB, it needs to be uploaded to a presigned S3 URL bucket. The presigned URL allows for secure and temporary access to the S3 bucket for uploading the image. Once the asset is requested, an asset ID is generated for it. Please include this asset ID in this header and to use the uploaded image in a prompt, you need to refer to it using the following format:  `<img src=\"data:image/png;asset_id,{asset_id}\" />`."
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "messages": {
+                    "items": {
+                      "properties": {
+                        "role": {
+                          "allOf": [
+                            {
+                              "type": "string",
+                              "enum": [
+                                "assistant",
+                                "user"
+                              ],
+                              "title": "Role"
+                            }
+                          ],
+                          "description": "The role of the message's author."
+                        },
+                        "content": {
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "items": {
+                                "anyOf": [
+                                  {
+                                    "properties": {
+                                      "image_url": {
+                                        "properties": {
+                                          "url": {
+                                            "type": "string",
+                                            "title": "Url"
+                                          }
+                                        },
+                                        "type": "object",
+                                        "required": [
+                                          "url"
+                                        ],
+                                        "title": "ImageURL"
+                                      },
+                                      "type": {
+                                        "type": "string",
+                                        "enum": [
+                                          "image_url"
+                                        ],
+                                        "const": "image_url",
+                                        "title": "Type"
+                                      }
+                                    },
+                                    "type": "object",
+                                    "required": [
+                                      "image_url",
+                                      "type"
+                                    ],
+                                    "title": "NIMVLMChatCompletionContentPartImage"
+                                  },
+                                  {
+                                    "properties": {
+                                      "text": {
+                                        "type": "string",
+                                        "title": "Text"
+                                      },
+                                      "type": {
+                                        "type": "string",
+                                        "enum": [
+                                          "text"
+                                        ],
+                                        "const": "text",
+                                        "title": "Type"
+                                      }
+                                    },
+                                    "type": "object",
+                                    "required": [
+                                      "text",
+                                      "type"
+                                    ],
+                                    "title": "NIMVLMChatCompletionContentPartText"
+                                  }
+                                ]
+                              },
+                              "type": "array"
+                            }
+                          ],
+                          "title": "Content",
+                          "description": "The contents of the message.\n        <br>To pass images (only with role=`user`):\n        <br>    - When content is a string, image can be passed together with the text with `img` HTML tags that wraps \n        an image URL (`<img src=\"{url}\" />`), \n        base64 encoded image data (`<img src=\"data:image/{format};base64,{base64encodedimage}\" />`), \n        or an NVCF asset ID (`<img src=\"data:image/{format};asset_id,{asset_id}\" />`) \n        when the container is hosted in NVCF and the payload exceeds 200KB.\n        <br>    - When content is a list of objects, images can be passed as objects with type=`image_url`.\n        <br>    - In both cases, images can be PNG, JPG or JPEG.\n        <br>For `system` and `assistant` roles, the object list format is not supported.\n        "
+                        }
+                      },
+                      "type": "object",
+                      "required": [
+                        "role",
+                        "content"
+                      ],
+                      "title": "NIMLLMChatCompletionMessage"
+                    },
+                    "type": "array",
+                    "minItems": 1,
+                    "title": "Messages",
+                    "description": "A list of messages comprising the conversation so far."
+                  },
+                  "model": {
+                    "type": "string",
+                    "title": "Model",
+                    "description": "The model to use.",
+                    "default": "nvidia/nemotron-parse"
+                  },
+                  "frequency_penalty": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "maximum": 2,
+                        "minimum": -2
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Frequency Penalty",
+                    "description": "Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.",
+                    "default": 0
+                  },
+                  "max_tokens": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "maximum": 8192,
+                        "minimum": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Max Tokens",
+                    "description": "The maximum number of tokens that can be generated.",
+                    "default": 3500
+                  },
+                  "presence_penalty": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "maximum": 2,
+                        "minimum": -2
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Presence Penalty",
+                    "description": "Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.",
+                    "default": 0
+                  },
+                  "seed": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "maximum": 9223372036854776000,
+                        "minimum": -9223372036854776000
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Seed",
+                    "description": "Changing the seed will produce a different response with similar characteristics. Fixing the seed will reproduce the same results if all other parameters are also kept constant."
+                  },
+                  "stop": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Stop",
+                    "description": "Sequences where the API will stop generating further tokens."
+                  },
+                  "stream": {
+                    "anyOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Stream",
+                    "description": "If set, partial message deltas will be sent, like in ChatGPT. Tokens will be sent as data-only [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Event_stream_format) as they become available, with the stream terminated by a `data: [DONE]`",
+                    "default": false
+                  },
+                  "temperature": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "maximum": 2,
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Temperature",
+                    "description": "What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.",
+                    "default": 0
+                  },
+                  "top_p": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "maximum": 1,
+                        "exclusiveMinimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Top P",
+                    "description": "An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or `temperature` but not both.",
+                    "default": 1
+                  }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "required": [
+                  "messages",
+                  "model"
+                ],
+                "title": "NIMLLMChatCompletionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Invocation is fulfilled",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "title": "Id"
+                    },
+                    "object": {
+                      "type": "string",
+                      "enum": [
+                        "chat.completion"
+                      ],
+                      "const": "chat.completion",
+                      "title": "Object",
+                      "default": "chat.completion"
+                    },
+                    "created": {
+                      "type": "integer",
+                      "title": "Created"
+                    },
+                    "model": {
+                      "type": "string",
+                      "title": "Model"
+                    },
+                    "choices": {
+                      "items": {
+                        "properties": {
+                          "index": {
+                            "type": "integer",
+                            "title": "Index"
+                          },
+                          "message": {
+                            "properties": {
+                              "role": {
+                                "type": "string",
+                                "title": "Role"
+                              },
+                              "content": {
+                                "anyOf": [
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Content"
+                              }
+                            },
+                            "additionalProperties": false,
+                            "type": "object",
+                            "required": [
+                              "role"
+                            ],
+                            "title": "ChatMessage"
+                          },
+                          "finish_reason": {
+                            "anyOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "stop",
+                                  "length"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "title": "Finish Reason"
+                          },
+                          "stop_reason": {
+                            "anyOf": [
+                              {
+                                "type": "integer"
+                              },
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "title": "Stop Reason"
+                          }
+                        },
+                        "additionalProperties": false,
+                        "type": "object",
+                        "required": [
+                          "index",
+                          "message"
+                        ],
+                        "title": "ChatCompletionResponseChoice"
+                      },
+                      "type": "array",
+                      "title": "Choices"
+                    },
+                    "usage": {
+                      "properties": {
+                        "prompt_tokens": {
+                          "type": "integer",
+                          "title": "Prompt Tokens",
+                          "default": 0
+                        },
+                        "total_tokens": {
+                          "type": "integer",
+                          "title": "Total Tokens",
+                          "default": 0
+                        },
+                        "completion_tokens": {
+                          "anyOf": [
+                            {
+                              "type": "integer"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "title": "Completion Tokens",
+                          "default": 0
+                        }
+                      },
+                      "additionalProperties": false,
+                      "type": "object",
+                      "title": "UsageInfo"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "model",
+                    "choices",
+                    "usage"
+                  ],
+                  "title": "ChatCompletionResponse"
+                }
+              },
+              "text/event-stream": {
+                "schema": {
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "title": "Id"
+                    },
+                    "object": {
+                      "type": "string",
+                      "enum": [
+                        "chat.completion.chunk"
+                      ],
+                      "const": "chat.completion.chunk",
+                      "title": "Object",
+                      "default": "chat.completion.chunk"
+                    },
+                    "created": {
+                      "type": "integer",
+                      "title": "Created"
+                    },
+                    "model": {
+                      "type": "string",
+                      "title": "Model"
+                    },
+                    "choices": {
+                      "items": {
+                        "properties": {
+                          "index": {
+                            "type": "integer",
+                            "title": "Index"
+                          },
+                          "delta": {
+                            "properties": {
+                              "role": {
+                                "anyOf": [
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Role"
+                              },
+                              "content": {
+                                "anyOf": [
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Content"
+                              }
+                            },
+                            "additionalProperties": false,
+                            "type": "object",
+                            "title": "DeltaMessage"
+                          },
+                          "finish_reason": {
+                            "anyOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "stop",
+                                  "length"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "title": "Finish Reason"
+                          },
+                          "stop_reason": {
+                            "anyOf": [
+                              {
+                                "type": "integer"
+                              },
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "title": "Stop Reason"
+                          }
+                        },
+                        "additionalProperties": false,
+                        "type": "object",
+                        "required": [
+                          "index",
+                          "delta"
+                        ],
+                        "title": "ChatCompletionResponseStreamChoice"
+                      },
+                      "type": "array",
+                      "title": "Choices"
+                    },
+                    "usage": {
+                      "anyOf": [
+                        {
+                          "properties": {
+                            "prompt_tokens": {
+                              "type": "integer",
+                              "title": "Prompt Tokens",
+                              "default": 0
+                            },
+                            "total_tokens": {
+                              "type": "integer",
+                              "title": "Total Tokens",
+                              "default": 0
+                            },
+                            "completion_tokens": {
+                              "anyOf": [
+                                {
+                                  "type": "integer"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ],
+                              "title": "Completion Tokens",
+                              "default": 0
+                            }
+                          },
+                          "additionalProperties": false,
+                          "type": "object",
+                          "title": "UsageInfo"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "model",
+                    "choices"
+                  ],
+                  "title": "ChatCompletionStreamResponse"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "Result is pending. Client should poll using the requestId.\n",
+            "content": {
+              "application/json": {
+                "example": {},
+                "schema": {}
+              }
+            },
+            "headers": {
+              "NVCF-REQID": {
+                "description": "requestId required for pooling",
+                "schema": {
+                  "type": "string",
+                  "format": "uuid",
+                  "maxLength": 36
+                }
+              },
+              "NVCF-STATUS": {
+                "description": "Invocation status",
+                "schema": {
+                  "type": "string",
+                  "format": "^[a-zA-Z-]{1,64}$",
+                  "maxLength": 64
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation failed, provided entity could not be processed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "object": {
+                      "type": "string",
+                      "title": "Object",
+                      "default": "error"
+                    },
+                    "message": {
+                      "type": "string",
+                      "title": "Message"
+                    },
+                    "type": {
+                      "type": "string",
+                      "title": "Type"
+                    },
+                    "param": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Param"
+                    },
+                    "code": {
+                      "type": "integer",
+                      "title": "Code"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "message",
+                    "type",
+                    "code"
+                  ],
+                  "title": "ErrorResponse"
+                },
+                "example": {
+                  "type": "urn:nvcf-worker-service:problem-details:unprocessable-entity",
+                  "title": "Unprocessable Entity",
+                  "status": 422,
+                  "detail": "string",
+                  "instance": "/v2/nvcf/pexec/functions/e598bfc1-b058-41af-869d-556d3c7e1b48",
+                  "requestId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The invocation ended with an error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "object": {
+                      "type": "string",
+                      "title": "Object",
+                      "default": "error"
+                    },
+                    "message": {
+                      "type": "string",
+                      "title": "Message"
+                    },
+                    "type": {
+                      "type": "string",
+                      "title": "Type"
+                    },
+                    "param": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Param"
+                    },
+                    "code": {
+                      "type": "integer",
+                      "title": "Code"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "message",
+                    "type",
+                    "code"
+                  ],
+                  "title": "ErrorResponse"
+                },
+                "example": {
+                  "type": "urn:nvcf-worker-service:problem-details:internal-server-error",
+                  "title": "Internal Server Error",
+                  "status": 500,
+                  "detail": "string",
+                  "instance": "/v2/nvcf/pexec/functions/e598bfc1-b058-41af-869d-556d3c7e1b48",
+                  "requestId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+                }
+              }
+            }
+          }
+        },
+        "x-nvai-meta": {
+          "name": "Create chat completion",
+          "returns": "Returns a [chat completion](/docs/api-reference/chat/object) object.\n",
+          "path": "create",
+          "examples": [
+            {
+              "name": "document1",
+              "input": {
+                "image": "https://assets.ngc.nvidia.com/products/api-catalog/nemoretriever-parse/example_1.jpg",
+                "task_prompt": "markdown_bbox"
+              },
+              "requestJson": "{\n  \"model\": \"nvidia/nemotron-parse\",\n  \"tools\": [{\"type\": \"function\", \"function\": {\"name\": \"<%- input.task_prompt %>\"}}],\n  \"messages\": [\n      {\n          \"role\": \"user\",\n          \"content\": [{\"type\": \"image_url\", \"image_url\": {\"url\": \"<%- input.image %>\"}}]\n      }\n  ]\n}\n",
+              "responseJson": "{\n  \"id\": \"chatcmpl-1074badc476a4030bcfeb234170b91b6\",\n  \"object\": \"chat.completion\",\n  \"created\": 1761100218,\n  \"model\": \"nvidia/nemotron-parse\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"refusal\": null,\n        \"annotations\": null,\n        \"audio\": null,\n        \"function_call\": null,\n        \"tool_calls\": [\n          {\n            \"id\": \"chatcmpl-tool-27b642d737d94a4c8d8f159a8344d08a\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"markdown_bbox\",\n              \"arguments\": \"[[{\\\"bbox\\\": {\\\"xmin\\\": 0.5422449275362318, \\\"ymin\\\": 0.03609420949902409, \\\"xmax\\\": 0.9328985507246378, \\\"ymax\\\": 0.05581470396877032}, \\\"text\\\": \\\"**CUDA C++ Programming Guide, Release 12.8**\\\", \\\"type\\\": \\\"Page-header\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.07575942028985506, \\\"ymin\\\": 0.407718932986337, \\\"xmax\\\": 0.9328985507246378, \\\"ymax\\\": 0.44196330513988286}, \\\"text\\\": \\\"These thread scopes are implemented as extensions to standard C++ in the CUDA Standard C++ library.\\\", \\\"type\\\": \\\"Text\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.07575942028985506, \\\"ymin\\\": 0.4754081977878985, \\\"xmax\\\": 0.513136231884058, \\\"ymax\\\": 0.508586597267404}, \\\"text\\\": \\\"## 5.6. Compute Capability\\\", \\\"type\\\": \\\"Section-header\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.07575942028985506, \\\"ymin\\\": 0.5305722836694861, \\\"xmax\\\": 0.9328985507246378, \\\"ymax\\\": 0.5950636304489265}, \\\"text\\\": \\\"The _compute capability_ of a device is represented by a version number, also sometimes called its \\\\\\\"SM version\\\\\\\". This version number identifies the features supported by the GPU hardware and is used by applications at runtime to determine which hardware features and/or instructions are available on the present GPU.\\\", \\\"type\\\": \\\"Text\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.07575942028985506, \\\"ymin\\\": 0.600260247234873, \\\"xmax\\\": 0.9328985507246378, \\\"ymax\\\": 0.6335718932986337}, \\\"text\\\": \\\"The compute capability comprises a major revision number _X_ and a minor revision number _Y_ and is denoted by _X.Y_.\\\", \\\"type\\\": \\\"Text\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.07575942028985506, \\\"ymin\\\": 0.6398344827586208, \\\"xmax\\\": 0.9328985507246378, \\\"ymax\\\": 0.719915679895901}, \\\"text\\\": \\\"Devices with the same major revision number are of the same core architecture. The major revision number is 9 for devices based on the _NVIDIA Hopper GPU_ architecture, 8 for devices based on the _NVIDIA Ampere GPU_ architecture, 7 for devices based on the _Volta_ architecture, 6 for devices based on the _Pascal_ architecture, 5 for devices based on the _Maxwell_ architecture, and 3 for devices based on the _Kepler_ architecture.\\\", \\\"type\\\": \\\"Text\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.07575942028985506, \\\"ymin\\\": 0.7251122966818477, \\\"xmax\\\": 0.9328985507246378, \\\"ymax\\\": 0.7584239427456083}, \\\"text\\\": \\\"The minor revision number corresponds to an incremental improvement to the core architecture, possibly including new features.\\\", \\\"type\\\": \\\"Text\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.07575942028985506, \\\"ymin\\\": 0.76375380611581, \\\"xmax\\\": 0.9328985507246378, \\\"ymax\\\": 0.7979981782693559}, \\\"text\\\": \\\"_Turing_ is the architecture for devices of compute capability 7.5, and is an incremental update based on the _Volta_ architecture.\\\", \\\"type\\\": \\\"Text\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.07575942028985506, \\\"ymin\\\": 0.8031947950553024, \\\"xmax\\\": 0.9328985507246378, \\\"ymax\\\": 0.836506441119063}, \\\"text\\\": \\\"_CUDA-Enabled GPUs_ lists of all CUDA-enabled devices along with their compute capability. _Compute Capabilities_ gives the technical specifications of each compute capability.\\\", \\\"type\\\": \\\"Text\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.07575942028985506, \\\"ymin\\\": 0.8574261548471047, \\\"xmax\\\": 0.9328985507246378, \\\"ymax\\\": 0.9229834743005856}, \\\"text\\\": \\\"**Note:** The compute capability version of a particular GPU should not be confused with the CUDA version (for example, CUDA 7.5, CUDA 8, CUDA 9), which is the version of the CUDA _software platform_. The CUDA platform is used by application developers to create applications that run on many generations of GPU architectures, including future GPU architectures yet to be invented. While new versions\\\", \\\"type\\\": \\\"Text\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.07575942028985506, \\\"ymin\\\": 0.956295120364346, \\\"xmax\\\": 0.9328985507246378, \\\"ymax\\\": 0.974949642160052}, \\\"text\\\": \\\"**5.6. Compute Capability** 19\\\", \\\"type\\\": \\\"Page-footer\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.0802376811594203, \\\"ymin\\\": 0.09951958360442419, \\\"xmax\\\": 0.9300623188405798, \\\"ymax\\\": 0.3910631099544567}, \\\"text\\\": \\\"\\\\\\\\begin{tabular}{cc}\\\\n**Thread Scope** & **Description** \\\\\\\\\\\\\\\\ cuda::thread_scope::thread_scope_thread & Only the CUDA thread which initiated asynchronous operations synchronizes. \\\\\\\\\\\\\\\\ cuda::thread_scope::thread_scope_block & All or any CUDA threads within the same thread block as the initiating thread synchronizes. \\\\\\\\\\\\\\\\ cuda::thread_scope::thread_scope_device & All or any CUDA threads in the same GPU device as the initiating thread synchronizes. \\\\\\\\\\\\\\\\ cuda::thread_scope::thread_scope_system & All or any CUDA or CPU threads in the same system as the initiating thread synchronizes. \\\\\\\\\\\\\\\\ \\\\\\\\end{tabular}\\\", \\\"type\\\": \\\"Table\\\"}]]\"\n            }\n          }\n        ],\n        \"reasoning_content\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"stop_reason\": null\n    }\n  ],\n  \"service_tier\": null,\n  \"system_fingerprint\": null,\n  \"usage\": {\n    \"prompt_tokens\": 5,\n    \"total_tokens\": 672,\n    \"completion_tokens\": 667,\n    \"prompt_tokens_details\": null\n  },\n  \"prompt_logprobs\": null,\n  \"kv_transfer_params\": null\n}\n"
+            },
+            {
+              "name": "document2",
+              "input": {
+                "image": "https://assets.ngc.nvidia.com/products/api-catalog/nemotron-parse/example_2.jpg",
+                "task_prompt": "markdown_bbox"
+              },
+              "requestJson": "{\n  \"model\": \"nvidia/nemotron-parse\",\n  \"tools\": [{\"type\": \"function\", \"function\": {\"name\": \"<%- input.task_prompt %>\"}}],\n  \"messages\": [\n      {\n          \"role\": \"user\",\n          \"content\": [{\"type\": \"image_url\", \"image_url\": {\"url\": \"<%- input.image %>\"}}]\n      }\n  ]\n}\n",
+              "responseJson": "{\n  \"id\": \"chatcmpl-176bacf3c57740b79775f5e1ac510e98\",\n  \"object\": \"chat.completion\",\n  \"created\": 1761288425,\n  \"model\": \"nvidia/nemotron-parse\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": null,\n        \"refusal\": null,\n        \"annotations\": null,\n        \"audio\": null,\n        \"function_call\": null,\n        \"tool_calls\": [\n          {\n            \"id\": \"chatcmpl-tool-a35b6925ef0f4d2e878f432534304387\",\n            \"type\": \"function\",\n            \"function\": {\n              \"name\": \"markdown_bbox\",\n              \"arguments\": \"[[{\\\"bbox\\\": {\\\"xmin\\\": 0.0565878453038674, \\\"ymin\\\": 0.0633, \\\"xmax\\\": 0.9412497237569062, \\\"ymax\\\": 0.0797}, \\\"text\\\": \\\"_Appl. Sci._ **2023**, _13_, 12967 4 of 21\\\", \\\"type\\\": \\\"Page-header\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.2732861878453039, \\\"ymin\\\": 0.3055, \\\"xmax\\\": 0.9412497237569062, \\\"ymax\\\": 0.518}, \\\"text\\\": \\\"The adopted experimental equipment for performing VHCF tests was an ultrasonic fatigue testing machine (UFTM). The UFTM is shown in Figure 1 and was developed at Politecnico di Torino for testing components in the chosen fatigue range. The UFTM can perform tests at \\\\\\\\(20\\\\\\\\pm 0.5\\\\\\\\) kHz under fully reversed tension-compression stress (_R_=-1), which significantly reduces the testing time compared to conventional testing apparatuses. To perform fatigue tests, the UFTM adopts the following devices: (i) an electric generator (Branson DCX 4 kW, not visible in Figure 1) which generates an electrical sinusoidal wave at 20 kHz; (ii) a piezoelectric transducer, responsible for converting the electrical wave into a mechanical vibration; (iii) a booster and a horn made of Ti-6Al-4V that amplify and convey the vibration to the specimen under testing; (iv) the specimen under investigation, which was designed for the UFTM resonance conditions; (v) a laser displacement sensor that measures the displacement at the specimen free end; (vi) vortex tubes to keep the temperature controlled in the range (20-24) \\\\\\\\(^\\\\\\\\circ\\\\\\\\)C; and (vii) a temperature sensor to observe the temperature evolution during the test execution.\\\", \\\"type\\\": \\\"Text\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.2732861878453039, \\\"ymin\\\": 0.8484, \\\"xmax\\\": 0.9412497237569062, \\\"ymax\\\": 0.932}, \\\"text\\\": \\\"Performing fatigue tests with the UFTM consists of the application of alternated stress in specimens that are designed to work in resonance conditions. The specimen and the vibration components are thus designed to have a resonance frequency corresponding to a longitudinal mode of vibration close to 20 kHz. Moreover, the UFTM adopts a closed-loop proportional-integrative-derivative (PID) control logic where the displacement measured\\\", \\\"type\\\": \\\"Text\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.0565878453038674, \\\"ymin\\\": 0.1375, \\\"xmax\\\": 0.9401116022099447, \\\"ymax\\\": 0.2891}, \\\"text\\\": \\\"\\\\\\\\begin{tabular}{cccccc}\\\\n\\\\\\\\multirow{2}{*}{**Quantity**} & \\\\\\\\multirow{2}{*}{**Symbol**} & \\\\\\\\multirow{2}{*}{**Units**} & \\\\\\\\multicolumn{3}{c}{**Materials**} \\\\\\\\\\\\\\\\ & & & **Ti-6Al-4V** & **Al. 7075 T6** & **SikaPower\\\\u00ae-1277** \\\\\\\\\\\\\\\\ Modulus of elasticity & E & MPa & 115,000 & 71,955 \\\\u00b1 224 & 2280 \\\\u00b1 533 \\\\\\\\\\\\\\\\ Poisson\\\\u2019s ratio & _v_ & / & 0.34 & 0.3 & 0.33 \\\\\\\\\\\\\\\\ Ultimate tensile strength & _\\\\u03c3uts_ & MPa & 950 & 610 \\\\u00b1 15 & 35.7 \\\\u00b1 1.4 \\\\\\\\\\\\\\\\ Density & _\\\\u03c1_ & g/cc & 4.395 & 2.8 & 1.1 \\\\\\\\\\\\\\\\ Loss factor & LF & / & 2.96 \\\\u00d7 10-4 & 3.5 \\\\u00d7 10-3 & 2 \\\\u00d7 10-2 \\\\\\\\\\\\\\\\ Viscosity & V & Pa\\\\u00b7s & / & / & 430 (at 20 \\\\u00b0C) \\\\\\\\\\\\\\\\ \\\\\\\\end{tabular}\\\", \\\"type\\\": \\\"Table\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.1543524861878453, \\\"ymin\\\": 0.5305, \\\"xmax\\\": 0.8500861878453039, \\\"ymax\\\": 0.8187}, \\\"text\\\": \\\"Piezoelectric transducer Vortex tube Booster Horn Temperature sensor Specimen Laser-displacement sensor\\\", \\\"type\\\": \\\"Picture\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.2732861878453039, \\\"ymin\\\": 0.1109, \\\"xmax\\\": 0.5322088397790055, \\\"ymax\\\": 0.1281}, \\\"text\\\": \\\"** 1.** Adopted material properties.\\\", \\\"type\\\": \\\"Caption\\\"}, {\\\"bbox\\\": {\\\"xmin\\\": 0.2732861878453039, \\\"ymin\\\": 0.8305, \\\"xmax\\\": 0.526632044198895, \\\"ymax\\\": 0.8461}, \\\"text\\\": \\\"**Figure 1.** The UFTM equipment [43].\\\", \\\"type\\\": \\\"Caption\\\"}]]\"\n            }\n          }\n        ],\n        \"reasoning_content\": null\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"stop_reason\": null\n    }\n  ],\n  \"service_tier\": null,\n  \"system_fingerprint\": null,\n  \"usage\": {\n    \"prompt_tokens\": 5,\n    \"total_tokens\": 881,\n    \"completion_tokens\": 876,\n    \"prompt_tokens_details\": null\n  },\n  \"prompt_logprobs\": null,\n  \"kv_transfer_params\": null\n}\n"
+            }
+          ],
+          "templates": [
+            {
+              "title": "Default",
+              "requestEjs": {
+                "python": "import os\nimport sys\nimport base64\nimport json\nimport mimetypes\nimport requests\n\nnvai_url = \"https://integrate.api.nvidia.com/v1/chat/completions\"\n\nheaders = {\n    \"Authorization\": f\"Bearer $API_KEY_REQUIRED_IF_EXECUTING_OUTSIDE_NGC\",\n    \"Accept\": \"application/json\",\n    \"Content-Type\": \"application/json\",\n}\n\ntools = [\n    \"markdown_bbox\",\n    \"markdown_no_bbox\",\n    \"detection_only\",\n]\n\ndef _read_image_as_base64(path):\n    with open(path, \"rb\") as f:\n        data = f.read()\n    b64 = base64.b64encode(data).decode(\"ascii\")\n    # guess mime from extension; default to jpeg\n    mime, _ = mimetypes.guess_type(path)\n    if mime is None:\n        mime = \"image/jpeg\"\n    return b64, mime\n\ndef _generate_content(task_id, b64_str, mime):\n    if task_id < 0 or task_id >= len(tools):\n        print(f\"task_id should be within [0, {len(tools)-1}]\")\n        sys.exit(1)\n    tool_name = tools[task_id]\n    media_tag = f'<img src=\"data:{mime};base64,{b64_str}\" />'\n    content = f\"{media_tag}\"\n    tool_spec = [{\"type\": \"function\", \"function\": {\"name\": tool_name}}]\n    return content, tool_spec, tool_name\n\nif __name__ == \"__main__\":\n    \"\"\"\n    Usage: python test.py <test_image> <task_id>\n    \"\"\"\n    if len(sys.argv) != 3:\n        print(\"Usage: python test.py <test_image> <task_id>\"\n              \"\\nFor example: python test.py car.jpg 0\")\n        sys.exit(1)\n\n    image_path = sys.argv[1]\n    task_id = int(sys.argv[2])\n\n    b64_str, mime = _read_image_as_base64(image_path)\n    content, tool_spec, tool_name = _generate_content(task_id, b64_str, mime)\n\n    inputs = {\n        \"model\": \"nvidia/nemotron-parse\",\n        \"messages\": [\n            {\n                \"role\": \"user\", \n                \"content\": content\n            }\n        ],\n        \"tools\": tool_spec,\n        \"tool_choice\": {\"type\": \"function\", \"function\": {\"name\": tool_name}},\n        \"max_tokens\": 1024,\n    }\n\n    response = requests.post(nvai_url, headers=headers, json=inputs, timeout=120)\n    try:\n        response.raise_for_status()\n    except requests.HTTPError as e:\n        print(\"Status:\", response.status_code)\n        print(\"Body:\", response.text)\n        raise\n\n    print(json.dumps(response.json(), ensure_ascii=False, indent=2))\n",
+                "curl": "#!/bin/bash\n\nNVAI_URL=\"https://integrate.api.nvidia.com/v1/chat/completions\"\nAPI_KEY=\"$API_KEY_REQUIRED_IF_EXECUTING_OUTSIDE_NGC\"\n\nTOOLS=(\"markdown_bbox\" \"markdown_no_bbox\" \"detection_only\")\n\nif [[ $# -ne 2 ]]; then\n  echo \"Usage: $0 <test_image> <task_id>\"\n  echo \"Example: $0 car.jpg 0\"\n  exit 1\nfi\n\nIMAGE_PATH=\"$1\"\nTASK_ID=\"$2\"\n\nif [[ ! -f \"$IMAGE_PATH\" ]]; then\n  echo \"Error: file '$IMAGE_PATH' not found.\"\n  exit 1\nfi\n\nif (( TASK_ID < 0 || TASK_ID >= ${#TOOLS[@]} )); then\n  echo \"task_id should be within [0, $((${#TOOLS[@]} - 1))]\"\n  exit 1\nfi\n\nTOOL_NAME=\"${TOOLS[$TASK_ID]}\"\n\nB64_STR=$(base64 -w 0 \"$IMAGE_PATH\")\n\nMIME=$(file --mime-type -b \"$IMAGE_PATH\")\nif [[ -z \"$MIME\" ]]; then\n  MIME=\"image/jpeg\"\nfi\n\nMEDIA_TAG=\"data:${MIME};base64,${B64_STR}\"\n\ntmp_json=$(mktemp)\ncat > \"$tmp_json\" <<EOF\n{\n  \"model\": \"nvidia/nemotron-parse\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": [\n          {\n            \"type\": \"image_url\",\n            \"image_url\": {\n              \"url\": \"$MEDIA_TAG\"\n            }\n          }\n        ]\n    }\n  ],\n  \"tools\": [\n    {\n      \"type\": \"function\",\n      \"function\": {\n        \"name\": \"${TOOL_NAME}\"\n      }\n    }\n  ],\n  \"max_tokens\": 1024\n}\nEOF\n\ncurl -s -X POST \"$NVAI_URL\" \\\n  -H \"Authorization: Bearer ${API_KEY}\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Accept: application/json\" \\\n  -d @\"$tmp_json\" | jq .\n\nrm -f \"$tmp_json\"\n"
+              },
+              "response": "{\n  \"id\": \"...\",\n  \"object\": \"chat.completion\",\n  \"created\": ...,\n  \"model\": \"nvidia/nemotron-parse\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"...\"\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\",\n      \"stop_reason\": null\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 5,\n    \"total_tokens\": 35,\n    \"completion_tokens\": 30\n  },\n  \"prompt_logprobs\": null\n}\n"
+            }
+          ]
+        }
+      }
+    },
+    "/status/{requestId}": {
+      "get": {
+        "tags": [
+          "Multimodal API"
+        ],
+        "summary": "Gets the result of an earlier function invocation request that returned a status of 202.",
+        "operationId": "getFunctionInvocationResult",
+        "parameters": [
+          {
+            "name": "requestId",
+            "in": "path",
+            "description": "requestId to poll results",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "maxLength": 36
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Invocation is fulfilled",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "title": "Id"
+                    },
+                    "object": {
+                      "type": "string",
+                      "enum": [
+                        "chat.completion"
+                      ],
+                      "const": "chat.completion",
+                      "title": "Object",
+                      "default": "chat.completion"
+                    },
+                    "created": {
+                      "type": "integer",
+                      "title": "Created"
+                    },
+                    "model": {
+                      "type": "string",
+                      "title": "Model"
+                    },
+                    "choices": {
+                      "items": {
+                        "properties": {
+                          "index": {
+                            "type": "integer",
+                            "title": "Index"
+                          },
+                          "message": {
+                            "properties": {
+                              "role": {
+                                "type": "string",
+                                "title": "Role"
+                              },
+                              "content": {
+                                "anyOf": [
+                                  {
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ],
+                                "title": "Content"
+                              }
+                            },
+                            "additionalProperties": false,
+                            "type": "object",
+                            "required": [
+                              "role"
+                            ],
+                            "title": "ChatMessage"
+                          },
+                          "finish_reason": {
+                            "anyOf": [
+                              {
+                                "type": "string",
+                                "enum": [
+                                  "stop",
+                                  "length"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "title": "Finish Reason"
+                          },
+                          "stop_reason": {
+                            "anyOf": [
+                              {
+                                "type": "integer"
+                              },
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "title": "Stop Reason"
+                          }
+                        },
+                        "additionalProperties": false,
+                        "type": "object",
+                        "required": [
+                          "index",
+                          "message"
+                        ],
+                        "title": "ChatCompletionResponseChoice"
+                      },
+                      "type": "array",
+                      "title": "Choices"
+                    },
+                    "usage": {
+                      "properties": {
+                        "prompt_tokens": {
+                          "type": "integer",
+                          "title": "Prompt Tokens",
+                          "default": 0
+                        },
+                        "total_tokens": {
+                          "type": "integer",
+                          "title": "Total Tokens",
+                          "default": 0
+                        },
+                        "completion_tokens": {
+                          "anyOf": [
+                            {
+                              "type": "integer"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "title": "Completion Tokens",
+                          "default": 0
+                        }
+                      },
+                      "additionalProperties": false,
+                      "type": "object",
+                      "title": "UsageInfo"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "model",
+                    "choices",
+                    "usage"
+                  ],
+                  "title": "ChatCompletionResponse"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "Result is pending. Client should poll using the requestId.\n",
+            "content": {
+              "application/json": {
+                "example": {},
+                "schema": {}
+              }
+            },
+            "headers": {
+              "NVCF-REQID": {
+                "description": "requestId required for pooling",
+                "schema": {
+                  "type": "string",
+                  "format": "uuid",
+                  "maxLength": 36
+                }
+              },
+              "NVCF-STATUS": {
+                "description": "Invocation status",
+                "schema": {
+                  "type": "string",
+                  "format": "^[a-zA-Z-]{1,64}$",
+                  "maxLength": 64
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "The invocation ended with an error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "object": {
+                      "type": "string",
+                      "title": "Object",
+                      "default": "error"
+                    },
+                    "message": {
+                      "type": "string",
+                      "title": "Message"
+                    },
+                    "type": {
+                      "type": "string",
+                      "title": "Type"
+                    },
+                    "param": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Param"
+                    },
+                    "code": {
+                      "type": "integer",
+                      "title": "Code"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "message",
+                    "type",
+                    "code"
+                  ],
+                  "title": "ErrorResponse"
+                },
+                "example": {
+                  "type": "urn:nvcf-worker-service:problem-details:unprocessable-entity",
+                  "title": "Unprocessable Entity",
+                  "status": 422,
+                  "detail": "string",
+                  "instance": "/v2/nvcf/pexec/functions/e598bfc1-b058-41af-869d-556d3c7e1b48",
+                  "requestId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The invocation ended with an error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "object": {
+                      "type": "string",
+                      "title": "Object",
+                      "default": "error"
+                    },
+                    "message": {
+                      "type": "string",
+                      "title": "Message"
+                    },
+                    "type": {
+                      "type": "string",
+                      "title": "Type"
+                    },
+                    "param": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Param"
+                    },
+                    "code": {
+                      "type": "integer",
+                      "title": "Code"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "message",
+                    "type",
+                    "code"
+                  ],
+                  "title": "ErrorResponse"
+                },
+                "example": {
+                  "type": "urn:nvcf-worker-service:problem-details:internal-server-error",
+                  "title": "Internal Server Error",
+                  "status": 500,
+                  "detail": "string",
+                  "instance": "/v2/nvcf/pexec/functions/e598bfc1-b058-41af-869d-556d3c7e1b48",
+                  "requestId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "Token": []
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "Token": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    },
+    "schemas": {
+      "ChatCompletionResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "object": {
+            "type": "string",
+            "enum": [
+              "chat.completion"
+            ],
+            "const": "chat.completion",
+            "title": "Object",
+            "default": "chat.completion"
+          },
+          "created": {
+            "type": "integer",
+            "title": "Created"
+          },
+          "model": {
+            "type": "string",
+            "title": "Model"
+          },
+          "choices": {
+            "items": {
+              "properties": {
+                "index": {
+                  "type": "integer",
+                  "title": "Index"
+                },
+                "message": {
+                  "properties": {
+                    "role": {
+                      "type": "string",
+                      "title": "Role"
+                    },
+                    "content": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Content"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "type": "object",
+                  "required": [
+                    "role"
+                  ],
+                  "title": "ChatMessage"
+                },
+                "finish_reason": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "stop",
+                        "length"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Finish Reason"
+                },
+                "stop_reason": {
+                  "anyOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Stop Reason"
+                }
+              },
+              "additionalProperties": false,
+              "type": "object",
+              "required": [
+                "index",
+                "message"
+              ],
+              "title": "ChatCompletionResponseChoice"
+            },
+            "type": "array",
+            "title": "Choices"
+          },
+          "usage": {
+            "properties": {
+              "prompt_tokens": {
+                "type": "integer",
+                "title": "Prompt Tokens",
+                "default": 0
+              },
+              "total_tokens": {
+                "type": "integer",
+                "title": "Total Tokens",
+                "default": 0
+              },
+              "completion_tokens": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Completion Tokens",
+                "default": 0
+              }
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "title": "UsageInfo"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "model",
+          "choices",
+          "usage"
+        ],
+        "title": "ChatCompletionResponse"
+      },
+      "ChatCompletionResponseChoice": {
+        "properties": {
+          "index": {
+            "type": "integer",
+            "title": "Index"
+          },
+          "message": {
+            "properties": {
+              "role": {
+                "type": "string",
+                "title": "Role"
+              },
+              "content": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Content"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "required": [
+              "role"
+            ],
+            "title": "ChatMessage"
+          },
+          "finish_reason": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "stop",
+                  "length"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Finish Reason"
+          },
+          "stop_reason": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Stop Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "index",
+          "message"
+        ],
+        "title": "ChatCompletionResponseChoice"
+      },
+      "ChatCompletionResponseStreamChoice": {
+        "properties": {
+          "index": {
+            "type": "integer",
+            "title": "Index"
+          },
+          "delta": {
+            "properties": {
+              "role": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Role"
+              },
+              "content": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Content"
+              }
+            },
+            "additionalProperties": false,
+            "type": "object",
+            "title": "DeltaMessage"
+          },
+          "finish_reason": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "stop",
+                  "length"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Finish Reason"
+          },
+          "stop_reason": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Stop Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "index",
+          "delta"
+        ],
+        "title": "ChatCompletionResponseStreamChoice"
+      },
+      "ChatCompletionStreamResponse": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "object": {
+            "type": "string",
+            "enum": [
+              "chat.completion.chunk"
+            ],
+            "const": "chat.completion.chunk",
+            "title": "Object",
+            "default": "chat.completion.chunk"
+          },
+          "created": {
+            "type": "integer",
+            "title": "Created"
+          },
+          "model": {
+            "type": "string",
+            "title": "Model"
+          },
+          "choices": {
+            "items": {
+              "properties": {
+                "index": {
+                  "type": "integer",
+                  "title": "Index"
+                },
+                "delta": {
+                  "properties": {
+                    "role": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Role"
+                    },
+                    "content": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Content"
+                    }
+                  },
+                  "additionalProperties": false,
+                  "type": "object",
+                  "title": "DeltaMessage"
+                },
+                "finish_reason": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "stop",
+                        "length"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Finish Reason"
+                },
+                "stop_reason": {
+                  "anyOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Stop Reason"
+                }
+              },
+              "additionalProperties": false,
+              "type": "object",
+              "required": [
+                "index",
+                "delta"
+              ],
+              "title": "ChatCompletionResponseStreamChoice"
+            },
+            "type": "array",
+            "title": "Choices"
+          },
+          "usage": {
+            "anyOf": [
+              {
+                "properties": {
+                  "prompt_tokens": {
+                    "type": "integer",
+                    "title": "Prompt Tokens",
+                    "default": 0
+                  },
+                  "total_tokens": {
+                    "type": "integer",
+                    "title": "Total Tokens",
+                    "default": 0
+                  },
+                  "completion_tokens": {
+                    "anyOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "title": "Completion Tokens",
+                    "default": 0
+                  }
+                },
+                "additionalProperties": false,
+                "type": "object",
+                "title": "UsageInfo"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "model",
+          "choices"
+        ],
+        "title": "ChatCompletionStreamResponse"
+      },
+      "ChatMessage": {
+        "properties": {
+          "role": {
+            "type": "string",
+            "title": "Role"
+          },
+          "content": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Content"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "role"
+        ],
+        "title": "ChatMessage"
+      },
+      "DeltaMessage": {
+        "properties": {
+          "role": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Role"
+          },
+          "content": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Content"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "DeltaMessage"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "object": {
+            "type": "string",
+            "title": "Object",
+            "default": "error"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "param": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Param"
+          },
+          "code": {
+            "type": "integer",
+            "title": "Code"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "message",
+          "type",
+          "code"
+        ],
+        "title": "ErrorResponse"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "properties": {
+                "loc": {
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      }
+                    ]
+                  },
+                  "type": "array",
+                  "title": "Location"
+                },
+                "msg": {
+                  "type": "string",
+                  "title": "Message"
+                },
+                "type": {
+                  "type": "string",
+                  "title": "Error Type"
+                }
+              },
+              "type": "object",
+              "required": [
+                "loc",
+                "msg",
+                "type"
+              ],
+              "title": "ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ImageURL": {
+        "properties": {
+          "url": {
+            "type": "string",
+            "title": "Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "url"
+        ],
+        "title": "ImageURL"
+      },
+      "NIMLLMChatCompletionMessage": {
+        "properties": {
+          "role": {
+            "allOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "assistant",
+                  "user"
+                ],
+                "title": "Role"
+              }
+            ],
+            "description": "The role of the message's author."
+          },
+          "content": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "image_url": {
+                          "properties": {
+                            "url": {
+                              "type": "string",
+                              "title": "Url"
+                            }
+                          },
+                          "type": "object",
+                          "required": [
+                            "url"
+                          ],
+                          "title": "ImageURL"
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "image_url"
+                          ],
+                          "const": "image_url",
+                          "title": "Type"
+                        }
+                      },
+                      "type": "object",
+                      "required": [
+                        "image_url",
+                        "type"
+                      ],
+                      "title": "NIMVLMChatCompletionContentPartImage"
+                    },
+                    {
+                      "properties": {
+                        "text": {
+                          "type": "string",
+                          "title": "Text"
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "text"
+                          ],
+                          "const": "text",
+                          "title": "Type"
+                        }
+                      },
+                      "type": "object",
+                      "required": [
+                        "text",
+                        "type"
+                      ],
+                      "title": "NIMVLMChatCompletionContentPartText"
+                    }
+                  ]
+                },
+                "type": "array"
+              }
+            ],
+            "title": "Content",
+            "description": "The contents of the message.\n        <br>To pass images (only with role=`user`):\n        <br>    - When content is a string, image can be passed together with the text with `img` HTML tags that wraps \n        an image URL (`<img src=\"{url}\" />`), \n        base64 encoded image data (`<img src=\"data:image/{format};base64,{base64encodedimage}\" />`), \n        or an NVCF asset ID (`<img src=\"data:image/{format};asset_id,{asset_id}\" />`) \n        when the container is hosted in NVCF and the payload exceeds 200KB.\n        <br>    - When content is a list of objects, images can be passed as objects with type=`image_url`.\n        <br>    - In both cases, images can be PNG, JPG or JPEG.\n        <br>For `system` and `assistant` roles, the object list format is not supported.\n        "
+          }
+        },
+        "type": "object",
+        "required": [
+          "role",
+          "content"
+        ],
+        "title": "NIMLLMChatCompletionMessage"
+      },
+      "NIMLLMChatCompletionRequest": {
+        "properties": {
+          "messages": {
+            "items": {
+              "properties": {
+                "role": {
+                  "allOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "assistant",
+                        "user"
+                      ],
+                      "title": "Role"
+                    }
+                  ],
+                  "description": "The role of the message's author."
+                },
+                "content": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "items": {
+                        "anyOf": [
+                          {
+                            "properties": {
+                              "image_url": {
+                                "properties": {
+                                  "url": {
+                                    "type": "string",
+                                    "title": "Url"
+                                  }
+                                },
+                                "type": "object",
+                                "required": [
+                                  "url"
+                                ],
+                                "title": "ImageURL"
+                              },
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "image_url"
+                                ],
+                                "const": "image_url",
+                                "title": "Type"
+                              }
+                            },
+                            "type": "object",
+                            "required": [
+                              "image_url",
+                              "type"
+                            ],
+                            "title": "NIMVLMChatCompletionContentPartImage"
+                          },
+                          {
+                            "properties": {
+                              "text": {
+                                "type": "string",
+                                "title": "Text"
+                              },
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "text"
+                                ],
+                                "const": "text",
+                                "title": "Type"
+                              }
+                            },
+                            "type": "object",
+                            "required": [
+                              "text",
+                              "type"
+                            ],
+                            "title": "NIMVLMChatCompletionContentPartText"
+                          }
+                        ]
+                      },
+                      "type": "array"
+                    }
+                  ],
+                  "title": "Content",
+                  "description": "The contents of the message.\n        <br>To pass images (only with role=`user`):\n        <br>    - When content is a string, image can be passed together with the text with `img` HTML tags that wraps \n        an image URL (`<img src=\"{url}\" />`), \n        base64 encoded image data (`<img src=\"data:image/{format};base64,{base64encodedimage}\" />`), \n        or an NVCF asset ID (`<img src=\"data:image/{format};asset_id,{asset_id}\" />`) \n        when the container is hosted in NVCF and the payload exceeds 200KB.\n        <br>    - When content is a list of objects, images can be passed as objects with type=`image_url`.\n        <br>    - In both cases, images can be PNG, JPG or JPEG.\n        <br>For `system` and `assistant` roles, the object list format is not supported.\n        "
+                }
+              },
+              "type": "object",
+              "required": [
+                "role",
+                "content"
+              ],
+              "title": "NIMLLMChatCompletionMessage"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Messages",
+            "description": "A list of messages comprising the conversation so far."
+          },
+          "model": {
+            "type": "string",
+            "title": "Model",
+            "description": "The model to use.",
+            "default": "nvidia/nemotron-parse"
+          },
+          "frequency_penalty": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 2,
+                "minimum": -2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Frequency Penalty",
+            "description": "Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.",
+            "default": 0
+          },
+          "max_tokens": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 8192,
+                "minimum": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Tokens",
+            "description": "The maximum number of tokens that can be generated.",
+            "default": 3500
+          },
+          "presence_penalty": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 2,
+                "minimum": -2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Presence Penalty",
+            "description": "Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.",
+            "default": 0
+          },
+          "seed": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 9223372036854776000,
+                "minimum": -9223372036854776000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Seed",
+            "description": "Changing the seed will produce a different response with similar characteristics. Fixing the seed will reproduce the same results if all other parameters are also kept constant."
+          },
+          "stop": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Stop",
+            "description": "Sequences where the API will stop generating further tokens."
+          },
+          "stream": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Stream",
+            "description": "If set, partial message deltas will be sent, like in ChatGPT. Tokens will be sent as data-only [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Event_stream_format) as they become available, with the stream terminated by a `data: [DONE]`",
+            "default": false
+          },
+          "temperature": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 2,
+                "minimum": 0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Temperature",
+            "description": "What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.",
+            "default": 0
+          },
+          "top_p": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1,
+                "exclusiveMinimum": 0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Top P",
+            "description": "An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or `temperature` but not both.",
+            "default": 1
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "messages",
+          "model"
+        ],
+        "title": "NIMLLMChatCompletionRequest"
+      },
+      "NIMVLMChatCompletionContentPartImage": {
+        "properties": {
+          "image_url": {
+            "properties": {
+              "url": {
+                "type": "string",
+                "title": "Url"
+              }
+            },
+            "type": "object",
+            "required": [
+              "url"
+            ],
+            "title": "ImageURL"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "image_url"
+            ],
+            "const": "image_url",
+            "title": "Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "image_url",
+          "type"
+        ],
+        "title": "NIMVLMChatCompletionContentPartImage"
+      },
+      "NIMVLMChatCompletionContentPartText": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "text"
+            ],
+            "const": "text",
+            "title": "Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "text",
+          "type"
+        ],
+        "title": "NIMVLMChatCompletionContentPartText"
+      },
+      "Role": {
+        "type": "string",
+        "enum": [
+          "assistant",
+          "user"
+        ],
+        "title": "Role"
+      },
+      "UsageInfo": {
+        "properties": {
+          "prompt_tokens": {
+            "type": "integer",
+            "title": "Prompt Tokens",
+            "default": 0
+          },
+          "total_tokens": {
+            "type": "integer",
+            "title": "Total Tokens",
+            "default": 0
+          },
+          "completion_tokens": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Completion Tokens",
+            "default": 0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "UsageInfo"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}
