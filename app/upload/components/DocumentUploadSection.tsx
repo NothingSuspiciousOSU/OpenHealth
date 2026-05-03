@@ -142,9 +142,9 @@ export function DocumentUploadSection({
                             <span>{isSuccess && progress === 100 ? 'Complete' : 'Parsing...'}</span>
                             <span>{Math.round(progress)}%</span>
                         </div>
-                        <div className="h-2 w-full overflow-hidden rounded-full bg-zinc-200 dark:bg-zinc-800">
+                        <div className="h-3 w-full overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-900">
                             <div 
-                                className="h-full bg-blue-500 transition-all duration-75 ease-linear"
+                                className="h-full bg-sky-500 shadow-[0_0_8px_rgba(14,165,233,0.5)]"
                                 style={{ width: `${progress}%` }}
                             />
                         </div>
