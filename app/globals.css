@@ -46,6 +46,11 @@ body {
   100% { background-position: 200% center; }
 }
 
+@keyframes chatActivityBar {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(320%); }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.7s ease-out forwards;
 }
@@ -88,6 +93,17 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 6s linear infinite;
+}
+
+.chat-activity-bar {
+  animation: chatActivityBar 1.15s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-activity-bar {
+    animation: none;
+    width: 100%;
+  }
 }
 
 /* Stat card hover */
