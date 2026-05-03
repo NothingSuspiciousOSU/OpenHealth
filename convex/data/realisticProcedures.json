@@ -1,0 +1,6087 @@
+[
+  {
+    "procedureDescription": "Physical Therapy Visit - Therapeutic Exercise and Manual Therapy",
+    "dateOfProcedure": 1761840000000,
+    "hospitalName": "Samaritan Athletic Medicine - Physical Therapy",
+    "city": "Corvallis",
+    "state": "OR",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 283,
+    "allowedAmount": 87,
+    "lineItems": [
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 94,
+        "providerName": "Shanon Williams, PT"
+      },
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 110,
+        "providerName": "Shanon Williams, PT"
+      },
+      {
+        "cptCode": "97140",
+        "serviceName": "Manual therapy techniques, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 79,
+        "providerName": "Shanon Williams, PT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Neuromuscular Reeducation",
+    "dateOfProcedure": 1717689600000,
+    "hospitalName": "Valley Orthopedic Physical Therapy",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 554,
+    "allowedAmount": 182,
+    "lineItems": [
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 145,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 132,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Low Complexity",
+    "dateOfProcedure": 1717948800000,
+    "hospitalName": "Northside Hand & Occupational Therapy",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 310,
+    "allowedAmount": 177,
+    "lineItems": [
+      {
+        "cptCode": "97161",
+        "serviceName": "Physical therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 191,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 119,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Moderate Complexity",
+    "dateOfProcedure": 1718208000000,
+    "hospitalName": "Samaritan Athletic Medicine - Physical Therapy",
+    "city": "Corvallis",
+    "state": "OR",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 588,
+    "allowedAmount": 241,
+    "lineItems": [
+      {
+        "cptCode": "97162",
+        "serviceName": "Physical therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 316,
+        "providerName": "Dr. Lauren Chen"
+      },
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 160,
+        "providerName": "Dr. Lauren Chen"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 112,
+        "providerName": "Dr. Lauren Chen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - High Complexity",
+    "dateOfProcedure": 1718467200000,
+    "hospitalName": "Lakeshore Outpatient Rehabilitation",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 612,
+    "allowedAmount": 247,
+    "lineItems": [
+      {
+        "cptCode": "97163",
+        "serviceName": "Physical therapy evaluation, high complexity",
+        "units": 1,
+        "costPerUnit": 392,
+        "providerName": "Evan Thompson, PT, DPT"
+      },
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 104,
+        "providerName": "Evan Thompson, PT, DPT"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 116,
+        "providerName": "Evan Thompson, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Hand Rehabilitation Visit",
+    "dateOfProcedure": 1718726400000,
+    "hospitalName": "Shirley Ryan AbilityLab Outpatient Center",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 568,
+    "allowedAmount": 169,
+    "lineItems": [
+      {
+        "cptCode": "97166",
+        "serviceName": "Occupational therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 307,
+        "providerName": "Dr. Kathleen Herrmann"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 152,
+        "providerName": "Dr. Kathleen Herrmann"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 109,
+        "providerName": "Dr. Kathleen Herrmann"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Self-Care Training Visit",
+    "dateOfProcedure": 1718985600000,
+    "hospitalName": "Riverbend Sports Rehab",
+    "city": "Austin",
+    "state": "TX",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 424,
+    "allowedAmount": 260,
+    "lineItems": [
+      {
+        "cptCode": "97165",
+        "serviceName": "Occupational therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 210,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 107,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Treatment Visit",
+    "dateOfProcedure": 1719244800000,
+    "hospitalName": "Valley Orthopedic Physical Therapy",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 206,
+    "allowedAmount": 90,
+    "lineItems": [
+      {
+        "cptCode": "92507",
+        "serviceName": "Speech/hearing therapy treatment",
+        "units": 1,
+        "costPerUnit": 206,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Swallowing Treatment Visit",
+    "dateOfProcedure": 1719504000000,
+    "hospitalName": "Kessler Rehabilitation Center - West Orange",
+    "city": "West Orange",
+    "state": "NJ",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 228,
+    "allowedAmount": 92,
+    "lineItems": [
+      {
+        "cptCode": "92526",
+        "serviceName": "Treatment of swallowing dysfunction",
+        "units": 1,
+        "costPerUnit": 228,
+        "providerName": "Shanon Williams, PT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Post-Operative Gait Training Visit",
+    "dateOfProcedure": 1718985600000,
+    "hospitalName": "Northside Hand & Occupational Therapy",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 315,
+    "allowedAmount": 95,
+    "lineItems": [
+      {
+        "cptCode": "97116",
+        "serviceName": "Gait training therapy, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 102,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 111,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain With and Without Contrast",
+    "dateOfProcedure": 1719244800000,
+    "hospitalName": "Cleveland Clinic Main Campus",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 4220,
+    "allowedAmount": 1891,
+    "lineItems": [
+      {
+        "cptCode": "70553",
+        "serviceName": "MRI brain without and with contrast",
+        "units": 1,
+        "costPerUnit": 4220,
+        "providerName": "Quest Diagnostics"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Knee Without Contrast",
+    "dateOfProcedure": 1719504000000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 2954,
+    "allowedAmount": 556,
+    "lineItems": [
+      {
+        "cptCode": "73721",
+        "serviceName": "MRI lower extremity joint without contrast",
+        "units": 1,
+        "costPerUnit": 2954,
+        "providerName": "Dr. Lauren Chen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Lumbar Spine Without Contrast",
+    "dateOfProcedure": 1719763200000,
+    "hospitalName": "Piedmont Atlanta Hospital",
+    "city": "Atlanta",
+    "state": "GA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 4643,
+    "allowedAmount": 1275,
+    "lineItems": [
+      {
+        "cptCode": "72148",
+        "serviceName": "MRI lumbar spine without contrast",
+        "units": 1,
+        "costPerUnit": 4643,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Head Without Contrast",
+    "dateOfProcedure": 1720022400000,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 1946,
+    "allowedAmount": 689,
+    "lineItems": [
+      {
+        "cptCode": "70450",
+        "serviceName": "CT head without contrast",
+        "units": 1,
+        "costPerUnit": 1946,
+        "providerName": "Advanced Radiology Associates"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Abdomen and Pelvis With Contrast",
+    "dateOfProcedure": 1720281600000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 6521,
+    "allowedAmount": 1708,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT abdomen and pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 6521,
+        "providerName": "Advanced Radiology Associates"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Screening Mammography",
+    "dateOfProcedure": 1720540800000,
+    "hospitalName": "Piedmont Atlanta Hospital",
+    "city": "Atlanta",
+    "state": "GA",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 506,
+    "allowedAmount": 205,
+    "lineItems": [
+      {
+        "cptCode": "77067",
+        "serviceName": "Screening mammography, bilateral",
+        "units": 1,
+        "costPerUnit": 506,
+        "providerName": "Dr. Michael Rivera"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Diagnostic Colonoscopy",
+    "dateOfProcedure": 1720800000000,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 5016,
+    "allowedAmount": 2180,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Diagnostic colonoscopy",
+        "units": 1,
+        "costPerUnit": 5016,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy With Biopsy",
+    "dateOfProcedure": 1721059200000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 8777,
+    "allowedAmount": 2401,
+    "lineItems": [
+      {
+        "cptCode": "45380",
+        "serviceName": "Colonoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 8777,
+        "providerName": "Quest Diagnostics"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy With Biopsy",
+    "dateOfProcedure": 1720540800000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 3949,
+    "allowedAmount": 2256,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "Upper endoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 3949,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Knee Arthroscopy With Meniscectomy",
+    "dateOfProcedure": 1720800000000,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 25967,
+    "allowedAmount": 5298,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy with meniscectomy",
+        "units": 1,
+        "costPerUnit": 25967,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1721059200000,
+    "hospitalName": "Cleveland Clinic Main Campus",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 80140,
+    "allowedAmount": 26088,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip arthroplasty",
+        "units": 1,
+        "costPerUnit": 80140,
+        "providerName": "Advanced Radiology Associates"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1721318400000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 80639,
+    "allowedAmount": 33409,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee arthroplasty",
+        "units": 1,
+        "costPerUnit": 80639,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Large Joint Injection",
+    "dateOfProcedure": 1721577600000,
+    "hospitalName": "Piedmont Atlanta Hospital",
+    "city": "Atlanta",
+    "state": "GA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 862,
+    "allowedAmount": 201,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Large joint injection or aspiration",
+        "units": 1,
+        "costPerUnit": 571,
+        "providerName": "Claire Nguyen, SLP"
+      },
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 291,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Primary Care Office Visit With Labs",
+    "dateOfProcedure": 1721836800000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 850,
+    "allowedAmount": 258,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 385,
+        "providerName": "Dr. Lauren Chen"
+      },
+      {
+        "cptCode": "80053",
+        "serviceName": "Comprehensive metabolic panel",
+        "units": 1,
+        "costPerUnit": 188,
+        "providerName": "Quest Diagnostics"
+      },
+      {
+        "cptCode": "85025",
+        "serviceName": "Complete blood count with differential",
+        "units": 1,
+        "costPerUnit": 130,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "80061",
+        "serviceName": "Lipid panel",
+        "units": 1,
+        "costPerUnit": 147,
+        "providerName": "Labcorp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Pain Evaluation",
+    "dateOfProcedure": 1722096000000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 1066,
+    "allowedAmount": 278,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 359,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram with interpretation",
+        "units": 1,
+        "costPerUnit": 256,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "71046",
+        "serviceName": "Chest X-ray, two views",
+        "units": 1,
+        "costPerUnit": 451,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ankle Injury Evaluation",
+    "dateOfProcedure": 1722355200000,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 451,
+    "allowedAmount": 227,
+    "lineItems": [
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 225,
+        "providerName": "Claire Nguyen, SLP"
+      },
+      {
+        "cptCode": "73610",
+        "serviceName": "Ankle X-ray, minimum three views",
+        "units": 1,
+        "costPerUnit": 226,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Epidural Steroid Injection",
+    "dateOfProcedure": 1722614400000,
+    "hospitalName": "Mayo Clinic Hospital",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 7964,
+    "allowedAmount": 3071,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Lumbar epidural steroid injection",
+        "units": 1,
+        "costPerUnit": 7964,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Transforaminal Epidural Steroid Injection",
+    "dateOfProcedure": 1722096000000,
+    "hospitalName": "Piedmont Atlanta Hospital",
+    "city": "Atlanta",
+    "state": "GA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 10530,
+    "allowedAmount": 1307,
+    "lineItems": [
+      {
+        "cptCode": "64483",
+        "serviceName": "Transforaminal epidural injection lumbar/sacral",
+        "units": 1,
+        "costPerUnit": 10530,
+        "providerName": "Dr. Lauren Chen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Therapeutic Exercise and Manual Therapy",
+    "dateOfProcedure": 1722355200000,
+    "hospitalName": "Riverbend Sports Rehab",
+    "city": "Austin",
+    "state": "TX",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 346,
+    "allowedAmount": 138,
+    "lineItems": [
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 137,
+        "providerName": "Dr. Michael Rivera"
+      },
+      {
+        "cptCode": "97140",
+        "serviceName": "Manual therapy techniques, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 72,
+        "providerName": "Dr. Michael Rivera"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Neuromuscular Reeducation",
+    "dateOfProcedure": 1722614400000,
+    "hospitalName": "Riverbend Sports Rehab",
+    "city": "Austin",
+    "state": "TX",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 421,
+    "allowedAmount": 220,
+    "lineItems": [
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 147,
+        "providerName": "Dr. Priya Shah"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 127,
+        "providerName": "Dr. Priya Shah"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Low Complexity",
+    "dateOfProcedure": 1722873600000,
+    "hospitalName": "Kessler Rehabilitation Center - West Orange",
+    "city": "West Orange",
+    "state": "NJ",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 368,
+    "allowedAmount": 137,
+    "lineItems": [
+      {
+        "cptCode": "97161",
+        "serviceName": "Physical therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 256,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 112,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Moderate Complexity",
+    "dateOfProcedure": 1723132800000,
+    "hospitalName": "Pinecrest Speech & Feeding Therapy",
+    "city": "Raleigh",
+    "state": "NC",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 575,
+    "allowedAmount": 271,
+    "lineItems": [
+      {
+        "cptCode": "97162",
+        "serviceName": "Physical therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 319,
+        "providerName": "Nina Brooks, SLP"
+      },
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 139,
+        "providerName": "Nina Brooks, SLP"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 117,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Re-Evaluation and Treatment",
+    "dateOfProcedure": 1723392000000,
+    "hospitalName": "Rancho Los Amigos Outpatient Therapy",
+    "city": "Downey",
+    "state": "CA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 382,
+    "allowedAmount": 181,
+    "lineItems": [
+      {
+        "cptCode": "97164",
+        "serviceName": "Physical therapy re-evaluation",
+        "units": 1,
+        "costPerUnit": 270,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 112,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Hand Rehabilitation Visit",
+    "dateOfProcedure": 1723651200000,
+    "hospitalName": "Pinecrest Speech & Feeding Therapy",
+    "city": "Raleigh",
+    "state": "NC",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 637,
+    "allowedAmount": 287,
+    "lineItems": [
+      {
+        "cptCode": "97166",
+        "serviceName": "Occupational therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 362,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 142,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 133,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Self-Care Training Visit",
+    "dateOfProcedure": 1723910400000,
+    "hospitalName": "Lakeshore Outpatient Rehabilitation",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 466,
+    "allowedAmount": 240,
+    "lineItems": [
+      {
+        "cptCode": "97165",
+        "serviceName": "Occupational therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 325,
+        "providerName": "Dr. Robert Onders"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 141,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Treatment Visit",
+    "dateOfProcedure": 1724169600000,
+    "hospitalName": "Rancho Los Amigos Outpatient Therapy",
+    "city": "Downey",
+    "state": "CA",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 196,
+    "allowedAmount": 91,
+    "lineItems": [
+      {
+        "cptCode": "92507",
+        "serviceName": "Speech/hearing therapy treatment",
+        "units": 1,
+        "costPerUnit": 196,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Swallowing Treatment Visit",
+    "dateOfProcedure": 1723651200000,
+    "hospitalName": "Rusk Rehabilitation at NYU Langone",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 234,
+    "allowedAmount": 121,
+    "lineItems": [
+      {
+        "cptCode": "92526",
+        "serviceName": "Treatment of swallowing dysfunction",
+        "units": 1,
+        "costPerUnit": 234,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Post-Operative Gait Training Visit",
+    "dateOfProcedure": 1723910400000,
+    "hospitalName": "Rancho Los Amigos Outpatient Therapy",
+    "city": "Downey",
+    "state": "CA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 286,
+    "allowedAmount": 93,
+    "lineItems": [
+      {
+        "cptCode": "97116",
+        "serviceName": "Gait training therapy, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 91,
+        "providerName": "Nina Brooks, SLP"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 104,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain With and Without Contrast",
+    "dateOfProcedure": 1724169600000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 5138,
+    "allowedAmount": 1396,
+    "lineItems": [
+      {
+        "cptCode": "70553",
+        "serviceName": "MRI brain without and with contrast",
+        "units": 1,
+        "costPerUnit": 5138,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Knee Without Contrast",
+    "dateOfProcedure": 1724428800000,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 3951,
+    "allowedAmount": 1428,
+    "lineItems": [
+      {
+        "cptCode": "73721",
+        "serviceName": "MRI lower extremity joint without contrast",
+        "units": 1,
+        "costPerUnit": 3951,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Lumbar Spine Without Contrast",
+    "dateOfProcedure": 1724688000000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 3323,
+    "allowedAmount": 1057,
+    "lineItems": [
+      {
+        "cptCode": "72148",
+        "serviceName": "MRI lumbar spine without contrast",
+        "units": 1,
+        "costPerUnit": 3323,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Head Without Contrast",
+    "dateOfProcedure": 1724947200000,
+    "hospitalName": "Piedmont Atlanta Hospital",
+    "city": "Atlanta",
+    "state": "GA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 1905,
+    "allowedAmount": 331,
+    "lineItems": [
+      {
+        "cptCode": "70450",
+        "serviceName": "CT head without contrast",
+        "units": 1,
+        "costPerUnit": 1905,
+        "providerName": "Evan Thompson, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Abdomen and Pelvis With Contrast",
+    "dateOfProcedure": 1725206400000,
+    "hospitalName": "Mayo Clinic Hospital",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 4244,
+    "allowedAmount": 2148,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT abdomen and pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 4244,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Screening Mammography",
+    "dateOfProcedure": 1725465600000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 487,
+    "allowedAmount": 125,
+    "lineItems": [
+      {
+        "cptCode": "77067",
+        "serviceName": "Screening mammography, bilateral",
+        "units": 1,
+        "costPerUnit": 487,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Diagnostic Colonoscopy",
+    "dateOfProcedure": 1725724800000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 6076,
+    "allowedAmount": 2391,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Diagnostic colonoscopy",
+        "units": 1,
+        "costPerUnit": 6076,
+        "providerName": "Evan Thompson, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy With Biopsy",
+    "dateOfProcedure": 1725206400000,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 9428,
+    "allowedAmount": 2016,
+    "lineItems": [
+      {
+        "cptCode": "45380",
+        "serviceName": "Colonoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 9428,
+        "providerName": "Quest Diagnostics"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy With Biopsy",
+    "dateOfProcedure": 1725465600000,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 7087,
+    "allowedAmount": 1599,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "Upper endoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 7087,
+        "providerName": "Dr. Priya Shah"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Knee Arthroscopy With Meniscectomy",
+    "dateOfProcedure": 1725724800000,
+    "hospitalName": "Cleveland Clinic Main Campus",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 17238,
+    "allowedAmount": 4379,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy with meniscectomy",
+        "units": 1,
+        "costPerUnit": 17238,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1725984000000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 59391,
+    "allowedAmount": 24928,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip arthroplasty",
+        "units": 1,
+        "costPerUnit": 59391,
+        "providerName": "Dr. Lauren Chen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1726243200000,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 77052,
+    "allowedAmount": 23971,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee arthroplasty",
+        "units": 1,
+        "costPerUnit": 77052,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Large Joint Injection",
+    "dateOfProcedure": 1726502400000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 1007,
+    "allowedAmount": 442,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Large joint injection or aspiration",
+        "units": 1,
+        "costPerUnit": 631,
+        "providerName": "Advanced Radiology Associates"
+      },
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 376,
+        "providerName": "Advanced Radiology Associates"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Primary Care Office Visit With Labs",
+    "dateOfProcedure": 1726761600000,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 1182,
+    "allowedAmount": 237,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 602,
+        "providerName": "Shanon Williams, PT"
+      },
+      {
+        "cptCode": "80053",
+        "serviceName": "Comprehensive metabolic panel",
+        "units": 1,
+        "costPerUnit": 248,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "85025",
+        "serviceName": "Complete blood count with differential",
+        "units": 1,
+        "costPerUnit": 108,
+        "providerName": "Quest Diagnostics"
+      },
+      {
+        "cptCode": "80061",
+        "serviceName": "Lipid panel",
+        "units": 1,
+        "costPerUnit": 224,
+        "providerName": "Labcorp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Pain Evaluation",
+    "dateOfProcedure": 1727020800000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 1167,
+    "allowedAmount": 282,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 438,
+        "providerName": "Dr. Robert Onders"
+      },
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram with interpretation",
+        "units": 1,
+        "costPerUnit": 143,
+        "providerName": "Dr. Robert Onders"
+      },
+      {
+        "cptCode": "71046",
+        "serviceName": "Chest X-ray, two views",
+        "units": 1,
+        "costPerUnit": 586,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ankle Injury Evaluation",
+    "dateOfProcedure": 1727280000000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 736,
+    "allowedAmount": 206,
+    "lineItems": [
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 407,
+        "providerName": "Claire Nguyen, SLP"
+      },
+      {
+        "cptCode": "73610",
+        "serviceName": "Ankle X-ray, minimum three views",
+        "units": 1,
+        "costPerUnit": 329,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Epidural Steroid Injection",
+    "dateOfProcedure": 1726761600000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 4378,
+    "allowedAmount": 2126,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Lumbar epidural steroid injection",
+        "units": 1,
+        "costPerUnit": 4378,
+        "providerName": "City Imaging Services"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Transforaminal Epidural Steroid Injection",
+    "dateOfProcedure": 1727020800000,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 4876,
+    "allowedAmount": 3017,
+    "lineItems": [
+      {
+        "cptCode": "64483",
+        "serviceName": "Transforaminal epidural injection lumbar/sacral",
+        "units": 1,
+        "costPerUnit": 4876,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Therapeutic Exercise and Manual Therapy",
+    "dateOfProcedure": 1727280000000,
+    "hospitalName": "Valley Orthopedic Physical Therapy",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 294,
+    "allowedAmount": 173,
+    "lineItems": [
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 90,
+        "providerName": "Shanon Williams, PT"
+      },
+      {
+        "cptCode": "97140",
+        "serviceName": "Manual therapy techniques, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 114,
+        "providerName": "Shanon Williams, PT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Neuromuscular Reeducation",
+    "dateOfProcedure": 1727539200000,
+    "hospitalName": "Northside Hand & Occupational Therapy",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 242,
+    "allowedAmount": 60,
+    "lineItems": [
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 93,
+        "providerName": "Dr. Lauren Chen"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 149,
+        "providerName": "Dr. Lauren Chen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Low Complexity",
+    "dateOfProcedure": 1727798400000,
+    "hospitalName": "Lakeshore Outpatient Rehabilitation",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 349,
+    "allowedAmount": 106,
+    "lineItems": [
+      {
+        "cptCode": "97161",
+        "serviceName": "Physical therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 251,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 98,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Moderate Complexity",
+    "dateOfProcedure": 1728057600000,
+    "hospitalName": "Rancho Los Amigos Outpatient Therapy",
+    "city": "Downey",
+    "state": "CA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 493,
+    "allowedAmount": 209,
+    "lineItems": [
+      {
+        "cptCode": "97162",
+        "serviceName": "Physical therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 234,
+        "providerName": "Rachel Kim, OTR/L"
+      },
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 128,
+        "providerName": "Rachel Kim, OTR/L"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 131,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Re-Evaluation and Treatment",
+    "dateOfProcedure": 1728316800000,
+    "hospitalName": "Valley Orthopedic Physical Therapy",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 352,
+    "allowedAmount": 234,
+    "lineItems": [
+      {
+        "cptCode": "97164",
+        "serviceName": "Physical therapy re-evaluation",
+        "units": 1,
+        "costPerUnit": 176,
+        "providerName": "Evan Thompson, PT, DPT"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 88,
+        "providerName": "Evan Thompson, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Hand Rehabilitation Visit",
+    "dateOfProcedure": 1728576000000,
+    "hospitalName": "Rancho Los Amigos Outpatient Therapy",
+    "city": "Downey",
+    "state": "CA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 548,
+    "allowedAmount": 209,
+    "lineItems": [
+      {
+        "cptCode": "97166",
+        "serviceName": "Occupational therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 290,
+        "providerName": "Claire Nguyen, SLP"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 168,
+        "providerName": "Claire Nguyen, SLP"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 90,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Self-Care Training Visit",
+    "dateOfProcedure": 1728835200000,
+    "hospitalName": "Johns Hopkins Outpatient Rehabilitation",
+    "city": "Baltimore",
+    "state": "MD",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 441,
+    "allowedAmount": 314,
+    "lineItems": [
+      {
+        "cptCode": "97165",
+        "serviceName": "Occupational therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 197,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 122,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Treatment Visit",
+    "dateOfProcedure": 1728316800000,
+    "hospitalName": "Summit Ridge Physical Therapy",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 260,
+    "allowedAmount": 64,
+    "lineItems": [
+      {
+        "cptCode": "92507",
+        "serviceName": "Speech/hearing therapy treatment",
+        "units": 1,
+        "costPerUnit": 260,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Swallowing Treatment Visit",
+    "dateOfProcedure": 1728576000000,
+    "hospitalName": "Kessler Rehabilitation Center - West Orange",
+    "city": "West Orange",
+    "state": "NJ",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 255,
+    "allowedAmount": 125,
+    "lineItems": [
+      {
+        "cptCode": "92526",
+        "serviceName": "Treatment of swallowing dysfunction",
+        "units": 1,
+        "costPerUnit": 255,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Post-Operative Gait Training Visit",
+    "dateOfProcedure": 1728835200000,
+    "hospitalName": "Lakeshore Outpatient Rehabilitation",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 239,
+    "allowedAmount": 188,
+    "lineItems": [
+      {
+        "cptCode": "97116",
+        "serviceName": "Gait training therapy, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 76,
+        "providerName": "Dr. Kathleen Herrmann"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 87,
+        "providerName": "Dr. Kathleen Herrmann"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain With and Without Contrast",
+    "dateOfProcedure": 1729094400000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 6404,
+    "allowedAmount": 1962,
+    "lineItems": [
+      {
+        "cptCode": "70553",
+        "serviceName": "MRI brain without and with contrast",
+        "units": 1,
+        "costPerUnit": 6404,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Knee Without Contrast",
+    "dateOfProcedure": 1729353600000,
+    "hospitalName": "Cleveland Clinic Main Campus",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 2976,
+    "allowedAmount": 782,
+    "lineItems": [
+      {
+        "cptCode": "73721",
+        "serviceName": "MRI lower extremity joint without contrast",
+        "units": 1,
+        "costPerUnit": 2976,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Lumbar Spine Without Contrast",
+    "dateOfProcedure": 1729612800000,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 5844,
+    "allowedAmount": 1404,
+    "lineItems": [
+      {
+        "cptCode": "72148",
+        "serviceName": "MRI lumbar spine without contrast",
+        "units": 1,
+        "costPerUnit": 5844,
+        "providerName": "Dr. Michael Rivera"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Head Without Contrast",
+    "dateOfProcedure": 1729872000000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 3099,
+    "allowedAmount": 626,
+    "lineItems": [
+      {
+        "cptCode": "70450",
+        "serviceName": "CT head without contrast",
+        "units": 1,
+        "costPerUnit": 3099,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Abdomen and Pelvis With Contrast",
+    "dateOfProcedure": 1730131200000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 4503,
+    "allowedAmount": 1599,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT abdomen and pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 4503,
+        "providerName": "City Imaging Services"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Screening Mammography",
+    "dateOfProcedure": 1730390400000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 416,
+    "allowedAmount": 127,
+    "lineItems": [
+      {
+        "cptCode": "77067",
+        "serviceName": "Screening mammography, bilateral",
+        "units": 1,
+        "costPerUnit": 416,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Diagnostic Colonoscopy",
+    "dateOfProcedure": 1729872000000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 7068,
+    "allowedAmount": 2372,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Diagnostic colonoscopy",
+        "units": 1,
+        "costPerUnit": 7068,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy With Biopsy",
+    "dateOfProcedure": 1730131200000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 10933,
+    "allowedAmount": 2915,
+    "lineItems": [
+      {
+        "cptCode": "45380",
+        "serviceName": "Colonoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 10933,
+        "providerName": "Dr. Priya Shah"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy With Biopsy",
+    "dateOfProcedure": 1730390400000,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 7893,
+    "allowedAmount": 1196,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "Upper endoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 7893,
+        "providerName": "Quest Diagnostics"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Knee Arthroscopy With Meniscectomy",
+    "dateOfProcedure": 1730649600000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 20485,
+    "allowedAmount": 9194,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy with meniscectomy",
+        "units": 1,
+        "costPerUnit": 20485,
+        "providerName": "Advanced Radiology Associates"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1730908800000,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 85199,
+    "allowedAmount": 23340,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip arthroplasty",
+        "units": 1,
+        "costPerUnit": 85199,
+        "providerName": "Dr. Lauren Chen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1731168000000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 69207,
+    "allowedAmount": 25265,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee arthroplasty",
+        "units": 1,
+        "costPerUnit": 69207,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Large Joint Injection",
+    "dateOfProcedure": 1731427200000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 946,
+    "allowedAmount": 247,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Large joint injection or aspiration",
+        "units": 1,
+        "costPerUnit": 715,
+        "providerName": "Dr. Sarah Smith"
+      },
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 231,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Primary Care Office Visit With Labs",
+    "dateOfProcedure": 1731686400000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 844,
+    "allowedAmount": 281,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 309,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "80053",
+        "serviceName": "Comprehensive metabolic panel",
+        "units": 1,
+        "costPerUnit": 249,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "85025",
+        "serviceName": "Complete blood count with differential",
+        "units": 1,
+        "costPerUnit": 53,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "80061",
+        "serviceName": "Lipid panel",
+        "units": 1,
+        "costPerUnit": 233,
+        "providerName": "Quest Diagnostics"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Pain Evaluation",
+    "dateOfProcedure": 1731945600000,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 1202,
+    "allowedAmount": 380,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 540,
+        "providerName": "Advanced Radiology Associates"
+      },
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram with interpretation",
+        "units": 1,
+        "costPerUnit": 261,
+        "providerName": "Advanced Radiology Associates"
+      },
+      {
+        "cptCode": "71046",
+        "serviceName": "Chest X-ray, two views",
+        "units": 1,
+        "costPerUnit": 401,
+        "providerName": "Advanced Radiology Associates"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ankle Injury Evaluation",
+    "dateOfProcedure": 1731427200000,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 633,
+    "allowedAmount": 255,
+    "lineItems": [
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 271,
+        "providerName": "Dr. Lauren Chen"
+      },
+      {
+        "cptCode": "73610",
+        "serviceName": "Ankle X-ray, minimum three views",
+        "units": 1,
+        "costPerUnit": 362,
+        "providerName": "Dr. Lauren Chen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Epidural Steroid Injection",
+    "dateOfProcedure": 1731686400000,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 6250,
+    "allowedAmount": 1898,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Lumbar epidural steroid injection",
+        "units": 1,
+        "costPerUnit": 6250,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Transforaminal Epidural Steroid Injection",
+    "dateOfProcedure": 1731945600000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 4925,
+    "allowedAmount": 2289,
+    "lineItems": [
+      {
+        "cptCode": "64483",
+        "serviceName": "Transforaminal epidural injection lumbar/sacral",
+        "units": 1,
+        "costPerUnit": 4925,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Therapeutic Exercise and Manual Therapy",
+    "dateOfProcedure": 1732204800000,
+    "hospitalName": "Riverbend Sports Rehab",
+    "city": "Austin",
+    "state": "TX",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 189,
+    "allowedAmount": 77,
+    "lineItems": [
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 89,
+        "providerName": "Dr. Priya Shah"
+      },
+      {
+        "cptCode": "97140",
+        "serviceName": "Manual therapy techniques, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 100,
+        "providerName": "Dr. Priya Shah"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Neuromuscular Reeducation",
+    "dateOfProcedure": 1732464000000,
+    "hospitalName": "Shirley Ryan AbilityLab Outpatient Center",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 408,
+    "allowedAmount": 137,
+    "lineItems": [
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 124,
+        "providerName": "Shanon Williams, PT"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 142,
+        "providerName": "Shanon Williams, PT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Low Complexity",
+    "dateOfProcedure": 1732723200000,
+    "hospitalName": "Northside Hand & Occupational Therapy",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 296,
+    "allowedAmount": 100,
+    "lineItems": [
+      {
+        "cptCode": "97161",
+        "serviceName": "Physical therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 192,
+        "providerName": "Dr. Thomas Balcezak"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 104,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Moderate Complexity",
+    "dateOfProcedure": 1732982400000,
+    "hospitalName": "Summit Ridge Physical Therapy",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 509,
+    "allowedAmount": 226,
+    "lineItems": [
+      {
+        "cptCode": "97162",
+        "serviceName": "Physical therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 264,
+        "providerName": "Claire Nguyen, SLP"
+      },
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 89,
+        "providerName": "Claire Nguyen, SLP"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 156,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Re-Evaluation and Treatment",
+    "dateOfProcedure": 1733241600000,
+    "hospitalName": "Summit Ridge Physical Therapy",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 419,
+    "allowedAmount": 132,
+    "lineItems": [
+      {
+        "cptCode": "97164",
+        "serviceName": "Physical therapy re-evaluation",
+        "units": 1,
+        "costPerUnit": 217,
+        "providerName": "Shanon Williams, PT"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 101,
+        "providerName": "Shanon Williams, PT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Hand Rehabilitation Visit",
+    "dateOfProcedure": 1733500800000,
+    "hospitalName": "Northside Hand & Occupational Therapy",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 477,
+    "allowedAmount": 200,
+    "lineItems": [
+      {
+        "cptCode": "97166",
+        "serviceName": "Occupational therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 235,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 154,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 88,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Self-Care Training Visit",
+    "dateOfProcedure": 1732982400000,
+    "hospitalName": "Johns Hopkins Outpatient Rehabilitation",
+    "city": "Baltimore",
+    "state": "MD",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 388,
+    "allowedAmount": 151,
+    "lineItems": [
+      {
+        "cptCode": "97165",
+        "serviceName": "Occupational therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 204,
+        "providerName": "Evan Thompson, PT, DPT"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 92,
+        "providerName": "Evan Thompson, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Treatment Visit",
+    "dateOfProcedure": 1733241600000,
+    "hospitalName": "Kessler Rehabilitation Center - West Orange",
+    "city": "West Orange",
+    "state": "NJ",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 208,
+    "allowedAmount": 118,
+    "lineItems": [
+      {
+        "cptCode": "92507",
+        "serviceName": "Speech/hearing therapy treatment",
+        "units": 1,
+        "costPerUnit": 208,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Swallowing Treatment Visit",
+    "dateOfProcedure": 1733500800000,
+    "hospitalName": "Riverbend Sports Rehab",
+    "city": "Austin",
+    "state": "TX",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 265,
+    "allowedAmount": 67,
+    "lineItems": [
+      {
+        "cptCode": "92526",
+        "serviceName": "Treatment of swallowing dysfunction",
+        "units": 1,
+        "costPerUnit": 265,
+        "providerName": "Evan Thompson, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Post-Operative Gait Training Visit",
+    "dateOfProcedure": 1733760000000,
+    "hospitalName": "Valley Orthopedic Physical Therapy",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 217,
+    "allowedAmount": 96,
+    "lineItems": [
+      {
+        "cptCode": "97116",
+        "serviceName": "Gait training therapy, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 122,
+        "providerName": "Evan Thompson, PT, DPT"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 95,
+        "providerName": "Evan Thompson, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain With and Without Contrast",
+    "dateOfProcedure": 1734019200000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 7144,
+    "allowedAmount": 2305,
+    "lineItems": [
+      {
+        "cptCode": "70553",
+        "serviceName": "MRI brain without and with contrast",
+        "units": 1,
+        "costPerUnit": 7144,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Knee Without Contrast",
+    "dateOfProcedure": 1734278400000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 5689,
+    "allowedAmount": 1155,
+    "lineItems": [
+      {
+        "cptCode": "73721",
+        "serviceName": "MRI lower extremity joint without contrast",
+        "units": 1,
+        "costPerUnit": 5689,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Lumbar Spine Without Contrast",
+    "dateOfProcedure": 1734537600000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 3130,
+    "allowedAmount": 1726,
+    "lineItems": [
+      {
+        "cptCode": "72148",
+        "serviceName": "MRI lumbar spine without contrast",
+        "units": 1,
+        "costPerUnit": 3130,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Head Without Contrast",
+    "dateOfProcedure": 1734796800000,
+    "hospitalName": "Cleveland Clinic Main Campus",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 1832,
+    "allowedAmount": 748,
+    "lineItems": [
+      {
+        "cptCode": "70450",
+        "serviceName": "CT head without contrast",
+        "units": 1,
+        "costPerUnit": 1832,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Abdomen and Pelvis With Contrast",
+    "dateOfProcedure": 1735056000000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 5835,
+    "allowedAmount": 1751,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT abdomen and pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 5835,
+        "providerName": "Advanced Radiology Associates"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Screening Mammography",
+    "dateOfProcedure": 1734537600000,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 302,
+    "allowedAmount": 248,
+    "lineItems": [
+      {
+        "cptCode": "77067",
+        "serviceName": "Screening mammography, bilateral",
+        "units": 1,
+        "costPerUnit": 302,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Diagnostic Colonoscopy",
+    "dateOfProcedure": 1734796800000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 5900,
+    "allowedAmount": 1876,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Diagnostic colonoscopy",
+        "units": 1,
+        "costPerUnit": 5900,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy With Biopsy",
+    "dateOfProcedure": 1735056000000,
+    "hospitalName": "Mayo Clinic Hospital",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 11370,
+    "allowedAmount": 2768,
+    "lineItems": [
+      {
+        "cptCode": "45380",
+        "serviceName": "Colonoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 11370,
+        "providerName": "Evan Thompson, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy With Biopsy",
+    "dateOfProcedure": 1735315200000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 5518,
+    "allowedAmount": 1495,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "Upper endoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 5518,
+        "providerName": "Dr. Lauren Chen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Knee Arthroscopy With Meniscectomy",
+    "dateOfProcedure": 1735574400000,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 15086,
+    "allowedAmount": 5566,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy with meniscectomy",
+        "units": 1,
+        "costPerUnit": 15086,
+        "providerName": "Dr. Michael Rivera"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1735833600000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 86105,
+    "allowedAmount": 22995,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip arthroplasty",
+        "units": 1,
+        "costPerUnit": 86105,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1736092800000,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 54091,
+    "allowedAmount": 15109,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee arthroplasty",
+        "units": 1,
+        "costPerUnit": 54091,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Large Joint Injection",
+    "dateOfProcedure": 1736352000000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 1051,
+    "allowedAmount": 314,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Large joint injection or aspiration",
+        "units": 1,
+        "costPerUnit": 728,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 323,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Primary Care Office Visit With Labs",
+    "dateOfProcedure": 1736611200000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 1033,
+    "allowedAmount": 334,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 593,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      },
+      {
+        "cptCode": "80053",
+        "serviceName": "Comprehensive metabolic panel",
+        "units": 1,
+        "costPerUnit": 136,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "85025",
+        "serviceName": "Complete blood count with differential",
+        "units": 1,
+        "costPerUnit": 123,
+        "providerName": "Quest Diagnostics"
+      },
+      {
+        "cptCode": "80061",
+        "serviceName": "Lipid panel",
+        "units": 1,
+        "costPerUnit": 181,
+        "providerName": "Labcorp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Pain Evaluation",
+    "dateOfProcedure": 1736092800000,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 1417,
+    "allowedAmount": 319,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 492,
+        "providerName": "Quest Diagnostics"
+      },
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram with interpretation",
+        "units": 1,
+        "costPerUnit": 335,
+        "providerName": "Quest Diagnostics"
+      },
+      {
+        "cptCode": "71046",
+        "serviceName": "Chest X-ray, two views",
+        "units": 1,
+        "costPerUnit": 590,
+        "providerName": "Quest Diagnostics"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ankle Injury Evaluation",
+    "dateOfProcedure": 1736352000000,
+    "hospitalName": "Mayo Clinic Hospital",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 642,
+    "allowedAmount": 242,
+    "lineItems": [
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 332,
+        "providerName": "Rachel Kim, OTR/L"
+      },
+      {
+        "cptCode": "73610",
+        "serviceName": "Ankle X-ray, minimum three views",
+        "units": 1,
+        "costPerUnit": 310,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Epidural Steroid Injection",
+    "dateOfProcedure": 1736611200000,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 4082,
+    "allowedAmount": 1697,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Lumbar epidural steroid injection",
+        "units": 1,
+        "costPerUnit": 4082,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Transforaminal Epidural Steroid Injection",
+    "dateOfProcedure": 1736870400000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 8023,
+    "allowedAmount": 1806,
+    "lineItems": [
+      {
+        "cptCode": "64483",
+        "serviceName": "Transforaminal epidural injection lumbar/sacral",
+        "units": 1,
+        "costPerUnit": 8023,
+        "providerName": "Advanced Radiology Associates"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Therapeutic Exercise and Manual Therapy",
+    "dateOfProcedure": 1737129600000,
+    "hospitalName": "Rusk Rehabilitation at NYU Langone",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 168,
+    "allowedAmount": 108,
+    "lineItems": [
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 95,
+        "providerName": "Rachel Kim, OTR/L"
+      },
+      {
+        "cptCode": "97140",
+        "serviceName": "Manual therapy techniques, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 73,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Neuromuscular Reeducation",
+    "dateOfProcedure": 1737388800000,
+    "hospitalName": "Riverbend Sports Rehab",
+    "city": "Austin",
+    "state": "TX",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 364,
+    "allowedAmount": 136,
+    "lineItems": [
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 92,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 136,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Low Complexity",
+    "dateOfProcedure": 1737648000000,
+    "hospitalName": "Johns Hopkins Outpatient Rehabilitation",
+    "city": "Baltimore",
+    "state": "MD",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 413,
+    "allowedAmount": 218,
+    "lineItems": [
+      {
+        "cptCode": "97161",
+        "serviceName": "Physical therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 300,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 113,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Moderate Complexity",
+    "dateOfProcedure": 1737907200000,
+    "hospitalName": "Rancho Los Amigos Outpatient Therapy",
+    "city": "Downey",
+    "state": "CA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 575,
+    "allowedAmount": 248,
+    "lineItems": [
+      {
+        "cptCode": "97162",
+        "serviceName": "Physical therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 333,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 111,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 131,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Re-Evaluation and Treatment",
+    "dateOfProcedure": 1738166400000,
+    "hospitalName": "Valley Orthopedic Physical Therapy",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 475,
+    "allowedAmount": 297,
+    "lineItems": [
+      {
+        "cptCode": "97164",
+        "serviceName": "Physical therapy re-evaluation",
+        "units": 1,
+        "costPerUnit": 197,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 139,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Hand Rehabilitation Visit",
+    "dateOfProcedure": 1737648000000,
+    "hospitalName": "Lakeshore Outpatient Rehabilitation",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 569,
+    "allowedAmount": 243,
+    "lineItems": [
+      {
+        "cptCode": "97166",
+        "serviceName": "Occupational therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 356,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 98,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 115,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Self-Care Training Visit",
+    "dateOfProcedure": 1737907200000,
+    "hospitalName": "Rancho Los Amigos Outpatient Therapy",
+    "city": "Downey",
+    "state": "CA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 349,
+    "allowedAmount": 140,
+    "lineItems": [
+      {
+        "cptCode": "97165",
+        "serviceName": "Occupational therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 208,
+        "providerName": "Dr. Robert Onders"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 141,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Treatment Visit",
+    "dateOfProcedure": 1738166400000,
+    "hospitalName": "Lakeshore Outpatient Rehabilitation",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 197,
+    "allowedAmount": 116,
+    "lineItems": [
+      {
+        "cptCode": "92507",
+        "serviceName": "Speech/hearing therapy treatment",
+        "units": 1,
+        "costPerUnit": 197,
+        "providerName": "Shanon Williams, PT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Swallowing Treatment Visit",
+    "dateOfProcedure": 1738425600000,
+    "hospitalName": "Summit Ridge Physical Therapy",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 203,
+    "allowedAmount": 101,
+    "lineItems": [
+      {
+        "cptCode": "92526",
+        "serviceName": "Treatment of swallowing dysfunction",
+        "units": 1,
+        "costPerUnit": 203,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Post-Operative Gait Training Visit",
+    "dateOfProcedure": 1738684800000,
+    "hospitalName": "Riverbend Sports Rehab",
+    "city": "Austin",
+    "state": "TX",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 322,
+    "allowedAmount": 120,
+    "lineItems": [
+      {
+        "cptCode": "97116",
+        "serviceName": "Gait training therapy, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 101,
+        "providerName": "Dr. Robert Onders"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 120,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain With and Without Contrast",
+    "dateOfProcedure": 1738944000000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 6300,
+    "allowedAmount": 1216,
+    "lineItems": [
+      {
+        "cptCode": "70553",
+        "serviceName": "MRI brain without and with contrast",
+        "units": 1,
+        "costPerUnit": 6300,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Knee Without Contrast",
+    "dateOfProcedure": 1739203200000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 4906,
+    "allowedAmount": 935,
+    "lineItems": [
+      {
+        "cptCode": "73721",
+        "serviceName": "MRI lower extremity joint without contrast",
+        "units": 1,
+        "costPerUnit": 4906,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Lumbar Spine Without Contrast",
+    "dateOfProcedure": 1739462400000,
+    "hospitalName": "Cleveland Clinic Main Campus",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 3914,
+    "allowedAmount": 1310,
+    "lineItems": [
+      {
+        "cptCode": "72148",
+        "serviceName": "MRI lumbar spine without contrast",
+        "units": 1,
+        "costPerUnit": 3914,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Head Without Contrast",
+    "dateOfProcedure": 1739721600000,
+    "hospitalName": "Cleveland Clinic Main Campus",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 1533,
+    "allowedAmount": 913,
+    "lineItems": [
+      {
+        "cptCode": "70450",
+        "serviceName": "CT head without contrast",
+        "units": 1,
+        "costPerUnit": 1533,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Abdomen and Pelvis With Contrast",
+    "dateOfProcedure": 1739203200000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 3408,
+    "allowedAmount": 1312,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT abdomen and pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 3408,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Screening Mammography",
+    "dateOfProcedure": 1739462400000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 296,
+    "allowedAmount": 171,
+    "lineItems": [
+      {
+        "cptCode": "77067",
+        "serviceName": "Screening mammography, bilateral",
+        "units": 1,
+        "costPerUnit": 296,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Diagnostic Colonoscopy",
+    "dateOfProcedure": 1739721600000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 4402,
+    "allowedAmount": 2009,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Diagnostic colonoscopy",
+        "units": 1,
+        "costPerUnit": 4402,
+        "providerName": "Advanced Radiology Associates"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy With Biopsy",
+    "dateOfProcedure": 1739980800000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 9608,
+    "allowedAmount": 3674,
+    "lineItems": [
+      {
+        "cptCode": "45380",
+        "serviceName": "Colonoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 9608,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy With Biopsy",
+    "dateOfProcedure": 1740240000000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 8654,
+    "allowedAmount": 1242,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "Upper endoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 8654,
+        "providerName": "Dr. Lauren Chen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Knee Arthroscopy With Meniscectomy",
+    "dateOfProcedure": 1740499200000,
+    "hospitalName": "Mayo Clinic Hospital",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 15947,
+    "allowedAmount": 5446,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy with meniscectomy",
+        "units": 1,
+        "costPerUnit": 15947,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1740758400000,
+    "hospitalName": "Cleveland Clinic Main Campus",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 79156,
+    "allowedAmount": 25391,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip arthroplasty",
+        "units": 1,
+        "costPerUnit": 79156,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1741017600000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 59781,
+    "allowedAmount": 20542,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee arthroplasty",
+        "units": 1,
+        "costPerUnit": 59781,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Large Joint Injection",
+    "dateOfProcedure": 1741276800000,
+    "hospitalName": "Mayo Clinic Hospital",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 625,
+    "allowedAmount": 313,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Large joint injection or aspiration",
+        "units": 1,
+        "costPerUnit": 321,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      },
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 304,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Primary Care Office Visit With Labs",
+    "dateOfProcedure": 1740758400000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 875,
+    "allowedAmount": 239,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 448,
+        "providerName": "Dr. Sarah Smith"
+      },
+      {
+        "cptCode": "80053",
+        "serviceName": "Comprehensive metabolic panel",
+        "units": 1,
+        "costPerUnit": 172,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "85025",
+        "serviceName": "Complete blood count with differential",
+        "units": 1,
+        "costPerUnit": 121,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "80061",
+        "serviceName": "Lipid panel",
+        "units": 1,
+        "costPerUnit": 134,
+        "providerName": "Quest Diagnostics"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Pain Evaluation",
+    "dateOfProcedure": 1741017600000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 1058,
+    "allowedAmount": 486,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 412,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram with interpretation",
+        "units": 1,
+        "costPerUnit": 281,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "71046",
+        "serviceName": "Chest X-ray, two views",
+        "units": 1,
+        "costPerUnit": 365,
+        "providerName": "Labcorp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ankle Injury Evaluation",
+    "dateOfProcedure": 1741276800000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 680,
+    "allowedAmount": 286,
+    "lineItems": [
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 220,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "73610",
+        "serviceName": "Ankle X-ray, minimum three views",
+        "units": 1,
+        "costPerUnit": 460,
+        "providerName": "Labcorp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Epidural Steroid Injection",
+    "dateOfProcedure": 1741536000000,
+    "hospitalName": "Cleveland Clinic Main Campus",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 6130,
+    "allowedAmount": 1977,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Lumbar epidural steroid injection",
+        "units": 1,
+        "costPerUnit": 6130,
+        "providerName": "Dr. Lauren Chen"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Transforaminal Epidural Steroid Injection",
+    "dateOfProcedure": 1741795200000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 6122,
+    "allowedAmount": 1240,
+    "lineItems": [
+      {
+        "cptCode": "64483",
+        "serviceName": "Transforaminal epidural injection lumbar/sacral",
+        "units": 1,
+        "costPerUnit": 6122,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Therapeutic Exercise and Manual Therapy",
+    "dateOfProcedure": 1742054400000,
+    "hospitalName": "Johns Hopkins Outpatient Rehabilitation",
+    "city": "Baltimore",
+    "state": "MD",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 218,
+    "allowedAmount": 90,
+    "lineItems": [
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 135,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "97140",
+        "serviceName": "Manual therapy techniques, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 83,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Neuromuscular Reeducation",
+    "dateOfProcedure": 1742313600000,
+    "hospitalName": "Shirley Ryan AbilityLab Outpatient Center",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 272,
+    "allowedAmount": 147,
+    "lineItems": [
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 98,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 87,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Low Complexity",
+    "dateOfProcedure": 1742572800000,
+    "hospitalName": "Northside Hand & Occupational Therapy",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 333,
+    "allowedAmount": 149,
+    "lineItems": [
+      {
+        "cptCode": "97161",
+        "serviceName": "Physical therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 221,
+        "providerName": "Nina Brooks, SLP"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 112,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Moderate Complexity",
+    "dateOfProcedure": 1742832000000,
+    "hospitalName": "Johns Hopkins Outpatient Rehabilitation",
+    "city": "Baltimore",
+    "state": "MD",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 601,
+    "allowedAmount": 251,
+    "lineItems": [
+      {
+        "cptCode": "97162",
+        "serviceName": "Physical therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 374,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 136,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 91,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Re-Evaluation and Treatment",
+    "dateOfProcedure": 1742313600000,
+    "hospitalName": "Northside Hand & Occupational Therapy",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 391,
+    "allowedAmount": 170,
+    "lineItems": [
+      {
+        "cptCode": "97164",
+        "serviceName": "Physical therapy re-evaluation",
+        "units": 1,
+        "costPerUnit": 259,
+        "providerName": "Shanon Williams, PT"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 132,
+        "providerName": "Shanon Williams, PT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Hand Rehabilitation Visit",
+    "dateOfProcedure": 1742572800000,
+    "hospitalName": "Samaritan Athletic Medicine - Physical Therapy",
+    "city": "Corvallis",
+    "state": "OR",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 561,
+    "allowedAmount": 189,
+    "lineItems": [
+      {
+        "cptCode": "97166",
+        "serviceName": "Occupational therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 298,
+        "providerName": "Evan Thompson, PT, DPT"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 151,
+        "providerName": "Evan Thompson, PT, DPT"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 112,
+        "providerName": "Evan Thompson, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Self-Care Training Visit",
+    "dateOfProcedure": 1742832000000,
+    "hospitalName": "Summit Ridge Physical Therapy",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 430,
+    "allowedAmount": 176,
+    "lineItems": [
+      {
+        "cptCode": "97165",
+        "serviceName": "Occupational therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 276,
+        "providerName": "Dr. Sarah Smith"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 154,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Treatment Visit",
+    "dateOfProcedure": 1743091200000,
+    "hospitalName": "Samaritan Athletic Medicine - Physical Therapy",
+    "city": "Corvallis",
+    "state": "OR",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 194,
+    "allowedAmount": 67,
+    "lineItems": [
+      {
+        "cptCode": "92507",
+        "serviceName": "Speech/hearing therapy treatment",
+        "units": 1,
+        "costPerUnit": 194,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Swallowing Treatment Visit",
+    "dateOfProcedure": 1743350400000,
+    "hospitalName": "Northside Hand & Occupational Therapy",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 287,
+    "allowedAmount": 122,
+    "lineItems": [
+      {
+        "cptCode": "92526",
+        "serviceName": "Treatment of swallowing dysfunction",
+        "units": 1,
+        "costPerUnit": 287,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Post-Operative Gait Training Visit",
+    "dateOfProcedure": 1743609600000,
+    "hospitalName": "Lakeshore Outpatient Rehabilitation",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 211,
+    "allowedAmount": 59,
+    "lineItems": [
+      {
+        "cptCode": "97116",
+        "serviceName": "Gait training therapy, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 78,
+        "providerName": "Dr. Thomas Balcezak"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 133,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain With and Without Contrast",
+    "dateOfProcedure": 1743868800000,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 4470,
+    "allowedAmount": 900,
+    "lineItems": [
+      {
+        "cptCode": "70553",
+        "serviceName": "MRI brain without and with contrast",
+        "units": 1,
+        "costPerUnit": 4470,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Knee Without Contrast",
+    "dateOfProcedure": 1744128000000,
+    "hospitalName": "Piedmont Atlanta Hospital",
+    "city": "Atlanta",
+    "state": "GA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 3825,
+    "allowedAmount": 1438,
+    "lineItems": [
+      {
+        "cptCode": "73721",
+        "serviceName": "MRI lower extremity joint without contrast",
+        "units": 1,
+        "costPerUnit": 3825,
+        "providerName": "Advanced Radiology Associates"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Lumbar Spine Without Contrast",
+    "dateOfProcedure": 1744387200000,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 5692,
+    "allowedAmount": 1899,
+    "lineItems": [
+      {
+        "cptCode": "72148",
+        "serviceName": "MRI lumbar spine without contrast",
+        "units": 1,
+        "costPerUnit": 5692,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Head Without Contrast",
+    "dateOfProcedure": 1743868800000,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 3675,
+    "allowedAmount": 476,
+    "lineItems": [
+      {
+        "cptCode": "70450",
+        "serviceName": "CT head without contrast",
+        "units": 1,
+        "costPerUnit": 3675,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Abdomen and Pelvis With Contrast",
+    "dateOfProcedure": 1744128000000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 5981,
+    "allowedAmount": 1497,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT abdomen and pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 5981,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Screening Mammography",
+    "dateOfProcedure": 1744387200000,
+    "hospitalName": "Piedmont Atlanta Hospital",
+    "city": "Atlanta",
+    "state": "GA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 344,
+    "allowedAmount": 170,
+    "lineItems": [
+      {
+        "cptCode": "77067",
+        "serviceName": "Screening mammography, bilateral",
+        "units": 1,
+        "costPerUnit": 344,
+        "providerName": "Quest Diagnostics"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Diagnostic Colonoscopy",
+    "dateOfProcedure": 1744646400000,
+    "hospitalName": "Piedmont Atlanta Hospital",
+    "city": "Atlanta",
+    "state": "GA",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 4042,
+    "allowedAmount": 3205,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Diagnostic colonoscopy",
+        "units": 1,
+        "costPerUnit": 4042,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy With Biopsy",
+    "dateOfProcedure": 1744905600000,
+    "hospitalName": "Piedmont Atlanta Hospital",
+    "city": "Atlanta",
+    "state": "GA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 8320,
+    "allowedAmount": 4026,
+    "lineItems": [
+      {
+        "cptCode": "45380",
+        "serviceName": "Colonoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 8320,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy With Biopsy",
+    "dateOfProcedure": 1745164800000,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 8404,
+    "allowedAmount": 2025,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "Upper endoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 8404,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Knee Arthroscopy With Meniscectomy",
+    "dateOfProcedure": 1745424000000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 22913,
+    "allowedAmount": 9794,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy with meniscectomy",
+        "units": 1,
+        "costPerUnit": 22913,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1745683200000,
+    "hospitalName": "Piedmont Atlanta Hospital",
+    "city": "Atlanta",
+    "state": "GA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 81498,
+    "allowedAmount": 36608,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip arthroplasty",
+        "units": 1,
+        "costPerUnit": 81498,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1745942400000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 84737,
+    "allowedAmount": 22977,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee arthroplasty",
+        "units": 1,
+        "costPerUnit": 84737,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Large Joint Injection",
+    "dateOfProcedure": 1745424000000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 827,
+    "allowedAmount": 202,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Large joint injection or aspiration",
+        "units": 1,
+        "costPerUnit": 487,
+        "providerName": "Shanon Williams, PT"
+      },
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 340,
+        "providerName": "Shanon Williams, PT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Primary Care Office Visit With Labs",
+    "dateOfProcedure": 1745683200000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 716,
+    "allowedAmount": 357,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 285,
+        "providerName": "Dr. Thomas Balcezak"
+      },
+      {
+        "cptCode": "80053",
+        "serviceName": "Comprehensive metabolic panel",
+        "units": 1,
+        "costPerUnit": 172,
+        "providerName": "Quest Diagnostics"
+      },
+      {
+        "cptCode": "85025",
+        "serviceName": "Complete blood count with differential",
+        "units": 1,
+        "costPerUnit": 129,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "80061",
+        "serviceName": "Lipid panel",
+        "units": 1,
+        "costPerUnit": 130,
+        "providerName": "Labcorp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Pain Evaluation",
+    "dateOfProcedure": 1745942400000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 1197,
+    "allowedAmount": 437,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 585,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram with interpretation",
+        "units": 1,
+        "costPerUnit": 339,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "71046",
+        "serviceName": "Chest X-ray, two views",
+        "units": 1,
+        "costPerUnit": 273,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ankle Injury Evaluation",
+    "dateOfProcedure": 1746201600000,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 807,
+    "allowedAmount": 239,
+    "lineItems": [
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 380,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "73610",
+        "serviceName": "Ankle X-ray, minimum three views",
+        "units": 1,
+        "costPerUnit": 427,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Epidural Steroid Injection",
+    "dateOfProcedure": 1746460800000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 5591,
+    "allowedAmount": 2432,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Lumbar epidural steroid injection",
+        "units": 1,
+        "costPerUnit": 5591,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Transforaminal Epidural Steroid Injection",
+    "dateOfProcedure": 1746720000000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 8360,
+    "allowedAmount": 1056,
+    "lineItems": [
+      {
+        "cptCode": "64483",
+        "serviceName": "Transforaminal epidural injection lumbar/sacral",
+        "units": 1,
+        "costPerUnit": 8360,
+        "providerName": "Evan Thompson, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Therapeutic Exercise and Manual Therapy",
+    "dateOfProcedure": 1746979200000,
+    "hospitalName": "Rusk Rehabilitation at NYU Langone",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 207,
+    "allowedAmount": 93,
+    "lineItems": [
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 114,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "97140",
+        "serviceName": "Manual therapy techniques, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 93,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Neuromuscular Reeducation",
+    "dateOfProcedure": 1747238400000,
+    "hospitalName": "Northside Hand & Occupational Therapy",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 402,
+    "allowedAmount": 190,
+    "lineItems": [
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 152,
+        "providerName": "Dr. Sarah Smith"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 125,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Low Complexity",
+    "dateOfProcedure": 1747497600000,
+    "hospitalName": "Valley Orthopedic Physical Therapy",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 314,
+    "allowedAmount": 197,
+    "lineItems": [
+      {
+        "cptCode": "97161",
+        "serviceName": "Physical therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 203,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 111,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Moderate Complexity",
+    "dateOfProcedure": 1746979200000,
+    "hospitalName": "Rancho Los Amigos Outpatient Therapy",
+    "city": "Downey",
+    "state": "CA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 635,
+    "allowedAmount": 289,
+    "lineItems": [
+      {
+        "cptCode": "97162",
+        "serviceName": "Physical therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 371,
+        "providerName": "Rachel Kim, OTR/L"
+      },
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 122,
+        "providerName": "Rachel Kim, OTR/L"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 142,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Re-Evaluation and Treatment",
+    "dateOfProcedure": 1747238400000,
+    "hospitalName": "Pinecrest Speech & Feeding Therapy",
+    "city": "Raleigh",
+    "state": "NC",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 495,
+    "allowedAmount": 177,
+    "lineItems": [
+      {
+        "cptCode": "97164",
+        "serviceName": "Physical therapy re-evaluation",
+        "units": 1,
+        "costPerUnit": 215,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 140,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Hand Rehabilitation Visit",
+    "dateOfProcedure": 1747497600000,
+    "hospitalName": "Riverbend Sports Rehab",
+    "city": "Austin",
+    "state": "TX",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 549,
+    "allowedAmount": 223,
+    "lineItems": [
+      {
+        "cptCode": "97166",
+        "serviceName": "Occupational therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 315,
+        "providerName": "Dr. Kathleen Herrmann"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 122,
+        "providerName": "Dr. Kathleen Herrmann"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 112,
+        "providerName": "Dr. Kathleen Herrmann"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Self-Care Training Visit",
+    "dateOfProcedure": 1747756800000,
+    "hospitalName": "Pinecrest Speech & Feeding Therapy",
+    "city": "Raleigh",
+    "state": "NC",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 328,
+    "allowedAmount": 187,
+    "lineItems": [
+      {
+        "cptCode": "97165",
+        "serviceName": "Occupational therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 212,
+        "providerName": "Dr. Thomas Balcezak"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 116,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Treatment Visit",
+    "dateOfProcedure": 1748016000000,
+    "hospitalName": "Pinecrest Speech & Feeding Therapy",
+    "city": "Raleigh",
+    "state": "NC",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 176,
+    "allowedAmount": 62,
+    "lineItems": [
+      {
+        "cptCode": "92507",
+        "serviceName": "Speech/hearing therapy treatment",
+        "units": 1,
+        "costPerUnit": 176,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Swallowing Treatment Visit",
+    "dateOfProcedure": 1748275200000,
+    "hospitalName": "Northside Hand & Occupational Therapy",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 226,
+    "allowedAmount": 165,
+    "lineItems": [
+      {
+        "cptCode": "92526",
+        "serviceName": "Treatment of swallowing dysfunction",
+        "units": 1,
+        "costPerUnit": 226,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Post-Operative Gait Training Visit",
+    "dateOfProcedure": 1748534400000,
+    "hospitalName": "Pinecrest Speech & Feeding Therapy",
+    "city": "Raleigh",
+    "state": "NC",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 224,
+    "allowedAmount": 83,
+    "lineItems": [
+      {
+        "cptCode": "97116",
+        "serviceName": "Gait training therapy, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 127,
+        "providerName": "Shanon Williams, PT"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 97,
+        "providerName": "Shanon Williams, PT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain With and Without Contrast",
+    "dateOfProcedure": 1748793600000,
+    "hospitalName": "Mayo Clinic Hospital",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 3313,
+    "allowedAmount": 1186,
+    "lineItems": [
+      {
+        "cptCode": "70553",
+        "serviceName": "MRI brain without and with contrast",
+        "units": 1,
+        "costPerUnit": 3313,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Knee Without Contrast",
+    "dateOfProcedure": 1749052800000,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 5200,
+    "allowedAmount": 1284,
+    "lineItems": [
+      {
+        "cptCode": "73721",
+        "serviceName": "MRI lower extremity joint without contrast",
+        "units": 1,
+        "costPerUnit": 5200,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Lumbar Spine Without Contrast",
+    "dateOfProcedure": 1748534400000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 5527,
+    "allowedAmount": 953,
+    "lineItems": [
+      {
+        "cptCode": "72148",
+        "serviceName": "MRI lumbar spine without contrast",
+        "units": 1,
+        "costPerUnit": 5527,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Head Without Contrast",
+    "dateOfProcedure": 1748793600000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 2737,
+    "allowedAmount": 1032,
+    "lineItems": [
+      {
+        "cptCode": "70450",
+        "serviceName": "CT head without contrast",
+        "units": 1,
+        "costPerUnit": 2737,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Abdomen and Pelvis With Contrast",
+    "dateOfProcedure": 1749052800000,
+    "hospitalName": "Cleveland Clinic Main Campus",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 4053,
+    "allowedAmount": 2250,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT abdomen and pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 4053,
+        "providerName": "City Imaging Services"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Screening Mammography",
+    "dateOfProcedure": 1749312000000,
+    "hospitalName": "Mayo Clinic Hospital",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 480,
+    "allowedAmount": 237,
+    "lineItems": [
+      {
+        "cptCode": "77067",
+        "serviceName": "Screening mammography, bilateral",
+        "units": 1,
+        "costPerUnit": 480,
+        "providerName": "Advanced Radiology Associates"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Diagnostic Colonoscopy",
+    "dateOfProcedure": 1749571200000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 6294,
+    "allowedAmount": 3348,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Diagnostic colonoscopy",
+        "units": 1,
+        "costPerUnit": 6294,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy With Biopsy",
+    "dateOfProcedure": 1749830400000,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 6973,
+    "allowedAmount": 1946,
+    "lineItems": [
+      {
+        "cptCode": "45380",
+        "serviceName": "Colonoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 6973,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy With Biopsy",
+    "dateOfProcedure": 1750089600000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 5718,
+    "allowedAmount": 1490,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "Upper endoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 5718,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Knee Arthroscopy With Meniscectomy",
+    "dateOfProcedure": 1750348800000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 17042,
+    "allowedAmount": 5248,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy with meniscectomy",
+        "units": 1,
+        "costPerUnit": 17042,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1750608000000,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 55306,
+    "allowedAmount": 25334,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip arthroplasty",
+        "units": 1,
+        "costPerUnit": 55306,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1750089600000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 82905,
+    "allowedAmount": 22020,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee arthroplasty",
+        "units": 1,
+        "costPerUnit": 82905,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Large Joint Injection",
+    "dateOfProcedure": 1750348800000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 712,
+    "allowedAmount": 211,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Large joint injection or aspiration",
+        "units": 1,
+        "costPerUnit": 421,
+        "providerName": "Dr. Thomas Balcezak"
+      },
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 291,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Primary Care Office Visit With Labs",
+    "dateOfProcedure": 1750608000000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 829,
+    "allowedAmount": 173,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 386,
+        "providerName": "Rachel Kim, OTR/L"
+      },
+      {
+        "cptCode": "80053",
+        "serviceName": "Comprehensive metabolic panel",
+        "units": 1,
+        "costPerUnit": 157,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "85025",
+        "serviceName": "Complete blood count with differential",
+        "units": 1,
+        "costPerUnit": 94,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "80061",
+        "serviceName": "Lipid panel",
+        "units": 1,
+        "costPerUnit": 192,
+        "providerName": "Labcorp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Pain Evaluation",
+    "dateOfProcedure": 1750867200000,
+    "hospitalName": "Mayo Clinic Hospital",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 1204,
+    "allowedAmount": 434,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 481,
+        "providerName": "Dr. Sarah Smith"
+      },
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram with interpretation",
+        "units": 1,
+        "costPerUnit": 336,
+        "providerName": "Dr. Sarah Smith"
+      },
+      {
+        "cptCode": "71046",
+        "serviceName": "Chest X-ray, two views",
+        "units": 1,
+        "costPerUnit": 387,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ankle Injury Evaluation",
+    "dateOfProcedure": 1751126400000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 756,
+    "allowedAmount": 311,
+    "lineItems": [
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 243,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "73610",
+        "serviceName": "Ankle X-ray, minimum three views",
+        "units": 1,
+        "costPerUnit": 513,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Epidural Steroid Injection",
+    "dateOfProcedure": 1751385600000,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 5054,
+    "allowedAmount": 1364,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Lumbar epidural steroid injection",
+        "units": 1,
+        "costPerUnit": 5054,
+        "providerName": "Dr. Priya Shah"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Transforaminal Epidural Steroid Injection",
+    "dateOfProcedure": 1751644800000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 5489,
+    "allowedAmount": 1372,
+    "lineItems": [
+      {
+        "cptCode": "64483",
+        "serviceName": "Transforaminal epidural injection lumbar/sacral",
+        "units": 1,
+        "costPerUnit": 5489,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Therapeutic Exercise and Manual Therapy",
+    "dateOfProcedure": 1751904000000,
+    "hospitalName": "Shirley Ryan AbilityLab Outpatient Center",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 347,
+    "allowedAmount": 112,
+    "lineItems": [
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 127,
+        "providerName": "Dr. Kathleen Herrmann"
+      },
+      {
+        "cptCode": "97140",
+        "serviceName": "Manual therapy techniques, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 93,
+        "providerName": "Dr. Kathleen Herrmann"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Neuromuscular Reeducation",
+    "dateOfProcedure": 1752163200000,
+    "hospitalName": "Pinecrest Speech & Feeding Therapy",
+    "city": "Raleigh",
+    "state": "NC",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 219,
+    "allowedAmount": 75,
+    "lineItems": [
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 85,
+        "providerName": "Dr. Michael Rivera"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 134,
+        "providerName": "Dr. Michael Rivera"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Low Complexity",
+    "dateOfProcedure": 1751644800000,
+    "hospitalName": "Rusk Rehabilitation at NYU Langone",
+    "city": "New York",
+    "state": "NY",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 402,
+    "allowedAmount": 162,
+    "lineItems": [
+      {
+        "cptCode": "97161",
+        "serviceName": "Physical therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 311,
+        "providerName": "Rachel Kim, OTR/L"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 91,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Moderate Complexity",
+    "dateOfProcedure": 1751904000000,
+    "hospitalName": "Lakeshore Outpatient Rehabilitation",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 514,
+    "allowedAmount": 360,
+    "lineItems": [
+      {
+        "cptCode": "97162",
+        "serviceName": "Physical therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 305,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 95,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 114,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Re-Evaluation and Treatment",
+    "dateOfProcedure": 1752163200000,
+    "hospitalName": "Lakeshore Outpatient Rehabilitation",
+    "city": "Seattle",
+    "state": "WA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 375,
+    "allowedAmount": 142,
+    "lineItems": [
+      {
+        "cptCode": "97164",
+        "serviceName": "Physical therapy re-evaluation",
+        "units": 1,
+        "costPerUnit": 286,
+        "providerName": "Rachel Kim, OTR/L"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 89,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Hand Rehabilitation Visit",
+    "dateOfProcedure": 1752422400000,
+    "hospitalName": "Shirley Ryan AbilityLab Outpatient Center",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 632,
+    "allowedAmount": 160,
+    "lineItems": [
+      {
+        "cptCode": "97166",
+        "serviceName": "Occupational therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 404,
+        "providerName": "Claire Nguyen, SLP"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 116,
+        "providerName": "Claire Nguyen, SLP"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 112,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Self-Care Training Visit",
+    "dateOfProcedure": 1752681600000,
+    "hospitalName": "Rancho Los Amigos Outpatient Therapy",
+    "city": "Downey",
+    "state": "CA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 475,
+    "allowedAmount": 304,
+    "lineItems": [
+      {
+        "cptCode": "97165",
+        "serviceName": "Occupational therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 225,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 125,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Treatment Visit",
+    "dateOfProcedure": 1752940800000,
+    "hospitalName": "Rancho Los Amigos Outpatient Therapy",
+    "city": "Downey",
+    "state": "CA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 171,
+    "allowedAmount": 122,
+    "lineItems": [
+      {
+        "cptCode": "92507",
+        "serviceName": "Speech/hearing therapy treatment",
+        "units": 1,
+        "costPerUnit": 171,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Swallowing Treatment Visit",
+    "dateOfProcedure": 1753200000000,
+    "hospitalName": "Shirley Ryan AbilityLab Outpatient Center",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 173,
+    "allowedAmount": 98,
+    "lineItems": [
+      {
+        "cptCode": "92526",
+        "serviceName": "Treatment of swallowing dysfunction",
+        "units": 1,
+        "costPerUnit": 173,
+        "providerName": "Dr. Priya Shah"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Post-Operative Gait Training Visit",
+    "dateOfProcedure": 1753459200000,
+    "hospitalName": "Rancho Los Amigos Outpatient Therapy",
+    "city": "Downey",
+    "state": "CA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 322,
+    "allowedAmount": 118,
+    "lineItems": [
+      {
+        "cptCode": "97116",
+        "serviceName": "Gait training therapy, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 103,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 116,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain With and Without Contrast",
+    "dateOfProcedure": 1753718400000,
+    "hospitalName": "Piedmont Atlanta Hospital",
+    "city": "Atlanta",
+    "state": "GA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 5488,
+    "allowedAmount": 1980,
+    "lineItems": [
+      {
+        "cptCode": "70553",
+        "serviceName": "MRI brain without and with contrast",
+        "units": 1,
+        "costPerUnit": 5488,
+        "providerName": "Dr. Priya Shah"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Knee Without Contrast",
+    "dateOfProcedure": 1753200000000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Choice POS II",
+    "billedAmount": 3861,
+    "allowedAmount": 1656,
+    "lineItems": [
+      {
+        "cptCode": "73721",
+        "serviceName": "MRI lower extremity joint without contrast",
+        "units": 1,
+        "costPerUnit": 3861,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Lumbar Spine Without Contrast",
+    "dateOfProcedure": 1753459200000,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 5532,
+    "allowedAmount": 615,
+    "lineItems": [
+      {
+        "cptCode": "72148",
+        "serviceName": "MRI lumbar spine without contrast",
+        "units": 1,
+        "costPerUnit": 5532,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Head Without Contrast",
+    "dateOfProcedure": 1753718400000,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 3060,
+    "allowedAmount": 881,
+    "lineItems": [
+      {
+        "cptCode": "70450",
+        "serviceName": "CT head without contrast",
+        "units": 1,
+        "costPerUnit": 3060,
+        "providerName": "Quest Diagnostics"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Abdomen and Pelvis With Contrast",
+    "dateOfProcedure": 1753977600000,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 3707,
+    "allowedAmount": 854,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT abdomen and pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 3707,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Screening Mammography",
+    "dateOfProcedure": 1754236800000,
+    "hospitalName": "Piedmont Atlanta Hospital",
+    "city": "Atlanta",
+    "state": "GA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 304,
+    "allowedAmount": 237,
+    "lineItems": [
+      {
+        "cptCode": "77067",
+        "serviceName": "Screening mammography, bilateral",
+        "units": 1,
+        "costPerUnit": 304,
+        "providerName": "Labcorp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Diagnostic Colonoscopy",
+    "dateOfProcedure": 1754496000000,
+    "hospitalName": "Cleveland Clinic Main Campus",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 8538,
+    "allowedAmount": 2803,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Diagnostic colonoscopy",
+        "units": 1,
+        "costPerUnit": 8538,
+        "providerName": "Advanced Radiology Associates"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy With Biopsy",
+    "dateOfProcedure": 1754755200000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 6646,
+    "allowedAmount": 2376,
+    "lineItems": [
+      {
+        "cptCode": "45380",
+        "serviceName": "Colonoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 6646,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy With Biopsy",
+    "dateOfProcedure": 1755014400000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 5749,
+    "allowedAmount": 2103,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "Upper endoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 5749,
+        "providerName": "Dr. Sarah Smith"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Knee Arthroscopy With Meniscectomy",
+    "dateOfProcedure": 1755273600000,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 19656,
+    "allowedAmount": 5762,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy with meniscectomy",
+        "units": 1,
+        "costPerUnit": 19656,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1754755200000,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 47914,
+    "allowedAmount": 40709,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip arthroplasty",
+        "units": 1,
+        "costPerUnit": 47914,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1755014400000,
+    "hospitalName": "Cleveland Clinic Main Campus",
+    "city": "Cleveland",
+    "state": "OH",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 75895,
+    "allowedAmount": 29489,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee arthroplasty",
+        "units": 1,
+        "costPerUnit": 75895,
+        "providerName": "Dr. Priya Shah"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Large Joint Injection",
+    "dateOfProcedure": 1755273600000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 1034,
+    "allowedAmount": 242,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Large joint injection or aspiration",
+        "units": 1,
+        "costPerUnit": 636,
+        "providerName": "Rachel Kim, OTR/L"
+      },
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 398,
+        "providerName": "Rachel Kim, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Primary Care Office Visit With Labs",
+    "dateOfProcedure": 1755532800000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 865,
+    "allowedAmount": 224,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 281,
+        "providerName": "City Imaging Services"
+      },
+      {
+        "cptCode": "80053",
+        "serviceName": "Comprehensive metabolic panel",
+        "units": 1,
+        "costPerUnit": 293,
+        "providerName": "Quest Diagnostics"
+      },
+      {
+        "cptCode": "85025",
+        "serviceName": "Complete blood count with differential",
+        "units": 1,
+        "costPerUnit": 54,
+        "providerName": "Quest Diagnostics"
+      },
+      {
+        "cptCode": "80061",
+        "serviceName": "Lipid panel",
+        "units": 1,
+        "costPerUnit": 237,
+        "providerName": "Labcorp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Pain Evaluation",
+    "dateOfProcedure": 1755792000000,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 1514,
+    "allowedAmount": 302,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 607,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram with interpretation",
+        "units": 1,
+        "costPerUnit": 310,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "71046",
+        "serviceName": "Chest X-ray, two views",
+        "units": 1,
+        "costPerUnit": 597,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ankle Injury Evaluation",
+    "dateOfProcedure": 1756051200000,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 594,
+    "allowedAmount": 230,
+    "lineItems": [
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 252,
+        "providerName": "Dr. Priya Shah"
+      },
+      {
+        "cptCode": "73610",
+        "serviceName": "Ankle X-ray, minimum three views",
+        "units": 1,
+        "costPerUnit": 342,
+        "providerName": "Dr. Priya Shah"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Lumbar Epidural Steroid Injection",
+    "dateOfProcedure": 1756310400000,
+    "hospitalName": "Mayo Clinic Hospital",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 9168,
+    "allowedAmount": 2470,
+    "lineItems": [
+      {
+        "cptCode": "62323",
+        "serviceName": "Lumbar epidural steroid injection",
+        "units": 1,
+        "costPerUnit": 9168,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Transforaminal Epidural Steroid Injection",
+    "dateOfProcedure": 1756569600000,
+    "hospitalName": "Mayo Clinic Hospital",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 8980,
+    "allowedAmount": 2320,
+    "lineItems": [
+      {
+        "cptCode": "64483",
+        "serviceName": "Transforaminal epidural injection lumbar/sacral",
+        "units": 1,
+        "costPerUnit": 8980,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Therapeutic Exercise and Manual Therapy",
+    "dateOfProcedure": 1756828800000,
+    "hospitalName": "Valley Orthopedic Physical Therapy",
+    "city": "Phoenix",
+    "state": "AZ",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 357,
+    "allowedAmount": 170,
+    "lineItems": [
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 123,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "97140",
+        "serviceName": "Manual therapy techniques, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 111,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Visit - Neuromuscular Reeducation",
+    "dateOfProcedure": 1756310400000,
+    "hospitalName": "Shirley Ryan AbilityLab Outpatient Center",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 512,
+    "allowedAmount": 272,
+    "lineItems": [
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 135,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 121,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Low Complexity",
+    "dateOfProcedure": 1756569600000,
+    "hospitalName": "Riverbend Sports Rehab",
+    "city": "Austin",
+    "state": "TX",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 268,
+    "allowedAmount": 184,
+    "lineItems": [
+      {
+        "cptCode": "97161",
+        "serviceName": "Physical therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 185,
+        "providerName": "Luis Hernandez, PTA"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 83,
+        "providerName": "Luis Hernandez, PTA"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Initial Evaluation - Moderate Complexity",
+    "dateOfProcedure": 1756828800000,
+    "hospitalName": "Rancho Los Amigos Outpatient Therapy",
+    "city": "Downey",
+    "state": "CA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 617,
+    "allowedAmount": 300,
+    "lineItems": [
+      {
+        "cptCode": "97162",
+        "serviceName": "Physical therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 352,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "97112",
+        "serviceName": "Neuromuscular reeducation, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 118,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 147,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Physical Therapy Re-Evaluation and Treatment",
+    "dateOfProcedure": 1757088000000,
+    "hospitalName": "Summit Ridge Physical Therapy",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 345,
+    "allowedAmount": 132,
+    "lineItems": [
+      {
+        "cptCode": "97164",
+        "serviceName": "Physical therapy re-evaluation",
+        "units": 1,
+        "costPerUnit": 163,
+        "providerName": "Evan Thompson, PT, DPT"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 2,
+        "costPerUnit": 91,
+        "providerName": "Evan Thompson, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Hand Rehabilitation Visit",
+    "dateOfProcedure": 1757347200000,
+    "hospitalName": "Pinecrest Speech & Feeding Therapy",
+    "city": "Raleigh",
+    "state": "NC",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 577,
+    "allowedAmount": 284,
+    "lineItems": [
+      {
+        "cptCode": "97166",
+        "serviceName": "Occupational therapy evaluation, moderate complexity",
+        "units": 1,
+        "costPerUnit": 331,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      },
+      {
+        "cptCode": "97530",
+        "serviceName": "Therapeutic activities, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 114,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 132,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Occupational Therapy Self-Care Training Visit",
+    "dateOfProcedure": 1757606400000,
+    "hospitalName": "Pinecrest Speech & Feeding Therapy",
+    "city": "Raleigh",
+    "state": "NC",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 379,
+    "allowedAmount": 236,
+    "lineItems": [
+      {
+        "cptCode": "97165",
+        "serviceName": "Occupational therapy evaluation, low complexity",
+        "units": 1,
+        "costPerUnit": 271,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "97535",
+        "serviceName": "Self-care/home management training, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 108,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Treatment Visit",
+    "dateOfProcedure": 1757865600000,
+    "hospitalName": "Kessler Rehabilitation Center - West Orange",
+    "city": "West Orange",
+    "state": "NJ",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 177,
+    "allowedAmount": 98,
+    "lineItems": [
+      {
+        "cptCode": "92507",
+        "serviceName": "Speech/hearing therapy treatment",
+        "units": 1,
+        "costPerUnit": 177,
+        "providerName": "Claire Nguyen, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Speech Therapy Swallowing Treatment Visit",
+    "dateOfProcedure": 1758124800000,
+    "hospitalName": "Johns Hopkins Outpatient Rehabilitation",
+    "city": "Baltimore",
+    "state": "MD",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 181,
+    "allowedAmount": 71,
+    "lineItems": [
+      {
+        "cptCode": "92526",
+        "serviceName": "Treatment of swallowing dysfunction",
+        "units": 1,
+        "costPerUnit": 181,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Post-Operative Gait Training Visit",
+    "dateOfProcedure": 1758384000000,
+    "hospitalName": "Summit Ridge Physical Therapy",
+    "city": "Denver",
+    "state": "CO",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 225,
+    "allowedAmount": 100,
+    "lineItems": [
+      {
+        "cptCode": "97116",
+        "serviceName": "Gait training therapy, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 97,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "97110",
+        "serviceName": "Therapeutic exercises, each 15 minutes",
+        "units": 1,
+        "costPerUnit": 128,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Brain With and Without Contrast",
+    "dateOfProcedure": 1757865600000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 6912,
+    "allowedAmount": 1975,
+    "lineItems": [
+      {
+        "cptCode": "70553",
+        "serviceName": "MRI brain without and with contrast",
+        "units": 1,
+        "costPerUnit": 6912,
+        "providerName": "Nina Brooks, SLP"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Knee Without Contrast",
+    "dateOfProcedure": 1758124800000,
+    "hospitalName": "UCSF Medical Center",
+    "city": "San Francisco",
+    "state": "CA",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 5322,
+    "allowedAmount": 1155,
+    "lineItems": [
+      {
+        "cptCode": "73721",
+        "serviceName": "MRI lower extremity joint without contrast",
+        "units": 1,
+        "costPerUnit": 5322,
+        "providerName": "Dr. Robert Onders"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "MRI Lumbar Spine Without Contrast",
+    "dateOfProcedure": 1758384000000,
+    "hospitalName": "Houston Methodist Hospital",
+    "city": "Houston",
+    "state": "TX",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "Choice Plus",
+    "billedAmount": 3796,
+    "allowedAmount": 1741,
+    "lineItems": [
+      {
+        "cptCode": "72148",
+        "serviceName": "MRI lumbar spine without contrast",
+        "units": 1,
+        "costPerUnit": 3796,
+        "providerName": "Dr. Thomas Balcezak"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Head Without Contrast",
+    "dateOfProcedure": 1758643200000,
+    "hospitalName": "Mayo Clinic Hospital",
+    "city": "Rochester",
+    "state": "MN",
+    "insuranceProvider": "Oscar Health",
+    "insurancePlan": "Silver Classic",
+    "billedAmount": 3328,
+    "allowedAmount": 881,
+    "lineItems": [
+      {
+        "cptCode": "70450",
+        "serviceName": "CT head without contrast",
+        "units": 1,
+        "costPerUnit": 3328,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "CT Abdomen and Pelvis With Contrast",
+    "dateOfProcedure": 1758902400000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 4504,
+    "allowedAmount": 1556,
+    "lineItems": [
+      {
+        "cptCode": "74177",
+        "serviceName": "CT abdomen and pelvis with contrast",
+        "units": 1,
+        "costPerUnit": 4504,
+        "providerName": "Shanon Williams, PT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Screening Mammography",
+    "dateOfProcedure": 1759161600000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Molina Healthcare",
+    "insurancePlan": "Marketplace Silver",
+    "billedAmount": 573,
+    "allowedAmount": 126,
+    "lineItems": [
+      {
+        "cptCode": "77067",
+        "serviceName": "Screening mammography, bilateral",
+        "units": 1,
+        "costPerUnit": 573,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Diagnostic Colonoscopy",
+    "dateOfProcedure": 1759420800000,
+    "hospitalName": "Yale New Haven Hospital",
+    "city": "New Haven",
+    "state": "CT",
+    "insuranceProvider": "Humana",
+    "insurancePlan": "Medicare Advantage HMO",
+    "billedAmount": 7261,
+    "allowedAmount": 1758,
+    "lineItems": [
+      {
+        "cptCode": "45378",
+        "serviceName": "Diagnostic colonoscopy",
+        "units": 1,
+        "costPerUnit": 7261,
+        "providerName": "Labcorp"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Colonoscopy With Biopsy",
+    "dateOfProcedure": 1759680000000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 5873,
+    "allowedAmount": 1768,
+    "lineItems": [
+      {
+        "cptCode": "45380",
+        "serviceName": "Colonoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 5873,
+        "providerName": "Dr. Michael Rivera"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Upper Endoscopy With Biopsy",
+    "dateOfProcedure": 1759939200000,
+    "hospitalName": "Massachusetts General Hospital",
+    "city": "Boston",
+    "state": "MA",
+    "insuranceProvider": "UnitedHealthcare",
+    "insurancePlan": "AARP Medicare Advantage",
+    "billedAmount": 5082,
+    "allowedAmount": 1033,
+    "lineItems": [
+      {
+        "cptCode": "43239",
+        "serviceName": "Upper endoscopy with biopsy",
+        "units": 1,
+        "costPerUnit": 5082,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Knee Arthroscopy With Meniscectomy",
+    "dateOfProcedure": 1759420800000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Centene",
+    "insurancePlan": "Ambetter Balanced Care",
+    "billedAmount": 20285,
+    "allowedAmount": 6982,
+    "lineItems": [
+      {
+        "cptCode": "29881",
+        "serviceName": "Knee arthroscopy with meniscectomy",
+        "units": 1,
+        "costPerUnit": 20285,
+        "providerName": "Dr. Kathleen Herrmann"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Hip Replacement",
+    "dateOfProcedure": 1759680000000,
+    "hospitalName": "Northwestern Memorial Hospital",
+    "city": "Chicago",
+    "state": "IL",
+    "insuranceProvider": "Kaiser Permanente",
+    "insurancePlan": "HMO",
+    "billedAmount": 76180,
+    "allowedAmount": 22350,
+    "lineItems": [
+      {
+        "cptCode": "27130",
+        "serviceName": "Total hip arthroplasty",
+        "units": 1,
+        "costPerUnit": 76180,
+        "providerName": "Dr. Priya Shah"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Total Knee Replacement",
+    "dateOfProcedure": 1759939200000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Blue Cross Blue Shield",
+    "insurancePlan": "Blue Choice PPO",
+    "billedAmount": 58903,
+    "allowedAmount": 41068,
+    "lineItems": [
+      {
+        "cptCode": "27447",
+        "serviceName": "Total knee arthroplasty",
+        "units": 1,
+        "costPerUnit": 58903,
+        "providerName": "Quest Diagnostics"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Large Joint Injection",
+    "dateOfProcedure": 1760198400000,
+    "hospitalName": "UCLA Medical Center",
+    "city": "Los Angeles",
+    "state": "CA",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 623,
+    "allowedAmount": 238,
+    "lineItems": [
+      {
+        "cptCode": "20610",
+        "serviceName": "Large joint injection or aspiration",
+        "units": 1,
+        "costPerUnit": 375,
+        "providerName": "Dr. David Ott"
+      },
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 248,
+        "providerName": "Dr. David Ott"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Primary Care Office Visit With Labs",
+    "dateOfProcedure": 1760457600000,
+    "hospitalName": "Tampa General Hospital",
+    "city": "Tampa",
+    "state": "FL",
+    "insuranceProvider": "Aetna",
+    "insurancePlan": "Medicare Premier PPO",
+    "billedAmount": 1180,
+    "allowedAmount": 177,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 567,
+        "providerName": "Quest Diagnostics"
+      },
+      {
+        "cptCode": "80053",
+        "serviceName": "Comprehensive metabolic panel",
+        "units": 1,
+        "costPerUnit": 270,
+        "providerName": "Quest Diagnostics"
+      },
+      {
+        "cptCode": "85025",
+        "serviceName": "Complete blood count with differential",
+        "units": 1,
+        "costPerUnit": 120,
+        "providerName": "Labcorp"
+      },
+      {
+        "cptCode": "80061",
+        "serviceName": "Lipid panel",
+        "units": 1,
+        "costPerUnit": 223,
+        "providerName": "Quest Diagnostics"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Chest Pain Evaluation",
+    "dateOfProcedure": 1760716800000,
+    "hospitalName": "Intermountain Medical Center",
+    "city": "Murray",
+    "state": "UT",
+    "insuranceProvider": "Anthem",
+    "insurancePlan": "Blue Access PPO",
+    "billedAmount": 1286,
+    "allowedAmount": 362,
+    "lineItems": [
+      {
+        "cptCode": "99214",
+        "serviceName": "Established patient office visit, level 4",
+        "units": 1,
+        "costPerUnit": 596,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "93000",
+        "serviceName": "Electrocardiogram with interpretation",
+        "units": 1,
+        "costPerUnit": 319,
+        "providerName": "Maya Patel, PT, DPT"
+      },
+      {
+        "cptCode": "71046",
+        "serviceName": "Chest X-ray, two views",
+        "units": 1,
+        "costPerUnit": 371,
+        "providerName": "Maya Patel, PT, DPT"
+      }
+    ]
+  },
+  {
+    "procedureDescription": "Ankle Injury Evaluation",
+    "dateOfProcedure": 1760976000000,
+    "hospitalName": "Stanford Health Care",
+    "city": "Stanford",
+    "state": "CA",
+    "insuranceProvider": "Cigna",
+    "insurancePlan": "Open Access Plus",
+    "billedAmount": 822,
+    "allowedAmount": 240,
+    "lineItems": [
+      {
+        "cptCode": "99213",
+        "serviceName": "Established patient office visit, level 3",
+        "units": 1,
+        "costPerUnit": 322,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      },
+      {
+        "cptCode": "73610",
+        "serviceName": "Ankle X-ray, minimum three views",
+        "units": 1,
+        "costPerUnit": 500,
+        "providerName": "Ari Cohen, MS, OTR/L"
+      }
+    ]
+  }
+]

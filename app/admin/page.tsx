@@ -42,7 +42,7 @@ export default function AdminPage() {
     try {
       await generateData();
       setMessage("Seed data generated successfully.");
-    } catch (err) {
+    } catch {
       setMessage("Error generating data.");
     } finally {
       setIsGenerating(false);
@@ -63,10 +63,9 @@ export default function AdminPage() {
           setMessage(`Purging database... (Deleted ${totalDeleted} items)`);
         }
       }
-      setMessage(`Database cleared successfully. Total ${totalDeleted} items removed.`);
-    } catch (err) {
-      setMessage("Error clearing data. The database might be partially cleared.");
-      console.error(err);
+      setMessage("Database cleared successfully.");
+    } catch {
+      setMessage("Error clearing data.");
     } finally {
       setIsClearing(false);
     }
@@ -77,8 +76,8 @@ export default function AdminPage() {
     setMessage("Loading 2000 realistic prestored entries...");
     try {
       await loadPrestored();
-      setMessage("2000 entries loaded successfully.");
-    } catch (err) {
+      setMessage("Realistic data loaded successfully.");
+    } catch {
       setMessage("Error loading prestored data.");
     } finally {
       setIsLoadingPrestored(false);
@@ -166,23 +165,14 @@ export default function AdminPage() {
 
           <div className="rounded-xl border border-sky-100 bg-sky-50/30 p-6 dark:border-sky-900/20 dark:bg-sky-900/10">
             <h3 className="text-lg font-semibold text-sky-900 dark:text-sky-100">Realistic</h3>
-            <p className="mt-2 text-xs text-sky-700/70 dark:text-sky-400/70">Load researched hospital and insurance entries.</p>
-            <div className="mt-6 space-y-3">
-              <button
-                onClick={handleLoadPrestored900}
-                disabled={isGenerating || isClearing || isLoadingPrestored || isLoadingPrestored900}
-                className="w-full rounded-lg bg-sky-600 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-500 disabled:opacity-50"
-              >
-                {isLoadingPrestored900 ? "Loading..." : "Load 900 Entries"}
-              </button>
-              <button
-                onClick={handleLoadPrestored}
-                disabled={isGenerating || isClearing || isLoadingPrestored || isLoadingPrestored900}
-                className="w-full rounded-lg border border-sky-200 bg-white py-2.5 text-sm font-semibold text-sky-700 transition hover:bg-sky-50 dark:border-sky-800 dark:bg-zinc-900 dark:text-sky-400 dark:hover:bg-sky-950/30 disabled:opacity-50"
-              >
-                {isLoadingPrestored ? "Loading..." : "Load 2000 Entries"}
-              </button>
-            </div>
+            <p className="mt-2 text-xs text-sky-700/70 dark:text-sky-400/70">Load 250 researched hospital and insurance entries.</p>
+            <button
+              onClick={handleLoadPrestored}
+              disabled={isGenerating || isClearing || isLoadingPrestored}
+              className="mt-6 w-full rounded-lg bg-sky-600 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-500 disabled:opacity-50"
+            >
+              {isLoadingPrestored ? "Loading..." : "Load Prestored Data"}
+            </button>
           </div>
 
           <div className="rounded-xl border border-red-100 bg-red-50/30 p-6 dark:border-red-900/20 dark:bg-red-900/10">
