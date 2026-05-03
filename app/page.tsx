@@ -53,18 +53,18 @@ export default function Home() {
               }}
               placeholder='Ex: "ACL Surgery" or Enter a Specific CPT'
             />
-            <div className="mt-3 flex items-center justify-center gap-3">
+            <div className="mt-4 flex w-full items-center justify-between gap-4 px-2 sm:px-4">
               <button
                 type="button"
                 onClick={handleSearch}
-                className="inline-flex items-center rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 dark:focus:ring-offset-zinc-950"
+                className="flex flex-1 items-center justify-center rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 dark:focus:ring-offset-zinc-950"
               >
                 Search
               </button>
               <span className="text-xs font-medium text-zinc-400 dark:text-zinc-500">
                 or
               </span>
-              <AddProcedureButton onClick={() => router.push('/upload')} />
+              <AddProcedureButton className="flex-1" onClick={() => router.push('/upload')} />
             </div>
           </div>
 
