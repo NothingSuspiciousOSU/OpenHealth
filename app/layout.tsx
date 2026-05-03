@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OpenHealth — Spot billing errors before you overpay",
+  title: "OpenHealth",
   description:
-    "Americans lose $160–530 billion every year to healthcare fraud, overpayments, and billing mistakes. OpenHealth helps patients find errors, understand charges, and push back.",
+    "Bringing transparency to medical billing.",
 };
 
 export default function RootLayout({

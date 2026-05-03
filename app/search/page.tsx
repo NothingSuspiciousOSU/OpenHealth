@@ -2,7 +2,7 @@
 
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, useRef, useCallback, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { SearchBar } from "../components/SearchBar";
 import { SearchResultItem } from "../components/SearchResultItem";
@@ -22,16 +22,14 @@ function SearchPageContent() {
   const { profile } = useInsuranceProfile();
   const [sortBy, setSortBy] = useState("relevant"); // "relevant", "price_asc", "price_desc"
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [displayLimit, setDisplayLimit] = useState(25);
   
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 400) {
-        setShowScrollTop(true);
-      } else {
-        setShowScrollTop(false);
-      }
+      const shouldShow = window.scrollY > 400;
+      setShowScrollTop((prev) => prev === shouldShow ? prev : shouldShow);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   
@@ -45,6 +43,16 @@ function SearchPageContent() {
   
   const filterOptions = useQuery(api.search.getFilterOptions);
   
+  const statsResults = useQuery(api.search.searchStats, {
+    q: activeQuery,
+    insuranceProvider: insuranceProv,
+    insurancePlan: insurancePlan,
+    state: state,
+    city: city,
+    hospitalName: hospital,
+    afterDate: date ? BigInt(new Date(date).getTime()) : undefined,
+  });
+
   const results = useQuery(api.search.searchProcedures, {
     q: activeQuery,
     insuranceProvider: insuranceProv,
@@ -53,6 +61,10 @@ function SearchPageContent() {
     city: city,
     hospitalName: hospital,
     afterDate: date ? BigInt(new Date(date).getTime()) : undefined,
+    limit: displayLimit,
+    sortBy: sortBy,
+    profileProvider: profile.providerName,
+    profilePlan: profile.planName,
   });
 
   /** Build a URLSearchParams with all current filters */
@@ -105,6 +117,54 @@ function SearchPageContent() {
     ? Object.keys(filterOptions.locations[state]).sort() : [];
   const hospitals = filterOptions && state && city && filterOptions.locations[state][city] 
     ? filterOptions.locations[state][city].sort() : [];
+
+  // Reset limit when search parameters change
+  useEffect(() => {
+    setDisplayLimit(25);
+  }, [activeQuery, insuranceProv, insurancePlan, state, city, hospital, date, sortBy]);
+
+  // Infinite Scroll Observer — use useCallback to keep a stable ref callback and
+  // a loading guard to prevent rapid-fire state updates that cause infinite loops.
+  const observer = useRef<IntersectionObserver | null>(null);
+  const loadingGuard = useRef(false);
+
+  // Reset the guard whenever results arrive (query settled)
+  useEffect(() => {
+    if (results !== undefined) {
+      loadingGuard.current = false;
+    }
+  }, [results]);
+
+  const observerRef = useCallback((node: HTMLDivElement | null) => {
+    if (observer.current) observer.current.disconnect();
+    
+    if (node) {
+      observer.current = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting && !loadingGuard.current) {
+            loadingGuard.current = true;
+            setDisplayLimit((prev) => prev + 25);
+          }
+        },
+        { rootMargin: "400px" }
+      );
+      observer.current.observe(node);
+    }
+  }, []);
+
+  // Cache previous results to prevent flickering during infinite scroll loads
+  const prevStatsRef = useRef(statsResults);
+  const prevResultsRef = useRef(results);
+  if (statsResults !== undefined) prevStatsRef.current = statsResults;
+  if (results !== undefined) prevResultsRef.current = results;
+
+  const displayStats = statsResults ?? prevStatsRef.current;
+  const displayResults = results ?? prevResultsRef.current;
+
+  // Only show full skeleton on initial load (no cached data at all)
+  const isInitialLoading = displayStats === undefined || displayResults === undefined;
+  // Show a subtle indicator when loading more pages
+  const isLoadingMore = !isInitialLoading && (statsResults === undefined || results === undefined);
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black py-10 text-zinc-950 dark:text-zinc-50">
@@ -258,11 +318,11 @@ function SearchPageContent() {
           <div className="flex-1">
             <div className="mb-4 flex flex-col items-start justify-between sm:flex-row sm:items-center">
               <h2 className="text-xl font-semibold">
-                {results === undefined 
+                {isInitialLoading 
                   ? "Searching..." 
-                  : `${results.length} result${results.length === 1 ? '' : 's'} found`}
+                  : `${displayStats.length} result${displayStats.length === 1 ? '' : 's'} found`}
               </h2>
-              {results !== undefined && results.length > 0 && (
+              {!isInitialLoading && displayStats.length > 0 && (
                 <div className="mt-2 flex items-center gap-2 sm:mt-0">
                   <div className="relative">
                     <button
@@ -298,13 +358,13 @@ function SearchPageContent() {
               )}
             </div>
 
-            {results === undefined ? (
+            {isInitialLoading ? (
               <div className="space-y-4">
                 {[1, 2, 3].map((i) => (
                   <div key={i} className="h-32 w-full animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-800" />
                 ))}
               </div>
-            ) : results.length === 0 ? (
+            ) : displayStats.length === 0 ? (
               <div className="flex flex-col items-center justify-center rounded-lg border border-zinc-200 border-dashed py-24 text-center dark:border-zinc-800">
                 <div className="mb-4 text-6xl">😢</div>
                 <h3 className="mb-2 text-lg font-medium">No results found</h3>
@@ -321,7 +381,7 @@ function SearchPageContent() {
               </div>
             ) : (
               <div className="flex flex-col">
-                <CostStats results={results} />
+                <CostStats results={displayStats} />
                 
                 <div className="mb-4 mt-8 grid grid-cols-1 gap-4 px-4 text-xs font-semibold uppercase tracking-wider text-zinc-500 sm:grid-cols-12 sm:gap-6">
                   <div className="sm:col-span-4">Hospital (Location | Date)</div>
@@ -330,26 +390,18 @@ function SearchPageContent() {
                   <div className="flex flex-col items-start sm:col-span-3 sm:items-end">Total Amount</div>
                 </div>
                 
-                <div className="flex flex-col overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-                  {results
-                    .sort((a, b) => {
-                      if (sortBy === "price_asc") {
-                        return Number(a.allowedAmount) - Number(b.allowedAmount);
-                      }
-                      if (sortBy === "price_desc") {
-                        return Number(b.allowedAmount) - Number(a.allowedAmount);
-                      }
-                      // Default "relevant" sort: match profile first
-                      const aMatches = a.insurance.providerName === profile.providerName && a.insurance.planName === profile.planName;
-                      const bMatches = b.insurance.providerName === profile.providerName && b.insurance.planName === profile.planName;
-                      if (aMatches && !bMatches) return -1;
-                      if (!aMatches && bMatches) return 1;
-                      return 0;
-                    })
-                    .map((proc) => (
-                      <SearchResultItem key={proc._id} procedure={proc} />
+                <div className={`flex flex-col overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-950 transition-opacity duration-200 ${isLoadingMore ? 'opacity-80' : ''}`}>
+                  {displayResults.map((proc) => (
+                    <SearchResultItem key={proc._id} procedure={proc} />
                   ))}
                 </div>
+                
+                {/* Infinite Scroll Trigger */}
+                {(displayStats.length > displayLimit || isLoadingMore) && (
+                  <div ref={observerRef} className="flex items-center justify-center py-8">
+                    <div className="h-6 w-6 animate-spin rounded-full border-2 border-zinc-300 border-t-blue-600 dark:border-zinc-700"></div>
+                  </div>
+                )}
               </div>
             )}
           </div>

@@ -12,7 +12,7 @@ type Procedure = {
   insurance: { providerName: string; planName: string };
   billedAmount: bigint;
   allowedAmount: bigint;
-  cptCodes: string[];
+  cptCodes?: string[]; // Made optional since they aren't loaded immediately
 };
 
 export function SearchResultItem({ procedure }: { procedure: Procedure }) {
@@ -73,9 +73,6 @@ export function SearchResultItem({ procedure }: { procedure: Procedure }) {
         {/* Procedure Column */}
         <div className="sm:col-span-4">
           <div className="font-semibold text-zinc-900 dark:text-zinc-100">{procedure.procedureDescription}</div>
-          <div className="text-xs text-zinc-500 dark:text-zinc-400">
-            {procedure.cptCodes?.length > 0 ? procedure.cptCodes.join(" • ") : "No CPT codes listed"}
-          </div>
         </div>
 
         {/* Insurance Column */}
