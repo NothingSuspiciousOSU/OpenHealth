@@ -39,3 +39,14 @@ export const successPanelClasses =
 
 export const errorPanelClasses =
     'rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-800 shadow-sm dark:border-rose-500/20 dark:bg-rose-500/10 dark:text-rose-100';
+
+export const dropdownContainerClasses = 'relative';
+
+export const dropdownMenuClasses =
+    'absolute z-10 w-full mt-1 bg-white border border-zinc-300 rounded-md shadow-lg max-h-48 overflow-y-auto dark:bg-zinc-800 dark:border-zinc-600';
+
+export const dropdownOptionClasses =
+    'w-full text-left px-4 py-2 hover:bg-blue-50 dark:hover:bg-zinc-700 text-zinc-900 dark:text-zinc-100 text-sm transition cursor-pointer';
+
+export const dropdownEmptyClasses =
+    'px-4 py-2 text-sm text-zinc-500 dark:text-zinc-400';

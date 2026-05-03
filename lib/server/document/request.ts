@@ -112,6 +112,7 @@ export async function parseDocumentStructure(data: DocumentData): Promise<Parsed
             '- billedAmount is the total charges from the hospital/provider.',
             '- allowedAmount is billedAmount minus any contractual adjustments, negotiation, or writeoff. This does not include insurance payments.',
             '- Monetary fields must be float: dollar.cents',
+            '- State code should be two letters.',
             '- If a value is missing, use an empty string, 0, or null for serviceName.',
         ].join('\n');
 

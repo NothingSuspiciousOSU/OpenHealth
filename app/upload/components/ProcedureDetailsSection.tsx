@@ -1,5 +1,6 @@
 import type { ChangeEvent } from 'react';
 import type { ProcedureFormData } from '../types';
+import { AutocompleteInput } from './AutocompleteInput';
 import {
   fieldLabelClasses,
   inputClasses,
@@ -12,9 +13,10 @@ type ProcedureDetailsSectionProps = {
   formData: ProcedureFormData;
   isLoading: boolean;
   onChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  hospitalSuggestions?: string[];
 };
 
-export function ProcedureDetailsSection({ formData, isLoading, onChange }: ProcedureDetailsSectionProps) {
+export function ProcedureDetailsSection({ formData, isLoading, onChange, hospitalSuggestions = [] }: ProcedureDetailsSectionProps) {
   return (
     <div className={sectionCardClasses}>
       <div className="mb-4">
@@ -54,14 +56,13 @@ export function ProcedureDetailsSection({ formData, isLoading, onChange }: Proce
 
         <div>
           <label className={fieldLabelClasses}>Hospital Name *</label>
-          <input
-            type="text"
+          <AutocompleteInput
             name="hospitalName"
             value={formData.hospitalName}
             onChange={onChange}
             disabled={isLoading}
-            className={inputClasses}
             placeholder="Enter hospital name"
+            suggestions={hospitalSuggestions}
           />
         </div>
       </div>

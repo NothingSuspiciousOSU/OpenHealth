@@ -62,9 +62,11 @@ export const getFilterOptions = query({
   handler: async (ctx) => {
     // Use .take() to bound reads — 500 procedures is enough for filter options
     const procedures = await ctx.db.query("procedures").take(500);
+    const lineItems = await ctx.db.query("procedureLineItems").take(500);
 
     const insurances: Record<string, Set<string>> = {};
     const locations: Record<string, Record<string, Set<string>>> = {};
+    const providers = new Set<string>();
 
     for (const p of procedures) {
       // Insurance
@@ -81,6 +83,12 @@ export const getFilterOptions = query({
       if (!locations[state]) locations[state] = {};
       if (!locations[state][city]) locations[state][city] = new Set();
       if (hosp) locations[state][city].add(hosp);
+    }
+
+    for (const li of lineItems) {
+      if (li.providerName) {
+        providers.add(li.providerName);
+      }
     }
 
     // Convert to serializable format
@@ -100,6 +108,7 @@ export const getFilterOptions = query({
     return {
       insurances: serializedInsurances,
       locations: serializedLocations,
+      providers: Array.from(providers),
     };
   },
 });

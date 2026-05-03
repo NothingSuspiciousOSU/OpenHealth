@@ -1,4 +1,5 @@
 import type { CptLineItemDraft } from '../types';
+import { AutocompleteInput } from './AutocompleteInput';
 import {
     fieldLabelClasses,
     inputClasses,
@@ -18,7 +19,9 @@ type ProcedureLineItemsSectionProps = {
         field: keyof CptLineItemDraft,
         value: string,
     ) => void;
+    providerSuggestions?: string[];
 };
+
 
 type LineItemField = {
     key: keyof CptLineItemDraft;
@@ -41,6 +44,7 @@ export function ProcedureLineItemsSection({
     onAddLineItem,
     onRemoveLineItem,
     onLineItemChange,
+    providerSuggestions = [],
 }: ProcedureLineItemsSectionProps) {
     return (
         <div className={sectionCardClasses}>
@@ -82,15 +86,26 @@ export function ProcedureLineItemsSection({
                             {lineItemFields.map((field) => (
                                 <div key={field.key} className={field.key === 'serviceName' ? 'md:col-span-2' : ''}>
                                     <label className={fieldLabelClasses}>{field.label}</label>
-                                    <input
-                                        type={field.type ?? 'text'}
-                                        value={lineItem[field.key]}
-                                        onChange={(event) => onLineItemChange(index, field.key, event.target.value)}
-                                        disabled={isLoading}
-                                        className={inputClasses}
-                                        placeholder={field.placeholder}
-                                        min={field.type === 'number' ? '0' : undefined}
-                                    />
+                                    {field.key === 'providerName' ? (
+                                        <AutocompleteInput
+                                            name={field.key}
+                                            value={lineItem[field.key]}
+                                            onChange={(e) => onLineItemChange(index, field.key, e.target.value)}
+                                            disabled={isLoading}
+                                            placeholder={field.placeholder}
+                                            suggestions={providerSuggestions}
+                                        />
+                                    ) : (
+                                        <input
+                                            type={field.type ?? 'text'}
+                                            value={lineItem[field.key]}
+                                            onChange={(event) => onLineItemChange(index, field.key, event.target.value)}
+                                            disabled={isLoading}
+                                            className={inputClasses}
+                                            placeholder={field.placeholder}
+                                            min={field.type === 'number' ? '0' : undefined}
+                                        />
+                                    )}
                                 </div>
                             ))}
                         </div>

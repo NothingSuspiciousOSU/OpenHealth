@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from 'react';
-import { useMutation } from 'convex/react';
+import { useState, useMemo } from 'react';
+import { useMutation, useQuery } from 'convex/react';
 import { api } from '@/convex/_generated/api';
 import { createDocumentDataFromImages } from '@/lib/shared/DocumentData';
 import { parseFilesToUploadImages, validateUploadSelection } from '@/lib/shared/documentUploadClient';
 import { DocumentUploadSection } from './components/DocumentUploadSection';
+import { AutocompleteInput } from './components/AutocompleteInput';
 import { ProcedureDetailsSection } from './components/ProcedureDetailsSection';
 import {
     ProcedureLineItemsSection,
@@ -23,8 +24,21 @@ import {
     successPanelClasses,
     fieldLabelClasses,
     inputClasses,
+    dropdownContainerClasses,
+    dropdownMenuClasses,
+    dropdownOptionClasses,
+    dropdownEmptyClasses,
 } from './components/formStyles';
 import type { CptLineItemDraft, ProcedureFormData } from './types';
+
+const US_STATES = [
+    'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
+    'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
+    'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
+    'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
+    'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY',
+    'DC'
+];
 
 type ProcedureLineItemsPayload = Array<{
     cptCode: string;
@@ -65,6 +79,9 @@ function createInitialLineItems(): CptLineItemDraft[] {
 }
 
 export function UploadPage() {
+    const filterOptions = useQuery(api.search.getFilterOptions);
+
+
     const createProcedure = useMutation(api.procedures.create);
     const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
     const [isDocumentParseLoading, setIsDocumentParseLoading] = useState(false);
@@ -75,7 +92,38 @@ export function UploadPage() {
     const [showSuccessPanel, setShowSuccessPanel] = useState(false);
     const [successDBUpdate, setSuccessDBUpdate] = useState(false);
     const [formData, setFormData] = useState<ProcedureFormData>(createInitialFormData);
+    // Derived suggestions
+    const hospitalSuggestions = useMemo(() => {
+        if (!filterOptions || !formData.location.state || !formData.location.city) return [];
+        return filterOptions.locations[formData.location.state]?.[formData.location.city] || [];
+    }, [filterOptions, formData.location.state, formData.location.city]);
+
+    const citySuggestions = useMemo(() => {
+        if (!filterOptions || !formData.location.state) return [];
+        return Object.keys(filterOptions.locations[formData.location.state] || {});
+    }, [filterOptions, formData.location.state]);
+
+    const providerSuggestions = useMemo(() => {
+        if (!filterOptions) return [];
+        return Object.keys(filterOptions.insurances || {});
+    }, [filterOptions]);
+
+    const planSuggestions = useMemo(() => {
+        if (!filterOptions || !formData.insurance.providerName) return [];
+        return filterOptions.insurances[formData.insurance.providerName] || [];
+    }, [filterOptions, formData.insurance.providerName]);
+    
+    const lineItemProviderSuggestions = filterOptions?.providers || [];
+
     const [lineItems, setLineItems] = useState<CptLineItemDraft[]>(createInitialLineItems);
+    const [stateSearchOpen, setStateSearchOpen] = useState(false);
+    const [stateSearchValue, setStateSearchValue] = useState('');
+
+    const filteredStates = stateSearchValue.trim() === ''
+        ? US_STATES
+        : US_STATES.filter(state =>
+            state.toLowerCase().includes(stateSearchValue.toLowerCase())
+        );
 
     const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
         const files = event.target.files ? Array.from(event.target.files) : [];
@@ -95,11 +143,34 @@ export function UploadPage() {
         setSuccessDBUpdate(false);
     };
 
+    const handleStateSelect = (state: string) => {
+        setFormData((previous) => ({
+            ...previous,
+            location: {
+                ...previous.location,
+                state: state,
+            },
+        }));
+        setStateSearchOpen(false);
+        setStateSearchValue('');
+    };
+
+    const handleStateSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { value } = event.target;
+        setStateSearchValue(value);
+        setStateSearchOpen(true);
+    };
+
     const handleFormChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target;
 
         if (name.startsWith('location.')) {
             const key = name.split('.')[1] as keyof ProcedureFormData['location'];
+            if (key === 'state') {
+                setStateSearchValue(value);
+                setStateSearchOpen(true);
+                return;
+            }
             setFormData((previous) => ({
                 ...previous,
                 location: {
@@ -408,42 +479,65 @@ export function UploadPage() {
                         </div>
                     )}
 
-                    <ProcedureDetailsSection
-                        formData={formData}
-                        isLoading={isFormChangeLoading}
-                        onChange={handleFormChange}
-                    />
-
                     <div className={sectionCardClasses}>
                         <h2 className="mb-4 text-base font-semibold text-zinc-900 dark:text-zinc-100">Location</h2>
                         <div className="grid gap-4 md:grid-cols-2">
-                            <div>
-                                <label className={fieldLabelClasses}>City *</label>
-                                <input
-                                    type="text"
-                                    name="location.city"
-                                    value={formData.location.city}
-                                    onChange={handleFormChange}
-                                    disabled={isFormChangeLoading}
-                                    className={inputClasses}
-                                    placeholder="City"
-                                />
-                            </div>
-
-                            <div>
+                            <div className={dropdownContainerClasses}>
                                 <label className={fieldLabelClasses}>State *</label>
                                 <input
                                     type="text"
                                     name="location.state"
-                                    value={formData.location.state}
-                                    onChange={handleFormChange}
+                                    value={stateSearchOpen ? stateSearchValue : formData.location.state}
+                                    onChange={handleStateSearchChange}
+                                    onFocus={() => setStateSearchOpen(true)}
+                                    onBlur={() => setTimeout(() => setStateSearchOpen(false), 200)}
                                     disabled={isFormChangeLoading}
                                     className={inputClasses}
-                                    placeholder="State"
+                                    placeholder="Type or select state"
+                                    autoComplete="off"
+                                />
+                                {stateSearchOpen && (
+                                    <div className={dropdownMenuClasses}>
+                                        {filteredStates.length > 0 ? (
+                                            filteredStates.map((state) => (
+                                                <button
+                                                    key={state}
+                                                    type="button"
+                                                    onClick={() => handleStateSelect(state)}
+                                                    className={dropdownOptionClasses}
+                                                >
+                                                    {state}
+                                                </button>
+                                            ))
+                                        ) : (
+                                            <div className={dropdownEmptyClasses}>
+                                                No states found
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+                            <div>
+                                <label className={fieldLabelClasses}>City *</label>
+                                <AutocompleteInput
+                                    name="location.city"
+                                    value={formData.location.city}
+                                    onChange={handleFormChange}
+                                    disabled={isFormChangeLoading}
+                                    placeholder="City"
+                                    suggestions={citySuggestions}
                                 />
                             </div>
                         </div>
                     </div>
+
+                    <ProcedureDetailsSection
+                        formData={formData}
+                        isLoading={isFormChangeLoading}
+                        onChange={handleFormChange}
+                        hospitalSuggestions={hospitalSuggestions}
+                    />
+
 
                     <div className={sectionCardClasses}>
                         <h2 className="mb-4 text-base font-semibold text-zinc-900 dark:text-zinc-100">Insurance</h2>
@@ -452,27 +546,25 @@ export function UploadPage() {
                                 <label className={fieldLabelClasses}>
                                     Insurance Provider Name *
                                 </label>
-                                <input
-                                    type="text"
+                                <AutocompleteInput
                                     name="insurance.providerName"
                                     value={formData.insurance.providerName}
                                     onChange={handleFormChange}
                                     disabled={isFormChangeLoading}
-                                    className={inputClasses}
-                                    placeholder="Insurance provider"
+                                    placeholder="Insurance provider name"
+                                    suggestions={providerSuggestions}
                                 />
                             </div>
 
                             <div>
                                 <label className={fieldLabelClasses}>Plan Name *</label>
-                                <input
-                                    type="text"
+                                <AutocompleteInput
                                     name="insurance.planName"
                                     value={formData.insurance.planName}
                                     onChange={handleFormChange}
                                     disabled={isFormChangeLoading}
-                                    className={inputClasses}
-                                    placeholder="Plan name"
+                                    placeholder="Plan name (optional)"
+                                    suggestions={planSuggestions}
                                 />
                             </div>
                         </div>
@@ -519,6 +611,7 @@ export function UploadPage() {
                         onAddLineItem={addLineItem}
                         onRemoveLineItem={removeLineItem}
                         onLineItemChange={handleLineItemChange}
+                        providerSuggestions={lineItemProviderSuggestions}
                     />
 
                     {formError && (
