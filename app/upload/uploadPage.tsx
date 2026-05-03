@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { useMutation } from 'convex/react';
+import { api } from '@/convex/_generated/api';
 import { createDocumentDataFromImages } from '@/lib/shared/DocumentData';
 import { parseFilesToUploadImages, validateUploadSelection } from '@/lib/shared/documentUploadClient';
 import { DocumentUploadSection } from './components/DocumentUploadSection';
@@ -27,9 +29,16 @@ import type { CptLineItemDraft, ProcedureFormData } from './types';
 type ProcedureLineItemsPayload = Array<{
     cptCode: string;
     serviceName: string | null;
-    units: number;
-    costPerUnit: number;
+    units: bigint;
+    costPerUnit: bigint;
 }>;
+
+type ParsedLineItem = {
+    cptCode?: unknown;
+    serviceName?: unknown;
+    units?: unknown;
+    costPerUnit?: unknown;
+};
 
 function createInitialFormData(): ProcedureFormData {
     return {
@@ -54,6 +63,7 @@ function createInitialLineItems(): CptLineItemDraft[] {
 }
 
 export function UploadPage() {
+    const createProcedure = useMutation(api.procedures.create);
     const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
     const [isDocumentParseLoading, setIsDocumentParseLoading] = useState(false);
     const [isFormChangeLoading, setIsFormChangeLoading] = useState(false);
@@ -218,36 +228,31 @@ export function UploadPage() {
         setSuccessDBUpdate(false);
 
         try {
-            const images = await parseFilesToUploadImages(selectedFiles);
-
-            const documentData = createDocumentDataFromImages(
-                images.map((image) => ({
-                    resource: image.base64,
-                    filename: image.filename,
-                    fileType: image.fileType,
-                })),
-                new Date(Date.now()),
-            );
-
             const procedureLineItemsPayload: ProcedureLineItemsPayload = lineItems.map((lineItem) => ({
                 cptCode: lineItem.cptCode.trim(),
                 serviceName: lineItem.serviceName.trim() || null,
-                units: Number.parseInt(lineItem.units, 10),
-                costPerUnit: Number.parseInt(lineItem.costPerUnit, 10),
+                units: BigInt(Number.parseInt(lineItem.units, 10)),
+                costPerUnit: BigInt(Number.parseInt(lineItem.costPerUnit, 10)),
             }));
 
-            const procedurePayload = {
-                documentData,
+            await createProcedure({
                 procedure: {
-                    ...formData,
-                    dateOfProcedure: new Date(formData.dateOfProcedure).getTime(),
-                    billedAmount: Number.parseInt(formData.billedAmount, 10),
-                    allowedAmount: Number.parseInt(formData.allowedAmount, 10),
+                    procedureDescription: formData.procedureDescription.trim(),
+                    dateOfProcedure: BigInt(new Date(formData.dateOfProcedure).getTime()),
+                    hospitalName: formData.hospitalName.trim(),
+                    location: {
+                        city: formData.location.city.trim(),
+                        state: formData.location.state.trim(),
+                    },
+                    insurance: {
+                        providerName: formData.insurance.providerName.trim(),
+                        planName: formData.insurance.planName.trim(),
+                    },
+                    billedAmount: BigInt(Number.parseInt(formData.billedAmount, 10)),
+                    allowedAmount: BigInt(Number.parseInt(formData.allowedAmount, 10)),
                 },
                 procedureLineItems: procedureLineItemsPayload,
-            };
-
-            throw new Error("PROCEDURE ADD TO DB NOT YET IMPLEMENTED!");
+            });
 
             setSuccessDBUpdate(true);
             setSelectedFiles([]);
@@ -338,7 +343,7 @@ export function UploadPage() {
             }
 
             if (parsedLineItems.length > 0) {
-                const mapped = parsedLineItems.map((li: any) => ({
+                const mapped = parsedLineItems.map((li: ParsedLineItem) => ({
                     cptCode: String(li.cptCode || ''),
                     serviceName: li.serviceName == null ? '' : String(li.serviceName),
                     units: li.units != null ? String(Math.round(Number(li.units))) : '',

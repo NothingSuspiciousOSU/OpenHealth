@@ -10,6 +10,7 @@
 
 import type * as mockData from "../mockData.js";
 import type * as model_procedures from "../model/procedures.js";
+import type * as procedures from "../procedures.js";
 import type * as search from "../search.js";
 
 import type {
@@ -21,6 +22,7 @@ import type {
 declare const fullApi: ApiFromModules<{
   mockData: typeof mockData;
   "model/procedures": typeof model_procedures;
+  procedures: typeof procedures;
   search: typeof search;
 }>;
 
