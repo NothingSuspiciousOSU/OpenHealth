@@ -3,6 +3,11 @@ import "server-only";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "@/convex/_generated/api";
 import type { Id } from "@/convex/_generated/dataModel";
+import type {
+  AgentAggregateDataRequest,
+  AgentQueryDataRequest,
+  AgentWhereCondition,
+} from "@/lib/shared/chat/agentRead";
 
 let convexClient: ConvexHttpClient | null = null;
 
@@ -41,6 +46,15 @@ export type AgentReadFilters = {
   dateOfProcedureLte?: number;
 };
 
+const INT64_FIELDS = new Set([
+  "dateOfProcedure",
+  "billedAmount",
+  "allowedAmount",
+  "units",
+  "costPerUnit",
+  "lineTotal",
+]);
+
 function normalizeFilters(filters: AgentReadFilters | undefined) {
   if (!filters) return undefined;
 
@@ -58,9 +72,44 @@ function normalizeFilters(filters: AgentReadFilters | undefined) {
   };
 }
 
+function normalizeDslWhere(where: AgentWhereCondition[] | undefined) {
+  if (!where) return undefined;
+  return where.map((condition) => ({
+    ...condition,
+    value: Array.isArray(condition.value)
+      ? condition.value.map((value) => normalizeDslValue(condition.field, value))
+      : normalizeDslValue(condition.field, condition.value),
+  }));
+}
+
+function normalizeDslValue(field: string, value: string | number) {
+  if (typeof value === "number" && INT64_FIELDS.has(field)) {
+    return BigInt(value);
+  }
+  return value;
+}
+
 export async function describeConvexDataModel() {
   return getConvexClient().query(api.agent.describeDataModel, {
     token: getAgentReadToken(),
+  });
+}
+
+export async function queryConvexAgentData(request: AgentQueryDataRequest) {
+  return getConvexClient().query(api.agent.queryData, {
+    token: getAgentReadToken(),
+    ...request,
+    where: normalizeDslWhere(request.where),
+  });
+}
+
+export async function aggregateConvexAgentData(
+  request: AgentAggregateDataRequest,
+) {
+  return getConvexClient().query(api.agent.aggregateData, {
+    token: getAgentReadToken(),
+    ...request,
+    where: normalizeDslWhere(request.where),
   });
 }
 

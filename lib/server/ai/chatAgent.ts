@@ -2,19 +2,22 @@ import "server-only";
 
 import { stepCountIs, tool, ToolLoopAgent } from "ai";
 import { z } from "zod";
-import { agentReadFiltersSchema } from "@/lib/shared/chat/agentRead";
+import {
+  agentAggregateDataRequestSchema,
+  agentQueryDataRequestSchema,
+} from "@/lib/shared/chat/agentRead";
 import { BillDocumentContext } from "@/lib/shared/chat/documentContext";
 import {
+  aggregateConvexAgentData,
   describeConvexDataModel,
-  readConvexAgentData,
+  queryConvexAgentData,
 } from "./convexAgent";
 import { getNemotronModelId, getOpenRouterProvider } from "./openrouter";
 import { searchWithTavily } from "./tavily";
 
 function buildInstructions(documentContext?: BillDocumentContext) {
-  const documentContextText = documentContext
-    ? JSON.stringify(documentContext, null, 2)
-    : "No bill PDF context was provided for this turn.";
+  const documentContextText = formatDocumentContext(documentContext);
+  const hasBillContext = Boolean(documentContext);
 
   return [
     "You are the OpenHealth medical bill transparency agent.",
@@ -32,23 +35,26 @@ function buildInstructions(documentContext?: BillDocumentContext) {
     "- hospital, location, insurance, CPT, and service-name filtering",
     "- OpenHealth billed and allowed amount comparisons",
     "",
-    'Use action "describeDataModel" when you need to understand available fields.',
-    'Use action "readData" when retrieving rows.',
-    'Use table "procedures" for procedure-level comparisons.',
-    'Use table "procedureLineItems" for itemized bill/service-line comparisons.',
+    'Use action "describeDataModel" when you need to understand available fields, filters, relationships, or aggregation options.',
+    'Use action "queryData" when retrieving matching rows with filters, search, sorting, pagination, or relationship includes.',
+    'Use action "aggregateData" when the user asks for ranges, typical prices, medians, averages, counts, trends, comparisons, or "is this high".',
+    'Use table "procedures" for procedure-level billed/allowed comparisons.',
+    'Use table "procedureLineItems" for itemized CPT/service-line comparisons.',
+    'On table "procedures", aggregate dollar fields are "billedAmount" and "allowedAmount".',
+    'On table "procedureLineItems", aggregate dollar fields are "lineTotal" and "costPerUnit"; there is no "allowedAmount" field on procedureLineItems.',
     "",
-    "Prefer specific filters when available:",
-    "- cptCode",
-    "- procedureDescriptionContains",
-    "- serviceNameContains",
-    "- hospitalName",
-    "- state",
-    "- city",
-    "- insuranceProviderName",
-    "- insurancePlanName",
-    "- dateOfProcedureGte/dateOfProcedureLte",
+    "DSL basics:",
+    '- For `queryData`, put `table`, `where`, `search`, `sort`, `include`, `limit`, and `cursor` at the top level of the tool input with `action: "queryData"`.',
+    '- For `aggregateData`, put `table`, `where`, `search`, `groupBy`, `metrics`, and `limit` at the top level of the tool input with `action: "aggregateData"`.',
+    '- Filters are `where` conditions with `field`, `op`, and `value`; supported ops are "eq", "contains", "gte", "lte", and "in".',
+    '- Text search uses `search` with declared search fields: "procedureDescription", "cptCode", or "serviceName".',
+    '- Use `include: ["procedure"]` on procedureLineItems when parent bill context helps.',
+    '- Use `include: ["lineItems"]` on procedures when itemized CPT details help.',
+    '- For line-item total comparisons, aggregate field "lineTotal", not "allowedAmount".',
+    'Example queryData input: `{ "action": "queryData", "table": "procedureLineItems", "where": [{ "field": "cptCode", "op": "eq", "value": "99284" }], "include": ["procedure"], "limit": 25 }`.',
+    'Example aggregateData input: `{ "action": "aggregateData", "table": "procedureLineItems", "where": [{ "field": "cptCode", "op": "eq", "value": "99284" }], "metrics": [{ "op": "count" }, { "op": "median", "field": "lineTotal" }] }`.',
     "",
-    "Start with focused filters. If no matches are returned, explain that and broaden the search.",
+    "Start with focused filters. If no matches are returned, read the diagnostics, broaden by dropping the most specific filters first, and do not repeat the same exact empty query.",
     "",
     "2. webResearchAgent",
     "Use this only for public external context:",
@@ -73,6 +79,12 @@ function buildInstructions(documentContext?: BillDocumentContext) {
     "",
     "Workflow:",
     "- First, understand the user's question and the extracted bill context.",
+    hasBillContext
+      ? "- A bill context is available. Use structured fields such as CPT codes, service descriptions, hospital, insurer, dates, and amounts as exact query inputs when relevant."
+      : "- No bill context is available. If the user asks to audit a bill, ask them to attach the bill PDF or paste CPT/service lines and amounts before querying OpenHealth data.",
+    "- Prefer structured extracted bill facts for exact OpenHealth filters and calculations.",
+    "- Consult the full extracted document text whenever the user asks about anything not represented in the structured fields, including addresses, claim identifiers, footnotes, adjustments, payer language, payment details, or document-specific wording.",
+    "- Treat uploaded document text as model-extracted/OCR-like evidence. It can contain extraction uncertainty, so do not overstate illegible or ambiguous details.",
     "- If the user asks about prices, fairness, comparisons, or whether something looks high, use OpenHealth data unless the answer is only conceptual.",
     "- If the user asks what a CPT code, charge type, denial, adjustment, or billing term means, use webResearchAgent when current or external context would help.",
     "- If the user provides a bill amount and comparison rows are available, use priceReasoningAgent.",
@@ -95,14 +107,35 @@ function buildInstructions(documentContext?: BillDocumentContext) {
   ].join("\n");
 }
 
+function formatDocumentContext(documentContext?: BillDocumentContext) {
+  if (!documentContext) {
+    return "No bill PDF context was provided for this turn.";
+  }
+
+  const { documentMarkdown, pages, ...structuredContext } = documentContext;
+  const fullDocumentText =
+    documentMarkdown.trim() ||
+    pages
+      .map((page) => [`## Page ${page.pageNumber}`, page.text].join("\n\n"))
+      .join("\n\n");
+
+  return [
+    "Structured extracted bill facts:",
+    JSON.stringify(structuredContext, null, 2),
+    "",
+    "Full extracted document text:",
+    fullDocumentText || "No full document text was extracted.",
+  ].join("\n");
+}
+
 export function createOpenHealthChatAgent(documentContext?: BillDocumentContext) {
   const openrouter = getOpenRouterProvider();
 
   return new ToolLoopAgent({
     model: openrouter(getNemotronModelId()),
     instructions: buildInstructions(documentContext),
-    stopWhen: stepCountIs(8),
-    maxOutputTokens: 3000,
+    stopWhen: stepCountIs(20),
+    maxOutputTokens: 5000,
     tools: {
       webResearchAgent: tool({
         description:
@@ -128,28 +161,31 @@ export function createOpenHealthChatAgent(documentContext?: BillDocumentContext)
       }),
       convexDatabaseAgent: tool({
         description:
-          "Read OpenHealth procedure and line-item data through a bounded, read-only, schema-aware Convex surface.",
-        inputSchema: z.object({
-          action: z.enum(["describeDataModel", "readData"]),
-          table: z.enum(["procedures", "procedureLineItems"]).optional(),
-          limit: z.number().int().min(1).max(100).optional(),
-          filters: agentReadFiltersSchema.optional(),
-        }),
-        execute: async ({ action, table, limit, filters }) => {
+          "Read and aggregate OpenHealth procedure and line-item data through a bounded, read-only, schema-aware Convex query DSL.",
+        inputSchema: z.discriminatedUnion("action", [
+          z.object({ action: z.literal("describeDataModel") }),
+          agentQueryDataRequestSchema.extend({
+            action: z.literal("queryData"),
+          }),
+          agentAggregateDataRequestSchema.extend({
+            action: z.literal("aggregateData"),
+          }),
+        ]),
+        execute: async (input) => {
           try {
-            if (action === "describeDataModel") {
+            if (input.action === "describeDataModel") {
               const model = await describeConvexDataModel();
               return { ok: true, model };
             }
 
-            if (!table) {
-              return {
-                ok: false,
-                error: "table is required when action is readData",
-              };
+            if (input.action === "queryData") {
+              const query = agentQueryDataRequestSchema.parse(input);
+              const data = await queryConvexAgentData(query);
+              return { ok: true, data };
             }
 
-            const data = await readConvexAgentData({ table, limit, filters });
+            const aggregate = agentAggregateDataRequestSchema.parse(input);
+            const data = await aggregateConvexAgentData(aggregate);
             return { ok: true, data };
           } catch (error) {
             return {
