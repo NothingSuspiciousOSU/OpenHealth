@@ -71,32 +71,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Trending ─── */}
-      <TrendingProcedures />
+      <div>
 
-      {/* ─── Stats ─── */}
-      <StatsBar
-        stats={[
-          {
-            value: "$160B-$530B",
-            label:
-              "Estimated loss every year to healthcare fraud, overpayments, and billing mistakes",
-          },
-          {
-            value: "80%",
-            label: "Medical bills with errors",
-          },
-          {
-            value: "1.5x",
-            label: "Higher odds of errors after emergency care",
-          },
-          {
-            value: "~76%",
-            label:
-              "Those who experience financial relief after disputing their bill",
-          },
-        ]}
-      />
+        {/* ─── Stats ─── */}
+        <StatsBar
+            stats={[
+            {
+                value: "$160B-$530B",
+                label:
+                "Estimated loss every year to healthcare fraud, overpayments, and billing mistakes",
+            },
+            {
+                value: "80%",
+                label: "Medical bills with errors",
+            },
+            {
+                value: "1.5x",
+                label: "Higher odds of errors after emergency care",
+            },
+            {
+                value: "~76%",
+                label:
+                "Those who experience financial relief after disputing their bill",
+            },
+            ]}
+        />
+      </div>
+
+      {/* ─── Trending ─── */}
+        <TrendingProcedures />
+      
     </div>
   );
 }
