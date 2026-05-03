@@ -5,6 +5,7 @@ import {
   generatedProviders,
   generatedProceduresData,
 } from "./mockDataSets";
+import { prestoredData } from "./prestoredData";
 
 /**
  * Delete a batch of data from both tables.
@@ -94,6 +95,54 @@ export const generate = mutation({
       }
     }
 
+    return { success: true };
+  },
+});
+
+/**
+ * Load realistic prestored data from prestoredData.ts
+ */
+export const loadPrestored = mutation({
+  args: {},
+  handler: async (ctx) => {
+    for (const entry of prestoredData) {
+      const dateOfProcedure = BigInt(entry.dateOfProcedure);
+      const billedAmount = BigInt(entry.billedAmount);
+      const allowedAmount = BigInt(entry.allowedAmount);
+
+      const procedureId = await ctx.db.insert("procedures", {
+        procedureDescription: entry.procedureDescription,
+        dateOfProcedure,
+        hospitalName: entry.hospitalName,
+        location: {
+          city: entry.city,
+          state: entry.state,
+        },
+        insurance: {
+          providerName: entry.insuranceProvider,
+          planName: entry.insurancePlan,
+        },
+        billedAmount,
+        allowedAmount,
+      });
+
+      for (const item of entry.lineItems) {
+        await ctx.db.insert("procedureLineItems", {
+          procedureId,
+          cptCode: item.cptCode,
+          serviceName: item.serviceName,
+          units: BigInt(item.units),
+          costPerUnit: BigInt(item.costPerUnit),
+          providerName: item.providerName,
+          hospitalName: entry.hospitalName,
+          city: entry.city,
+          state: entry.state,
+          insuranceProviderName: entry.insuranceProvider,
+          insurancePlanName: entry.insurancePlan,
+          dateOfProcedure,
+        });
+      }
+    }
     return { success: true };
   },
 });
