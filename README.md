@@ -48,15 +48,21 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Environment Variables
 
+Copy `.env.local.example` to `.env.local` for local development. For
+production, use `.env.production.example` as the checklist for your hosting
+provider and Convex production deployment.
+
 Core app data depends on Convex. AI, document parsing, external research, file
 upload, and admin-only data controls also use these environment-backed services
 when their corresponding features are enabled:
 
 - Convex deployment values, including `NEXT_PUBLIC_CONVEX_URL`
-- OpenRouter model credentials
-- Tavily search credentials
-- NVIDIA NIM credentials
-- UploadThing credentials
+- `OPENROUTER_API_KEY`
+- Optional OpenRouter model overrides: `PDF_CONTEXT_MODEL`, `NEMOTRON_MODEL`
+- `TAVILY_API_KEY`
+- `AGENT_READ_TOKEN`
+- `NIM_SECRET`
+- `UPLOADTHING_TOKEN`
 - `ADMIN_PAGE_PASSWORD`
 
 Do not commit `.env.local`; each teammate should create their own local Convex
