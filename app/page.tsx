@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { HeroIcon } from "./components/HeroIcon";
 import { SearchBar } from "./components/SearchBar";
 import { StatsBar } from "./components/StatsBar";
-import { AddUploadProcedureButton } from "./components/AddUploadProcedureButton";
+import { AddProcedureButton } from "./components/AddProcedureButton";
 import { TrendingProcedures } from "./components/TrendingProcedures";
 
 export default function Home() {
@@ -63,7 +63,7 @@ export default function Home() {
               <span className="text-xs font-medium text-zinc-400 dark:text-zinc-500">
                 or
               </span>
-              <AddUploadProcedureButton onClick={() => {}} />
+              <AddProcedureButton onClick={() => router.push('/upload')} />
             </div>
           </div>
         </div>
