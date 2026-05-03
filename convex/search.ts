@@ -104,8 +104,8 @@ export const getFilterOptions = query({
   args: {},
   handler: async (ctx) => {
     // Search a large sample of the database for filter options
-    const procedures = await ctx.db.query("procedures").take(500);
-    const lineItems = await ctx.db.query("procedureLineItems").take(500);
+    const procedures = await ctx.db.query("procedures").take(1000);
+    const lineItems = await ctx.db.query("procedureLineItems").take(1000);
 
     const insurances: Record<string, Set<string>> = {};
     const locations: Record<string, Record<string, Set<string>>> = {};
