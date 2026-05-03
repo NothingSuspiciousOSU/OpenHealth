@@ -1,6 +1,7 @@
 import "server-only";
 
 import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
+import { transformOpenRouterRequestBody } from "./openrouterRequest";
 
 const OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1";
 const DEFAULT_PDF_CONTEXT_MODEL = "google/gemini-3.1-flash-lite-preview";
@@ -27,6 +28,7 @@ export function getOpenRouterProvider() {
         "HTTP-Referer": "https://openhealth.app",
         "X-Title": "OpenHealth",
       },
+      transformRequestBody: transformOpenRouterRequestBody,
     });
   }
 
