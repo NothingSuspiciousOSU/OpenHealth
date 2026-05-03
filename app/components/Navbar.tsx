@@ -12,6 +12,7 @@ export function Navbar() {
     { href: "/", label: "Home" },
     { href: "/search?q=", label: "Search" },
     { href: "/upload", label: "Upload" },
+    { href: "/chat", label: "Chat" },
   ];
 
   return (
