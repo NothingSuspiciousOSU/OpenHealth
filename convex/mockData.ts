@@ -5,23 +5,29 @@ import {
   generatedProviders,
   generatedProceduresData,
 } from "./mockDataSets";
-import { prestoredData } from "./prestoredData";
+import { prestoredData, prestoredData900 } from "./prestoredData";
 
 /**
  * Delete a batch of data from both tables.
- * Call repeatedly until `remaining` is 0.
+ * Call repeatedly until `done` is true.
  */
 export const clearBatch = mutation({
   args: {},
   handler: async (ctx) => {
-    const procedures = await ctx.db.query("procedures").take(200);
+    const BATCH_SIZE = 500;
+    
+    const procedures = await ctx.db.query("procedures").take(BATCH_SIZE);
     for (const p of procedures) await ctx.db.delete("procedures", p._id);
 
-    const lineItems = await ctx.db.query("procedureLineItems").take(200);
+    const lineItems = await ctx.db.query("procedureLineItems").take(BATCH_SIZE);
     for (const li of lineItems)
       await ctx.db.delete("procedureLineItems", li._id);
 
-    return { remaining: procedures.length + lineItems.length };
+    const totalDeleted = procedures.length + lineItems.length;
+    return { 
+      deleted: totalDeleted,
+      done: totalDeleted === 0
+    };
   },
 });
 
@@ -106,6 +112,54 @@ export const loadPrestored = mutation({
   args: {},
   handler: async (ctx) => {
     for (const entry of prestoredData) {
+      const dateOfProcedure = BigInt(entry.dateOfProcedure);
+      const billedAmount = BigInt(entry.billedAmount);
+      const allowedAmount = BigInt(entry.allowedAmount);
+
+      const procedureId = await ctx.db.insert("procedures", {
+        procedureDescription: entry.procedureDescription,
+        dateOfProcedure,
+        hospitalName: entry.hospitalName,
+        location: {
+          city: entry.city,
+          state: entry.state,
+        },
+        insurance: {
+          providerName: entry.insuranceProvider,
+          planName: entry.insurancePlan,
+        },
+        billedAmount,
+        allowedAmount,
+      });
+
+      for (const item of entry.lineItems) {
+        await ctx.db.insert("procedureLineItems", {
+          procedureId,
+          cptCode: item.cptCode,
+          serviceName: item.serviceName,
+          units: BigInt(item.units),
+          costPerUnit: BigInt(item.costPerUnit),
+          providerName: item.providerName,
+          hospitalName: entry.hospitalName,
+          city: entry.city,
+          state: entry.state,
+          insuranceProviderName: entry.insuranceProvider,
+          insurancePlanName: entry.insurancePlan,
+          dateOfProcedure,
+        });
+      }
+    }
+    return { success: true };
+  },
+});
+
+/**
+ * Load 900 realistic prestored data entries
+ */
+export const loadPrestored900 = mutation({
+  args: {},
+  handler: async (ctx) => {
+    for (const entry of prestoredData900) {
       const dateOfProcedure = BigInt(entry.dateOfProcedure);
       const billedAmount = BigInt(entry.billedAmount);
       const allowedAmount = BigInt(entry.allowedAmount);
