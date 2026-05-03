@@ -60,7 +60,7 @@ export default function Home() {
       <StatsBar
         stats={[
           {
-            value: "$160-$530B",
+            value: "$160B-$530B",
             label:
               "Estimated loss every year to healthcare fraud, overpayments, and billing mistakes",
           },
@@ -75,7 +75,7 @@ export default function Home() {
           {
             value: "~76%",
             label:
-              "Those who experience financial relief after reaching out",
+              "Those who experience financial relief after disputing their bill",
           },
         ]}
       />
