@@ -3,7 +3,6 @@ import { v } from "convex/values";
 import {
   findProceduresByCpt,
   findProceduresByDescription,
-  applyProcedureFilters,
 } from "./model/procedures";
 
 export const searchProcedures = query({

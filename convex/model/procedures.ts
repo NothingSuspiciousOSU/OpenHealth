@@ -139,48 +139,6 @@ export async function findProceduresByDescription(
 }
 
 /**
- * Apply optional filters to a list of procedures (in-memory).
- */
-export function applyProcedureFilters(
-  procedures: Doc<"procedures">[],
-  filters: {
-    insuranceProvider?: string;
-    insurancePlan?: string;
-    state?: string;
-    city?: string;
-    hospitalName?: string;
-    afterDate?: bigint;
-  },
-): Doc<"procedures">[] {
-  let results = procedures;
-
-  if (filters.insuranceProvider) {
-    results = results.filter(
-      (p) => p.insurance.providerName === filters.insuranceProvider,
-    );
-  }
-  if (filters.insurancePlan) {
-    results = results.filter(
-      (p) => p.insurance.planName === filters.insurancePlan,
-    );
-  }
-  if (filters.state) {
-    results = results.filter((p) => p.location.state === filters.state);
-  }
-  if (filters.city) {
-    results = results.filter((p) => p.location.city === filters.city);
-  }
-  if (filters.hospitalName) {
-    results = results.filter((p) => p.hospitalName === filters.hospitalName);
-  }
-  if (filters.afterDate !== undefined) {
-    results = results.filter((p) => p.dateOfProcedure >= filters.afterDate!);
-  }
-
-  return results;
-}
-
-/**
  * Attach CPT codes to a list of procedures by looking up their line items.
  */
 export async function attachCptCodes(
