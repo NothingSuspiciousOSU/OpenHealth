@@ -1,7 +1,16 @@
 "use client";
 
-import { FormEvent, useMemo, useRef, useState } from "react";
+import {
+  FormEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { useChat } from "@ai-sdk/react";
+import ReactMarkdown, { type Components } from "react-markdown";
+import remarkGfm from "remark-gfm";
 import {
   billDocumentContextSchema,
   BillDocumentContext,
@@ -33,25 +42,55 @@ export default function ChatPage() {
   const [attachment, setAttachment] = useState<AttachmentState | null>(null);
   const [clientError, setClientError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const transcriptRef = useRef<HTMLDivElement>(null);
+  const transcriptEndRef = useRef<HTMLDivElement>(null);
+  const shouldFollowTranscriptRef = useRef(true);
 
   const { messages, sendMessage, regenerate, stop, status, error } = useChat();
   const busy = status === "submitted" || status === "streaming";
   const readingPdf = attachment?.status === "reading";
 
-  const progressLabel = useMemo(() => {
-    if (readingPdf) return "Reading PDF";
-    if (status === "submitted") return "Starting agent";
-    if (status === "streaming") return "Agent running";
+  const modelProgressLabel = useMemo(() => {
+    if (status === "submitted") return "Waiting for model";
+    if (status === "streaming") return "Model is replying";
     return null;
-  }, [readingPdf, status]);
+  }, [status]);
+
+  const attachmentStatusLabel = useMemo(() => {
+    if (!attachment) return "No PDF attached";
+    if (attachment.status === "ready") return "PDF ready";
+    if (attachment.status === "reading") return "Reading PDF";
+    if (attachment.status === "error") return "Needs text fallback";
+    return "PDF attached";
+  }, [attachment]);
+
+  const scrollTranscriptToBottom = useCallback((behavior: ScrollBehavior) => {
+    requestAnimationFrame(() => {
+      transcriptEndRef.current?.scrollIntoView({ block: "end", behavior });
+    });
+  }, []);
+
+  const handleTranscriptScroll = useCallback(() => {
+    const element = transcriptRef.current;
+    if (!element) return;
+
+    shouldFollowTranscriptRef.current = isNearBottom(element);
+  }, []);
+
+  useEffect(() => {
+    if (!shouldFollowTranscriptRef.current) return;
+    scrollTranscriptToBottom(status === "streaming" ? "auto" : "smooth");
+  }, [messages, scrollTranscriptToBottom, status]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const text = input.trim();
     if (!text || busy || readingPdf) return;
 
+    shouldFollowTranscriptRef.current = true;
     setClientError(null);
     setInput("");
+    scrollTranscriptToBottom("smooth");
     await sendMessage(
       { text },
       { body: { documentContext: documentContext ?? undefined } },
@@ -60,6 +99,9 @@ export default function ChatPage() {
 
   async function handleRegenerate() {
     if (busy) return;
+
+    shouldFollowTranscriptRef.current = true;
+    scrollTranscriptToBottom("smooth");
     await regenerate({
       body: { documentContext: documentContext ?? undefined },
     });
@@ -141,106 +183,50 @@ export default function ChatPage() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-50 py-8 text-zinc-950 dark:bg-black dark:text-zinc-50">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 lg:h-[calc(100vh-7rem)] lg:flex-row">
-        <aside className="w-full shrink-0 lg:w-80">
-          <div className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-            <div className="flex items-start justify-between gap-3">
-              <div>
-                <h1 className="text-lg font-semibold tracking-tight">
-                  Bill Chat
-                </h1>
-                <p className="mt-1 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
-                  Ask about charges, CPT codes, allowed amounts, or OpenHealth
-                  price comparisons.
-                </p>
-              </div>
-              {progressLabel && (
-                <span className="rounded-md bg-sky-50 px-2 py-1 text-xs font-medium text-sky-700 dark:bg-sky-950 dark:text-sky-300">
-                  {progressLabel}
-                </span>
-              )}
-            </div>
-
-            <div className="mt-5">
-              <label
-                htmlFor="bill-pdf"
-                className="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
-              >
-                PDF bill
-              </label>
-              <input
-                ref={fileInputRef}
-                id="bill-pdf"
-                type="file"
-                accept={CHAT_PDF_MIME_TYPE}
-                disabled={busy || readingPdf}
-                onChange={(event) => handleFileChange(event.target.files)}
-                className="mt-2 block w-full text-sm text-zinc-600 file:mr-3 file:rounded-md file:border-0 file:bg-zinc-900 file:px-3 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-zinc-700 disabled:opacity-60 dark:text-zinc-300 dark:file:bg-zinc-100 dark:file:text-zinc-950"
-              />
-              <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-500">
-                One PDF, up to {Math.round(MAX_CHAT_PDF_BYTES / 1024 / 1024)} MB.
-              </p>
-            </div>
-
-            {attachment && (
-              <div className="mt-4 rounded-lg border border-zinc-200 bg-zinc-50 p-3 dark:border-zinc-800 dark:bg-zinc-900">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0">
-                    <p className="truncate text-sm font-medium">
-                      {attachment.fileName}
-                    </p>
-                    <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
-                      {formatBytes(attachment.sizeBytes)} ·{" "}
-                      {attachment.status === "ready"
-                        ? "Ready"
-                        : attachment.status === "reading"
-                          ? "Reading"
-                          : attachment.status === "error"
-                            ? "Needs text fallback"
-                            : "Attached"}
-                    </p>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={removeAttachment}
-                    className="rounded-md px-2 py-1 text-xs font-medium text-zinc-500 hover:bg-zinc-200 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
-                  >
-                    Remove
-                  </button>
-                </div>
-                {attachment.error && (
-                  <p className="mt-3 text-sm leading-6 text-amber-700 dark:text-amber-300">
-                    {attachment.error} Paste the key bill text into chat.
-                  </p>
-                )}
-              </div>
-            )}
-
-            {documentContext && (
-              <div className="mt-4 rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-950">
-                <p className="font-medium">Extracted context</p>
-                <dl className="mt-3 space-y-2 text-xs text-zinc-600 dark:text-zinc-400">
-                  <ContextRow label="Provider" value={documentContext.providerName} />
-                  <ContextRow label="Hospital" value={documentContext.hospitalName} />
-                  <ContextRow
-                    label="Billed"
-                    value={formatMoney(documentContext.billedAmount)}
-                  />
-                  <ContextRow
-                    label="Allowed"
-                    value={formatMoney(documentContext.allowedAmount)}
-                  />
-                </dl>
-              </div>
-            )}
-          </div>
+    <div className="flex h-full min-h-0 overflow-hidden bg-zinc-50 text-zinc-950 dark:bg-black dark:text-zinc-50">
+      <div className="mx-auto flex h-full min-h-0 w-full max-w-7xl flex-col gap-3 px-3 py-3 sm:px-4 lg:flex-row lg:gap-4 lg:px-6">
+        <aside className="min-h-0 shrink-0 lg:w-80">
+          <ContextPanel
+            attachment={attachment}
+            attachmentStatusLabel={attachmentStatusLabel}
+            busy={busy}
+            documentContext={documentContext}
+            fileInputRef={fileInputRef}
+            onFileChange={handleFileChange}
+            onRemoveAttachment={removeAttachment}
+            readingPdf={readingPdf}
+          />
         </aside>
 
-        <section className="flex min-h-[620px] flex-1 flex-col rounded-xl border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-          <div className="flex-1 overflow-y-auto p-5">
+        <section className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <header className="shrink-0 border-b border-zinc-200 px-4 py-3 dark:border-zinc-800">
+            <div className="flex items-center justify-between gap-3">
+              <div className="min-w-0">
+                <h1 className="truncate text-sm font-semibold tracking-tight">
+                  Bill Chat
+                </h1>
+                <p className="truncate text-xs text-zinc-500 dark:text-zinc-400">
+                  Ask about charges, codes, allowed amounts, and price context.
+                </p>
+              </div>
+              <span className="shrink-0 rounded-md bg-zinc-100 px-2 py-1 text-xs font-medium text-zinc-600 dark:bg-zinc-900 dark:text-zinc-300">
+                {modelProgressLabel ?? "Ready"}
+              </span>
+            </div>
+            {modelProgressLabel && (
+              <div className="mt-3">
+                <ActivityBar label={modelProgressLabel} />
+              </div>
+            )}
+          </header>
+
+          <div
+            ref={transcriptRef}
+            onScroll={handleTranscriptScroll}
+            className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-4"
+          >
             {messages.length === 0 ? (
-              <div className="flex h-full min-h-[420px] items-center justify-center text-center">
+              <div className="flex min-h-full items-center justify-center px-2 text-center">
                 <div className="max-w-md">
                   <p className="text-base font-semibold">
                     Ask a bill transparency question.
@@ -254,27 +240,18 @@ export default function ChatPage() {
             ) : (
               <div className="space-y-5">
                 {messages.map((message) => (
-                  <div
+                  <MessageBubble
                     key={message.id}
-                    className={
-                      message.role === "user"
-                        ? "ml-auto max-w-3xl rounded-xl bg-zinc-900 px-4 py-3 text-white dark:bg-zinc-100 dark:text-zinc-950"
-                        : "mr-auto max-w-3xl"
-                    }
-                  >
-                    {message.role === "assistant" && (
-                      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                        OpenHealth Agent
-                      </p>
-                    )}
-                    <MessageParts parts={message.parts as RenderablePart[]} />
-                  </div>
+                    parts={message.parts as RenderablePart[]}
+                    role={message.role}
+                  />
                 ))}
               </div>
             )}
+            <div ref={transcriptEndRef} />
           </div>
 
-          <div className="border-t border-zinc-200 p-4 dark:border-zinc-800">
+          <div className="shrink-0 border-t border-zinc-200 p-3 dark:border-zinc-800 sm:p-4">
             {(clientError || error) && (
               <p className="mb-3 rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-300">
                 {clientError || error?.message}
@@ -287,11 +264,11 @@ export default function ChatPage() {
                 rows={3}
                 disabled={busy}
                 placeholder="Ask whether a charge looks high, what a CPT code means, or what to ask next."
-                className="min-h-24 resize-none rounded-lg border border-zinc-200 bg-white px-3 py-3 text-sm outline-none transition placeholder:text-zinc-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-100 disabled:opacity-60 dark:border-zinc-800 dark:bg-zinc-950 dark:focus:border-sky-400 dark:focus:ring-sky-950"
+                className="max-h-36 min-h-20 resize-none rounded-lg border border-zinc-200 bg-white px-3 py-3 text-sm outline-none transition placeholder:text-zinc-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-100 disabled:opacity-60 dark:border-zinc-800 dark:bg-zinc-950 dark:focus:border-sky-400 dark:focus:ring-sky-950"
               />
               <div className="flex flex-wrap items-center justify-between gap-3">
-                <div className="text-xs text-zinc-500 dark:text-zinc-400">
-                  {progressLabel ?? "Ready"}
+                <div className="min-w-0 text-xs text-zinc-500 dark:text-zinc-400">
+                  {readingPdf ? "Reading PDF" : attachmentStatusLabel}
                 </div>
                 <div className="flex items-center gap-2">
                   {busy && (
@@ -329,12 +306,184 @@ export default function ChatPage() {
   );
 }
 
-function MessageParts({ parts }: { parts: RenderablePart[] }) {
+function ContextPanel({
+  attachment,
+  attachmentStatusLabel,
+  busy,
+  documentContext,
+  fileInputRef,
+  onFileChange,
+  onRemoveAttachment,
+  readingPdf,
+}: {
+  attachment: AttachmentState | null;
+  attachmentStatusLabel: string;
+  busy: boolean;
+  documentContext: BillDocumentContext | null;
+  fileInputRef: React.RefObject<HTMLInputElement | null>;
+  onFileChange: (files: FileList | null) => void;
+  onRemoveAttachment: () => void;
+  readingPdf: boolean;
+}) {
+  return (
+    <div className="flex max-h-[34dvh] min-h-0 flex-col overflow-hidden rounded-lg border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 sm:max-h-[28dvh] lg:h-full lg:max-h-none lg:p-4">
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <h2 className="text-sm font-semibold tracking-tight">
+            Document Context
+          </h2>
+          <p className="mt-1 text-xs leading-5 text-zinc-500 dark:text-zinc-400">
+            Attach one bill PDF or paste details directly into chat.
+          </p>
+        </div>
+        <span className="shrink-0 rounded-md bg-zinc-100 px-2 py-1 text-xs font-medium text-zinc-600 dark:bg-zinc-900 dark:text-zinc-300">
+          {attachmentStatusLabel}
+        </span>
+      </div>
+
+      <div className="mt-3 min-h-0 flex-1 overflow-y-auto overscroll-contain pr-1 sm:grid sm:grid-cols-[minmax(0,1fr)_minmax(16rem,1fr)] sm:gap-3 lg:block">
+        <div>
+          <label
+            htmlFor="bill-pdf"
+            className="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+          >
+            PDF bill
+          </label>
+          <input
+            ref={fileInputRef}
+            id="bill-pdf"
+            type="file"
+            accept={CHAT_PDF_MIME_TYPE}
+            disabled={busy || readingPdf}
+            onChange={(event) => onFileChange(event.target.files)}
+            className="mt-2 block w-full text-sm text-zinc-600 file:mr-3 file:rounded-md file:border-0 file:bg-zinc-900 file:px-3 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-zinc-700 disabled:opacity-60 dark:text-zinc-300 dark:file:bg-zinc-100 dark:file:text-zinc-950"
+          />
+          <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-500">
+            One PDF, up to {Math.round(MAX_CHAT_PDF_BYTES / 1024 / 1024)} MB.
+          </p>
+          {readingPdf && (
+            <div className="mt-3">
+              <ActivityBar label="Reading PDF" />
+            </div>
+          )}
+        </div>
+
+        <div className="mt-3 min-w-0 sm:mt-0 lg:mt-4">
+          {attachment ? (
+            <AttachmentCard
+              attachment={attachment}
+              onRemoveAttachment={onRemoveAttachment}
+            />
+          ) : (
+            <div className="rounded-lg border border-dashed border-zinc-200 bg-zinc-50 p-3 text-sm text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
+              Upload-ready. You can start without a PDF.
+            </div>
+          )}
+
+          {documentContext && (
+            <div className="mt-3 rounded-lg border border-zinc-200 bg-white p-3 text-sm dark:border-zinc-800 dark:bg-zinc-950">
+              <p className="font-medium">Extracted context</p>
+              <dl className="mt-3 space-y-2 text-xs text-zinc-600 dark:text-zinc-400">
+                <ContextRow label="Provider" value={documentContext.providerName} />
+                <ContextRow label="Hospital" value={documentContext.hospitalName} />
+                <ContextRow
+                  label="Billed"
+                  value={formatMoney(documentContext.billedAmount)}
+                />
+                <ContextRow
+                  label="Allowed"
+                  value={formatMoney(documentContext.allowedAmount)}
+                />
+              </dl>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function AttachmentCard({
+  attachment,
+  onRemoveAttachment,
+}: {
+  attachment: AttachmentState;
+  onRemoveAttachment: () => void;
+}) {
+  return (
+    <div className="rounded-lg border border-zinc-200 bg-zinc-50 p-3 dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <p className="truncate text-sm font-medium">{attachment.fileName}</p>
+          <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+            {formatBytes(attachment.sizeBytes)} ·{" "}
+            {attachment.status === "ready"
+              ? "Ready"
+              : attachment.status === "reading"
+                ? "Reading"
+                : attachment.status === "error"
+                  ? "Needs text fallback"
+                  : "Attached"}
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={onRemoveAttachment}
+          className="rounded-md px-2 py-1 text-xs font-medium text-zinc-500 hover:bg-zinc-200 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+        >
+          Remove
+        </button>
+      </div>
+      {attachment.error && (
+        <p className="mt-3 text-sm leading-6 text-amber-700 dark:text-amber-300">
+          {attachment.error} Paste the key bill text into chat.
+        </p>
+      )}
+    </div>
+  );
+}
+
+function MessageBubble({
+  parts,
+  role,
+}: {
+  parts: RenderablePart[];
+  role: string;
+}) {
+  const isUser = role === "user";
+
+  return (
+    <div
+      className={
+        isUser
+          ? "ml-auto max-w-3xl rounded-lg bg-zinc-900 px-4 py-3 text-white dark:bg-zinc-100 dark:text-zinc-950"
+          : "mr-auto max-w-3xl"
+      }
+    >
+      {!isUser && (
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+          OpenHealth Agent
+        </p>
+      )}
+      <MessageParts assistant={!isUser} parts={Array.isArray(parts) ? parts : []} />
+    </div>
+  );
+}
+
+function MessageParts({
+  assistant,
+  parts,
+}: {
+  assistant: boolean;
+  parts: RenderablePart[];
+}) {
   return (
     <div className="space-y-3">
       {parts.map((part, index) => {
         if (part.type === "text" && typeof part.text === "string") {
-          return (
+          return assistant ? (
+            <AssistantMarkdown key={index}>{part.text}</AssistantMarkdown>
+          ) : (
             <p key={index} className="whitespace-pre-wrap text-sm leading-6">
               {part.text}
             </p>
@@ -350,6 +499,125 @@ function MessageParts({ parts }: { parts: RenderablePart[] }) {
     </div>
   );
 }
+
+function AssistantMarkdown({ children }: { children: string }) {
+  return (
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      components={markdownComponents}
+    >
+      {children}
+    </ReactMarkdown>
+  );
+}
+
+const markdownComponents: Components = {
+  a({ children, href }) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium text-sky-700 underline decoration-sky-300 underline-offset-2 hover:text-sky-600 dark:text-sky-300 dark:decoration-sky-700 dark:hover:text-sky-200"
+      >
+        {children}
+      </a>
+    );
+  },
+  blockquote({ children }) {
+    return (
+      <blockquote className="my-3 border-l-2 border-zinc-300 pl-4 text-sm leading-6 text-zinc-600 dark:border-zinc-700 dark:text-zinc-300">
+        {children}
+      </blockquote>
+    );
+  },
+  code({ children, className }) {
+    return (
+      <code
+        className={`${className ?? ""} rounded bg-zinc-100 px-1 py-0.5 font-mono text-[0.85em] text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100`}
+      >
+        {children}
+      </code>
+    );
+  },
+  h1({ children }) {
+    return (
+      <h1 className="mb-3 mt-5 text-xl font-semibold tracking-tight first:mt-0">
+        {children}
+      </h1>
+    );
+  },
+  h2({ children }) {
+    return (
+      <h2 className="mb-2 mt-5 text-lg font-semibold tracking-tight first:mt-0">
+        {children}
+      </h2>
+    );
+  },
+  h3({ children }) {
+    return (
+      <h3 className="mb-2 mt-4 text-base font-semibold tracking-tight first:mt-0">
+        {children}
+      </h3>
+    );
+  },
+  hr() {
+    return <hr className="my-4 border-zinc-200 dark:border-zinc-800" />;
+  },
+  li({ children }) {
+    return <li className="pl-1">{children}</li>;
+  },
+  ol({ children }) {
+    return (
+      <ol className="my-3 list-decimal space-y-1 pl-5 text-sm leading-6">
+        {children}
+      </ol>
+    );
+  },
+  p({ children }) {
+    return <p className="my-3 text-sm leading-6 first:mt-0 last:mb-0">{children}</p>;
+  },
+  pre({ children }) {
+    return (
+      <pre className="my-3 max-w-full overflow-x-auto rounded-lg bg-zinc-950 p-3 text-xs leading-5 text-zinc-50 dark:bg-black [&_code]:rounded-none [&_code]:bg-transparent [&_code]:p-0 [&_code]:text-inherit">
+        {children}
+      </pre>
+    );
+  },
+  table({ children }) {
+    return (
+      <div className="my-4 max-w-full overflow-x-auto overscroll-x-contain">
+        <table className="min-w-full border-collapse text-left text-sm">
+          {children}
+        </table>
+      </div>
+    );
+  },
+  tbody({ children }) {
+    return <tbody className="divide-y divide-zinc-200 dark:divide-zinc-800">{children}</tbody>;
+  },
+  td({ children }) {
+    return (
+      <td className="border border-zinc-200 px-3 py-2 align-top dark:border-zinc-800">
+        {children}
+      </td>
+    );
+  },
+  th({ children }) {
+    return (
+      <th className="border border-zinc-200 bg-zinc-50 px-3 py-2 font-semibold dark:border-zinc-800 dark:bg-zinc-900">
+        {children}
+      </th>
+    );
+  },
+  ul({ children }) {
+    return (
+      <ul className="my-3 list-disc space-y-1 pl-5 text-sm leading-6">
+        {children}
+      </ul>
+    );
+  },
+};
 
 function ToolPart({ part }: { part: RenderablePart }) {
   const label = String(part.type).replace("tool-", "");
@@ -373,6 +641,24 @@ function ToolPart({ part }: { part: RenderablePart }) {
           {JSON.stringify(part.output, null, 2)}
         </pre>
       )}
+    </div>
+  );
+}
+
+function ActivityBar({ label }: { label: string }) {
+  return (
+    <div role="status" aria-live="polite" className="space-y-1">
+      <div className="flex items-center justify-between gap-3 text-xs font-medium text-zinc-500 dark:text-zinc-400">
+        <span>{label}</span>
+      </div>
+      <div
+        role="progressbar"
+        aria-label={label}
+        aria-valuetext={label}
+        className="h-1.5 overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-900"
+      >
+        <div className="chat-activity-bar h-full w-1/3 rounded-full bg-sky-500" />
+      </div>
     </div>
   );
 }
@@ -407,6 +693,10 @@ function readFileAsDataUrl(file: File) {
     reader.onerror = () => reject(new Error("Could not read file."));
     reader.readAsDataURL(file);
   });
+}
+
+function isNearBottom(element: HTMLElement) {
+  return element.scrollHeight - element.scrollTop - element.clientHeight < 96;
 }
 
 function formatBytes(bytes: number) {

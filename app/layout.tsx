@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ConvexClientProvider } from "./ConvexClientProvider";
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
+import { AppShell } from "./components/AppShell";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -31,14 +30,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="h-full">
         <ConvexClientProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <AppShell>{children}</AppShell>
         </ConvexClientProvider>
       </body>
     </html>
   );
 }
-
