@@ -1,6 +1,7 @@
 type StatItem = {
   value: string;
   label: string;
+  reference: string[];
 };
 
 type StatsBarProps = {
@@ -8,6 +9,9 @@ type StatsBarProps = {
 };
 
 export function StatsBar({ stats }: StatsBarProps) {
+  let citationCounter = 0;
+
+
   return (
     <section className="w-full py-8">
       <div className="mx-auto w-full max-w-5xl px-6">
@@ -22,6 +26,24 @@ export function StatsBar({ stats }: StatsBarProps) {
               </div>
               <div className="mt-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
                 {stat.label}
+              </div>
+              <div className="mt-auto flex justify-center gap-2">
+                {stat.reference.map((r, i) => {
+                  citationCounter += 1;
+                  const citationNumber = citationCounter;
+
+                  return (
+                    <a
+                      key={`${r}-${i}`}
+                      href={r}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-zinc-400 hover:text-zinc-600 dark:text-zinc-500"
+                    >
+                      {`[${citationNumber}]`}
+                    </a>
+                  );
+                })}
               </div>
             </div>
           ))}
