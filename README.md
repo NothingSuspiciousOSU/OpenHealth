@@ -1,28 +1,28 @@
-# OpenHealth 🏥
-### *Medical billing is purposefully confusing.*
+# OpenHealth: Creating transparency in healthcare
+### Problem: *Healthcare is not transparent, and medical billing is purposefully confusing.*
 
-OpenHealth is a medical bill transparency platform that helps users search for and compare procedure and CPT prices across insurance providers, locations, hospitals, and other billing factors.
+**OpenHealth** is a medical bill transparency platform that helps users search for and compare procedure and CPT charge code prices across insurance providers, locations, hospitals, and other billing factors.
 
 ---
 
-## ✨ Features
+## Features
 - **CPT Price Search:** Compare medical costs by description or CPT code across hospitals and insurers.
 - **Advanced Filtering:** Narrow results by provider, plan, location, and date with smart sorting.
 - **Cost Insights:** Interactive charts, price distributions, and trending procedure analytics.
 - **Personalized Estimates:** Save insurance profiles to estimate deductibles and out-of-pocket costs.
 - **Community Contribution:** Upload and auto-extract bill details from PDFs/images via AI.
-- **AI Bill Chat:** Chat with your bill to decode charges, CPT codes, and negotiation points.
+- **AI Bill Chat:** Chat with an agent about your bill to decode charges, CPT codes, and find negotiation points.
 - **Agentic Data Tools:** AI agent queries real-time data for bounded cost comparisons and research.
 - **Admin Controls:** Secure tools for database hydration, synthetic data, and maintenance.
 
 ---
 <p align="center">
-  <img width="567" height="793" alt="Screenshot 2026-05-03 at 8 03 49 AM" src="https://github.com/user-attachments/assets/b5d8e291-6012-456d-a2b0-dbc7cb974522" />
+  <img width="567" height="793" alt="Search Dashboard" src="https://github.com/user-attachments/assets/b5d8e291-6012-456d-a2b0-dbc7cb974522" />
 </p>
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js 20 or newer
@@ -48,23 +48,22 @@ OpenHealth is a medical bill transparency platform that helps users search for a
    Open [http://localhost:3000](http://localhost:3000).
 
 ### Seed Sample Data
-After `npx convex dev` is connected, run:
-```bash
-npx convex import --table procedures sampleData.jsonl
-```
+To seed sample data go to [http://localhost:3000/admin](http://localhost:3000/admin) and input the `ADMIN_PAGE_PASSWORD` specified in `.env.local`.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frontend:** Next.js 15+, Tailwind CSS, Recharts
 - **Backend:** Convex (Real-time Database & Functions)
 - **AI:** NVIDIA NIM, Google Gemini
 - **Storage:** UploadThing
+- **AI Tools:** ChatGPT, Github Copilot, Antigravity, Codex, Cursor, Gemini
 
-## 🏗️ Commands
+## Commands
 ```bash
-npm run lint      # Run ESLint
-npm run build     # Production build
-npx convex dev    # Backend dev server
-npx convex dashboard # View your data
+npm run lint                             # Run ESLint
+npm run build                            # Production build
+npx convex dev                           # Backend dev server
+npx convex dashboard                     # View your data
+npx convex deploy --cmd "npm run build"  # Fully deployment
 ```
