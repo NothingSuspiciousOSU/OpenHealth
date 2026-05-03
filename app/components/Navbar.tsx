@@ -11,6 +11,7 @@ export function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/search?q=", label: "Search" },
+    { href: "/upload", label: "Upload" },
   ];
 
   return (
